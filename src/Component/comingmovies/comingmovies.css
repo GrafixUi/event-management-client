@@ -1,0 +1,268 @@
+.upcomingmovie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.movie {
+    margin-top: 50px;
+
+}
+
+.movie_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.movie_content h1 {
+    color: #242565;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    justify-content: space-between;
+    line-height: normal;
+}
+
+.Dropdown {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.dropbutton {
+    background: #F2F4FF;
+    color: #1D275F;
+    padding: 16px;
+    font-family: DM Sans;
+    font-size: 16px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    padding-right: 40px;
+}
+
+.dropdowncontent {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdowncontent {
+    display: none;
+    position: absolute;
+    background-color: #a8a6a6;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdowncontent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownbutton:hover .dropdowncontent {
+    display: block;
+}
+
+.downarrow {
+    padding-top: 2px;
+    position: absolute;
+    padding-left: 10px;
+}
+
+.Movies {
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.MoviesProduct {
+    max-width: 70%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.MoviesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Moviesdown {
+    padding-left: 25px;
+}
+
+.Moviescontent {
+    padding-left: 30px;
+    margin-top: -25px;
+}
+
+.MoviesHeading {
+    width: 300px;
+    font-size: 18px;
+    font-family: DM Sans;
+}
+
+.MoviesDesc {
+    width: 300px;
+    font-size: 18px;
+    font-family: DM Sans;
+}
+
+.Moviesmonth {
+    margin-top: -30px;
+    color: #3D37F1;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.MoviesDate {
+    color: #000;
+    font-family: DM Sans;
+    font-size: 28.429px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: -10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .movie_content {
+        display: flex;
+        text-align: center;
+    }
+
+    .movie_content h1 {
+        left: 100px;
+    }
+
+    .Dropdown {
+        display: flex;
+        margin-right: 50px;
+    }
+
+    .dropbutton {
+        margin-top: 20px;
+    }
+
+    .Movies {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .buttons h2 {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .MoviesProduct {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+
+    .MoviesHeading,
+    .MoviesDesc,
+    .Moviesmonth,
+    .MoviesDate,
+    .Button {
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .movie_content {
+        display: flex;
+        text-align: center;
+    }
+
+    .movie_content h1 {
+        margin-left: 50px;
+    }
+
+    .Dropdown {
+        display: flex;
+        margin-right: 50px;
+    }
+
+    .dropbutton {
+        margin-top: 20px;
+    }
+
+    .Movies {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .buttons h2 {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .MoviesProduct {
+        width: 38%;
+        margin-bottom: 20px;
+    }
+
+    .MoviesProduct img {
+        margin-left: 15px;
+    }
+
+    .MoviesHeading,
+    .MoviesDesc,
+    .Moviesmonth,
+    .MoviesDate,
+    .Button {
+        width: 90%;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .movie_content {
+        text-align: center;
+    }
+
+    .movie_content h1 {
+        margin-left: 50px;
+        font-size: 30px;
+    }
+
+    .Dropdown {display: flex;
+        align-items: center;
+        
+    }
+
+    .dropbutton {
+        padding-right: 35px;
+    }
+
+    .MoviesProduct {
+        width: 52%;
+    }
+
+    .MoviesHeading,
+    .MoviesDesc,
+    .Moviesmonth,
+    .MoviesDate,
+    .Button{
+        width: 100%;
+        text-align: center;
+    }
+}

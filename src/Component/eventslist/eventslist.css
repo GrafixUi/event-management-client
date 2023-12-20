@@ -1,0 +1,200 @@
+.header {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.headerList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.headerTitle {
+    color: #242565;
+    font-family: Poppins;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.btn1 {
+    color: white;
+    width: 150px;
+    height: 80px;
+    border: none;
+    cursor: pointer;
+}
+
+.btnName {
+    position: absolute;
+    color: white;
+    text-align: center;
+    padding-left: 50px;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.events {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.eventProduct {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.eventContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eventdown {
+    padding-left: 25px;
+}
+
+.eventcontent {
+    padding-left: 30px;
+    margin-top: -25px;
+}
+
+.eventHeading {
+    width: 300px;
+    font-size: 18px;
+    font-family: DM Sans;
+}
+
+.eventDesc {
+    width: 300px;
+    font-size: 18px;
+    font-family: DM Sans;
+}
+
+.month {
+    margin-top: -30px;
+    color: #3D37F1;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Date {
+    color: #000;
+    font-family: DM Sans;
+    font-size: 28.429px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: -10px;
+}
+
+.Button {
+    color: #3D37F1;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 50px;
+    cursor: pointer;
+    width: 182.168px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: 1.5px solid #3D37F1;
+    box-shadow: 0px 10px 50px 0px rgba(195, 193, 247, 0.562);
+}
+
+@media only screen and (max-width: 1200px) {
+    .events {
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+    .buttons h2{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .eventProduct {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    
+    .eventHeading,
+    .eventDesc,
+    .month,
+    .Date,
+    .Button {
+        width: 10%;  
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .events {
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+    .buttons h2{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .eventProduct {
+        width: 38%;
+        margin-bottom: 20px;
+    }
+    .eventProduct img {
+        margin-left: 20px;
+    }
+    .eventHeading,
+    .eventDesc,
+    .month,
+    .Date,
+    .Button {
+        width: 10%;  
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .eventProduct {
+        width: 52%; 
+    }
+
+    .eventHeading,
+    .eventDesc,
+    .month,
+    .Date,
+    .Button {
+        width: 100%;
+        text-align: center; 
+    }
+}
