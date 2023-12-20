@@ -29,13 +29,13 @@ const footer = () => {
                         </div>
                     </div>
                     <div className='Rightside'>
-                    <h2>Stay in the loop</h2>
-                    <p>Join our mailing list to stay in the loop with our newest for Event and concert</p>
-                    <input type="email" placeholder=" Enter Your Email Address" className='Footersearch'/>
-                    <button className='btn'>Subscribe</button>
+                        <h2>Stay in the loop</h2>
+                        <p>Join our mailing list to stay in the loop with our newest for Event and concert</p>
+                        <input type="email" placeholder=" Enter Your Email Address" className='Footersearch' />
+                        <button className='btn'>Subscribe</button>
+                    </div>
                 </div>
-                </div>
-                
+
             </div>
         </div>
     )

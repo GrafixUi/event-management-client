@@ -85,3 +85,22 @@
     color: #1DBF73;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        margin-top: 50px;
+    }
+
+    .faqtop h2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+
+    .wrapperitem {
+        padding: 10px;
+    }
+}

@@ -139,128 +139,34 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    .movie_content {
+    .event_content {
         display: flex;
         text-align: center;
-    }
-
-    .movie_content h1 {
-        left: 100px;
     }
 
     .Dropdown {
         display: flex;
-        margin-right: 50px;
     }
 
     .dropbutton {
         margin-top: 20px;
+        padding-right: 16px;
     }
 
-    .Movies {
+    .event {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .buttons h2 {
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-
-    .MoviesProduct {
-        width: 30%;
+    .eventProduct {
+        max-width: 100%;
         margin-bottom: 20px;
     }
 
-
-    .MoviesHeading,
-    .MoviesDesc,
-    .Moviesmonth,
-    .MoviesDate,
-    .Button {
-        width: 100%;
-        font-size: 15px;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    .movie_content {
-        display: flex;
-        text-align: center;
-    }
-
-    .movie_content h1 {
-        margin-left: 50px;
-    }
-
-    .Dropdown {
-        display: flex;
-        margin-right: 50px;
-    }
-
-    .dropbutton {
-        margin-top: 20px;
-    }
-
-    .Movies {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .buttons h2 {
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-
-    .MoviesProduct {
-        width: 38%;
-        margin-bottom: 20px;
-    }
-
-    .MoviesProduct img {
-        margin-left: 15px;
-    }
-
-    .MoviesHeading,
-    .MoviesDesc,
-    .Moviesmonth,
-    .MoviesDate,
-    .Button {
-        width: 90%;
-        font-size: 15px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .movie_content {
-        text-align: center;
-    }
-
-    .movie_content h1 {
-        margin-left: 50px;
-        font-size: 30px;
-    }
-
-    .Dropdown {display: flex;
-        align-items: center;
-        
-    }
-
-    .dropbutton {
-        padding-right: 35px;
-    }
-
-    .MoviesProduct {
-        width: 52%;
-    }
-
-    .MoviesHeading,
-    .MoviesDesc,
-    .Moviesmonth,
-    .MoviesDate,
-    .Button{
+    .eventHeading,
+    .eventDesc,
+    .month,
+    .Date {
         width: 100%;
         text-align: center;
     }

@@ -99,3 +99,38 @@
     /* font-family: DM Sans; */
     font-weight: 500;
 }
+
+@media only screen and (max-width: 1200px) {
+    .Footerlinks {
+        gap: 50px;
+    }
+
+    .Footercontent img {
+        width: 15%;
+    }
+
+    .Footersearch{
+        width: 60%;
+    }
+
+    .btn {
+        margin-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .Footerlinks {
+        gap: 50px;
+    }
+
+    .Footercontent img {
+        width: 15%;
+    }
+
+    .Footersearch{
+        width: 50%;
+    }
+    .btn {
+        margin-right: 50px;
+    }
+}
