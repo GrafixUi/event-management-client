@@ -1,7 +1,8 @@
 .nav {
   background-image: url(../../assets//images//bg.png);
   width: 100%;
-  height: 90vh;
+
+  background-size: cover;
 }
 
 .nav_content {
@@ -28,6 +29,7 @@ img {
   border-radius: 50px;
   background: #F5167E;
   border: none;
+  width: 100px;
   padding: 8px 10px;
   color: white;
   cursor: pointer;
@@ -37,6 +39,9 @@ img {
   font-weight: 500;
 }
 
+.headerbutton{
+  display: flex;
+}
 
 .headerbutton {
   margin-left: 20px;
@@ -112,7 +117,7 @@ img {
   width: 80%;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px){
   .Content {
     align-items: center;
   }
@@ -262,4 +267,86 @@ img {
 
     width: 50%;
   }
+}
+
+@media only screen and (max-width: 640px) {
+  .nav {
+    height: auto; 
+  }
+
+  .Content {
+    margin-right: 20px;
+    margin-top: 10px; 
+  }
+
+  img {
+    padding: 10px;
+  }
+
+  .button1,
+  .headerbutton {
+    margin: 10px 10px;
+  }
+
+  .headercontent,
+  .header-title {
+    font-size: 36px;
+  }
+
+  .form {
+    width: 100%; 
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .button {
+    width: 40%;
+    height: 45%;
+  }
+
+  .rightside {
+    text-align: center; 
+  }
+
+  .rightimg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Content1 {
+    display: flex; 
+  }
+  .headercontent,
+  .header-title {
+    font-size: 24px; 
+  }
+
+  .button1,
+  .headerbutton {
+    font-size: 14px;
+    padding: 10px; 
+  }
+
+}
+
+@media only screen and (max-width: 375px) {
+  .Content1 {
+    display: flex; 
+  }
+  .headercontent,
+  .header-title {
+    font-size: 24px; 
+  }
+
+  .button1,
+  .headerbutton {
+    font-size: 8px;
+  }
+  .img{
+    width: 70%;
+  }
+
 }

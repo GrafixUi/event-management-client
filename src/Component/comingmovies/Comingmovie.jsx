@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { FaAngleDown } from "react-icons/fa6";
 import "./comingmovies.css"
 import { eventsData } from "../eventslist/eventslist.data";
-import event1 from "../../assets/images/product1.png"
+import event2 from "../../assets/images/product2.png"
+import Card from 'react-bootstrap/Card';
 
 
 const UpComing = () => {
@@ -49,23 +50,26 @@ const UpComing = () => {
                     </div>
 
                 </div>
-                <div className='Movies'>
-                    {items.map((item) => (
-                        <div className='MoviesProduct'>
-                            <img src={event1} alt='Event1' className='MoviesImage' />
-                            <div className='MoviesContainer'>
-                                <div className='Moviesdown'>
-                                    <h3 className='Moviesmonth'>{item.Month}</h3>
-                                    <p className='MoviesDate'>{item.Date}</p>
-                                </div>
-                                <div className='Moviescontent'>
-                                    <h3 className='MoviesHeading'>{item.Title}</h3>
-                                    <p className='MoviesDesc'>{item.Decs}</p>
+                <div className='events'>
+                {items.map((item) => (
+                    <Card style={{ width: '18rem' }} className='shadow p-3 mb-5 bg-body-tertiary rounded card' >
+                        <Card.Img variant="top" src={event2} />
+                        <Card.Body className='eventContainer'>
+                            <div>
+                                <div className='eventdown'>
+                                    <h3 className='month'>{item.Month}</h3>
+                                    <p className='Date'>{item.Date}</p>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
+                            <div className='eventcontent'>
+                                <Card.Title className='eventtitle'>{item.Title}</Card.Title>
+                                <Card.Text>{item.Decs}
+                                </Card.Text>
+                            </div>
+                        </Card.Body>
+                    </Card>
+                ))}
+            </div>
             </div>
             <button className='Button'>Load More</button>
         </div>
