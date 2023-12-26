@@ -4,12 +4,15 @@ import slide from "../../assets/images/about3.png";
 import slide2 from "../../assets/images/about4.png";
 import slide3 from "../../assets/images/about5.png";
 import phone from "../../assets/images/phone.png";
+import Navbar from "../../component/navbar/Navbar";
+import Footer from "../../component/footer/Footer";
 import email from "../../assets/images/email.png";
 import mark from "../../assets/images/mark.png";
 import clock from "../../assets/images/Clock.png";
 const Contact = () => {
     return (
         <div>
+            <Navbar />
             <div className="flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
@@ -24,10 +27,10 @@ const Contact = () => {
                 <div className="flex w-full max-w-[1530px] flex-col items-center mb-[589px] max-md:max-w-full max-md:my-10">
                     <div className="flex justify-between gap-5 px-5 items-start max-md:flex-wrap ">
                         <div className="flex grow basis-[0%] flex-col items-stretch mt-2 max-md:max-w-full">
-                            <div className="text-black text-5xl font-medium max-md:max-w-full max-md:text-4xl">
+                            <div className="text-black text-3xl font-bold max-md:max-w-full max-md:text-4xl">
                                 We’re here to help you!
                             </div>
-                            <div className="text-black text-lg font-[275] mt-7 max-md:max-w-full">
+                            <div className="text-black text-md font-[275] mt-7 max-md:max-w-full">
                                 Have a question, comment, or brilliant idea you'd like to share?{" "}
                                 <br />
                                 Send us a little note below - we love to hear from you and will always
@@ -41,7 +44,7 @@ const Contact = () => {
                                                 <img
                                                     loading="lazy"
                                                     srcSet={phone} alt='phone'
-                                                    className="aspect-square object-contain object-center w-20 overflow-hidden max-w-full"
+                                                    className="aspect-square object-contain object-center w-16 overflow-hidden max-w-full"
                                                 />{" "}
                                                 <div className="text-black text-xl font-medium self-stretch whitespace-nowrap mt-6">
                                                     Phone Number
@@ -56,7 +59,7 @@ const Contact = () => {
                                                 <img
                                                     loading="lazy"
                                                     srcSet={email} alt='email'
-                                                    className="aspect-square object-contain object-center w-20 shadow-sm overflow-hidden max-w-full"
+                                                    className="aspect-square object-contain object-center w-16 shadow-sm overflow-hidden max-w-full"
                                                 />{" "}
                                                 <div className="text-black text-xl font-medium self-stretch whitespace-nowrap mt-7">
                                                     Email
@@ -75,7 +78,7 @@ const Contact = () => {
                                                 <img
                                                     loading="lazy"
                                                     srcSet={mark} alt='mark'
-                                                    className="aspect-square object-contain object-center w-20 overflow-hidden max-w-full ml-10 max-md:ml-2.5"
+                                                    className="aspect-square object-contain object-center w-16 overflow-hidden max-w-full ml-10 max-md:ml-2.5"
                                                 />{" "}
                                                 <div className="text-black text-xl font-medium self-stretch mt-10">
                                                     Location
@@ -91,7 +94,7 @@ const Contact = () => {
                                                 <img
                                                     loading="lazy"
                                                     srcSet={clock} alt='clock'
-                                                    className="aspect-square object-contain object-center w-20 overflow-hidden max-w-full ml-9 max-md:ml-2.5"
+                                                    className="aspect-square object-contain object-center w-16 overflow-hidden max-w-full ml-9 max-md:ml-2.5"
                                                 />{" "}
                                                 <div className="text-black text-xl font-medium self-stretch mt-9">
                                                     Opening Hours
@@ -115,10 +118,10 @@ const Contact = () => {
                             className="aspect-[0.01] object-contain object-center w-1 stroke-[4px] stroke-neutral-400 stroke-opacity-10 overflow-hidden self-stretch shrink-0 max-w-full"
                         />{" "}
                         <div className="self-stretch flex grow basis-[0%] flex-col mt-1.5 max-md:max-w-full">
-                            <div className="text-black text-5xl font-medium self-stretch max-md:max-w-full max-md:text-4xl max-md:ml-28 max-sm:ml-44">
+                            <div className="text-black text-3xl font-bold self-stretch max-md:max-w-full max-md:text-4xl max-md:ml-28 max-sm:ml-44">
                                 Do you want to get in touch?
                             </div>{" "}
-                            <div className="text-black text-2xl font-[275] self-stretch mt-8 max-md:max-w-full">
+                            <div className="text-black text-xl font-[275] self-stretch mt-8 max-md:max-w-full">
                                 Let us know how we can help you.
                             </div>{" "}
                             <input className="text-zinc-500 text-opacity-90 text-xl font-medium whitespace-nowrap border self-stretch justify-center mt-10 pl-9 pr-16 py-5 rounded-xl border-solid border-black border-opacity-30 items-start max-md:max-w-full max-md:mr-1.5 max-md:px-5" type='text' placeholder='Name' />
@@ -129,7 +132,7 @@ const Contact = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="text-black text-6xl font-semibold self-stretch max-md:max-w-full max-md:text-4xl max-md:mt-10">
+                    <div className="text-black mt-16 text-3xl font-semibold self-stretch max-md:max-w-full max-md:text-4xl max-md:mt-10">
                         Fresh from blog
                     </div>
                     <div className="self-stretch mt-16 max-md:max-w-full max-md:mt-10">
@@ -224,6 +227,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

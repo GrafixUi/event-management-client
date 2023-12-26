@@ -2,10 +2,16 @@ import React, { useEffect, useRef, useState } from 'react';
 import Logo from "../../assets/images/logo.png";
 import bg from "../../assets/images/bg.png";
 import dropdown from "../../assets/icons/dropdown.svg";
-import btn1 from "../../assets/images/btn1.png";
-import btn2 from "../../assets/images/btn2.png";
+// import btn1 from "../../assets/images/btn1.png";
+// import btn2 from "../../assets/images/btn2.png";
 import img1 from "../../assets/images/img1.png";
 import baner from "../../assets/images/banner.png";
+import conference from "../../assets/images/conferences.png";
+import Entertainment from "../../assets/images/entertainment.png";
+import Sport from "../../assets/images/sports.png";
+import Travel from "../../assets/images/travel.png";
+import Festival from "../../assets/images/festivals.png";
+import Workshop from "../../assets/images/workshop.png";
 import Upcomingevent from '../../component/upcomingevent/Upcomingevents';
 import Upcomingmovies from "../../component/upcomingmovie/Upcomingmovie";
 import Upcomingevents from '../../component/upcomingevent/Upcomingevents';
@@ -65,7 +71,7 @@ const Home = () => {
                                 <Link to="register">Create Event</Link>
                             </button>
                             <button className="text-white text-base whitespace-nowrap justify-center items-stretch grow px-12 py-2.5 rounded-[50px] border-[1.5px] border-solid border-white max-md:px-5">
-                               <Link to="login">Login</Link> 
+                                <Link to="login">Login</Link>
                             </button>
                         </div>
                     </div>
@@ -76,7 +82,7 @@ const Home = () => {
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f03ee049ab72c2667a3ec0da5c2ef34b2ecdff6a4e03abe75ae41470494e42a?"
                                 className="aspect-[0.66] object-contain object-center w-[29px] stroke-[2.333px] stroke-indigo-600 stroke-opacity-20 overflow-hidden max-w-full"
                             /> */}
-                            <div className="text-white text-3xl font-semibold self-stretch mt-9 max-md:max-w-full max-md:text-4xl">
+                            <div className="text-white text-4xl font-semibold self-stretch mt-9 max-md:max-w-full max-md:text-4xl">
                                 <span className="font-medium">Find the Your</span>{" "}
                                 <span className="">Favorites</span>
                                 <br />
@@ -106,34 +112,62 @@ const Home = () => {
             <div className="text-[#242565] text-5xl font-bold self-center mt-16 max-md:max-w-full max-md:mt-10">
                 Explore the your Events and Movies
             </div>
-            <div className="self-center w-[594px] max-w-full mt-24 max-md:mt-10">
+            <div className="self-start w-[594px] max-w-full mt-24 max-md:mt-10">
                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                        <div className="flex flex-col items-stretch w-[52%] max-md:w-full max-md:ml-0">
-                            <Link to="eventslist" className="flex-col text-white text-2xl font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  text-center  bg-cover bg-center" style={{
-                                backgroundImage: `url(${btn1})`,
-                            }}>
-                                Events
-                            </Link>
-                        </div>
-                        <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
-                            <Link to="movieslist" className="flex-col text-white text-2xl text-center font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  bg-cover bg-center ml" style={{
-                                backgroundImage: `url(${btn2})`,
-                            }}>
-                               Movies
-                            </Link>
-                        </div>
+                    <div className="flex flex-col items-stretch w-[52%] max-md:w-full max-md:ml-0">
+                        <Link to="eventslist" className="flex-col text-white text-2xl font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  text-center  bg-cover bg-center" style={{
+                            backgroundImage: `url(${conference})`,
+                        }}>
+                            Entertainment
+                        </Link>
+                    </div>
+                    <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
+                        <Link to="movieslist" className="flex-col text-white text-2xl text-center font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  bg-cover bg-center ml bg" style={{
+                            backgroundImage: `url(${Workshop})`,
+                        }}>
+                            Conference
+                        </Link>
+                    </div>
+                    <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
+                        <Link to="movieslist" className="flex-col text-white text-2xl text-center font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  bg-cover bg-center ml" style={{
+                            backgroundImage: `url(${Entertainment})`,
+                        }}>
+                            Travel
+                        </Link>
+                    </div>
+                    <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
+                        <Link to="movieslist" className="flex-col text-white text-2xl text-center font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  bg-cover bg-center ml" style={{
+                            backgroundImage: `url(${Travel})`,
+                        }}>
+                            Festivals
+                        </Link>
+                    </div>
+                    <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
+                        <Link to="movieslist" className="flex-col text-white text-2xl text-center font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  bg-cover bg-center ml" style={{
+                            backgroundImage: `url(${Festival})`,
+                        }}>
+                            Workshops
+                        </Link>
+                    </div>
+                    <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
+                        <Link to="movieslist" className="flex-col text-white text-2xl text-center font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  bg-cover bg-center ml" style={{
+                            backgroundImage: `url(${Sport})`,
+                        }}>
+                            Sports
+                        </Link>
+                    </div>
                 </div>
             </div>
             <Upcomingevents />
             <Upcomingevent />
-                <Link to="eventslist" className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-12 py-6 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5">
-                    Load More
-                </Link>
+            <Link to="eventslist" className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-12 py-6 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5">
+                Load More
+            </Link>
             <Upcomingmovies />
             <Upcomingevent />
-                <Link to="eventslist" className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-12 py-6 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5">
-                    Load More
-                </Link>
+            <Link to="eventslist" className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-12 py-6 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5">
+                Load More
+            </Link>
             <div className="flex-col overflow-hidden self-stretch relative flex min-h-[252px] w-full justify-center items-center mt-11 px-16 py-10 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
@@ -427,7 +461,7 @@ const Home = () => {
             <div className="bg-blue-950 self-stretch flex w-full flex-col items-center mt-28 pt-12 pb-6 px-16 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <div className="flex w-full max-w-[1668px] flex-col items-center mt-4 max-md:max-w-full">
                     <div className="self-stretch flex items-start justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
-                        <img 
+                        <img
                             className=" object-contain object-center overflow-hidden grow basis-[0%] mt-6 self-start max-md:max-w-72"
                             loading="lazy"
                             srcSet={Logo} alt='logo'
