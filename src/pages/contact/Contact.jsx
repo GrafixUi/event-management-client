@@ -25,9 +25,9 @@ const Contact = () => {
             </div>
             <div className="bg-white flex flex-col justify-center items-center px-16 max-md:px-5">
                 <div className="flex w-full max-w-[1530px] flex-col items-center mb-[589px] max-md:max-w-full max-md:my-10">
-                    <div className="flex justify-between gap-5 px-5 items-start max-md:flex-wrap ">
-                        <div className="flex grow basis-[0%] flex-col items-stretch mt-2 max-md:max-w-full">
-                            <div className="text-black text-3xl font-bold max-md:max-w-full max-md:text-4xl">
+                    <div className="flex justify-between gap-28 px-5 items-start max-md:flex-wrap ">
+                        <div className="flex grow basis-[0%] flex-col items-stretch mt-2 max-md:max-w-full max-sm:self-center max-sm:items-center max-sm:ml-10">
+                            <div className="text-black text-3xl font-bold max-md:max-w-full max-md:text-4xl max-sm:self-center max-sm:items-center">
                                 We’re here to help you!
                             </div>
                             <div className="text-black text-md font-[275] mt-7 max-md:max-w-full">
@@ -99,7 +99,7 @@ const Contact = () => {
                                                 <div className="text-black text-xl font-medium self-stretch mt-9">
                                                     Opening Hours
                                                 </div>{" "}
-                                                <div className="text-black text-xl font-[275] self-stretch mt-4">
+                                                <div className="text-black w-[250px] text-xl font-[275] self-stretch mt-4">
                                                     Mon-Fri: 9:00 am -6:00 pm
                                                     <br />
                                                     Sat: 9:00 am - 4:00 pm
@@ -115,19 +115,19 @@ const Contact = () => {
                         <img
                             loading="lazy"
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/f863485c8eadeecd08c3813dd34ec8ae73d00bcb7ccc89041b2a72c6fde361e0?" alt='img'
-                            className="aspect-[0.01] object-contain object-center w-1 stroke-[4px] stroke-neutral-400 stroke-opacity-10 overflow-hidden self-stretch shrink-0 max-w-full"
+                            className=" bg-black opacity-15 aspect-[0.01] object-contain object-center w-1 stroke-[4px] stroke-neutral-400 stroke-opacity-10 overflow-hidden self-stretch shrink-0 max-w-full max-sm:hidden"
                         />{" "}
                         <div className="self-stretch flex grow basis-[0%] flex-col mt-1.5 max-md:max-w-full">
-                            <div className="text-black text-3xl font-bold self-stretch max-md:max-w-full max-md:text-4xl max-md:ml-28 max-sm:ml-44">
+                            <div className="text-black text-3xl font-bold self-center items-center max-md:max-w-full max-md:text-4xl max-md:ml-28 max-sm:ml-2">
                                 Do you want to get in touch?
                             </div>{" "}
-                            <div className="text-black text-xl font-[275] self-stretch mt-8 max-md:max-w-full">
+                            <div className="text-black text-xl font-[275] self-stretch mt-8 max-md:max-w-full max-sm:ml-2">
                                 Let us know how we can help you.
                             </div>{" "}
                             <input className="text-zinc-500 text-opacity-90 text-xl font-medium whitespace-nowrap border self-stretch justify-center mt-10 pl-9 pr-16 py-5 rounded-xl border-solid border-black border-opacity-30 items-start max-md:max-w-full max-md:mr-1.5 max-md:px-5" type='text' placeholder='Name' />
                             <input className="text-zinc-500 text-opacity-90 text-xl font-medium whitespace-nowrap border self-stretch justify-center mt-14 pl-9 pr-16 py-5 rounded-xl border-solid border-black border-opacity-30 items-start max-md:max-w-full max-md:mr-1.5 max-md:mt-10 max-md:px-5" type='text' placeholder='Email' />
                             <input className="text-zinc-500 text-opacity-90 text-xl font-medium whitespace-nowrap border self-stretch mt-12 pl-9 pr-16 pt-7 pb-36 rounded-xl border-solid border-black border-opacity-30 items-start max-md:max-w-full max-md:mr-1.5 max-md:mt-10 max-md:pb-10 max-md:px-5" type='text' placeholder='Message' />
-                            <button className="text-zinc-50 text-2xl font-medium whitespace-nowrap bg-black self-center w-[385px] max-w-full justify-center items-center mt-16 px-10 py-5 max-md:mt-10 max-md:px-5">
+                            <button className="text-zinc-50 text-2xl font-medium whitespace-nowrap bg-black self-center w-[385px] max-w-full justify-center items-center mt-16 px-10 py-5 max-md:mt-10 max-md:px-5 rounded">
                                 Submit
                             </button>
                         </div>
@@ -148,7 +148,7 @@ const Contact = () => {
                                         <div className="text-black text-base font-[275] max-md:max-w-full">
                                             MAR 12, 2023 | 0 COMMENTS | POSTED BY TicketVerse
                                         </div>
-                                        <div className="text-black text-3xl font-medium mt-5 max-md:max-w-full">
+                                        <div className="text-black text-xl font-medium mt-5 max-md:max-w-full">
                                             Things to do while attending a Music Festival
                                         </div>
                                     </div>
@@ -165,7 +165,7 @@ const Contact = () => {
                                         <div className="text-black text-base font-[275] max-md:max-w-full">
                                             MAR 10, 2023 | 0 COMMENTS | POSTED BY TicketVerse
                                         </div>
-                                        <div className="text-black text-3xl font-medium mt-5 max-md:max-w-full">
+                                        <div className="text-black text-xl font-medium mt-5 max-md:max-w-full">
                                             15 Great Ideas for Additional Music Festival Activities
                                         </div>
                                     </div>
@@ -179,11 +179,11 @@ const Contact = () => {
                                         className="aspect-[1.48] object-contain object-center w-full overflow-hidden max-md:max-w-full"
                                     />
                                     <div className="flex flex-col items-stretch mt-3 pl-3.5 pr-20 max-md:max-w-full max-md:pr-5">
-                                        <div className="text-black text-base font-[275] whitespace-nowrap max-md:mr-2">
-                                            MAR 12, 2021 | 0 COMMENTS | POSTED BY TicketVerse
+                                        <div className="text-black text-base font-[275] max-md:max-w-full">
+                                            MAR 10, 2023 | 0 COMMENTS | POSTED BY TicketVerse
                                         </div>
-                                        <div className="text-black text-3xl font-medium w-[382px] mt-6 max-md:mr-2">
-                                            Venue Floor Plans May Put Events at Risk
+                                        <div className="text-black text-xl font-medium mt-5 max-md:max-w-full">
+                                        Venue Floor Plans May Put Events at Risk
                                         </div>
                                     </div>
                                 </div>
@@ -214,7 +214,7 @@ const Contact = () => {
                                             <div className="flex flex-col items-stretch w-[74%] max-md:w-full max-md:ml-0">
                                                 <input className="text-black text-base font-[275] whitespace-nowrap border grow justify-center w-full pl-5 pr-16 pt-5 pb-5 rounded-lg border-solid border-black border-opacity-10 items-start max-md:max-w-full max-md:mt-2 max-md:px-5" type='text' placeholder='Email Address' />
                                             </div>
-                                            <div className="flex flex-col items-stretch w-[26%] ml-5 max-md:w-full max-md:ml-0">
+                                            <div className="flex flex-col items-stretch w-[26%] max-md:w-full max-md:ml-0">
                                                 <button className="text-white text-xl font-[] whitespace-nowrap bg-black grow justify-center items-stretch w-full my-auto px-5 py-5 rounded-lg max-md:mt-3.5 max-md:px-5">
                                                     Subscribe
                                                 </button>

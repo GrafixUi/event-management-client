@@ -12,10 +12,11 @@ import Sport from "../../assets/images/sports.png";
 import Travel from "../../assets/images/travel.png";
 import Festival from "../../assets/images/festivals.png";
 import Workshop from "../../assets/images/workshop.png";
+import UpCominevent from "../../component/upcomingevents/Upcomingevents"
 import Upcomingevent from '../../component/upcomingevent/Upcomingevents';
 import Upcomingmovies from "../../component/upcomingmovie/Upcomingmovie";
-import Upcomingevents from '../../component/upcomingevent/Upcomingevents';
 import { Link } from 'react-router-dom';
+import Footer from "../../component/footer/Footer"
 const Home = () => {
     //dropdown for filter
 
@@ -60,17 +61,17 @@ const Home = () => {
                     className="absolute h-full w-full object-cover object-center inset-0"
                 />
                 <div className="relative flex w-full max-w-[1620px] flex-col items-stretch mb-16 max-md:max-w-full max-md:mb-10">
-                    <div className="flex w-full items-stretch justify-between gap-5 pr-20 max-md:max-w-full  max-md:pr-5">
+                    <div className="flex w-full items-stretch justify-between gap-5 pr-20 max-md:max-w-full  max-md:pr-5 max-sm:w-44 max-sm:-mt-40 max-sm:-ml-8">
                         <img
                             loading="lazy"
                             srcSet={Logo} alt='logo'
                             className="aspect-[3.49] object-contain object-center w-[250px] overflow-hidden shrink-0 max-w-full"
                         />
                         <div className="self-center flex items-stretch justify-between gap-5 my-auto max-sm:w-5">
-                            <button className="text-white text-base font-medium whitespace-nowrap justify-center items-stretch shadow-sm bg-pink-600 grow px-5 py-4 rounded-[50px]">
+                            <button className="text-white text-base font-medium whitespace-nowrap justify-center items-stretch shadow-sm bg-pink-600 grow px-5 py-4 rounded-[50px] max-sm:px-3 max-sm:py-2">
                                 <Link to="register">Create Event</Link>
                             </button>
-                            <button className="text-white text-base whitespace-nowrap justify-center items-stretch grow px-12 py-2.5 rounded-[50px] border-[1.5px] border-solid border-white max-md:px-5">
+                            <button className="text-white text-base whitespace-nowrap justify-center items-stretch grow px-12 py-2.5 rounded-[50px] border-[1.5px] border-solid border-white max-md:px-5 max-sm:px-3 max-sm:py-2">
                                 <Link to="login">Login</Link>
                             </button>
                         </div>
@@ -82,7 +83,7 @@ const Home = () => {
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f03ee049ab72c2667a3ec0da5c2ef34b2ecdff6a4e03abe75ae41470494e42a?"
                                 className="aspect-[0.66] object-contain object-center w-[29px] stroke-[2.333px] stroke-indigo-600 stroke-opacity-20 overflow-hidden max-w-full"
                             /> */}
-                            <div className="text-white text-4xl font-semibold self-stretch mt-9 max-md:max-w-full max-md:text-4xl">
+                            <div className="text-white text-6xl font-semibold self-stretch mt-9 max-md:max-w-full max-md:text-4xl">
                                 <span className="font-medium">Find the Your</span>{" "}
                                 <span className="">Favorites</span>
                                 <br />
@@ -109,7 +110,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="text-[#242565] text-5xl font-bold self-center mt-16 max-md:max-w-full max-md:mt-10">
+            <div className="text-[#242565] text-3xl font-bold self-center mt-16 max-md:max-w-full max-md:mt-10 max-sm:text-xl">
                 Explore the your Events and Movies
             </div>
             <div className="self-center  max-w-full mt-24 max-md:mt-10">
@@ -156,16 +157,15 @@ const Home = () => {
                             Sport
                         </Link>
                     </div>
-                    
+
                 </div>
             </div>
-            <Upcomingevents />
             <Upcomingevent />
+            <UpCominevent />
             <Link to="eventslist" className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-12 py-6 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5">
                 Load More
             </Link>
             <Upcomingmovies />
-            <Upcomingevent />
             <Link to="eventslist" className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-12 py-6 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5">
                 Load More
             </Link>
@@ -195,10 +195,10 @@ const Home = () => {
                 </div>
             </div>
             <div className="self-center flex w-[1087px] max-w-full justify-between gap-5 mt-32 px-5 items-start max-md:flex-wrap max-md:mt-10">
-                <div className="text-blue-950 text-4xl font-bold grow shrink basis-auto mt-3">
+                <div className="text-blue-950 text-4xl font-bold grow shrink basis-auto mt-3 max-sm:ml-5">
                     Upcoming Movies
                 </div>
-                <div className="flex items-stretch gap-5 max-md:max-w-full max-md:flex-wrap">
+                <div className="flex items-stretch gap-5 max-md:max-w-full max-md:flex-wrap max-sm:hidden">
                     <div ref={dropdownRef} className="bg-violet-50 flex items-stretch justify-between gap-5 px-6 py-4 rounded-[50px] max-md:px-5">
                         <div ref={dropdownRef}>
 
@@ -324,7 +324,7 @@ const Home = () => {
                 <div className=' relative w-[1115px] overflow-hidden pb-3'>
                     <input className=' peer absolute top-0 inset-x-0 w-[1115px] max-w-full h-12 opacity-0 z-10 cursor-pointer' type='checkbox' />
                     <div className=' w-full flex items-center'>
-                        <h1 className=' text-lg font-semibold text-[#404145]'>What’s the difference between the Free plan and the Unlimited plan?</h1>
+                        <h1 className=' text-lg font-semibold text-[#404145] max-sm:w-72 max-sm:text-[18px]'>What’s the difference between the Free plan and the Unlimited plan?</h1>
                     </div>
                     <div className=' max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40'>
                         <div className=' text-[#404145] p-4'>
@@ -404,7 +404,7 @@ const Home = () => {
                 <div className=' relative w-[1115px] overflow-hidden pb-3'>
                     <input className=' peer absolute top-0 inset-x-0 w-[1115px] max-w-full h-12 opacity-0 z-10 cursor-pointer' type='checkbox' />
                     <div className=' w-full flex items-center'>
-                        <h1 className=' text-lg font-semibold text-[#404145]'>What’s the difference between the Free plan and the Unlimited plan?</h1>
+                        <h1 className=' text-lg font-semibold text-[#404145] max-sm:w-72 max-sm:text-[18px]'>What’s the difference between the Free plan and the Unlimited plan?</h1>
                     </div>
                     <div className=' max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40'>
                         <div className=' text-[#404145] p-4'>
@@ -420,7 +420,7 @@ const Home = () => {
                 <div className=' relative w-[1115px] overflow-hidden pb-3'>
                     <input className=' peer absolute top-0 inset-x-0 w-[1115px] max-w-full h-12 opacity-0 z-10 cursor-pointer' type='checkbox' />
                     <div className='  w-full flex items-center'>
-                        <h1 className=' text-lg font-semibold text-[#404145]'>Which currencies does Fiverr Workspace support?</h1>
+                        <h1 className=' text-lg font-semibold text-[#404145] max-sm:w-72 max-sm:text-[18px]'>Which currencies does Fiverr Workspace support?</h1>
                     </div>
                     <div className=' max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40'>
                         <div className=' text-[#404145] p-4'>
@@ -459,61 +459,7 @@ const Home = () => {
                 <span className="text-emerald-500">drop us a message</span>
                 <span className=""> any time.</span>
             </div>
-            <div className="bg-blue-950 self-stretch flex w-full flex-col items-center mt-28 pt-12 pb-6 px-16 max-md:max-w-full max-md:mt-10 max-md:px-5">
-                <div className="flex w-full max-w-[1668px] flex-col items-center mt-4 max-md:max-w-full">
-                    <div className="self-stretch flex items-start justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
-                        <img
-                            className=" object-contain object-center overflow-hidden grow basis-[0%] mt-6 self-start max-md:max-w-72"
-                            loading="lazy"
-                            srcSet={Logo} alt='logo'
-                        />
-                        <div className="flex basis-[0%] flex-col items-stretch self-start">
-                            <div className="text-white text-lg font-bold capitalize whitespace-nowrap">
-                                Plan Events
-                            </div>
-                            <div className="text-zinc-100 text-sm flex flex-col font-medium leading-7 mt-10">
-                                <Link>Create and Set Up</Link>
-                                <Link>Sell Tickets</Link>
-                                <Link>Online RSVP</Link>
-                                <Link>Online Events</Link>
-                            </div>
-                        </div>
-                        <div className="self-stretch flex basis-[0%] flex-col items-stretch">
-                            <div className="text-white text-lg font-bold capitalize whitespace-nowrap">
-                                Eventick
-                            </div>
-                            <div className="text-zinc-100 flex flex-col text-sm font-medium leading-7 mt-10">
-                                <Link>About Us</Link>
-                                <Link>Press</Link>
-                                <Link>Contact Us</Link>
-                                <Link>Help Center</Link>
-                                <Link>How it Works</Link>
-                                <Link>Privacy</Link>
-                                <Link>Terms</Link>
-                            </div>
-                        </div>
-                        <div className="flex grow basis-[0%] flex-col items-start max-md:max-w-full">
-                            <div className="text-white text-lg font-bold capitalize max-md:max-w-full">
-                                Stay in the loop
-                            </div>
-                            <div className="text-zinc-100 text-sm leading-6 mt-8 max-md:max-w-full">
-                                Join our mailing list to stay in the loop with our newest for
-                                Event and concert
-                            </div>
-                            <div className="flex max-w-[733px] justify-center items-stretch py-px mt-7">
-                                <input type="text" placeholder='Enter Your email..' className="text-neutral-400 text-xs my-auto bg-white flex items-center justify-between gap-5 pl-9 pr-2.5 w-96  max-md:max-w-full max-md:flex-wrap max-md:pl-5 px-8 py-4 border-none " />
-                                <button className="text-white text-center text-lg font-bold leading-4 whitespace-nowrap justify-center items-stretch bg-pink-600 px-8 py-4  self-start max-md:px-5">
-                                    Search
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-slate-600 self-stretch shrink-0 h-px mt-16 mx-9 max-md:mr-2.5 max-md:mt-10" />
-                    <div className="text-white text-sm leading-6 mt-8">
-                        Copyright © 2023 TicketVerse{" "}
-                    </div>
-                </div>
-            </div>
+            <Footer />
         </div >
     )
 }

@@ -11,13 +11,13 @@ const Eventticket = () => {
     return (
         <div className="bg-white flex flex-col items-stretch">
             <Navbar />
-            <div className="flex-col overflow-hidden relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
+            <div className="flex-col overflow-hidden relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:-mt-0">
                 <img
                     loading="lazy"
                     srcSet={header} alt='header'
                     className="absolute h-full w-full object-cover object-center inset-0"
                 />
-                <div className="relative flex w-full max-w-[1438px] items-stretch justify-between gap-5 mt-96 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+                <div className="relative flex w-full max-w-[1438px] items-stretch justify-between gap-5 mt-96 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:ml-20">
                     <div className="flex flex-col items-stretch max-md:max-w-full">
                         <div className="text-white text-3xl max-md:max-w-full max-md:text-4xl">
                             Event Name
@@ -75,7 +75,7 @@ const Eventticket = () => {
                     <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
                         <div className="bg-white grow w-full px-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-8 max-md:px-5">
                             <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 ">
-                                <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0">
+                                <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0 max-sm:self-center max-sm:items-center">
                                     <img
                                         loading="lazy" 
                                         srcSet={vendor} alt='vendor'
@@ -96,9 +96,9 @@ const Eventticket = () => {
                                             </div>
                                             
                                         </div>
-                                        <button className="text-neutral-500 text-center text-sm font-semibold leading-4 items-stretch rounded border justify-center mt-5 px-7 py-3.5 border-solid border-neutral-500 max-md:px-5">
+                                        <Link to="/contact" className="text-neutral-500 text-center text-sm font-semibold leading-4 items-stretch rounded border justify-center mt-5 px-7 py-3.5 border-solid border-neutral-500 max-md:px-5">
                                             Contact Me
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -244,9 +244,9 @@ const Eventticket = () => {
                                 Discounts, offers and price concessions will be applied later
                                 during payment
                             </div>
-                            <div className="text-white text-center text-base font-semibold whitespace-nowrap justify-center items-center bg-blue-950 self-center w-[404px] max-w-full mt-11 px-16 py-5 rounded-xl max-md:mt-10 max-md:px-5 cursor-pointer">
+                            <Link to="/confirmticket" className="text-white text-center text-base font-semibold whitespace-nowrap justify-center items-center bg-blue-950 self-center w-[404px] max-w-full mt-11 px-16 py-5 rounded-xl max-md:mt-10 max-md:px-5 cursor-pointer">
                                 Book Now
-                            </div>
+                            </Link>
                             <div className="text-pink-600 text-base font-semibold self-center whitespace-nowrap mt-5 cursor-pointer">
                                 Cancel
                             </div>

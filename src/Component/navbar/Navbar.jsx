@@ -65,14 +65,15 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <div className="self-center flex flex-col-reverse items-center justify-between my-auto max-sm:hidden">
-                    <div className="text-white text-xs leading-6 my-auto">
+                <div className="self-center flex  items-center justify-between my-auto max-sm:hidden">
+                    <div className="text-white text-lg leading-6 my-auto mr-6">
                         <span className="font-semibold">Hello, </span>
+                        <span className="font-semibold">Username </span>
                     </div>
                     <img
                         loading="lazy"
                         srcSet={profile} alt='profile'
-                        className="aspect-square object-contain object-center w-[66px] overflow-hidden self-stretch shrink-0 max-w-full"
+                        className="aspect-square object-contain object-center w-[80px] overflow-hidden self-stretch shrink-0 max-w-full"
                     />
                 </div>
             </div>

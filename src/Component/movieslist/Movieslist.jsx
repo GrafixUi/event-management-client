@@ -11,9 +11,9 @@ const eventlist = () => {
             <img
                 loading="lazy"
                 srcSet={header} alt='header'
-                className="aspect-[3.52] object-contain object-center w-full overflow-hidden max-md:max-w-full max-md:mt-10"
+                className="aspect-[3.52] object-contain object-center w-full overflow-hidden max-md:max-w-full max-md:mt-10 max-sm:-mt-0"
             />
-            <div className="text-blue-950 text-4xl font-bold self-center whitespace-nowrap ml-32 mt-10">
+            <div className="text-blue-950 text-4xl font-bold self-center whitespace-nowrap mt-10">
                 Movies{" "}
             </div>
             <div className="self-center flex w-full max-w-[1652px] flex-col mt-10  max-md:max-w-full max-md:my-10">

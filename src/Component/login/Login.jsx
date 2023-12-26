@@ -12,7 +12,7 @@ const Login = () => {
                             <img
                                 loading="lazy"
                                 srcSet={logo} alt='logo'
-                                className="aspect-[3.11] object-contain object-center w-full overflow-hidden self-stretch max-md:max-w-full"
+                                className="aspect-[3.11] object-contain object-center  self-center w-[300px] overflow-hidden  max-md:max-w-full"
                             />
                             <div className="text-white text-center text-6xl font-semibold tracking-[5.2px] uppercase self-center max-w-[274px] mt- max-md:text-4xl max-md:mt-10">
                                 <span className="font-[275] text-2xl">Login as</span>

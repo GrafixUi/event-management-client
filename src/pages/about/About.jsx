@@ -18,7 +18,7 @@ const About = () => {
                                 <img
                                     loading="lazy"
                                     srcSet={about} alt='about'
-                                    className="aspect-[1.2] object-contain object-center w-[550px] ml-10 rounded-lg overflow-hidden grow max-md:max-w-full max-md:mt-10"
+                                    className="aspect-[1.2] object-contain object-center w-[550px]  rounded-lg overflow-hidden grow max-md:max-w-full max-md:mt-10"
                                 />
                             </div>
                             <div className="flex flex-col items-stretch w-6/12 ml-5 max-md:w-full max-md:ml-0">
@@ -128,10 +128,10 @@ const About = () => {
                                             className="aspect-[1.48] object-contain object-center w-full overflow-hidden max-md:max-w-full"
                                         />
                                         <div className="flex flex-col items-stretch mt-3 pl-3.5 pr-20 max-md:max-w-full max-md:pr-5">
-                                            <div className="text-black text-base font-[275] whitespace-nowrap max-md:mr-2">
-                                                MAR 12, 2021 | 0 COMMENTS | POSTED BY TicketVerse
+                                        <div className="text-black text-base font-[100] max-md:max-w-full">
+                                                MAR 10, 2023 | 0 COMMENTS | POSTED BY TicketVerse
                                             </div>
-                                            <div className="text-black text-2xl font-medium w-[352px] mt-6 max-md:mr-2">
+                                            <div className="text-black text-2xl font-medium mt-5 max-md:max-w-full">
                                                 Venue Floor Plans May Put Events at Risk
                                             </div>
                                         </div>

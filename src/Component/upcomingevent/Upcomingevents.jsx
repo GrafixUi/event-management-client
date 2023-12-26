@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import product1 from "../../assets/images/product1.png";
-import { upcomingData } from "../upcomingevent/upcomingevents.data";
+import { upcomingData } from "./upcomingevents.data";
 import { Link } from 'react-router-dom';
 
 const Upcomingevents = () => {
@@ -9,7 +9,7 @@ const Upcomingevents = () => {
     return (
         <div className=" py-5 mt-8 flex flex-wrap items-stretch ml-7 justify-center gap-8 max-sm:-ml-1">
             {items.map((item) => (
-                <Link to="/eventslist">
+                <Link to="/movieslist">
                     <div key={item.id} className="bg-white shadow shadow-black flex w-[343px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                         <img
                             loading="lazy"

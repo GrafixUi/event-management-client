@@ -128,9 +128,9 @@ const Movieslist = () => {
                                                     (974)
                                                 </div>
                                             </div>
-                                            <button className="text-neutral-500 text-center text-sm font-semibold leading-4 items-stretch rounded border justify-center mt-5 px-7 py-3.5 border-solid border-neutral-500 max-md:px-5">
+                                            <Link to="/contact" className="text-neutral-500 text-center text-sm font-semibold leading-4 items-stretch rounded border justify-center mt-5 px-7 py-3.5 border-solid border-neutral-500 max-md:px-5">
                                                 Contact Me
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

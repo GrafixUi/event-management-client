@@ -6,14 +6,14 @@ import Footer from '../../component/footer/Footer';
 import Navbar from '../../component/navbar/Navbar';
 const eventlist = () => {
     return (
-        <div className="bg-white flex flex-col items-stretch py-">
+        <div className="bg-white flex flex-col items-stretch">
             <Navbar />
             <img
                 loading="lazy"
                 srcSet={header} alt='header'
-                className="aspect-[3.52] object-contain object-center w-full overflow-hidden max-md:max-w-full max-md:mt-10"
+                className="aspect-[3.52] object-contain object-center w-full overflow-hidden max-md:max-w-full max-md:mt-10 max-sm:-mt-1"
             />
-            <div className="text-blue-950 text-4xl font-bold self-center whitespace-nowrap ml-32 mt-10">
+            <div className="text-blue-950 text-4xl font-bold items-center self-center justify-center whitespace-nowrap  mt-10">
                 Events{" "}
             </div>
             <div className="self-center flex w-full max-w-[1652px] flex-col mt-10  max-md:max-w-full max-md:my-10">

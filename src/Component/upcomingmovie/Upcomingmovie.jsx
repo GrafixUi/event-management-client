@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import product1 from "../../assets/images/product1.png";
 import dropdown from "../../assets/icons/dropdown.svg";
-import { upcomingData } from "../upcomingmovie/upcomingmovie.data";
+import Upcomingevent from "../upcomingevents/Upcomingevents";
+import { upcomingData } from "./upcomingmovie.data";
 import { Link } from 'react-router-dom';
 
 const Upcomingevents = () => {
@@ -45,7 +46,7 @@ const Upcomingevents = () => {
     return (
         <div className="flex flex-col">
             <div className="self-center flex w-[1087px] max-w-full justify-between gap-5 mt-32 px-5 items-start max-md:flex-wrap max-md:mt-10">
-                <div className="text-blue-950 text-4xl font-bold grow shrink basis-auto mt-2.5">
+                <div className="text-blue-950 text-4xl font-bold grow shrink basis-auto mt-2.5 max-sm:self-center max-sm:items-center max-sm:ml-5">
                     Upcoming Events
                 </div>
                 <div className=" flex items-center justify-center gap-5 max-md:max-w-full max-md:flex-wrap max-sm:hidden">
@@ -190,7 +191,7 @@ const Upcomingevents = () => {
                     </Link>
                 ))}
             </div>
-
+            <Upcomingevent />
         </div>
     );
 };

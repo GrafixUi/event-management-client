@@ -12,12 +12,12 @@ const Eventselectionn = () => {
     return (
         <div className="bg-white flex flex-col ">
             <Navbar />
-            <div className=" flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 max-md:max-w-full max-md:mt-10 max-md:px-5">
+            <div className=" flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 max-md:max-w-full max-md:mt-10 max-md:px-5  max-sm:-mt-0">
                 <img
                     srcSet={header} alt='header'
                     className="absolute h-full w-full object-cover object-center inset-0"
                 />
-                <div className=" container justify-between ite relative flex w-full max-w-[1438px] items-stretch gap-5 mt-96 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+                <div className=" container justify-between ite relative flex w-full max-w-[1438px] items-stretch gap-5 mt-96 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:self-center max-sm:items-center max-sm:ml-20">
                     <div className="flex flex-col items-stretch max-md:max-w-full">
                         <div className="text-white text-3xl max-md:max-w-full max-md:text-4xl">
                             Event Name
@@ -37,8 +37,8 @@ const Eventselectionn = () => {
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                         <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
                             <div className="bg-white flex w-full grow items-stretch justify-between gap-5 mx-auto pl-16 pr-20 py-10 rounded-2xl max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-md:px-5">
-                                <div className="flex items-stretch justify-between gap-5">
-                                    <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-3 pr-5 py-6 rounded-xl">
+                                <div className="flex items-stretch justify-between gap-5 max-sm:self-center max-sm:items-center">
+                                    <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-3 pr-5 py-6 rounded-xl ">
                                         <div className="text-white text-xl font-semibold leading-6 uppercase whitespace-nowrap">
                                             dec
                                         </div>
@@ -76,7 +76,7 @@ const Eventselectionn = () => {
                         <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
                             <div className="bg-white grow w-full pl-16 pr-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                                    <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0">
+                                    <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0 max-sm:self-center max-sm:items-center">
                                         <img
                                             srcSet={vendor} alt='vendor'
                                             className="aspect-square object-contain object-center w-[110px] justify-center items-center overflow-hidden shrink-0 max-w-full max-md:mt-10"
@@ -95,9 +95,9 @@ const Eventselectionn = () => {
                                                     <Rating />
                                                 </div>
                                             </div>
-                                            <button className="text-neutral-500 text-center text-sm font-semibold leading-4 items-stretch rounded border justify-center mt-5 px-7 py-3.5 border-solid border-neutral-500 max-md:px-5">
+                                            <Link to="/contact" className="text-neutral-500 text-center text-sm font-semibold leading-4 items-stretch rounded border justify-center mt-5 px-7 py-3.5 border-solid border-neutral-500 max-md:px-5">
                                                 Contact Me
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -392,7 +392,7 @@ const Eventselectionn = () => {
                                 2 months ago
                             </div>
                         </div>{" "}
-                        <div className="text-zinc-700 text-base leading-6 self-stretch mt-5 max-md:max-w-full">
+                        <div className="text-zinc-700 text-base leading-6 self-stretch mt-5 max-md:max-w-full max-sm:w-80">
                             Great work! I wanted a video to showcase my fitness app and the
                             designer delivered an excellent job and on time. highly satisfied.
                             thank you!
@@ -496,7 +496,7 @@ const Eventselectionn = () => {
                                 1 month ago
                             </div>
                         </div>
-                        <div className="text-zinc-700 text-base leading-6 self-stretch mt-5 max-md:max-w-full">
+                        <div className="text-zinc-700 text-base leading-6 self-stretch mt-5 max-md:max-w-full max-sm:w-80">
                             Amazing work. Will def work again with him this was a big project
                             and he knocked it out of the park.
                         </div>

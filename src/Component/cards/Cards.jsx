@@ -19,6 +19,9 @@ const Cards = () => {
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
                 breakpoints={{
+                    390: {
+                        slidesPerView: 1,
+                    },
                     480: {
                         slidesPerView: 1,
                     },
