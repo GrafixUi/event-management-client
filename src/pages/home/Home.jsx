@@ -112,50 +112,51 @@ const Home = () => {
             <div className="text-[#242565] text-5xl font-bold self-center mt-16 max-md:max-w-full max-md:mt-10">
                 Explore the your Events and Movies
             </div>
-            <div className="self-start w-[594px] max-w-full mt-24 max-md:mt-10">
+            <div className="self-center  max-w-full mt-24 max-md:mt-10">
                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                    <div className="flex flex-col items-stretch w-[52%] max-md:w-full max-md:ml-0">
-                        <Link to="eventslist" className="flex-col text-white text-2xl font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  text-center  bg-cover bg-center" style={{
+                    <div className="flex flex-col items-stretch w-[32%] max-md:w-full max-md:ml-0">
+                        <Link to="eventslist" className="flex-col text-white text-2xl font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-8 py-11 rounded-xl max-md:mt-10 max-md:px-5  text-center  bg-cover bg-center" style={{
                             backgroundImage: `url(${conference})`,
+                        }}>
+                            conference
+                        </Link>
+                    </div>
+                    <div className="flex flex-col items-stretch w-[52%] max-md:w-full max-md:ml-0">
+                        <Link to="eventslist" className="flex-col text-white text-2xl font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-8 py-11  rounded-xl max-md:mt-10 max-md:px-5  text-center  bg-cover bg-center" style={{
+                            backgroundImage: `url(${Entertainment})`,
                         }}>
                             Entertainment
                         </Link>
                     </div>
-                    <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
-                        <Link to="movieslist" className="flex-col text-white text-2xl text-center font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  bg-cover bg-center ml bg" style={{
-                            backgroundImage: `url(${Workshop})`,
-                        }}>
-                            Conference
-                        </Link>
-                    </div>
-                    <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
-                        <Link to="movieslist" className="flex-col text-white text-2xl text-center font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  bg-cover bg-center ml" style={{
-                            backgroundImage: `url(${Entertainment})`,
+                    <div className="flex flex-col items-stretch w-[52%] max-md:w-full max-md:ml-0">
+                        <Link to="eventslist" className="flex-col text-white text-2xl font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-8 py-11 rounded-xl max-md:mt-10 max-md:px-5  text-center  bg-cover bg-center" style={{
+                            backgroundImage: `url(${Travel})`,
                         }}>
                             Travel
                         </Link>
                     </div>
-                    <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
-                        <Link to="movieslist" className="flex-col text-white text-2xl text-center font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  bg-cover bg-center ml" style={{
-                            backgroundImage: `url(${Travel})`,
+                    <div className="flex flex-col items-stretch w-[52%] max-md:w-full max-md:ml-0">
+                        <Link to="eventslist" className="flex-col text-white text-2xl font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-8 py-11 rounded-xl max-md:mt-10 max-md:px-5  text-center  bg-cover bg-center" style={{
+                            backgroundImage: `url(${Festival})`,
                         }}>
                             Festivals
                         </Link>
                     </div>
-                    <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
-                        <Link to="movieslist" className="flex-col text-white text-2xl text-center font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  bg-cover bg-center ml" style={{
-                            backgroundImage: `url(${Festival})`,
+                    <div className="flex flex-col items-stretch w-[52%] max-md:w-full max-md:ml-0">
+                        <Link to="eventslist" className="flex-col text-white text-2xl font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-8 py-11 rounded-xl max-md:mt-10 max-md:px-5  text-center  bg-cover bg-center" style={{
+                            backgroundImage: `url(${Workshop})`,
                         }}>
-                            Workshops
+                            Workshop
                         </Link>
                     </div>
-                    <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
-                        <Link to="movieslist" className="flex-col text-white text-2xl text-center font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-16 py-11 max-md:mt-10 max-md:px-5  bg-cover bg-center ml" style={{
+                    <div className="flex flex-col items-stretch w-[52%] max-md:w-full max-md:ml-0">
+                        <Link to="eventslist" className="flex-col text-white text-2xl font-medium uppercase relative whitespace-nowrap shadow-sm overflow-hidden aspect-[2.4615384615384617] grow justify-center items-center px-8 py-11 rounded-xl max-md:mt-10 max-md:px-5  text-center  bg-cover bg-center" style={{
                             backgroundImage: `url(${Sport})`,
                         }}>
-                            Sports
+                            Sport
                         </Link>
                     </div>
+                    
                 </div>
             </div>
             <Upcomingevents />
