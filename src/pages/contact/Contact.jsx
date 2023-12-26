@@ -4,15 +4,12 @@ import slide from "../../assets/images/about3.png";
 import slide2 from "../../assets/images/about4.png";
 import slide3 from "../../assets/images/about5.png";
 import phone from "../../assets/images/phone.png";
-import Navbar from "../../component/navbar/Navbar";
-import Footer from "../../component/footer/Footer";
 import email from "../../assets/images/email.png";
 import mark from "../../assets/images/mark.png";
 import clock from "../../assets/images/Clock.png";
 const Contact = () => {
     return (
         <div>
-            <Navbar />
             <div className="flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
@@ -227,7 +224,6 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

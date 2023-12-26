@@ -4,12 +4,9 @@ import about2 from "../../assets/images/about2.png";
 import slide from "../../assets/images/about3.png";
 import slide2 from "../../assets/images/about4.png";
 import slide3 from "../../assets/images/about5.png";
-import Navbar from "../../component/navbar/Navbar";
-import Footer from "../../component/footer/Footer";
 const About = () => {
     return (
         <div>
-            <Navbar />
             <div className="bg-white flex flex-col justify-center items-center px-16 py-12 max-md:px-5">
                 <div className="flex w-full max-w-[1634px] flex-col items-stretch mt-8 max-md:max-w-full max-md:my-10">
                     <div className="max-md:max-w-full">
@@ -142,7 +139,6 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

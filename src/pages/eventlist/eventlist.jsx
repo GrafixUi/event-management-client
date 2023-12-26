@@ -2,12 +2,9 @@ import React from 'react';
 import header from "../../assets/images/header.png";
 import filter from "../../assets/images/filter.png";
 import Eventslist from '../../component/eventslist/eventslist';
-import Footer from '../../component/footer/Footer';
-import Navbar from '../../component/navbar/Navbar';
 const eventlist = () => {
     return (
         <div className="bg-white flex flex-col items-stretch">
-            <Navbar />
             <img
                 loading="lazy"
                 srcSet={header} alt='header'
@@ -77,7 +74,6 @@ const eventlist = () => {
                 </div>{" "}
                 
             </div>
-            <Footer />
         </div>
     )
 }

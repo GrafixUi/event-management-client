@@ -1,6 +1,4 @@
 import React from 'react';
-import Navbar from "../navbar/Navbar";
-import Footer from "../footer/Footer";
 import header from "../../assets/images/header2.png";
 import header2 from "../../assets/images/booking.png";
 import vendor from "../../assets/images/vendorlogo.png";
@@ -10,7 +8,6 @@ import { Link } from 'react-router-dom';
 const Moviesticket = () => {
     return (
         <div className="bg-white flex flex-col items-stretch">
-            <Navbar />
             <div className="flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
@@ -455,7 +452,6 @@ const Moviesticket = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

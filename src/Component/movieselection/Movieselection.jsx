@@ -4,8 +4,6 @@ import header2 from "../../assets/images/booking.png";
 import location from "../../assets/images/location.png";
 import vendor from "../../assets/images/vendorlogo.png";
 import Rating from '../rating/Rating';
-import Navbar from "../navbar/Navbar";
-import Footer from "../footer/Footer";
 import Cards from '../cards/Cards';
 import frame from "../../assets/images/Frame.png";
 import { Link } from 'react-router-dom';
@@ -13,7 +11,6 @@ import { Link } from 'react-router-dom';
 const Movieslist = () => {
     return (
         <div className="bg-white flex flex-col ">
-            <Navbar />
             <div className="flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
@@ -589,7 +586,6 @@ const Movieslist = () => {
                     I need to add the voice over, Is that possible ?
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

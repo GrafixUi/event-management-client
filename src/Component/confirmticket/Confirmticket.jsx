@@ -4,15 +4,12 @@ import UPI from "../../assets/images/upi.png";
 import Credit from "../../assets/images/credit.png";
 import Paylater from "../../assets/images/paylater.png";
 import Net from "../../assets/images/net.png";
-import Navbar from "../navbar/Navbar";
-import Footer from "../footer/Footer";
 import MWallets from "../../assets/images/m-wallets.png"
 import { Link } from 'react-router-dom';
 
 const Confirmticket = () => {
     return (
         <div>
-            <Navbar />
             <div className="bg-white flex flex-col justify-center items-center px-16 max-md:px-5">
                 <div className="flex w-full max-w-[1493px] flex-col mt-10 max-md:max-w-full max-md:my-10">
                     <div className="text-blue-950 text-3xl font-bold self-center whitespace-nowrap font-[Poppins]">
@@ -271,7 +268,6 @@ const Confirmticket = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

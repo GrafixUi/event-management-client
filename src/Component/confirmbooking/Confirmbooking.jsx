@@ -1,13 +1,10 @@
 import React from 'react';
 import QRCode from "react-qr-code";
-import Navbar from "../navbar/Navbar";
-import Footer from "../footer/Footer";
 import booking from "../../assets/images/booking.png";
 
 const Confirmbooking = () => {
     return (
         <div>
-            <Navbar />
             <div className="bg-white flex flex-col justify-center items-center px-16 py-12 max-md:px-5">
                 <div className="flex w-full max-w-[1452px] flex-col mt-10 max-md:max-w-full max-md:my-10">
                     <img
@@ -97,7 +94,6 @@ const Confirmbooking = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

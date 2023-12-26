@@ -5,13 +5,10 @@ import location from "../../assets/images/location.png";
 import Rating from "../rating/Rating";
 import Cards from '../cards/Cards';
 import frame from "../../assets/images/Frame.png";
-import Navbar from "../navbar/Navbar"
-import Footer from "../footer/Footer"
 import { Link } from 'react-router-dom';
 const Eventselectionn = () => {
     return (
         <div className="bg-white flex flex-col ">
-            <Navbar />
             <div className=" flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 max-md:max-w-full max-md:mt-10 max-md:px-5  max-sm:-mt-0">
                 <img
                     srcSet={header} alt='header'
@@ -549,7 +546,6 @@ const Eventselectionn = () => {
                     I need to add the voice over, Is that possible ?
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

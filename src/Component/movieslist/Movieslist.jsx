@@ -1,13 +1,10 @@
 import React from 'react';
-import Navbar from "../navbar/Navbar";
-import Footer from "../footer/Footer";
 import header from "../../assets/images/header.png";
 import filter from "../../assets/images/filter.png";
 import Movielist from '../movielist/Movieslist';
 const eventlist = () => {
     return (
         <div className="bg-white flex flex-col items-stretc">
-            <Navbar />
             <img
                 loading="lazy"
                 srcSet={header} alt='header'
@@ -77,7 +74,6 @@ const eventlist = () => {
                 </div>{" "}
                 
             </div>
-            <Footer />
         </div>
     )
 }
