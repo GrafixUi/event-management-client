@@ -1,4 +1,4 @@
-export const eventslistData = [
+export const movieslistData = [
     {
         id: 1,
         month:"Apr",

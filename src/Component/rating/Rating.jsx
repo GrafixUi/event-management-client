@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import "./rating.css"
-import { FaStar } from "react-icons/fa"
+import "./rating.css";
+import { FaStar } from "react-icons/fa";
 const Rating = () => {
     const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null)

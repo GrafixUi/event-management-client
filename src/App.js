@@ -1,26 +1,37 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import Navbar from "./Component/navbar/Navbar"
 import Home from './pages/home/Home';
-import List from './pages/list/List';
-import Events from './pages/singleEvent/events'
-import About from "./pages/about/About"
-import Eventselection from './pages/eventselection/Eventselection';
-import Booking from './pages/booking/Booking';
+import List from './pages/eventlist/eventlist';
+import Eventselection from "../src/component/eventselection/Eventselectionn";
+import Eventticket from "../src/component/eventticket/Eventticket";
+import Confirmticket from './component/confirmticket/Confirmticket';
+import Confirmbooking from './component/confirmbooking/Confirmbooking';
+import Movieselection from './component/movieselection/Movieselection';
+import Moviesticket from './component/moviestickets/Moviesticket';
+import About from "./pages/about/About";
+import Register from './component/register/Register';
+import Login from './component/login/Login';
+import Vendorlogin from './component/vendorlogin/Vendorlogin';
+import Contact from './pages/contact/Contact';
+import Movieslist from './component/movieslist/Movieslist';
 function App() {
   return (
-    <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/events' element={<List/>} />
-        <Route path='/events/:id' element={<Events/>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/events' element={<List />} />
+        <Route path='/movielist' element={<Movieslist />} />
+        <Route path='/eventselection' element={<Eventselection />} />
+        <Route path='/eventticket' element={<Eventticket />} />
+        <Route path='/moviesticket' element={<Moviesticket />} />
+        <Route path='/movieselection' element={<Movieselection />} />
+        <Route path='/confirmticket' element={<Confirmticket />} />
+        <Route path='/booking' element={<Confirmbooking />} />
         <Route path='/about' element={<About />} />
-        <Route path='/eventpage' element={<Eventselection />} />
-        <Route path='/booking' element={<Booking/>} />
-        
+        <Route path='/register' element={<Register />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/vendorlogin' element={<Vendorlogin />} />
       </Routes>
-    </BrowserRouter>
   );
 }
 
