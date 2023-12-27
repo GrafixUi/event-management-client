@@ -14,7 +14,7 @@ const Eventselectionn = () => {
                     srcSet={header} alt='header'
                     className="absolute h-full w-full object-cover object-center inset-0"
                 />
-                <div className=" container justify-between ite relative flex w-full max-w-[1438px] items-stretch gap-5 mt-96 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:self-center max-sm:items-center max-sm:ml-20">
+                <div className=" container justify-around ite relative flex w-full max-w-[1438px] items-stretch gap-5 mt-96 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:self-center max-sm:items-center max-sm:ml-20">
                     <div className="flex flex-col items-stretch max-md:max-w-full">
                         <div className="text-white text-3xl max-md:max-w-full max-md:text-4xl">
                             Event Name
@@ -24,8 +24,14 @@ const Eventselectionn = () => {
                             Telangana, India
                         </div>
                     </div>
-                    <Link to="/eventticket" className="text-white text-base font-bold whitespace-nowrap bg-blue-950 justify-center items-center mt-10 px-16 py-6 rounded-2xl self-end max-md:px-5">
-                        BOOK NOW
+                    <Link to="/eventticket" class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
+                        <span class="relative text-white font-bold text-lg">Book Now</span>
+                        <div class="flex items-center -space-x-3 translate-x-3">
+                            <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
                     </Link>
                 </div>
             </div>
@@ -157,29 +163,7 @@ const Eventselectionn = () => {
                     </div>
                     <div className="flex gap-1 py-px self-start items-start">
                         <div className="items-stretch flex gap-1 py-0.5">
-                            <img
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/66f43ca94bde2fe4fab038e983e6893a7b7aa200c89013112b20938173ddbb8a?" alt='img'
-                                className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                            />
-                            <img
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d1bd68eaa3d7b8deb829c55d82ac1f7f7955ce6ec6470833652d8be33ef04f3?" alt='img'
-                                className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                            />
-                            <img
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d8299cbf066a92baba2ebd7af54ae99133260f7ddc512c9e4aa6fd574aa5a970?" alt='img'
-                                className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                            />
-                            <img
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/29a3e1ade95afe6e049672fd86ef1871f43eec8be42d1f018e58134a6d228379?" alt='img'
-                                className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                            />
-                            <img
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c3613cb8e4b2d5bb9d3fe9026576b82ac55299a51502c333243b7cbfcc5e85e?" alt='img'
-                                className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                            />
-                        </div>
-                        <div className="text-amber-400 text-sm font-bold leading-5 self-stretch grow whitespace-nowrap">
-                            4.9
+                            <Rating />
                         </div>
                     </div>
                 </div>

@@ -5,11 +5,11 @@ const Footer = () => {
     return (
         <div className="bg-blue-950 self-stretch flex w-full flex-col items-center mt-28 pt-12 px-16 max-md:max-w-full max-md:mt-10 max-md:px-5">
             <div className="flex w-full max-w-[1668px] flex-col items-center mt-4 max-md:max-w-full">
-                <div className="self-stretch flex items-start justify-between gap-40 max-md:max-w-full max-md:flex-wrap max-sm:gap-5">
+                <div className="self-stretch flex items-start justify-between max-md:gap-20 gap-20 max-md:max-w-full max-md:flex-wrap max-sm:gap-5">
                     <img
                         loading="lazy"
                         srcSet={Logo} alt='logo'
-                        className="aspect-[3.49] object-contain object-center w-[350px] overflow-hidden mt-6 self-start max-md:max-w-full"
+                        className="aspect-[3.49] object-contain object-center w-[350px] max-md:w-[300px] overflow-hidden mt-6 self-start max-md:max-w-full"
                     />
                     <div className="flex basis-[0%] flex-col items-stretch self-start">
                         <div className="text-white text-lg font-bold capitalize whitespace-nowrap">

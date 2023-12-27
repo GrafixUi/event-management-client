@@ -24,12 +24,12 @@ const Movieslist = () => {
                                 <img
                                     loading="lazy"
                                     srcSet={header2} alt='header2'
-                                    className="aspect-[0.8] object-contain object-center w-full overflow-hidden grow max-md:mt-9"
+                                    className="aspect-[0.8] object-contain object-center w-[400px] overflow-hidden grow max-md:mt-9"
                                 />
                             </div>
                             <div className="flex flex-col items-stretch w-[46%] ml-5 max-md:w-full max-md:ml-0">
                                 <div className="flex flex-col items-stretch my-auto max-md:mt-10">
-                                    <div className="text-white text-7xl whitespace-nowrap max-md:text-4xl">
+                                    <div className="text-white text-5xl whitespace-nowrap max-md:text-4xl">
                                         SHINE (2023)
                                     </div>
                                     <div className="text-neutral-400 text-justify text-base mt-11 max-md:mt-10">
@@ -49,8 +49,14 @@ const Movieslist = () => {
                         </div>
                     </div>
                     <div className="backdrop-blur-[13.899999618530273px] self-center flex grow basis-[0%] flex-col justify-center my-auto px-16 py-12 rounded-3xl items-end max-md:max-w-full max-md:px-5">
-                        <Link to="/moviesticket" className="text-white text-center text-4xl whitespace-nowrap bg-blue-950 w-[308px] max-w-full justify-center items-center mr-5 mt-2 mb-1.5 px-16 py-4 rounded-2xl max-md:mr-2.5 max-md:px-5">
-                            BOOK NOW
+                        <Link to="/moviesticket" class="relative group overflow-hidden  px-20 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
+                            <span class="relative text-white font-bold text-xl w-32">Book Now</span>
+                            <div class="flex items-center -space-x-3 translate-x-3">
+                                <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
                         </Link>
                     </div>
                 </div>
@@ -117,12 +123,6 @@ const Movieslist = () => {
                                             <div className="flex justify-between gap-1 mt-1.5 items-start max-md:mr-1">
                                                 <div className="items-stretch flex gap-1 pr-3 py-0.5">
                                                     <Rating />
-                                                </div>
-                                                <div className="text-amber-400 text-sm font-bold leading-5 self-center my-auto">
-                                                    4.9
-                                                </div>
-                                                <div className="text-neutral-500 text-sm leading-5 self-stretch whitespace-nowrap">
-                                                    (974)
                                                 </div>
                                             </div>
                                             <Link to="/contact" className="text-neutral-500 text-center text-sm font-semibold leading-4 items-stretch rounded border justify-center mt-5 px-7 py-3.5 border-solid border-neutral-500 max-md:px-5">
@@ -191,35 +191,8 @@ const Movieslist = () => {
                     </div>{" "}
                     <div className="flex gap-1 py-px self-start items-start">
                         <div className="items-stretch flex gap-1 py-0.5">
-                            <img
-                                loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/66f43ca94bde2fe4fab038e983e6893a7b7aa200c89013112b20938173ddbb8a?" alt='lazy'
-                                className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                            />{" "}
-                            <img
-                                loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d1bd68eaa3d7b8deb829c55d82ac1f7f7955ce6ec6470833652d8be33ef04f3?" alt='lazy'
-                                className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                            />{" "}
-                            <img
-                                loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d8299cbf066a92baba2ebd7af54ae99133260f7ddc512c9e4aa6fd574aa5a970?" alt='lazy'
-                                className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                            />{" "}
-                            <img
-                                loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/29a3e1ade95afe6e049672fd86ef1871f43eec8be42d1f018e58134a6d228379?" alt='lazy'
-                                className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                            />{" "}
-                            <img
-                                loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c3613cb8e4b2d5bb9d3fe9026576b82ac55299a51502c333243b7cbfcc5e85e?" alt='lazy'
-                                className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                            />
+                            <Rating />
                         </div>{" "}
-                        <div className="text-amber-400 text-sm font-bold leading-5 self-stretch grow whitespace-nowrap">
-                            4.9
-                        </div>
                     </div>
                 </div>{" "}
                 <div className="items-center self-stretch flex flex-col mt-3 pb-5 px-5 max-md:max-w-full">

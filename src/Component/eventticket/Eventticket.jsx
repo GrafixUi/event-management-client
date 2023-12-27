@@ -3,21 +3,18 @@ import header from "../../assets/images/header2.png";
 import vendor from "../../assets/images/vendorlogo.png";
 import vector from "../../assets/icons/Vector.svg";
 import Rating from "../rating/Rating";
-import Navbar from "../navbar/Navbar";
-import Footer from "../footer/Footer";
 import { Link } from 'react-router-dom';
 
 const Eventticket = () => {
     return (
         <div className="bg-white flex flex-col items-stretch">
-            <Navbar />
             <div className="flex-col overflow-hidden relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:-mt-0">
                 <img
                     loading="lazy"
                     srcSet={header} alt='header'
                     className="absolute h-full w-full object-cover object-center inset-0"
                 />
-                <div className="relative flex w-full max-w-[1438px] items-stretch justify-between gap-5 mt-96 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:ml-20">
+                <div className="relative flex w-full max-w-[1438px] items-stretch justify-around gap-5 mt-96 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:ml-20">
                     <div className="flex flex-col items-stretch max-md:max-w-full">
                         <div className="text-white text-3xl max-md:max-w-full max-md:text-4xl">
                             Event Name
@@ -27,8 +24,14 @@ const Eventticket = () => {
                             Telangana, India
                         </div>
                     </div>
-                    <Link to="/confirmticket" className="text-white text-base font-bold whitespace-nowrap bg-blue-950 justify-center items-center mt-10 px-16 py-6 rounded-2xl self-end max-md:px-5">
-                        BOOK NOW
+                    <Link to="/confirmbooking" class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
+                        <span class="relative text-white font-bold text-lg">Book Now</span>
+                        <div class="flex items-center -space-x-3 translate-x-3">
+                            <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
                     </Link>
                 </div>
             </div>
@@ -77,7 +80,7 @@ const Eventticket = () => {
                             <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 ">
                                 <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0 max-sm:self-center max-sm:items-center">
                                     <img
-                                        loading="lazy" 
+                                        loading="lazy"
                                         srcSet={vendor} alt='vendor'
                                         className="aspect-square object-contain object-center w-[110px] justify-center items-center overflow-hidden shrink-0 max-w-full max-md:mt-10"
                                     />
@@ -94,7 +97,7 @@ const Eventticket = () => {
                                             <div className="items-stretch flex gap-1 pr-3 py-0.5">
                                                 <Rating />
                                             </div>
-                                            
+
                                         </div>
                                         <Link to="/contact" className="text-neutral-500 text-center text-sm font-semibold leading-4 items-stretch rounded border justify-center mt-5 px-7 py-3.5 border-solid border-neutral-500 max-md:px-5">
                                             Contact Me
@@ -254,7 +257,6 @@ const Eventticket = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
