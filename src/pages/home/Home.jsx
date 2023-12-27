@@ -53,8 +53,8 @@ const Home = () => {
         };
     }, []);
     return (
-        <div className="bg-white flex flex-col">
-            <div className="flex-col overflow-hidden self-stretch relative flex min-h-[947px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:px-5">
+        <div className="bg-white flex flex-col ">
+            <div className="flex-col overflow-hidden self-stretch relative flex min-h-[747px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:px-5">
                 <img
                     loading="lazy"
                     srcSet={bg} alt='bg'
