@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.493bcaf8.css",
-    "main.js": "/static/js/main.00062066.js",
+    "main.css": "/static/css/main.7e40a133.css",
+    "main.js": "/static/js/main.f3b62e74.js",
     "static/media/bg.png": "/static/media/bg.3096a88193b9259e98a9.png",
     "static/media/header2.png": "/static/media/header2.12367e737a0d4d5597d9.png",
     "static/media/header.png": "/static/media/header.88bd3b3be20822b74bf6.png",
@@ -16,21 +16,15 @@
     "static/media/product1.png": "/static/media/product1.e66f643f559e86224613.png",
     "static/media/location.png": "/static/media/location.52bafb6f72e0d098943d.png",
     "static/media/booking.png": "/static/media/booking.b5fa62d718a58f94a5e8.png",
-    "static/media/festivals.png": "/static/media/festivals.77ce2b229eaaf969e130.png",
-    "static/media/entertainment.png": "/static/media/entertainment.ab2165ca8e678189d1b2.png",
-    "static/media/sports.png": "/static/media/sports.84f8ae6dde199ca066d4.png",
-    "static/media/travel.png": "/static/media/travel.d5a99d7ade9d8c66032f.png",
-    "static/media/workshop.png": "/static/media/workshop.39d03a0eec13435c0cc3.png",
-    "static/media/conferences.png": "/static/media/conferences.e36e8fb1a80ca5a0e6c4.png",
     "static/media/vendorlogo.png": "/static/media/vendorlogo.a14555ff5f30aa784d1e.png",
     "static/media/Vector.svg": "/static/media/Vector.9caa90194e213e7e92087a9ccd04c898.svg",
     "static/media/dropdown.svg": "/static/media/dropdown.e3e3abe84cda7d13c7348308098b40ce.svg",
     "index.html": "/index.html",
-    "main.493bcaf8.css.map": "/static/css/main.493bcaf8.css.map",
-    "main.00062066.js.map": "/static/js/main.00062066.js.map"
+    "main.7e40a133.css.map": "/static/css/main.7e40a133.css.map",
+    "main.f3b62e74.js.map": "/static/js/main.f3b62e74.js.map"
   },
   "entrypoints": [
-    "static/css/main.493bcaf8.css",
-    "static/js/main.00062066.js"
+    "static/css/main.7e40a133.css",
+    "static/js/main.f3b62e74.js"
   ]
 }
