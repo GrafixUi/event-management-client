@@ -1,0 +1,38 @@
+
+.custom-card {
+    position: relative;
+    
+    background-color: #ff004c;
+    border: 1px solid #000;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    height: 180px;
+    width: 250px;
+    transition: 0.85s;
+}
+.custom-card:hover{
+    background: url(../../assets/images/banner.png); 
+    transition: 0.5s ease;
+    cursor: pointer;
+   
+}
+
+
+.custom-card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.custom-card .content p {
+    margin-top: 60px;
+    text-align: center;
+}

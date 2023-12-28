@@ -1,65 +1,88 @@
-import React from 'react';
+import React from "react";
 import Logo from "../../assets/images/logo.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 const Footer = () => {
-    return (
-        <div className="bg-blue-950 self-stretch flex w-full flex-col items-center mt-28 pt-12 px-16 max-md:max-w-full max-md:mt-10 max-md:px-5">
-            <div className="flex w-full max-w-[1668px] flex-col items-center mt-4 max-md:max-w-full">
-                <div className="self-stretch flex items-start justify-between max-md:gap-20 gap-20 max-md:max-w-full max-md:flex-wrap max-sm:gap-5">
-                    <img
-                        loading="lazy"
-                        srcSet={Logo} alt='logo'
-                        className="aspect-[3.49] object-contain object-center w-[350px] max-md:w-[300px] overflow-hidden mt-6 self-start max-md:max-w-full"
-                    />
-                    <div className="flex basis-[0%] flex-col items-stretch self-start">
-                        <div className="text-white text-lg font-bold capitalize whitespace-nowrap">
-                            Plan Events
-                        </div>
-                        <div className="text-zinc-100 text-sm flex flex-col font-medium leading-7 mt-8">
-                            <Link className=' w-32'>Create and Set Up</Link>
-                            <Link>Sell Tickets</Link>
-                            <Link>Online RSVP</Link>
-                            <Link>Online Events</Link>
-                        </div>
-                    </div>
-                    <div className="self-stretch flex basis-[0%] flex-col items-stretch">
-                        <div className="text-white text-lg font-bold capitalize whitespace-nowrap">
-                            Eventick
-                        </div>
-                        <div className="text-zinc-100 flex flex-col text-sm font-medium leading-7 mt-8">
-                            <Link>About Us</Link>
-                            <Link>Press</Link>
-                            <Link>Contact Us</Link>
-                            <Link>Help Center</Link>
-                            <Link>How it Works</Link>
-                            <Link>Privacy</Link>
-                            <Link>Terms</Link>
-                        </div>
-                    </div>
-                    <div className="flex grow basis-[0%] flex-col items-stretch self-start max-md:max-w-full">
-                        <div className="text-white text-lg font-bold capitalize max-md:max-w-full">
-                            Stay in the loop
-                        </div>
-                        <div className="text-zinc-100 text-sm leading-6 mt-8 max-md:max-w-full">
-                            Join our mailing list to stay in the loop with our newest for
-                            Event and concert
-                        </div>
-                        <div className="flex max-w-[733px] justify-center items-stretch mt-7 rounded">
-                            <input type="text" placeholder='Enter Your email..' className="text-neutral-400 text-xs my-auto bg-white flex items-center justify-between gap-5 pl-9 pr-2.5 w-96  max-md:max-w-full max-md:flex-wrap max-md:pl-5 px-8 py-4 border-none rounded-l-md" />
-                            <button className="text-white text-center text-lg font-bold leading-4 whitespace-nowrap justify-center items-stretch bg-pink-600 px-8 py-4  self-start max-md:px-5 rounded-r-md">
-                                Search
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div className="bg-slate-600 self-stretch shrink-0 h-px mt-16 mx-9 max-md:mr-2.5 max-md:mt-10" />
-                <div className="text-white text-sm leading-6 mt-8">
-                    Copyright © 2023 TicketVerse{" "}
-                </div>
-            </div>
+  return (
+    <div className="bg-blue-950">
+      <div className=" container mx-auto p-2 self-stretch grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-2 pt-6 px-4 max-md:max-px-4">
+        <div>
+          <img
+            loading="lazy"
+            srcSet={Logo}
+            alt="logo"
+            className="aspect-[3.49] object-contain object-center w-full overflow-hidden flex justify-center align-middle items-center mt-[110px]"
+          />
+        </div>
+        <div>
+          <div className="text-white text-lg font-bold capitalize mb-4">
+            Plan Events
+          </div>
+          <div className="text-zinc-100 text-sm flex flex-col font-medium leading-7 mb-6">
+            <Link to="#" className="mb-2">
+              Create and Set Up
+            </Link>
+            <Link to="#" className="mb-2">
+              Sell Tickets
+            </Link>
+            <Link to="#" className="mb-2">
+              Online RSVP
+            </Link>
+            <Link to="#">Online Events</Link>
+          </div>
+        </div>
+        <div>
+          <div className="text-white text-lg font-bold capitalize mb-4">
+            Eventick
+          </div>
+          <div className="text-zinc-100 flex flex-col text-sm font-medium leading-7 mb-6">
+            <Link to="#" className="mb-2">
+              About Us
+            </Link>
+            <Link to="#" className="mb-2">
+              Press
+            </Link>
+            <Link to="#" className="mb-2">
+              Contact Us
+            </Link>
+            <Link to="#" className="mb-2">
+              Help Center
+            </Link>
+            <Link to="#" className="mb-2">
+              How it Works
+            </Link>
+            <Link to="#" className="mb-2">
+              Privacy
+            </Link>
+            <Link to="#">Terms</Link>
+          </div>
         </div>
 
-    )
-}
+        <div>
+          <div className="text-white text-lg font-bold capitalize mb-4">
+            Stay in the loop
+          </div>
+          <div className="text-zinc-100 text-sm leading-6 mb-6">
+            Join our mailing list to stay in the loop with our newest for Event
+            and concert
+          </div>
+          <div className="bg-white flex max-w-[486px] items-center justify-between gap-5 pl-9 pr-2.5 py-2 rounded-[45.595px] border-2 border-solid border-zinc-100 max-md:flex-wrap max-md:pl-5">
+            <div className="text-neutral-400 text-xs my-auto">
+              Enter your email address..
+            </div>
+            <div className="text-white text-xs tracking-wider whitespace-nowrap justify-center items-stretch shadow-2xl bg-pink-600 self-stretch px-4 py-4 rounded-[50px] max-md:px-5">
+              Subscibe Now
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-slate-600 self-stretch h-px mb-6" />
 
-export default Footer
+      <div className="text-white text-center text-sm mb-4 leading-6">
+        Copyright © 2023 TicketVerse{" "}
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
