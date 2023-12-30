@@ -1,11 +1,14 @@
 
 import React, { useState } from 'react';
 import Dashboard from "../dashboard/Dashboard";
+import Navbar from "../../component/navbar/Navbar"
+import Footer from "../../component/footer/Footer"
 
 const Vendorlogin = () => {
     const [isToggled, setIsToggled] = useState(false)
     return (
         <div>
+            <Navbar />
             <div className="items-center bg-white bg-opacity-90 flex flex-col justify-center px-16 py-12 max-md:px-5">
                 <div className="w-full max-w-[1499px] mt-10 mb-52 max-md:max-w-full max-md:my-10">
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
@@ -91,6 +94,7 @@ const Vendorlogin = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

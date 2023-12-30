@@ -7,9 +7,12 @@ import phone from "../../assets/images/phone.png";
 import email from "../../assets/images/email.png";
 import mark from "../../assets/images/mark.png";
 import clock from "../../assets/images/Clock.png";
+import Navbar from "../../component/navbar/Navbar"
+import Footer from "../../component/footer/Footer"
 const Contact = () => {
     return (
         <div>
+            <Navbar />
             <div className="flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
@@ -224,6 +227,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

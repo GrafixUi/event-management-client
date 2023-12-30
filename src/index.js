@@ -14,7 +14,7 @@ import Contact from './pages/contact/Contact';
 import Confirmticket from './component/confirmticket/Confirmticket';
 import Moviesticket from './component/moviestickets/Moviesticket';
 import Eventticket from "./component/eventticket/Eventticket";
-import Movieslist from './component/movieslist/Movieslist';
+import Movieslist from './pages/movieslist/Movieslist';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([

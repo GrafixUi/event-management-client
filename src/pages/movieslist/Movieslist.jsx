@@ -1,22 +1,21 @@
 import React from 'react';
 import header from "../../assets/images/header.png";
 import filter from "../../assets/images/filter.png";
-import Movielist from '../movielist/Movieslist';
+import Movielist from '../../component/movielist/Movieslist';
+import Headerswiper from '../../component/header-swiper/Header-swiper';
+import Navbar from "../../component/navbar/Navbar"
+import Footer from "../../component/footer/Footer"
 const eventlist = () => {
     return (
         <div className="bg-white flex flex-col items-stretc">
-            <img
-                loading="lazy"
-                srcSet={header} alt='header'
-                className="aspect-[3.52] object-contain object-center w-full overflow-hidden max-md:max-w-full max-md:mt-10 max-sm:-mt-0"
-            />
-            <div className="text-blue-950 text-4xl font-bold self-center whitespace-nowrap mt-10">
-                Movies{" "}
+            <Navbar />
+            <div className="">
+                <Headerswiper />
             </div>
             <div className="self-center flex w-full max-w-[1652px] flex-col mt-10  max-md:max-w-full max-md:my-10">
                 <div className="self-stretch max-md:max-w-full">
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                        <div className="flex flex-col items-stretch w-1/5 max-md:w-full max-md:ml-0">
+                        <div className="flex flex-col items-stretch w-1/5 ml-5 max-md:w-full max-md:ml-0">
                             <div className="shadow-lg bg-white flex w-full flex-col mx-auto pt-4 pb-9 px-5 rounded-3xl items-start max-md:mt-10 max-md:pl-5">
                                 <div className="justify-between items-center bg-white self-stretch flex gap-5 py-1.5">
                                     <div className="text-zinc-500 text-2xl font-semibold tracking-wide my-auto">
@@ -72,8 +71,9 @@ const eventlist = () => {
                         <Movielist />
                     </div>
                 </div>{" "}
-                
+
             </div>
+            <Footer/>
         </div>
     )
 }

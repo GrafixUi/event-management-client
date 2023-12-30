@@ -4,17 +4,20 @@ import vendor from "../../assets/images/vendorlogo.png";
 import vector from "../../assets/icons/Vector.svg";
 import Rating from "../rating/Rating";
 import { Link } from 'react-router-dom';
+import Navbar from "../../component/navbar/Navbar"
+import Footer from "../../component/footer/Footer"
 
 const Eventticket = () => {
     return (
         <div className="bg-white flex flex-col items-stretch">
+            <Navbar />
             <div className="flex-col overflow-hidden relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:-mt-0">
                 <img
                     loading="lazy"
                     srcSet={header} alt='header'
-                    className="absolute h-full w-full object-cover object-center inset-0"
+                    className="absolute h-[500px] w-full object-cover object-center inset-0"
                 />
-                <div className="relative flex w-full max-w-[1438px] items-stretch justify-around gap-5 mt-96 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:ml-20">
+                <div className="relative flex w-full max-w-[1438px] items-stretch justify-around gap-5 mt-72 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:ml-20">
                     <div className="flex flex-col items-stretch max-md:max-w-full">
                         <div className="text-white text-3xl max-md:max-w-full max-md:text-4xl">
                             Event Name
@@ -24,7 +27,7 @@ const Eventticket = () => {
                             Telangana, India
                         </div>
                     </div>
-                    <Link to="/confirmbooking" class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
+                    <Link to="/confirmticket" class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
                         <span class="relative text-white font-bold text-lg">Book Now</span>
                         <div class="flex items-center -space-x-3 translate-x-3">
                             <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
@@ -35,7 +38,7 @@ const Eventticket = () => {
                     </Link>
                 </div>
             </div>
-            <div className="self-center w-full max-w-[1478px] mt-16 max-md:max-w-full max-md:mt-10">
+            <div className="self-center w-full max-w-[1478px] mt-5 max-md:max-w-full max-md:mt-10">
                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                     <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
                         <div className="bg-white flex w-full grow items-stretch justify-between gap-5 mx-auto px-16 py-10 rounded-2xl max-md:max-w-full max-md:flex-wrap max-md:mt-8 max-md:px-5">
@@ -257,6 +260,7 @@ const Eventticket = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

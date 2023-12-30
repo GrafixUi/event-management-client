@@ -4,15 +4,18 @@ import header2 from "../../assets/images/booking.png";
 import vendor from "../../assets/images/vendorlogo.png";
 import Rating from '../rating/Rating';
 import { Link } from 'react-router-dom';
+import Navbar from "../../component/navbar/Navbar"
+import Footer from "../../component/footer/Footer"
 
 const Moviesticket = () => {
     return (
         <div className="bg-white flex flex-col items-stretch">
+            <Navbar />
             <div className="flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
                     srcSet={header} alt='header'
-                    className="absolute h-full w-full object-cover object-center inset-0"
+                    className="absolute h-[500px] w-full object-cover object-center inset-0"
                 />
                 <div className="relative flex w-full max-w-[1489px] items-stretch justify-between gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
                     <div className="max-md:max-w-full">
@@ -21,10 +24,10 @@ const Moviesticket = () => {
                                 <img
                                     loading="lazy"
                                     srcSet={header2} alt='header2'
-                                    className="aspect-[0.8] object-contain object-center w-full overflow-hidden grow max-md:mt-9"
+                                    className="aspect-[0.8] object-contain object-center w-[300px] overflow-hidden grow max-md:mt-9"
                                 />
                             </div>
-                            <div className="flex flex-col items-stretch w-[46%] ml-5 max-md:w-full max-md:ml-0">
+                            <div className="flex flex-col items-stretch w-[40%] ml-5 max-md:w-full max-md:ml-0">
                                 <div className="flex flex-col items-stretch my-auto max-md:mt-10">
                                     <div className="text-white text-7xl whitespace-nowrap max-md:text-4xl">
                                         SHINE (2023)
@@ -458,6 +461,7 @@ const Moviesticket = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

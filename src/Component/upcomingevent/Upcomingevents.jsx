@@ -10,7 +10,7 @@ const Upcomingevents = () => {
         <div className=" py-5 mt-8 flex flex-wrap items-stretch ml-7 justify-center gap-8 max-sm:-ml-1">
             {items.map((item) => (
                 <Link to="/movieslist">
-                    <div key={item.id} className="bg-white shadow shadow-black flex w-[343px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105">
+                    <div key={item.id} className="bg-white shadow-sm shadow-slate-300 flex w-[343px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105">
                         <img
                             loading="lazy"
                             srcSet={product1} alt='product'

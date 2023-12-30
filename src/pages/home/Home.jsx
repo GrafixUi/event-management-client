@@ -9,6 +9,12 @@ import Upcomingmovies from "../../component/upcomingmovie/Upcomingmovie";
 import { Link } from "react-router-dom";
 import Footer from "../../component/footer/Footer";
 import "./Home.css";
+import { IoIosMicrophone } from "react-icons/io";
+import { SiYourtraveldottv } from "react-icons/si";
+import { MdSportsVolleyball, MdWorkspacesOutline, MdOutlineFestival, MdLocalMovies } from "react-icons/md";
+
+
+
 import CardComponent from "../../component/cato-card/cato-card";
 
 const Home = () => {
@@ -56,24 +62,7 @@ const Home = () => {
           className="absolute h-full w-full object-cover object-center inset-0"
         />
         <div className="relative flex w-full max-w-[1220px] flex-col items-stretch mb-16 max-md:max-w-full max-md:mb-10">
-          <div className="flex w-full items-stretch justify-between gap-5 pr-20 max-md:max-w-full  max-md:pr-5 max-sm:w-44 max-sm:-mt-40 max-sm:-ml-8">
-            <img
-              loading="lazy"
-              srcSet={Logo}
-              alt="logo"
-              className="aspect-[3.49] object-contain object-center w-[250px] overflow-hidden shrink-0 max-w-full"
-            />
-            <div className="self-center flex items-stretch justify-between gap-5 my-auto max-sm:w-5">
-              <Link to="register">
-                <button className="text-white font-medium whitespace-nowrap justify-center items-stretch shadow-sm bg-pink-600 grow p-4 px-6 text-sm rounded-[20px] max-sm:px-3 max-sm:py-2">
-                  Create Event
-                </button>
-              </Link>
-              <button className="text-white text-base whitespace-nowrap justify-center items-stretch grow px-10 py-2.5 rounded-[40px] border-[1.5px] border-solid border-white max-md:px-5 max-sm:px-3 max-sm:py-2">
-                <Link to="login">Login</Link>
-              </button>
-            </div>
-          </div>
+
           <div className="flex items-stretch justify-between gap-5 mt-14 pr-2 h-[400px] max-md:max-w-full max-md:flex-wrap max-md:mt-10">
             <div className="self-center flex grow basis-[0%] flex-col my-auto items-start max-md:max-w-full">
               <div className="text-white text-3xl font-bold self-stretch mt-3 p-6 max-md:max-w-full max-md:text-1xl">
@@ -82,14 +71,10 @@ const Home = () => {
                 <br />
                 Events & Movies
               </div>
-              <div className="flex justify-center items-stretch px-6 mt-3 ">
-                <input
-                  type="text"
-                  placeholder="Find your Events and Movies"
-                  className="text-neutral-400 text-xs my-auto bg-white rounded-[10px] flex items-center justify-between gap-5 pr-2 w-80  max-md:max-w-60 max-md:flex-wrap max-md:pl-5 px-8 py-4 border-none "
-                />
-                <button className="text-white text-center text-lg font-bold leading-4 whitespace-nowrap justify-center items-stretch bg-pink-600 ml-[-20px] px-8 py-4 self-start max-md:px-5">
-                  Search
+              <div className="bg-white flex max-w-[486px] items-center justify-between gap-5 pl-9 pr-2.5 py-2 rounded-[45.595px] border-2 border-solid border-zinc-100 max-md:flex-wrap max-md:pl-5">
+                <input className="text-neutral-400 text-xs p-2 my-auto border border-none" type="text" placeholder="Enter your email address.." />
+                <button className="text-white text-xs tracking-wider whitespace-nowrap justify-center items-stretch shadow-2xl bg-pink-600 self-stretch px-4 py-4 rounded-[50px] max-md:px-5">
+                  Subscibe Now
                 </button>
               </div>
             </div>
@@ -106,40 +91,47 @@ const Home = () => {
         Explore the your Events and Movies
       </div>
       <div className="flex items-center justify-center my-24">
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
           <CardComponent
-            imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uZmVyZW5jZXxlbnwwfHwwfHx8MA%3D%3D"
+            // imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uZmVyZW5jZXxlbnwwfHwwfHx8MA%3D%3D"
             title="Conference"
+            icon={<IoIosMicrophone size={30} color="white" />}
             description="___________"
             bgColor="bg-red-500"
+            
           />
           <CardComponent
-            imageSrc="https://images.unsplash.com/photo-1603190287605-e6ade32fa852?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW50ZXJ0YWlubWVudHxlbnwwfHwwfHx8MA%3D%3D"
+            // imageSrc="https://images.unsplash.com/photo-1603190287605-e6ade32fa852?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW50ZXJ0YWlubWVudHxlbnwwfHwwfHx8MA%3D%3D"
             title="Entertainment"
+            icon={<MdLocalMovies  size={30} color="white" />}
             description="___________"
             bgColor="bg-purple-500"
           />
           <CardComponent
-            imageSrc="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D"
+            // imageSrc="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D"
             title="Travel"
+            icon={<SiYourtraveldottv  size={30} color="white" />}
             description="___________"
             bgColor="bg-indigo-500"
           />
           <CardComponent
-            imageSrc="https://images.unsplash.com/photo-1603228254119-e6a4d095dc59?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVzdGl2YWxzfGVufDB8fDB8fHww"
+            // imageSrc="https://images.unsplash.com/photo-1603228254119-e6a4d095dc59?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVzdGl2YWxzfGVufDB8fDB8fHww"
             title="Festivals"
+            icon={<MdOutlineFestival  size={30} color="white" />}
             description="___________"
             bgColor="bg-pink-500"
           />
           <CardComponent
-            imageSrc="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V29ya3Nob3BzfGVufDB8fDB8fHww"
+            // imageSrc="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V29ya3Nob3BzfGVufDB8fDB8fHww"
             title="Workshops"
+            icon={<MdWorkspacesOutline  size={30} color="white" />}
             description="___________"
             bgColor="bg-blue-500"
           />
           <CardComponent
-            imageSrc="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            // imageSrc="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             title="Sports"
+            icon={<MdSportsVolleyball  size={30} color="white" />}
             description="___________"
             bgColor="bg-yellow-400"
           />
@@ -148,7 +140,7 @@ const Home = () => {
       <Upcomingmovies />
       <Link
         to="eventslist"
-        className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-12 py-6 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5  hover:text-white group relative flex overflow-hidden"
+        className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-8 py-3 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5  hover:text-white group relative flex overflow-hidden"
       >
         <span className=" absolute left-0 w-full h-0 transition-all bg-indigo-500 opacity-100 group-hover:h-full group-hover:top-0 duration-200 ease"></span>
         <span className=" relative">Load More</span>
@@ -176,7 +168,7 @@ const Home = () => {
             </div>
             <Link
               to="login"
-              className="text-white text-center text-lg font-bold shadow-2xl bg-pink-600 justify-center items-center mt-6 px-10 py-3 rounded-[40px] max-md:px-5"
+              className="text-white text-center text-lg font-bold shadow-2xl bg-pink-600 justify-center items-center mt-6 px-8 py-3 rounded-[40px] max-md:px-5"
             >
               Create Events
             </Link>
@@ -184,7 +176,7 @@ const Home = () => {
         </div>
       </div>
       <div className="self-center flex w-[1087px] max-w-full justify-between gap-5 mt-32 px-5 items-start max-md:flex-wrap max-md:mt-10">
-        <div className="text-blue-950 text-4xl font-bold grow shrink basis-auto mt-3 max-sm:ml-5">
+        <div className="text-blue-950 text-2xl font-bold grow shrink basis-auto mt-3 max-sm:ml-5">
           Upcoming Movies
         </div>
         <div className="flex items-stretch gap-5 max-md:max-w-full max-md:flex-wrap max-sm:hidden">
@@ -290,7 +282,7 @@ const Home = () => {
       <Upcomingevent />
       <Link
         to="movieslist"
-        className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-12 py-6 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5 hover:text-white group relative flex overflow-hidden"
+        className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-8 py-3 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5 hover:text-white group relative flex overflow-hidden"
       >
         <span className=" absolute left-0 w-full h-0 transition-all bg-indigo-500 opacity-100 group-hover:h-full group-hover:top-0 duration-200 ease"></span>
         <span className=" relative">Load More</span>

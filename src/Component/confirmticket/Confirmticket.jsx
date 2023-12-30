@@ -6,53 +6,56 @@ import Paylater from "../../assets/images/paylater.png";
 import Net from "../../assets/images/net.png";
 import MWallets from "../../assets/images/m-wallets.png"
 import { Link } from 'react-router-dom';
+import Navbar from "../../component/navbar/Navbar"
+import Footer from "../../component/footer/Footer"
 
 const Confirmticket = () => {
     return (
         <div>
+            <Navbar />
             <div className="bg-white flex flex-col justify-center items-center px-16 max-md:px-5">
                 <div className="flex w-full max-w-[1493px] flex-col mt-10 max-md:max-w-full max-md:my-10">
-                    <div className="text-blue-950 text-3xl font-bold self-center whitespace-nowrap font-[Poppins]">
+                    <div className="text-blue-950 text-xl font-bold self-center whitespace-nowrap font-[Poppins]">
                         Pay to confirm booking
                     </div>
                     <div className="self-stretch mt-16 max-md:max-w-full max-md:mt-10">
                         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                             <div className="flex flex-col items-stretch w-[65%] max-md:w-full max-md:ml-0">
-                                <div className="bg-blue-950 grow w-full pl-16 pr-20 py-12 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
+                                <div className="bg-blue-950 grow w-[700px] pl-16 pr-20 py-12 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                                        <div className="flex flex-col items-stretch w-[61%] max-md:w-full max-md:ml-0">
+                                        <div className="flex flex-col items-stretch w-[51%] max-md:w-full max-md:ml-0">
                                             <div className="flex flex-col items-stretch my-auto max-md:max-w-full max-md:mt-10">
-                                                <div className="text-white text-4xl font-semibold max-md:max-w-full">
+                                                <div className="text-white text-2xl font-semibold max-md:max-w-full">
                                                     Booking Detail
                                                 </div>
-                                                <div className="text-white text-2xl font-medium leading-8 mt-8 max-md:max-w-full">
+                                                <div className="text-white text-xl font-medium leading-8 mt-8 max-md:max-w-full">
                                                     Schedule
                                                 </div>
-                                                <div className="text-white text-lg leading-7 mt-7">
+                                                <div className="text-white text-md leading-7 mt-7">
                                                     Movie Title
                                                 </div>
-                                                <div className="text-white text-2xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
+                                                <div className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
                                                     EVENT NAME
                                                 </div>
-                                                <div className="text-white text-lg leading-7 mt-5">
+                                                <div className="text-white text-md leading-7 mt-5">
                                                     Date
                                                 </div>
-                                                <div className="text-white text-2xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
+                                                <div className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
                                                     Mon, 23 Oct 2023
                                                 </div>
                                                 <div className="text-neutral-400 text-lg leading-7 mt-5">
                                                     Ticket (3)
                                                 </div>
-                                                <div className="text-white text-2xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
+                                                <div className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
                                                     C8, C9, C10
                                                 </div>
                                                 <div className="text-white text-sm font-medium mt-9 max-md:max-w-full">
                                                     Theater:
                                                 </div>
-                                                <div className="text-white text-2xl font-semibold mt-7 max-md:max-w-full">
+                                                <div className="text-white text-xl font-semibold mt-7 max-md:max-w-full">
                                                     HITEX Exhibition Centre
                                                 </div>
-                                                <div className="text-white text-lg font-light mt-5 max-md:max-w-full">
+                                                <div className="text-white text-md font-light mt-5 max-md:max-w-full">
                                                     HITEX Exhibition Centre, Hitex Road, Izzathnagar,
                                                     Kothaguda, Telangana, India
                                                 </div>
@@ -67,13 +70,13 @@ const Confirmticket = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col items-stretch w-[35%] ml-5 max-md:w-full max-md:ml-0">
+                            <div className="flex flex-col items-stretch w-[30%] ml-5 max-md:w-full max-md:ml-0">
                                 <div className="flex flex-col max-md:max-w-full max-md:mt-10">
                                     <div className="justify-center items-stretch bg-white self-stretch flex flex-col p-8 rounded-3xl border-2 border-dashed border-blue-950 max-md:max-w-full max-md:px-5">
                                         <div className="text-blue-950 text-2xl font-medium max-md:max-w-full">
                                             Offers
                                         </div>
-                                        <div className="justify-between items-stretch flex w-full gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
+                                        <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
                                             <div className="justify-between items-center flex gap-2.5">
                                                 <img
                                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/93e2f9a3ab332727d07dceec0d7d91924df0a1bce654f8e4f84ece11c0d38c0e?" alt='img'
@@ -153,7 +156,10 @@ const Confirmticket = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <button className="text-pink-600 text-base font-semibold self-center whitespace-nowrap mt-10 max-md:mt-10">
+                                    <Link to="/confirmbooking" className="text-[#0A075F] text-bold font-semibold self-center whitespace-nowrap mt-10 max-md:mt-10">
+                                        Next
+                                    </Link>
+                                    <button className="text-pink-600 text-bold font-semibold self-center whitespace-nowrap mt-10 max-md:mt-10">
                                         Cancel
                                     </button>
                                 </div>
@@ -161,7 +167,7 @@ const Confirmticket = () => {
                         </div>
                     </div>
 
-                    <div className="flex max-w-[786px] flex-col px-5 mt-14">
+                    <div className="flex max-w-[686px] flex-col px-5 mt-14">
                         <div className="text-neutral-800 text-xl font-medium whitespace-nowrap self-start max-md:ml-1.5">
                             All Payment Options
                         </div>
@@ -268,6 +274,7 @@ const Confirmticket = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

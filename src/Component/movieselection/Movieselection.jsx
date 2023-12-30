@@ -7,15 +7,18 @@ import Rating from '../rating/Rating';
 import Cards from '../cards/Cards';
 import frame from "../../assets/images/Frame.png";
 import { Link } from 'react-router-dom';
+import Navbar from "../../component/navbar/Navbar"
+import Footer from "../../component/footer/Footer"
 
 const Movieslist = () => {
     return (
         <div className="bg-white flex flex-col ">
+            <Navbar />
             <div className="flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
                     srcSet={header} alt='header'
-                    className="absolute h-full w-full object-cover object-center inset-0"
+                    className="absolute h-[500px] w-full object-cover object-center inset-0"
                 />
                 <div className="relative flex w-full max-w-[1489px] items-stretch justify-between gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
                     <div className="max-md:max-w-full">
@@ -24,10 +27,10 @@ const Movieslist = () => {
                                 <img
                                     loading="lazy"
                                     srcSet={header2} alt='header2'
-                                    className="aspect-[0.8] object-contain object-center w-[400px] overflow-hidden grow max-md:mt-9"
+                                    className="aspect-[0.8] object-contain object-center w-[300px] overflow-hidden grow max-md:mt-9"
                                 />
                             </div>
-                            <div className="flex flex-col items-stretch w-[46%] ml-5 max-md:w-full max-md:ml-0">
+                            <div className="flex flex-col items-stretch w-[40%] ml-5 max-md:w-full max-md:ml-0">
                                 <div className="flex flex-col items-stretch my-auto max-md:mt-10">
                                     <div className="text-white text-5xl whitespace-nowrap max-md:text-4xl">
                                         SHINE (2023)
@@ -342,223 +345,8 @@ const Movieslist = () => {
                         </div>
                     </div>
                 </div>{" "}
-                <div className="items-stretch flex w-[712px] max-w-full flex-col ml-4 mt-10 py-11 border-t-zinc-300 border-t border-solid self-start">
-                    <div className="items-center flex justify-between gap-4 pr-20 max-md:max-w-full max-md:flex-wrap max-md:pr-5">
-                        <div className="justify-center text-white text-sm font-bold leading-5 uppercase whitespace-nowrap items-center bg-zinc-200 aspect-square h-12 my-auto px-5 rounded-3xl">
-                            m
-                        </div>{" "}
-                        <div className="items-stretch self-stretch flex grow basis-[0%] flex-col">
-                            <div className="text-zinc-700 text-base font-bold leading-6">
-                                marvinachi
-                            </div>{" "}
-                            <div className="flex justify-between gap-2 mt-2 py-px items-start">
-                                <img
-                                    loading="lazy"
-                                    srcSet={frame} alt='frame'
-                                    className="aspect-square object-contain object-center w-5 overflow-hidden shrink-0 max-w-full"
-                                />{" "}
-                                <div className="text-neutral-500 text-sm leading-5 self-stretch grow whitespace-nowrap">
-                                    United States
-                                </div>
-                            </div>
-                        </div>
-                    </div>{" "}
-                    <div className="flex flex-col mt-5 pl-16 items-start max-md:max-w-full max-md:pl-5">
-                        <div className="flex items-stretch gap-1.5">
-                            <div className="flex justify-between gap-1 py-px items-start">
-                                <div className="items-stretch flex gap-1 py-0.5">
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/5348ebd664b1412c824a1a8713b2b40016ac5ef76b175477473d789f45a3b551?" alt='img'
-                                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                    />{" "}
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/5be28a53a7db21f9bdacda96055c94478f4122b8eaf3668590c75d509eef8133?" alt='img'
-                                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                    />{" "}
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/eebe0e5f9f2b9fa8bb7b2afee70cd0d612a9084d6c17dc233dd3bb8dddb586c5?" alt='img'
-                                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                    />{" "}
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3ab0251bc6007ca8b89fc849af33e26d53b68d6b248a49c46b245666eb7939b?" alt='img'
-                                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                    />{" "}
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/1667145b915d8657a2aa255136a72dca8314641288ad04dba6ca591de5635508?" alt='img'
-                                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                    />
-                                </div>{" "}
-                                <div className="text-amber-400 text-sm font-bold leading-5 self-stretch grow whitespace-nowrap">
-                                    5
-                                </div>
-                            </div>{" "}
-                            <div className="self-center flex w-px shrink-0 h-[17px] flex-col my-auto border-r-zinc-200 border-r border-solid" />{" "}
-                            <div className="justify-center text-neutral-500 text-sm leading-5 self-center grow whitespace-nowrap my-auto">
-                                2 months ago
-                            </div>
-                        </div>{" "}
-                        <div className="text-zinc-700 text-base leading-6 self-stretch mt-5 max-md:max-w-full">
-                            Great work! I wanted a video to showcase my fitness app and the
-                            designer delivered an excellent job and on time. highly satisfied.
-                            thank you!
-                        </div>{" "}
-                        <div className="rounded border flex w-[81px] shrink-0 h-[54px] flex-col mt-5 border-solid border-zinc-100" />{" "}
-                        <div className="self-stretch flex justify-between gap-4 mt-4 pr-20 items-start max-md:max-w-full max-md:flex-wrap max-md:pr-5">
-                            <div className="text-zinc-700 text-sm font-semibold leading-6 grow whitespace-nowrap">
-                                Helpful?
-                            </div>{" "}
-                            <div className="items-stretch flex gap-1 px-px py-1.5">
-                                <img
-                                    loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/95743f235abd1f69dce6abc1906d398abcba71fda3331fb9e1f9250c720211fa?" alt='img'
-                                    className="aspect-square object-contain object-center w-3.5 justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                />{" "}
-                                <div className="text-zinc-700 text-sm font-semibold leading-5 self-start">
-                                    Yes
-                                </div>{" "}
-                                <img
-                                    loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/f69011f2af7ec8e8890c2f6f9bd40b7a195c45edf18a5b9d6e824be07dec4a4e?" alt='img'
-                                    className="aspect-square object-contain object-center w-3.5 justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                />{" "}
-                                <div className="text-zinc-700 text-sm font-semibold leading-5 grow whitespace-nowrap self-start">
-                                    No
-                                </div>
-                            </div>
-                        </div>{" "}
-                        <div className="items-stretch self-stretch flex justify-between gap-3 mt-6 pr-20 max-md:max-w-full max-md:flex-wrap max-md:pr-5">
-                            <img
-                                loading="lazy"
-                                srcSet={vendor} alt='vendor'
-                                className="aspect-square object-contain object-center w-8 overflow-hidden shrink-0 max-w-full"
-                            />{" "}
-                            <div className="text-zinc-700 text-base font-bold leading-6 self-center grow whitespace-nowrap my-auto">
-                                Seller's Response
-                            </div>
-                        </div>
-                        <div className="text-zinc-700 text-sm leading-6 whitespace-nowrap ml-11 mt-4 max-md:ml-2.5">
-                            Thank you so much 😊
-                        </div>
-                    </div>
-                </div>
-                <div className="items-stretch flex w-[712px] max-w-full flex-col ml-4 py-11 border-t-zinc-300 border-t border-solid self-start">
-                    <div className="items-center flex justify-between gap-4 pr-20 max-md:max-w-full max-md:flex-wrap max-md:pr-5">
-                        <div className="justify-center text-white text-sm font-bold leading-5 uppercase whitespace-nowrap items-center bg-zinc-200 aspect-square h-12 my-auto px-5 rounded-3xl max-md:pr-5">
-                            j
-                        </div>
-                        <div className="items-stretch self-stretch flex grow basis-[0%] flex-col">
-                            <div className="text-zinc-700 text-base font-bold leading-6 whitespace-nowrap">
-                                jcpconsulting
-                            </div>
-                            <div className="flex justify-between gap-2 mt-2 py-px items-start">
-                                <img
-                                    loading="lazy"
-                                    srcSet={frame} alt='frame'
-                                    className="aspect-square object-contain object-center w-5 overflow-hidden shrink-0 max-w-full"
-                                />
-                                <div className="text-neutral-500 text-sm leading-5 self-stretch grow whitespace-nowrap">
-                                    United States
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex flex-col mt-5 pl-16 items-start max-md:max-w-full max-md:pl-5">
-                        <div className="flex items-stretch gap-1.5">
-                            <div className="flex justify-between gap-1 py-px items-start">
-                                <div className="items-stretch flex gap-1 py-0.5">
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/29f35520a716382f9b757f82e796368fcf889ed4e8c6107e74be1d533d7c8baf?" alt='img'
-                                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                    />
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/fed05d61ed0af8dce876e64621acea59285c86a2725778e052a140046dc7487c?" alt='img'
-                                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                    />
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/a43e024a936ce46f9354dd068299ceb93829d20baf8b4f655460e1cfbe3ef49b?" alt='img'
-                                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                    />
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf0ab5dc4aee626dc136cc2c8723895f5054a10a39f59dd35d5345e7bcf30eb1?" alt='img'
-                                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                    />
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/06f586dc429e71ae72f29093298c02b2c7c8291af3c54467dd1b80a6185b4449?" alt='img'
-                                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                    />
-                                </div>
-                                <div className="text-amber-400 text-sm font-bold leading-5 self-stretch grow whitespace-nowrap">
-                                    5
-                                </div>
-                            </div>
-                            <div className="self-center flex w-px shrink-0 h-[17px] flex-col my-auto border-r-zinc-200 border-r border-solid" />
-                            <div className="justify-center text-neutral-500 text-sm leading-5 self-center grow whitespace-nowrap my-auto">
-                                1 month ago
-                            </div>
-                        </div>
-                        <div className="text-zinc-700 text-base leading-6 self-stretch mt-5 max-md:max-w-full">
-                            Amazing work. Will def work again with him this was a big project
-                            and he knocked it out of the park.
-                        </div>
-                        <div className="rounded border flex w-[81px] shrink-0 h-[54px] flex-col mt-5 border-solid border-zinc-100" />
-                        <div className="self-stretch flex justify-between gap-4 mt-4 pr-20 items-start max-md:max-w-full max-md:flex-wrap max-md:pr-5">
-                            <div className="text-zinc-700 text-sm font-semibold leading-6 grow whitespace-nowrap">
-                                Helpful?
-                            </div>
-                            <div className="items-stretch flex gap-1 px-px py-1.5">
-                                <img
-                                    loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/4258b09181838ebb847ee9ae07e77544ab4edf119337068e619421322574fa8a?" alt='img'
-                                    className="aspect-square object-contain object-center w-3.5 justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                />
-                                <div className="text-zinc-700 text-sm font-semibold leading-5 self-start">
-                                    Yes
-                                </div>
-                                <img
-                                    loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d778a97d23d18ca33620a1a5ae1332a792a56c635fb7689863d0e4516f4a02b?" alt='img'
-                                    className="aspect-square object-contain object-center w-3.5 justify-center items-center overflow-hidden shrink-0 max-w-full"
-                                />
-                                <div className="text-zinc-700 text-sm font-semibold leading-5 grow whitespace-nowrap self-start">
-                                    No
-                                </div>
-                            </div>
-                        </div>
-                        <div className="items-stretch self-stretch flex justify-between gap-3 mt-6 pr-20 max-md:max-w-full max-md:flex-wrap max-md:pr-5">
-                            <img
-                                loading="lazy"
-                                srcSet={frame} alt='frame'
-                                className="aspect-square object-contain object-center w-8 overflow-hidden shrink-0 max-w-full"
-                            />
-                            <div className="text-zinc-700 text-base font-bold leading-6 self-center grow whitespace-nowrap my-auto">
-                                Seller's Response
-                            </div>
-                        </div>{" "}
-                        <div className="text-zinc-700 text-sm leading-6 whitespace-nowrap ml-11 mt-4 max-md:ml-2.5">
-                            Thank you so much 😊
-                        </div>
-                    </div>
-                </div>{" "}
-                <div className="justify-center text-zinc-700 text-xl font-bold leading-7 whitespace-nowrap ml-12 mt-20 self-start max-md:ml-2.5 max-md:mt-10">
-                    FAQ
-                </div>{" "}
-                <div className="justify-center text-neutral-500 text-base font-semibold leading-6 items-stretch mr-5 mt-3 py-6 border-b-zinc-300 border-b border-solid self-end max-md:max-w-full max-md:mr-2.5">
-                    If I provide a website address can you take the screenshots ?
-                </div>{" "}
-                <div className="justify-center text-neutral-500 text-base font-semibold leading-6 whitespace-nowrap ml-12 mt-7 self-start max-md:ml-2.5">
-                    I need to add the voice over, Is that possible ?
-                </div>
             </div>
+            <Footer />
         </div>
     )
 }

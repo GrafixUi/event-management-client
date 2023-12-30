@@ -66,13 +66,11 @@ const Footer = () => {
             Join our mailing list to stay in the loop with our newest for Event
             and concert
           </div>
-          <div className="bg-white flex max-w-[486px] items-center justify-between gap-5 pl-9 pr-2.5 py-2 rounded-[45.595px] border-2 border-solid border-zinc-100 max-md:flex-wrap max-md:pl-5">
-            <div className="text-neutral-400 text-xs my-auto">
-              Enter your email address..
-            </div>
-            <div className="text-white text-xs tracking-wider whitespace-nowrap justify-center items-stretch shadow-2xl bg-pink-600 self-stretch px-4 py-4 rounded-[50px] max-md:px-5">
+          <div className="bg-white flex max-w-[486px]  items-center justify-between gap-5 pl-9 pr-2.5 py-2 rounded-[45.595px] border-2 border-solid border-zinc-100 max-md:flex-wrap max-md:pl-5">
+            <input className="text-neutral-400 border border-none text-xs my-auto p-3" type="text" placeholder="Enter your email address.."/>
+            <button className="text-white text-xs tracking-wider whitespace-nowrap justify-center items-stretch shadow-2xl bg-pink-600 self-stretch px-4 py-4 rounded-[50px] max-md:px-5">
               Subscibe Now
-            </div>
+            </button>
           </div>
         </div>
       </div>

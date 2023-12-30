@@ -46,7 +46,7 @@ const Upcomingevents = () => {
     return (
         <div className="flex flex-col">
             <div className="self-center flex w-[1087px] max-w-full justify-between gap-5 mt-6 px-5 items-start max-md:flex-wrap max-md:mt-10">
-                <div className="text-blue-950 text-4xl font-bold grow shrink basis-auto mt-2.5 max-sm:self-center max-sm:items-center max-sm:ml-5">
+                <div className="text-blue-950 text-2xl font-bold grow shrink basis-auto mt-2.5 max-sm:self-center max-sm:items-center max-sm:ml-5">
                     Upcoming Events
                 </div>
                 <div className=" flex items-center justify-center gap-1 max-md:max-w-full max-md:flex-wrap max-sm:hidden">
@@ -163,7 +163,7 @@ const Upcomingevents = () => {
             <div className=" py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8 max-sm:-ml-1">
                 {items.map((item) => (
                     <Link to="/eventslist">
-                        <div key={item.id} className="bg-white shadow shadow-black flex w-[343px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105">
+                        <div key={item.id} className="bg-white shadow-sm shadow-slate-300 flex w-[343px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105">
                             <img
                                 loading="lazy"
                                 srcSet={product1} alt='product1'
