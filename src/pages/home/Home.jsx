@@ -71,10 +71,10 @@ const Home = () => {
                 <br />
                 Events & Movies
               </div>
-              <div className="bg-white flex max-w-[486px] items-center justify-between gap-5 pl-9 pr-2.5 py-2 rounded-[45.595px] border-2 border-solid border-zinc-100 max-md:flex-wrap max-md:pl-5">
-                <input className="text-neutral-400 text-xs p-2 my-auto border border-none" type="text" placeholder="Enter your email address.." />
+              <div className="bg-white flex max-w-[486px] items-center justify-between gap-5 pl-6 ml-6 pr-2.5 py-2 rounded-[45.595px] border-2 border-solid border-zinc-100 max-md:flex-wrap max-md:pl-5">
+                <input className="text-neutral-400 text-xs p-2 my-auto border border-none" type="text" placeholder="Find your Events/Movies" />
                 <button className="text-white text-xs tracking-wider whitespace-nowrap justify-center items-stretch shadow-2xl bg-pink-600 self-stretch px-4 py-4 rounded-[50px] max-md:px-5">
-                  Subscibe Now
+                  Search
                 </button>
               </div>
             </div>
