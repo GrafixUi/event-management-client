@@ -15,7 +15,7 @@ const Marketplace = () => {
             <div className="contain">
                 <div className="flex flex-col items-start justify-between w-full gap-9">
 
-                    <div className="w-full grid grid-cols-1 md:grid-cols-3  justify-center items-center gap-20 mt-6">
+                    <div className="w-full grid grid-cols-2 md:grid-cols-3  justify-center items-center gap-8 md:gap-20 mt-6">
 
                         <Link
                             to="/"

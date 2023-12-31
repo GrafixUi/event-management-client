@@ -8,23 +8,23 @@ import Upcomingevent from "../../component/upcomingevent/Upcomingevents";
 import Upcomingmovies from "../../component/upcomingmovie/Upcomingmovie";
 import { Link } from "react-router-dom";
 import Footer from "../../component/footer/Footer";
-import Explore from "../home/explore/Explore"
+import Explore from "../home/explore/Explore";
 import "./Home.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import CardComponent from "../../component/cato-card/cato-card";
 import Featured from "./featured/Featured";
 
 const Home = () => {
   //dropdown for filter
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
   const handleSearch = () => {
     if (search) {
       navigate(`/gigs?search=${search}`);
     }
-  }
+  };
 
   const [isShowOpen, setShowOpen] = useState(false);
 
@@ -72,7 +72,9 @@ const Home = () => {
             <div className="self-center flex grow basis-[0%] flex-col my-auto items-start max-md:max-w-full max-sm:mt-32">
               <div className="text-white text-3xl font-bold self-stretch mt-3 p-6 max-md:max-w-full max-md:text-1xl">
                 <span className="font-medium text-[35px]">Find the Your</span>{" "}
-                <span className="text-[40px] font-thin header-style-font">Favorites</span>
+                <span className="text-[40px] font-thin header-style-font">
+                  Favorites
+                </span>
                 <br />
                 Events & Movies
               </div>
@@ -86,17 +88,16 @@ const Home = () => {
                   <input
                     type="text"
                     name="input"
-                    placeholder='Find your Events and Movies'
-                    className="w-96 h-full bg-transparent bg-white border border-none outline-none text-active "
+                    placeholder="Find your Events and Movies"
+                    className="w-[250px] h-full = bg-transparent bg-white border border-none outline-none text-active "
                   />
                   <button
                     type="submit"
-                    className="bg-[#F5167E] h-full lg:w-[150px] outline-none absolute top-16 lg:relative lg:top-0 rounded-md lg:rounded-[0] lg:rounded-tr-md lg:rounded-br-md w-full text-white"
+                    className="bg-[#F5167E] h-full lg:w-[150px] outline-none absolute top-16  lg:relative lg:top-0 rounded-md lg:rounded-[0] lg:rounded-tr-md lg:rounded-br-md md:px-12  px-24 md:left-0 left-10 py-2 text-white  "
                   >
                     Search
                   </button>
                 </div>
-
               </div>
             </div>
             <img
@@ -109,10 +110,9 @@ const Home = () => {
         </div>
       </div>
 
-
-      <div className="text-[#242565] text-3xl font-bold self-center  mt-16 max-md:max-w-full max-md:mt-10 max-sm:text-xl">
+      <div className="text-[#242565] md:text-3xl font-bold self-center  mt-16 max-md:max-w-full max-md:mt-10  text-center max-sm:text-[18px]">
         Explore the your Events and Movies
-      <Explore />
+        <Explore />
       </div>
       <Upcomingmovies />
       <Link
