@@ -6,3 +6,10 @@
 @tailwind utilities;
 
 
+*{
+    font-family: poppins !important;
+}
+
+.header-style-font{
+    font-family: 'Dancing Script';
+}

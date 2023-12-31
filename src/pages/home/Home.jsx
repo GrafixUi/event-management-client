@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Logo from "../../assets/images/logo.png";
-import bg from "../../assets/images/bg.png";
+import bg from "../../assets/images/background.png";
 import dropdown from "../../assets/icons/dropdown.svg";
 import img1 from "../../assets/images/img1.png";
 import baner from "../../assets/images/banner.png";
@@ -8,21 +8,23 @@ import Upcomingevent from "../../component/upcomingevent/Upcomingevents";
 import Upcomingmovies from "../../component/upcomingmovie/Upcomingmovie";
 import { Link } from "react-router-dom";
 import Footer from "../../component/footer/Footer";
+import Explore from "../home/explore/Explore"
 import "./Home.css";
-import { IoIosMicrophone } from "react-icons/io";
-import { SiYourtraveldottv } from "react-icons/si";
-import {
-  MdSportsVolleyball,
-  MdWorkspacesOutline,
-  MdOutlineFestival,
-  MdLocalMovies,
-} from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 import { FiSearch } from "react-icons/fi";
-
 import CardComponent from "../../component/cato-card/cato-card";
+import Featured from "./featured/Featured";
 
 const Home = () => {
   //dropdown for filter
+  const [search, setSearch] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    if (search) {
+      navigate(`/gigs?search=${search}`);
+    }
+  }
 
   const [isShowOpen, setShowOpen] = useState(false);
 
@@ -67,86 +69,50 @@ const Home = () => {
         />
         <div className="relative flex w-full max-w-[1220px] flex-col items-stretch mb-16 max-md:max-w-full max-md:mb-10">
           <div className="flex items-stretch justify-between gap-5 mt-14 pr-2 h-[400px] max-md:max-w-full max-md:flex-wrap max-md:mt-10">
-            <div className="self-center flex grow basis-[0%] flex-col my-auto items-start max-md:max-w-full">
+            <div className="self-center flex grow basis-[0%] flex-col my-auto items-start max-md:max-w-full max-sm:mt-32">
               <div className="text-white text-3xl font-bold self-stretch mt-3 p-6 max-md:max-w-full max-md:text-1xl">
                 <span className="font-medium text-[35px]">Find the Your</span>{" "}
-                <span className="text-[40px] font-serif">Favorites</span>
+                <span className="text-[40px] font-thin header-style-font">Favorites</span>
                 <br />
                 Events & Movies
               </div>
-              <div className="bg-white flex max-w-[486px] items-center justify-between gap-5 pl-6 ml-6 pr-2.5 py-2 rounded-[45.595px] border-2 border-solid border-zinc-100 max-md:flex-wrap max-md:pl-5">
-                <input
-                  type="text"
-                  name="input"
-                  placeholder='Try "building mobile app"'
-                  className={`w-full h-full bg-transparent outline-none text-active 
-                }`}
-                />
-                <button
-                  type="submit"
-                  className="bg-primary h-full lg:w-[150px] outline-none absolute top-16 lg:relative lg:top-0 rounded-md lg:rounded-[0] lg:rounded-tr-md lg:rounded-br-md w-full"
-                >
-                  Search
-                </button>
+              <div
+                className={`flex flex-col lg:flex-row items-center w-full lg:w-[650px] h-[50px] rounded-md focus:border focus:border-primary relative mb-20 lg:mb-0`}
+              >
+                <div className="flex items-center ml-4 justify-start w-full h-full">
+                  <span className="text-active pl-3 bg-white px-4 py-4 ml-2">
+                    <FiSearch size={18} />
+                  </span>
+                  <input
+                    type="text"
+                    name="input"
+                    placeholder='Find your Events and Movies'
+                    className="w-96 h-full bg-transparent bg-white border border-none outline-none text-active "
+                  />
+                  <button
+                    type="submit"
+                    className="bg-[#F5167E] h-full lg:w-[150px] outline-none absolute top-16 lg:relative lg:top-0 rounded-md lg:rounded-[0] lg:rounded-tr-md lg:rounded-br-md w-full text-white"
+                  >
+                    Search
+                  </button>
+                </div>
+
               </div>
             </div>
             <img
               loading="lazy"
               srcSet={img1}
               alt="img1"
-              className="aspect-square object-contain object-center w-full overflow-hidden grow basis-[0%] w-50 "
+              className="aspect-square max-sm:hidden object-contain object-center w-full overflow-hidden grow basis-[0%] w-50 "
             />
           </div>
         </div>
       </div>
+
+
       <div className="text-[#242565] text-3xl font-bold self-center  mt-16 max-md:max-w-full max-md:mt-10 max-sm:text-xl">
         Explore the your Events and Movies
-      </div>
-      <div className="flex items-center justify-center my-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
-          <CardComponent
-            // imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uZmVyZW5jZXxlbnwwfHwwfHx8MA%3D%3D"
-            title="Conference"
-            icon={<IoIosMicrophone size={30} color="white" />}
-            description="___________"
-            bgColor="bg-red-500"
-          />
-          <CardComponent
-            // imageSrc="https://images.unsplash.com/photo-1603190287605-e6ade32fa852?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW50ZXJ0YWlubWVudHxlbnwwfHwwfHx8MA%3D%3D"
-            title="Entertainment"
-            icon={<MdLocalMovies size={30} color="white" />}
-            description="___________"
-            bgColor="bg-purple-500"
-          />
-          <CardComponent
-            // imageSrc="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D"
-            title="Travel"
-            icon={<SiYourtraveldottv size={30} color="white" />}
-            description="___________"
-            bgColor="bg-indigo-500"
-          />
-          <CardComponent
-            // imageSrc="https://images.unsplash.com/photo-1603228254119-e6a4d095dc59?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVzdGl2YWxzfGVufDB8fDB8fHww"
-            title="Festivals"
-            icon={<MdOutlineFestival size={30} color="white" />}
-            description="___________"
-            bgColor="bg-pink-500"
-          />
-          <CardComponent
-            // imageSrc="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V29ya3Nob3BzfGVufDB8fDB8fHww"
-            title="Workshops"
-            icon={<MdWorkspacesOutline size={30} color="white" />}
-            description="___________"
-            bgColor="bg-blue-500"
-          />
-          <CardComponent
-            // imageSrc="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            title="Sports"
-            icon={<MdSportsVolleyball size={30} color="white" />}
-            description="___________"
-            bgColor="bg-yellow-400"
-          />
-        </div>
+      <Explore />
       </div>
       <Upcomingmovies />
       <Link
@@ -211,7 +177,7 @@ const Home = () => {
                 />
               </button>
               {isSortOpen && (
-                <ul className="absolute mt-10 mr-96 z-50 py-2 w-40 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
                   <button className=" text-[#015464] text-sm my-3 ">
                     12-01-2024{" "}
                   </button>
@@ -242,7 +208,7 @@ const Home = () => {
                 />
               </button>
               {isShowOpen && (
-                <ul className="absolute mt-10 mr-96 z-50 py-2 w-40 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
                   <button className=" text-[#015464] text-sm my-3 ">
                     12-01-2024{" "}
                   </button>
@@ -273,7 +239,7 @@ const Home = () => {
                 />
               </button>
               {isDropdownOpen && (
-                <ul className="absolute mt-10 mr-96 z-50 py-2 w-40 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
                   <button className=" text-[#015464] text-sm my-3 ">
                     12-01-2024{" "}
                   </button>

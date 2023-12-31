@@ -49,7 +49,7 @@ const Upcomingevents = () => {
                 <div className="text-blue-950 text-2xl font-bold grow shrink basis-auto mt-2.5 max-sm:self-center max-sm:items-center max-sm:ml-5">
                     Upcoming Events
                 </div>
-                <div className=" flex items-center justify-center gap-1 max-md:max-w-full max-md:flex-wrap max-sm:hidden">
+                <div className=" flex items-center justify-center gap-5 max-md:max-w-full max-md:flex-wrap max-sm:hidden">
                     <div ref={dropdownRef} className="bg-violet-50 flex items-stretch justify-between gap-5 px-6 py-4 rounded-[50px] max-md:px-5">
                         <div ref={dropdownRef}>
 
@@ -66,7 +66,7 @@ const Upcomingevents = () => {
                                     height={3} />
                             </button>
                             {isSortOpen && (
-                                <ul className="absolute mt-10 mr-96 z-50 py-2 w-40 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
 
                                     <button className=" text-[#015464] text-sm my-3 ">
                                         12-01-2024{" "}
@@ -102,7 +102,7 @@ const Upcomingevents = () => {
                                     height={3} />
                             </button>
                             {isShowOpen && (
-                                <ul className="absolute mt-10 mr-96 z-50 py-2 w-40 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
 
                                     <button className=" text-[#015464] text-sm my-3 ">
                                         12-01-2024{" "}
@@ -138,7 +138,7 @@ const Upcomingevents = () => {
                                     height={3} />
                             </button>
                             {isDropdownOpen && (
-                                <ul className="absolute mt-10 mr-96 z-50 py-2 w-40 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
 
                                     <button className=" text-[#015464] text-sm my-3 ">
                                         12-01-2024{" "}

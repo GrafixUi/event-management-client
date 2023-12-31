@@ -2,31 +2,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #011739;
+  background-color: #010539;
   color: white;
   position: sticky;
   top: 0;
   z-index: 999;
-  transition: 0.5s all ease;
+  transition: 0.3s ease-in;
+  /* height: 9vh; */
 }
 
 .navbar.active {
-  background-color: #011739;
-  /* color: white; */
+  background-color: #010539f8;
+  color: rgb(255, 255, 255);
+  transition: 0.2s ;
+  /* height: 16vh; */
 }
 
 .navbar.active button {
   background-color: white !important;
-  color: #ffffff !important;
+  color: #1dbf73 !important;
   border: 1px solid #1dbf73 !important;
 }
 
 .navbar .container {
-  width: 1400px;
+  width: 1200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 
 .navbar .container .logo {
@@ -36,7 +39,7 @@
 
 .navbar .container .logo .dot {
   font-weight: bold;
-  
+  color: #1dbf73;
 }
 
 .navbar .container .links {
@@ -51,7 +54,7 @@
   white-space: nowrap;
 }
 
-.navbar .container .links .user {
+.navbar .container .links  {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -59,14 +62,14 @@
   position: relative;
 }
 
-.navbar .container .links .user img {
+.navbar .container .links  img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.navbar .container .links .user .options {
+.navbar .container .links  .options {
   position: absolute;
   top: 50px;
   right: 0;
@@ -74,7 +77,7 @@
   background-color: white;
   border-radius: 10px;
   z-index: 999;
-  /* border: 1px solid lightgrey; */
+  border: 1px solid lightgrey;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -87,22 +90,75 @@
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
-  /* border: 1px solid white; */
+  border: 1px solid white;
   background-color: transparent;
   cursor: pointer;
 }
 
 .navbar .container .links button:hover {
-  border: #011739;
+  background-color: #1dbf73;
   border-color: #1dbf73;
 }
 
 .navbar .menu {
-  width: 1400px;
-  padding: 10px 0px;
+  width: 800px;
+  padding: 8px 0px;
   display: flex;
   justify-content: space-between;
-  /* color: gray; */
+  color: rgb(255, 255, 255);
   font-weight: 300;
-  font-family: "Montserrat", sans-serif;
+  
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar .container {
+    width: 90%;
+  }
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 800px) {
+  .navbar {
+    flex-direction: row;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+  }
+
+  .navbar .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .navbar .container .logo {
+    font-size: 24px;
+  }
+
+
+  /* .navbar .container .links {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    display: none;
+  }
+
+  .navbar .container .links .user {
+    margin-top: 10px;
+  }
+
+  .navbar .container .links .user .options {
+    top: 40px;
+    right: 10px;
+  } */
+
+  .navbar .menu {
+    display: none;
+  }
+  .img-2 {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    align-items: center;
+  }
 }
