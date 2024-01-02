@@ -82,22 +82,44 @@ const Home = () => {
               >
                 <div className="flex items-center ml-4 justify-start w-full h-full">
                   <span className="text-active rounded-l-lg pl-3 bg-white px-4 py-4 ml-2">
-                    <FiSearch size={18} />
+                    
                   </span>
                   <input
                     type="text"
                     name="input"
                     placeholder='Find your Events and Movies'
-                    className="w-96 h-full bg-transparent bg-white border border-none outline-none text-active "
+                    className="w-60  h-full bg-transparent bg-white border border-none outline-none text-active rounded-sm "
                   />
                   <button
                     type="submit"
-                    className="bg-[#F5167E] h-full lg:w-[100px] outline-none absolute top-16 lg:relative lg:top-0 rounded-md lg:rounded-[0] lg:rounded-tr-md lg:rounded-br-md w-full text-white"
+                    className="bg-[#F5167E] h-full lg:w-[100px] outline-none absolute top-16 lg:relative lg:top-0 rounded-md lg:rounded-[0] lg:rounded-tr-md lg:rounded-br-md w-60 sm:pl-0 md:left-0 left-10 text-white"
                   >
                     Search
                   </button>
                 </div>
-
+                <div>
+      <label htmlFor="price" className="block text-sm font-medium leading-6 text-gray-900">
+        Price
+      </label>
+      <div className="relative mt-2 rounded-md shadow-sm">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+          <span className="text-gray-500 sm:text-sm"></span>
+        </div>
+        <input
+          type="text"
+          name="price"
+          id="price"
+          className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          placeholder="0.00"
+        />
+        <div className="absolute inset-y-0 right-0 flex items-center">
+          <label htmlFor="currency" className="sr-only">
+            Currency
+          </label>
+          <button className="h-full bg-[#F5167E] rounded-md border-0  py-0 pl-2 pr-7 text-white sm:text-sm ">Search</button>
+        </div>
+      </div>
+    </div>
               </div>
             </div>
             <img
