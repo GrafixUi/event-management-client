@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className=" bg-blue-950 max-sm:w-[390px]">
-      <div className=" w-[1200px] mx-auto p-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-2 pt-6 px-4 max-md:max-px-4 max-xl:w-[1000px] max-sm:w-[390px] ">
-        <div className=" max-sm:w-[300px]">
+    <div className="bg-blue-950 w-full"> {/* Updated styling here */}
+      <div className="w-[1200px] mx-auto p-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-6 px-4 max-md:max-px-4 max-xl:w-[1000px]">
+        <div className="max-sm:w-[300px] mt-0 md:mt-[110px]">
           <img
             loading="lazy"
             srcSet={Logo}
             alt="logo"
-            className="aspect-[3.49] object-contain object-center w-full overflow-hidden flex justify-center align-middle items-center mt-[110px]"
+            className="aspect-[3.49] object-contain object-center w-full overflow-hidden flex justify-center align-middle items-center"
           />
         </div>
         <div>
@@ -67,15 +67,14 @@ const Footer = () => {
             and concert
           </div>
           <div className="bg-white flex  max-sm:hidden items-center justify-between pl-1 pr-2.5 py-2 rounded-[45.595px] border-2 border-solid border-zinc-100 max-xl:hidden max-lg:hidden max-md:flex-wrap max-md:pl-5">
-            <input className="text-neutral-400 border border-none text-xs my-auto p-3" type="text" placeholder="Enter your email address.."/>
+            <input className="text-neutral-400 border border-none text-xs my-auto p-3" type="text" placeholder="Enter your email address.." />
             <button className="text-white text-xs tracking-wider whitespace-nowrap justify-center items-stretch shadow-2xl bg-pink-600 self-stretch px-4 py-4 rounded-[50px]  max-md:px-5">
-              Subscibe
+              Subscribe
             </button>
           </div>
         </div>
       </div>
       <div className="bg-slate-600 self-stretch h-px mb-6" />
-
       <div className="text-white text-center text-sm pb-4 leading-6">
         Copyright © 2023 TicketVerse{" "}
       </div>

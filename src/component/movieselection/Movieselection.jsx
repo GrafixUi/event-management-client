@@ -181,7 +181,9 @@ const Movieslist = () => {
                     <div className="justify-center text-white text-2xl font-bold leading-8 max-md:max-w-full">
                         Recommended For You
                     </div>
-                    <Cards />
+                    <div className="flex justify-center">
+                        <Cards />
+                    </div>
                 </div>
             </div>{" "}
             <div className="self-center items-center justify-center flex max-w-full flex-col mt-20 mb-80  max-md:my-10 max-sm:ml-0">

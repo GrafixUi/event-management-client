@@ -80,30 +80,29 @@ const Home = () => {
               <div
                 className={`flex flex-col lg:flex-row items-center w-full lg:w-[650px] h-[50px] rounded-md focus:border focus:border-primary relative mb-20 lg:mb-0`}
               >
-                
                 <div>
-      <label htmlFor="price" className="block text-sm font-medium leading-6 text-gray-900">
-        Price
-      </label>
-      <div className="relative mt-2 ml-6 rounded-md shadow-sm">
-        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-          <span className="text-gray-500 sm:text-sm"><FiSearch /></span>
-        </div>
-        <input
-          type="text"
-          name="price"
-          id="price"
-          className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-          placeholder="Find the movies and event"
-        />
-        <div className="absolute inset-y-0 right-0 flex items-center">
-          <label htmlFor="currency" className="sr-only">
-            Currency
-          </label>
-          <button className="h-full bg-[#F5167E] rounded-md border-0  py-0 pl-2 pr-7 text-white sm:text-sm ">Search</button>
-        </div>
-      </div>
-    </div>
+                  <div className="relative mt-0 ml-6 rounded-md shadow-sm">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                      <span className="text-pink-500 sm:text-sm">
+                        <FiSearch />
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      name="price"
+                      id="price"
+                      className="block w-full rounded-md border-0 py-1.5 pl-7 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder="  Find the movies and events"
+                    />
+
+                    <div className="mt-2 sm:mt-0 sm:absolute sm:inset-y-0 sm:right-0 sm:flex sm:items-center">
+                      <button className="h-full bg-[#F5167E] rounded-md border-0 py-0 px-2 text-white sm:text-sm">
+                        Search
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
             <img
@@ -119,7 +118,7 @@ const Home = () => {
 
       <div className="text-[#242565] text-3xl font-bold self-center  mt-16 max-md:max-w-full max-md:mt-10 max-sm:text-xl">
         Explore the your Events and Movies
-      <Explore />
+        <Explore />
       </div>
       <Upcomingmovies />
       <Link
@@ -277,7 +276,7 @@ const Home = () => {
       <div className="justify-center text-zinc-700 text-center text-5xl font-bold leading-10 self-center mt-8 max-md:max-w-full max-md:text-4xl">
         Common questions
       </div>
-      
+
       <FAQ />
 
       <div className="justify-center text-center text-base font-bold leading-7 self-center max-w-[552px] mt-14 max-md:max-w-full max-md:mt-10 mb-12">
