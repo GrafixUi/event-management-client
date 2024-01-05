@@ -13,7 +13,7 @@ const Cards = () => {
         <div>
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={20}
+                spaceBetween={5}
                 slidesPerView={3}
                 navigation
                 onSlideChange={() => console.log('slide change')}
@@ -43,29 +43,29 @@ const Cards = () => {
                 }}
             >
                 <SwiperSlide>
-                    <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
+                    <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center">
                         <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[343px] flex-col items-stretch pb-6 rounded-2xl mb-2 justify-center">
+                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-2 justify-center">
                                 <img
                                     srcSet={product1} alt='product1'
                                     className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
                                 />
-                                <div className="self-center flex justify-between gap-5 mt-5 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
+                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
+                                    <div className="flex justify-center items-center self-center basis-[0%] flex-col  px-5">
+                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
                                             APR
-                                        </div>
-                                        <div className="text-black text-3xl font-bold whitespace-nowrap mt-2">
+                                        </h1>
+                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
                                             14
-                                        </div>
+                                        </p>
                                     </div>
                                     <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-black text-base font-bold leading-6">
+                                        <h2 className="text-black text-xs font-bold leading-5">
                                             JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </div>
-                                        <div className="text-neutral-500 text-sm leading-5 mt-5">
+                                        </h2>
+                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
                                             Directly seated and inside for you to enjoy the show.
-                                        </div>
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -75,27 +75,27 @@ const Cards = () => {
                 <SwiperSlide>
                     <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[343px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
+                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img
                                     srcSet={product1} alt='product1'
                                     className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
                                 />
-                                <div className="self-center flex justify-between gap-5 mt-5 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
+                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col items-center justify-center self-center px-5">
+                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
                                             APR
-                                        </div>
-                                        <div className="text-black text-3xl font-bold whitespace-nowrap mt-2">
+                                        </h1>
+                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
                                             14
-                                        </div>
+                                        </p>
                                     </div>
                                     <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-black text-base font-bold leading-6">
+                                        <h2 className="text-black text-xs font-bold leading-5">
                                             JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </div>
-                                        <div className="text-neutral-500 text-sm leading-5 mt-5">
+                                        </h2>
+                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
                                             Directly seated and inside for you to enjoy the show.
-                                        </div>
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -105,27 +105,27 @@ const Cards = () => {
                 <SwiperSlide>
                     <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[343px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
+                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img
                                     srcSet={product1} alt='product1'
                                     className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
                                 />
-                                <div className="self-center flex justify-between gap-5 mt-5 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
+                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col items-center self-center px-5">
+                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
                                             APR
-                                        </div>
-                                        <div className="text-black text-3xl font-bold whitespace-nowrap mt-2">
+                                        </h1>
+                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
                                             14
-                                        </div>
+                                        </p>
                                     </div>
                                     <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-black text-base font-bold leading-6">
+                                        <h2 className="text-black text-xs font-bold leading-5">
                                             JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </div>
-                                        <div className="text-neutral-500 text-sm leading-5 mt-5">
+                                        </h2>
+                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
                                             Directly seated and inside for you to enjoy the show.
-                                        </div>
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -135,13 +135,13 @@ const Cards = () => {
                 <SwiperSlide>
                     <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[343px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
+                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img
                                     srcSet={product1} alt='product1'
                                     className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
                                 />
-                                <div className="self-center flex justify-between gap-5 mt-5 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-stretch px-5">
+                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col self-center px-5">
                                         <div className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
                                             APR
                                         </div>
@@ -150,12 +150,12 @@ const Cards = () => {
                                         </div>
                                     </div>
                                     <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-black text-base font-bold leading-6">
+                                        <h2 className="text-black text-xs font-bold leading-5">
                                             JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </div>
-                                        <div className="text-neutral-500 text-sm leading-5 mt-5">
+                                        </h2>
+                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
                                             Directly seated and inside for you to enjoy the show.
-                                        </div>
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -165,27 +165,27 @@ const Cards = () => {
                 <SwiperSlide>
                     <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[343px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
+                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img
                                     srcSet={product1} alt='product1'
                                     className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
                                 />
-                                <div className="self-center flex justify-between gap-5 mt-5 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
+                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col items-stretch self-center px-5">
+                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
                                             APR
-                                        </div>
-                                        <div className="text-black text-3xl font-bold whitespace-nowrap mt-2">
+                                        </h1>
+                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
                                             14
-                                        </div>
+                                        </p>
                                     </div>
                                     <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-black text-base font-bold leading-6">
+                                        <h2 className="text-black text-xs font-bold leading-5">
                                             JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </div>
-                                        <div className="text-neutral-500 text-sm leading-5 mt-5">
+                                        </h2>
+                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
                                             Directly seated and inside for you to enjoy the show.
-                                        </div>
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -196,27 +196,27 @@ const Cards = () => {
                 <SwiperSlide>
                     <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[343px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
+                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img
                                     srcSet={product1} alt='product1'
                                     className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
                                 />
-                                <div className="self-center flex justify-between gap-5 mt-5 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
+                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col items-stretch self-center px-5">
+                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
                                             APR
-                                        </div>
-                                        <div className="text-black text-3xl font-bold whitespace-nowrap mt-2">
+                                        </h1>
+                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
                                             14
-                                        </div>
+                                        </p>
                                     </div>
                                     <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-black text-base font-bold leading-6">
+                                        <h2 className="text-black text-xs font-bold leading-5">
                                             JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </div>
-                                        <div className="text-neutral-500 text-sm leading-5 mt-5">
+                                        </h2>
+                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
                                             Directly seated and inside for you to enjoy the show.
-                                        </div>
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -226,27 +226,27 @@ const Cards = () => {
                 <SwiperSlide>
                     <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[343px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
+                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img
                                     srcSet={product1} alt='product1'
                                     className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
                                 />
-                                <div className="self-center flex justify-between gap-5 mt-5 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
+                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col items-stretch self-center px-5">
+                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
                                             APR
-                                        </div>
-                                        <div className="text-black text-3xl font-bold whitespace-nowrap mt-2">
+                                        </h1>
+                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
                                             14
-                                        </div>
+                                        </p>
                                     </div>
                                     <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <div className="text-black text-base font-bold leading-6">
+                                        <h2 className="text-black text-xs font-bold leading-5">
                                             JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </div>
-                                        <div className="text-neutral-500 text-sm leading-5 mt-5">
+                                        </h2>
+                                        <h2 className="text-neutral-500 text-xs leading-5 mt-1">
                                             Directly seated and inside for you to enjoy the show.
-                                        </div>
+                                        </h2>
                                     </div>
                                 </div>
                             </div>

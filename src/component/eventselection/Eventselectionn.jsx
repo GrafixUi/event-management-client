@@ -12,11 +12,11 @@ const Eventselectionn = () => {
   return (
     <div className="bg-white flex flex-col ">
       <Navbar />
-      <div className=" flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 max-md:max-w-full max-md:mt-10 max-md:px-5  max-sm:-mt-0 ">
+      <div className=" flex-col overflow-hidden self-stretch relative flex min-h-[450px] w-full justify-center items-center px-16 max-md:max-w-full max-md:mt-10 max-md:px-5  max-sm:-mt-0 ">
         <img
           srcSet={header}
           alt="header"
-          className="absolute h-[500px] w-full object-cover  object-center inset-0"
+          className="absolute h-[500px] w-full object-cover  object-center inset-0 max-md:h-[300px]"
         />
         <div className=" container justify-around ite relative flex w-full max-w-[1438px] items-stretch gap-5 mt-72 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:self-center max-sm:items-center max-sm:ml-20">
           <div className="flex flex-col items-stretch max-md:max-w-full">
@@ -53,19 +53,19 @@ const Eventselectionn = () => {
           </Link>
         </div>
       </div>
-      <div className="self-center flex w-full max-w-[1340px] flex-col items-stretch mt-5 max-md:max-w-full p-4">
+      <div className="self-center flex w-full max-w-[1300px] flex-col items-stretch mt-5 max-md:max-w-full p-4">
         <div className="max-md:max-w-full">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
               <div className="bg-white flex w-full grow items-stretch justify-between gap-5 mx-auto pl-16 pr-20 py-10 rounded-2xl max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-md:px-5">
                 <div className="flex items-stretch justify-between gap-5 max-sm:self-center max-sm:items-center">
-                  <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-3 pr-5 py-6 rounded-xl ">
-                    <div className="text-white text-xl font-semibold leading-6 uppercase whitespace-nowrap">
+                  <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-4 pr-8 py-6 rounded-xl ">
+                    <h1 className="text-white text-lg font-semibold leading-6 uppercase whitespace-nowrap">
                       dec
-                    </div>
-                    <div className="text-white text-6xl font-bold self-stretch whitespace-nowrap mt-4 max-md:text-4xl">
+                    </h1>
+                    <h3 className="text-white text-4xl font-bold self-stretch whitespace-nowrap mt-4 max-md:text-4xl">
                       08
-                    </div>
+                    </h3>
                   </div>
                   <div className="self-center flex grow basis-[0%] flex-col items-stretch my-auto">
                     <div className="items-stretch flex justify-between gap-3">
@@ -133,11 +133,11 @@ const Eventselectionn = () => {
         <div className="mt-8 max-md:max-w-full">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
-              <div className="bg-white flex grow flex-col w-full pl-10 pr-20 py-12 rounded-2xl items-start max-md:max-w-full max-md:mt-10 max-md:px-5">
-                <div className="text-zinc-700 text-xl font-bold leading-7 max-md:max-w-full">
+              <div className="bg-white flex grow flex-col w-full pl-10 pr-20 py-8 rounded-2xl items-start max-md:max-w-full max-md:mt-10 max-md:px-5">
+                <h1 className="text-zinc-700 text-xl font-bold leading-7 max-md:max-w-full">
                   About This Event
-                </div>
-                <div className="justify-center text-neutral-500 text-base leading-6 max-w-[645px] mt-10 max-md:max-w-full">
+                </h1>
+                <p className="justify-center text-neutral-500 text-sm leading-6 max-w-[645px] mt-8 max-md:max-w-full">
                   About the movie
                   <br />
                   Eswar, an IT employee, moves into a new house with his
@@ -146,13 +146,13 @@ const Eventselectionn = () => {
                   Things take a turn when Eswar buys a car and parks it in their
                   common parking space. Did their ego win over them or did they
                   realize their mistake?
-                </div>
-                <div className="text-neutral-400 text-base leading-6 mt-12 max-md:max-w-full max-md:mt-10">
+                </p>
+                <h3 className="text-neutral-400 text-base leading-6 mt-5 max-md:max-w-full max-md:mt-10">
                   Movie or Event type
-                </div>
-                <div className="justify-center text-neutral-500 text-base leading-6 underline mt-3 max-md:max-w-full">
+                </h3>
+                <h3 className="justify-center text-neutral-500 text-base leading-6 underline mt-1 max-md:max-w-full">
                   Drama,
-                </div>
+                </h3>
               </div>
             </div>
             <div className="flex flex-col items-stretch w-[32%] h- ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
@@ -168,7 +168,7 @@ const Eventselectionn = () => {
           </div>
         </div>
       </div>
-      <div className="border bg-blue-950 self-stretch flex w-full flex-col justify-center items-center mt-12 px-16 py-11 border-solid border-zinc-200 max-md:max-w-full max-md:mt-10 max-md:px-5">
+      <div className="border bg-blue-950 self-stretch flex w-full flex-col justify-center items-center mt-12 px-16 py-5 border-solid border-zinc-200 max-md:max-w-full max-md:mt-10 max-md:px-5">
         <div className="flex w-full max-w-[1465px] flex-col items-stretch mb-4 max-md:max-w-full">
           <div className="justify-center text-white text-2xl font-bold leading-8 max-md:max-w-full">
             Recommended For You
@@ -177,13 +177,13 @@ const Eventselectionn = () => {
         </div>
       </div>
       <div className=" self-center items-center justify-center flex max-w-full flex-col mt-20 max-md:my-10 max-sm:ml-0">
-        <div className=" items-end text-zinc-700 text-xl font-bold leading-7 whitespace-nowrap ml-6 self-start max-md:ml-2.5">
+        <h1 className=" items-end text-zinc-700 text-xl font-bold leading-7 whitespace-nowrap ml-6 self-start max-md:ml-2.5">
           Reviews
-        </div>
+        </h1>
         <div className="  flex  gap-3.5 ml-6 mt-14  max-md:ml-2.5 max-md:mt-10">
-          <div className="  text-zinc-700 text-base font-bold leading-6 grow whitespace-nowrap">
+          <h3 className="  text-zinc-700 text-base font-bold leading-6 grow whitespace-nowrap">
             902 reviews for this Gig
-          </div>
+          </h3>
           <div className="flex gap-1 py-px self-start items-start">
             <div className="items-stretch flex gap-1 py-0.5">
               <Rating />
@@ -196,9 +196,9 @@ const Eventselectionn = () => {
               <div className="flex flex-col items-stretch w-6/12 max-md:w-full max-md:ml-0">
                 <div className="items-stretch flex grow flex-col pb-2 px-1 max-md:mt-8">
                   <div className="flex items-stretch justify-between gap-2.5">
-                    <div className="text-blue-500 text-base font-semibold leading-4 self-center whitespace-nowrap my-auto">
+                    <h2 className="text-blue-500 text-base font-semibold leading-4 self-center whitespace-nowrap my-auto">
                       5 Stars
-                    </div>
+                    </h2>
                     <div className="fill-zinc-200 self-center flex grow basis-[0%] flex-col justify-center items-stretch my-auto pr-3">
                       <div className="bg-amber-400 flex shrink-0 h-2 flex-col rounded-[999px]" />
                     </div>{" "}

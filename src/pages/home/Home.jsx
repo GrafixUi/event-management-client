@@ -123,13 +123,14 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-
       <div className="text-[#242565] text-3xl font-bold flex flex-col  self-center items-center  mt-16 max-md:max-w-full max-md:mt-10 max-sm:text-xl">
         Explore your Events and Movies
         <Explore />
       </div>
-      <Upcomingmovies />
+
+      <div className=" flex self-center items-center justify-center">
+        <Upcomingevent />
+      </div>
       <Link
         to="eventslist"
         className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-8 py-3 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5  hover:text-white group relative flex overflow-hidden"
@@ -168,7 +169,7 @@ const Home = () => {
         </div>
       </div>
       <div className="self-center flex w-[1087px] max-w-full justify-between gap-5 mt-32 px-5 items-start max-md:flex-wrap max-md:mt-10">
-        <div className="text-blue-950 text-2xl font-bold grow shrink basis-auto mt-3 max-sm:ml-5">
+        <div className="text-blue-950 text-2xl font-bold grow shrink basis-auto mt-3 max-sm:ml-24">
           Upcoming Movies
         </div>
         <div className="flex items-stretch gap-5 max-md:max-w-full max-md:flex-wrap max-sm:hidden">
@@ -270,8 +271,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Upcomingevent />
-      <Upcomingevent />
+      <div className=" flex self-center items-center justify-center">
+        <Upcomingmovies />
+      </div>
       <Link
         to="movieslist"
         className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-8 py-3 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5 hover:text-white group relative flex overflow-hidden"

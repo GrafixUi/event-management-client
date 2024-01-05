@@ -29,10 +29,10 @@ const Moviesticket = () => {
                             </div>
                             <div className="flex flex-col items-stretch w-[40%] ml-5 max-md:w-full max-md:ml-0">
                                 <div className="flex flex-col items-stretch my-auto max-md:mt-10">
-                                    <div className="text-white text-7xl whitespace-nowrap max-md:text-4xl">
+                                    <h1 className="text-white text-3xl whitespace-nowrap max-md:text-4xl">
                                         SHINE (2023)
-                                    </div>
-                                    <div className="text-neutral-400 text-justify text-base mt-11 max-md:mt-10">
+                                    </h1>
+                                    <p className="text-neutral-400 text-justify text-base mt-5 max-md:mt-10">
                                         <br />
                                         Eswar, an IT employee, moves into a new house with his
                                         pregnant wife. Ilamparuthi, a government employee, has been
@@ -40,10 +40,10 @@ const Moviesticket = () => {
                                         daughter. Things take a turn when Eswar buys a car and parks
                                         it in their common parking space. Did their ego win over
                                         them or did they realize their mistake?
-                                    </div>
-                                    <div className="text-white text-lg whitespace-nowrap mt-10">
+                                    </p>
+                                    <h3 className="text-white text-lg whitespace-nowrap mt-4">
                                         Moive Type : Drama,scince friction{" "}
-                                    </div>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -62,43 +62,43 @@ const Moviesticket = () => {
                 </div>
             </div>
 
-            <div className="self-center w-full max-w-[1478px] mt-16 max-md:max-w-full max-md:mt-10">
+            <div className="self-center w-full max-w-[1300px] mt-16 max-md:max-w-full max-md:mt-10">
                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                     <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
                         <div className="bg-white flex grow items-stretch justify-between gap-5 w-full px-16 py-9 rounded-2xl max-md:max-w-full max-md:flex-wrap max-md:mt-8 max-md:px-5">
                             <div className="flex flex-col items-center">
-                                <div className="text-white text-xl font-semibold leading-6 uppercase whitespace-nowrap">
+                                <h2 className="text-white text-lg font-semibold leading-6 uppercase whitespace-nowrap">
                                     dec
-                                </div>
+                                </h2>
                                 <div className="self-stretch z-[1] flex items-stretch justify-between gap-5">
-                                    <div className="text-white text-6xl font-bold whitespace-nowrap backdrop-blur-[3.950000047683716px] bg-blue-950 grow items-stretch pl-3 pr-5 pt-12 pb-6 rounded-xl max-md:text-4xl">
+                                    <h1 className="text-white text-3xl font-bold whitespace-nowrap backdrop-blur-[3.950000047683716px] bg-blue-950 grow items-stretch pl-3 pr-5 pt-12 pb-6 rounded-xl max-md:text-4xl">
                                         08
-                                    </div>
+                                    </h1>
                                     <div className="self-center flex grow basis-[0%] flex-col items-stretch my-auto">
                                         <div className="items-stretch flex justify-between gap-3">
-                                            <div className="text-black text-sm">Released:</div>
-                                            <div className="text-black text-sm">2021</div>
+                                            <h3 className="text-black text-sm">Released:</h3>
+                                            <h3 className="text-black text-sm">2021</h3>
                                         </div>
                                         <div className="items-stretch flex justify-between gap-3 mt-5">
-                                            <div className="text-black text-sm">Gener:</div>
-                                            <div className="text-black text-sm">Comedy</div>
+                                            <h3 className="text-black text-sm">Gener:</h3>
+                                            <h3 className="text-black text-sm">Comedy</h3>
                                         </div>
                                         <div className="items-stretch flex justify-between gap-3 mt-5">
-                                            <div className="text-black text-sm">PG Rating:</div>
-                                            <div className="text-black text-sm">AM</div>
+                                            <h3 className="text-black text-sm">PG Rating:</h3>
+                                            <h3 className="text-black text-sm">AM</h3>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex flex-col items-stretch mt-5 self-start">
-                                <div className="text-black text-sm font-medium">Theater:</div>
-                                <div className="text-blue-950 text-sm font-semibold mt-4">
+                                <h3 className="text-black text-sm font-medium">Theater:</h3>
+                                <h3 className="text-blue-950 text-sm font-semibold mt-4">
                                     HITEX Exhibition Centre
-                                </div>
-                                <div className="text-blue-950 text-xs font-light mt-4">
+                                </h3>
+                                <h3 className="text-blue-950 text-xs font-light mt-4">
                                     HITEX Exhibition Centre, Hitex Road, Izzathnagar, <br />
                                     Kothaguda, Telangana, India
-                                </div>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -141,9 +141,9 @@ const Moviesticket = () => {
                     </div>
                 </div>
             </div>
-            <div className="self-center w-full max-w-[1478px] mt-12  max-md:max-w-full max-md:my-10">
+            <div className="self-center w-full max-w-[1300px] mt-12 mb-10 max-md:max-w-full max-md:my-10">
                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                    <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+                    <div className="flex flex-col items-stretch w-[66%]  max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
                         <div className="bg-white flex grow flex-col w-full px-10 py-12 rounded-[32px] max-md:max-w-full max-md:mt-8 max-md:px-5">
                             <div className="self-stretch flex flex-col items-center mt-9 max-md:max-w-full">
                                 <img
@@ -343,18 +343,18 @@ const Moviesticket = () => {
                         </div>
                     </div>
                     <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
-                        <div className="flex flex-col px-5 max-md:max-w-full max-md:mt-8">
-                            <div className="bg-blue-950 self-stretch flex flex-col pl-14 pr-20 py-11 rounded-xl items-start max-md:max-w-full max-md:px-5">
-                                <div className="text-zinc-300 text-lg leading-7">
+                        <div className="flex flex-col px-5 mt-4 max-md:max-w-full max-md:mt-8">
+                            <div className="bg-blue-950  self-stretch flex flex-col pl-14 pr-20 py-11 rounded-xl items-start max-md:max-w-full max-md:px-5">
+                                <h2 className="text-zinc-300 text-md leading-7">
                                     Movie Title
-                                </div>
-                                <div className="text-white text-3xl font-bold uppercase whitespace-nowrap mt-3.5">
+                                </h2>
+                                <h2 className="text-white text-xl font-bold uppercase whitespace-nowrap mt-3.5">
                                     Shine (2023)
-                                </div>
-                                <div className="text-zinc-300 text-lg mt-7">Seat No </div>
-                                <div className="text-white text-2xl font-semibold mt-3.5">
+                                </h2>
+                                <h2 className="text-zinc-300 text-md mt-7">Seat No </h2>
+                                <h1 className="text-white text-lg font-semibold mt-3.5">
                                     D4,D3
-                                </div>
+                                </h1>
                             </div>
                             <img
                                 loading="lazy"
@@ -365,14 +365,14 @@ const Moviesticket = () => {
                                 <div className="text-blue-950 text-2xl font-medium max-md:max-w-full">
                                     Offers
                                 </div>
-                                <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
-                                    <div className="justify-between items-center flex gap-2.5">
+                                <div className="justify-between items-stretch flex gap-5 mt-3 max-md:max-w-full max-md:flex-wrap">
+                                    <div className="justify-between items-center self-center flex gap-2.5">
                                         <img
                                             loading="lazy"
                                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/93e2f9a3ab332727d07dceec0d7d91924df0a1bce654f8e4f84ece11c0d38c0e?" alt='img'
                                             className="aspect-square object-contain object-center w-5 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
                                         />
-                                        <div className="text-neutral-800 text-base font-medium self-stretch grow whitespace-nowrap">
+                                        <div className="text-neutral-800 text-xs font-medium self-stretch grow whitespace-nowrap">
                                             50% off up to ₹100 | Use code BOOKNOW
                                         </div>
                                     </div>
@@ -380,15 +380,15 @@ const Moviesticket = () => {
                                         Apply
                                     </Link>
                                 </div>
-                                <div className="justify-between items-stretch flex w-full gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
-                                    <div className="justify-between items-center flex gap-2.5">
+                                <div className="justify-between items-stretch flex w-full gap-5 mt-2 max-md:max-w-full max-md:flex-wrap">
+                                    <div className="justify-between items-center self-center flex gap-2.5">
                                         <img
                                             loading="lazy"
                                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/93e2f9a3ab332727d07dceec0d7d91924df0a1bce654f8e4f84ece11c0d38c0e?" alt='img'
                                             className="aspect-square object-contain object-center w-5 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
                                         />
-                                        <div className="text-neutral-800 text-base font-medium self-stretch grow whitespace-nowrap">
-                                            20% off | Use code FIRSTTIME
+                                        <div className="text-neutral-800 text-xs font-medium self-stretch grow whitespace-nowrap">
+                                            20% off up to ₹100 | Use code FIRSTTIME
                                         </div>
                                     </div>
                                     <Link className="text-blue-950 text-base font-medium">
@@ -408,50 +408,50 @@ const Moviesticket = () => {
                                             Apply Code
                                         </div>
                                     </div>
-                                    <input className="text-zinc-500 text-opacity-50 text-sm font-medium whitespace-nowrap items-stretch self-stretch grow justify-center px-6 py-5 border-b-zinc-500 border-b-opacity-50 border-b border-solid max-md:px-5" type='text' placeholder='Enter code' />
+                                    <input className="text-zinc-500 text-opacity-50 w-36  text-sm font-medium whitespace-nowrap items-stretch self-stretch grow justify-center px-6 py-5 border-b-zinc-500 border-b-opacity-50 border border-none max-md:px-5" type='text' placeholder='Enter code' />
 
                                 </div>
                             </div>
                             <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 p-8 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
-                                <div className="text-neutral-800 text-xl font-medium max-md:max-w-full">
+                                <h2 className="text-neutral-800 text-xl font-medium max-md:max-w-full">
                                     Bill details
-                                </div>
-                                <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
-                                    <div className="text-zinc-500 text-xs font-medium">
+                                </h2>
+                                <div className="justify-between items-stretch flex gap-5 mt-3 max-md:max-w-full max-md:flex-wrap">
+                                    <h3 className="text-zinc-500 text-xs font-medium">
                                         Base Ticket Fare
-                                    </div>
-                                    <div className="text-zinc-500 text-xs font-medium">
+                                    </h3>
+                                    <h3 className="text-zinc-500 text-xs font-medium">
                                         ₹1000.00
-                                    </div>
+                                    </h3>
                                 </div>
                                 <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
-                                    <div className="text-zinc-500 text-xs font-medium">
+                                    <h3 className="text-zinc-500 text-xs font-medium">
                                         Total Travellers
-                                    </div>
-                                    <div className="text-zinc-500 text-xs font-medium">3</div>
+                                    </h3>
+                                    <h3 className="text-zinc-500 text-xs font-medium">3</h3>
                                 </div>
                                 <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
-                                    <div className="text-zinc-500 text-xs font-medium">
+                                    <h3 className="text-zinc-500 text-xs font-medium">
                                         CGST & SGST
-                                    </div>
-                                    <div className="text-zinc-500 text-xs font-medium">
+                                    </h3>
+                                    <h3 className="text-zinc-500 text-xs font-medium">
                                         ₹500.00
-                                    </div>
+                                    </h3>
                                 </div>
-                                <div className="justify-between items-stretch flex gap-5 mt-8 max-md:max-w-full max-md:flex-wrap">
-                                    <div className="text-neutral-700 text-xl font-medium">
+                                <div className="justify-between items-stretch flex gap-5 mt-4 max-md:max-w-full max-md:flex-wrap">
+                                    <h3 className="text-neutral-700 text-xl font-medium">
                                         Total Charge
-                                    </div>
-                                    <div className="text-neutral-700 text-xl font-medium">
+                                    </h3>
+                                    <h3 className="text-neutral-700 text-xl font-medium">
                                         ₹3500.00
-                                    </div>
+                                    </h3>
                                 </div>
                             </div>
-                            <div className="text-zinc-500 text-xs font-medium self-center mt-5 max-md:max-w-full">
+                            <h2 className="text-zinc-500 text-xs font-medium self-center mt-5 max-md:max-w-full">
                                 Discounts, offers and price concessions will be applied later
                                 during payment
-                            </div>
-                            <Link to="/confirmticket" className="text-white text-base text-center font-bold whitespace-nowrap justify-center items-center bg-blue-950 self-center w-[404px] max-w-full mt-11 px-16 py-5 rounded-xl max-md:mt-10 max-md:px-5">
+                            </h2>
+                            <Link to="/confirmticket" className="text-white text-base text-center font-bold whitespace-nowrap justify-center items-center bg-blue-950 self-center w-[300px] max-w-full mt-11 px-16 py-5 rounded-xl max-md:mt-10 max-md:px-5">
                                 Book Now
                             </Link>
                             <button className="text-pink-600 text-base font-semibold self-center whitespace-nowrap mt-5">

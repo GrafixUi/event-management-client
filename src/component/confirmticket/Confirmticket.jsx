@@ -14,51 +14,51 @@ const Confirmticket = () => {
         <div>
             <Navbar />
             <div className="bg-white flex flex-col justify-center items-center px-16 max-md:px-5">
-                <div className="flex w-full max-w-[1493px] flex-col mt-10 max-md:max-w-full max-md:my-10">
+                <div className="flex w-full max-w-[1493px] flex-col mt-24 max-md:max-w-full max-md:my-10">
                     <div className="text-blue-950 text-xl font-bold self-center whitespace-nowrap font-[Poppins]">
                         Pay to confirm booking
                     </div>
-                    <div className="self-stretch mt-16 max-md:max-w-full max-md:mt-10">
+                    <div className="self-stretch mt-10 max-md:max-w-full max-md:mt-10">
                         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                             <div className="flex flex-col items-stretch pl-28 w-[65%] max-md:w-full max-md:ml-0 max-sm:pl-0">
-                                <div className="bg-blue-950 grow w-[700px] pl-16 pr-20 py-12 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
+                                <div className="bg-blue-950 grow w-[650px] max-h-[650px] pl-16 pr-20 py-12 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                                         <div className="flex flex-col items-stretch w-[51%] max-md:w-full max-md:ml-0">
                                             <div className="flex flex-col items-stretch my-auto max-md:max-w-full max-md:mt-10">
-                                                <div className="text-white text-2xl font-semibold max-md:max-w-full">
-                                                    Booking Detail
-                                                </div>
-                                                <div className="text-white text-xl font-medium leading-8 mt-8 max-md:max-w-full">
+                                                <h1 className="text-white text-2xl font-semibold max-md:max-w-full">
+                                                    BOOKING DETAIL
+                                                </h1>
+                                                <h2 className="text-white text-xl font-medium leading-8 mt-8 max-md:max-w-full">
                                                     Schedule
-                                                </div>
-                                                <div className="text-white text-md leading-7 mt-7">
+                                                </h2>
+                                                <h3 className="text-white font-thin text-md leading-7 mt-7">
                                                     Movie Title
-                                                </div>
-                                                <div className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
+                                                </h3>
+                                                <h1 className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
                                                     EVENT NAME
-                                                </div>
-                                                <div className="text-white text-md leading-7 mt-5">
+                                                </h1>
+                                                <h2 className="text-white font-thin text-md leading-7 mt-5">
                                                     Date
-                                                </div>
-                                                <div className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
+                                                </h2>
+                                                <h2 className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
                                                     Mon, 23 Oct 2023
-                                                </div>
-                                                <div className="text-neutral-400 text-lg leading-7 mt-5">
+                                                </h2>
+                                                <h3 className="text-neutral-400 text-lg leading-7 mt-5">
                                                     Ticket (3)
-                                                </div>
-                                                <div className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
+                                                </h3>
+                                                <h1 className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
                                                     C8, C9, C10
-                                                </div>
-                                                <div className="text-white text-sm font-medium mt-9 max-md:max-w-full">
+                                                </h1>
+                                                <p className="text-white text-sm font-thin mt-5 max-md:max-w-full">
                                                     Theater:
-                                                </div>
-                                                <div className="text-white text-xl font-semibold mt-7 max-md:max-w-full">
+                                                </p>
+                                                <h1 className="text-white text-xl font-semibold mt-7 max-md:max-w-full">
                                                     HITEX Exhibition Centre
-                                                </div>
-                                                <div className="text-white text-md font-light mt-5 max-md:max-w-full">
+                                                </h1>
+                                                <p className="text-white text-md font-thin mt-3 max-md:max-w-full">
                                                     HITEX Exhibition Centre, Hitex Road, Izzathnagar,
                                                     Kothaguda, Telangana, India
-                                                </div>
+                                                </p>
                                             </div>
                                         </div>
                                         <div className="flex flex-col items-stretch w-[39%] ml-5 max-md:w-full max-md:ml-0">
@@ -73,32 +73,32 @@ const Confirmticket = () => {
                             <div className="flex flex-col items-stretch w-[30%] ml-5 max-md:w-full max-md:ml-0">
                                 <div className="flex flex-col max-md:max-w-full max-md:mt-10">
                                     <div className="justify-center items-stretch bg-white self-stretch flex flex-col p-8 rounded-3xl border-2 border-dashed border-blue-950 max-md:max-w-full max-md:px-5">
-                                        <div className="text-blue-950 text-2xl font-medium max-md:max-w-full">
+                                        <h1 className="text-blue-950 text-xl font-medium max-md:max-w-full">
                                             Offers
-                                        </div>
-                                        <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
-                                            <div className="justify-between items-center flex gap-2.5">
+                                        </h1>
+                                        <div className="justify-between items-stretch flex gap-5 mt-2 max-md:max-w-full max-md:flex-wrap">
+                                            <div className="justify-between items-center self-center flex gap-2.5">
                                                 <img
                                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/93e2f9a3ab332727d07dceec0d7d91924df0a1bce654f8e4f84ece11c0d38c0e?" alt='img'
                                                     className="aspect-square object-contain object-center w-5 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
                                                 />
-                                                <div className="text-neutral-800 text-base font-medium self-stretch grow whitespace-nowrap">
+                                                <h3 className="text-neutral-800 text-xs font-medium self-stretch grow whitespace-nowrap">
                                                     50% off up to ₹100 | Use code BOOKNOW
-                                                </div>
+                                                </h3>
                                             </div>
                                             <Link className="text-blue-950 text-base font-bold">
                                                 Apply
                                             </Link>
                                         </div>
-                                        <div className="justify-between items-stretch flex w-full gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
-                                            <div className="justify-between items-center flex gap-2.5">
+                                        <div className="justify-between items-stretch flex w-full gap-5 mt-3 max-md:max-w-full max-md:flex-wrap">
+                                            <div className="justify-between items-center self-center flex gap-2.5">
                                                 <img
                                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/93e2f9a3ab332727d07dceec0d7d91924df0a1bce654f8e4f84ece11c0d38c0e?" alt='img'
                                                     className="aspect-square object-contain object-center w-5 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
                                                 />
-                                                <div className="text-neutral-800 text-base font-medium self-stretch grow whitespace-nowrap">
-                                                    20% off | Use code FIRSTTIME
-                                                </div>
+                                                <h3 className="text-neutral-800 text-xs font-medium self-stretch grow whitespace-nowrap">
+                                                    20% off up to ₹100 | Use code FIRSTTIME
+                                                </h3>
                                             </div>
                                             <Link className="text-blue-950 text-base font-bold">
                                                 Apply
@@ -112,48 +112,48 @@ const Confirmticket = () => {
                                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/93c146497e8165cb89e62d813ff44ceaae8089be958bef572eb8b97e70731be6?" alt='img'
                                                     className="aspect-square object-contain object-center w-8 fill-blue-950 overflow-hidden shrink-0 max-w-full"
                                                 />
-                                                <div className="text-neutral-800 text-xl font-medium grow whitespace-nowrap self-start">
+                                                <h1 className="text-neutral-800 text-lg font-medium grow whitespace-nowrap self-start">
                                                     Apply Code
-                                                </div>
+                                                </h1>
                                             </div>
                                             <div className="text-zinc-500 text-opacity-50 text-sm font-medium whitespace-nowrap items-stretch self-stretch grow justify-center px-6 py-5 border-b-zinc-500 border-b-opacity-50 border-b border-solid max-md:px-5">
-                                                <input type="text" placeholder='Enter Code' className=' p-5 w-48 border border-none' />
+                                                <input type="text" placeholder='Enter Code' className=' p-5 w-36 border border-none' />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 p-8 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
-                                        <div className="text-neutral-800 text-xl font-medium max-md:max-w-full">
+                                        <h1 className="text-neutral-800 text-xl font-medium max-md:max-w-full">
                                             Bill details
+                                        </h1>
+                                        <div className="justify-between items-stretch flex gap-5 mt-3 max-md:max-w-full max-md:flex-wrap">
+                                            <h3 className="text-zinc-500 text-xs font-medium">
+                                                Base Ticket Fare
+                                            </h3>
+                                            <h3 className="text-zinc-500 text-xs font-medium">
+                                                ₹1000.00
+                                            </h3>
+                                        </div>
+                                        <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
+                                            <h3 className="text-zinc-500 text-xs font-medium">
+                                                Total Travellers
+                                            </h3>
+                                            <h3 className="text-zinc-500 text-xs font-medium">3</h3>
+                                        </div>
+                                        <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
+                                            <h3 className="text-zinc-500 text-xs font-medium">
+                                                CGST & SGST
+                                            </h3>
+                                            <h3 className="text-zinc-500 text-xs font-medium">
+                                                ₹500.00
+                                            </h3>
                                         </div>
                                         <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
-                                            <div className="text-zinc-500 text-xs font-medium">
-                                                Base Ticket Fare
-                                            </div>
-                                            <div className="text-zinc-500 text-xs font-medium">
-                                                ₹1000.00
-                                            </div>
-                                        </div>
-                                        <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
-                                            <div className="text-zinc-500 text-xs font-medium">
-                                                Total Travellers
-                                            </div>
-                                            <div className="text-zinc-500 text-xs font-medium">3</div>
-                                        </div>
-                                        <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
-                                            <div className="text-zinc-500 text-xs font-medium">
-                                                CGST & SGST
-                                            </div>
-                                            <div className="text-zinc-500 text-xs font-medium">
-                                                ₹500.00
-                                            </div>
-                                        </div>
-                                        <div className="justify-between items-stretch flex gap-5 mt-8 max-md:max-w-full max-md:flex-wrap">
-                                            <div className="text-neutral-700 text-xl font-medium">
+                                            <h2 className="text-neutral-700 text-xl font-medium">
                                                 Total Charge
-                                            </div>
-                                            <div className="text-neutral-700 text-xl font-medium">
+                                            </h2>
+                                            <h2 className="text-neutral-700 text-xl font-medium">
                                                 ₹3500.00
-                                            </div>
+                                            </h2>
                                         </div>
                                     </div>
                                     <Link to="/confirmbooking" className="text-[#0A075F] text-bold font-semibold self-center whitespace-nowrap mt-10 max-md:mt-10">
@@ -167,7 +167,7 @@ const Confirmticket = () => {
                         </div>
                     </div>
 
-                    <div className="flex max-w-[686px] flex-col px-5 pl-28 mt-14 mb-10 max-sm:pl-0">
+                    <div className="flex max-w-[686px] flex-col px-5 pl-28 mt-10 mb-10 max-sm:pl-0">
                         <div className="text-neutral-800 text-xl font-medium whitespace-nowrap self-start max-md:ml-1.5">
                             All Payment Options
                         </div>
