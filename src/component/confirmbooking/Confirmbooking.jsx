@@ -9,12 +9,12 @@ const Confirmbooking = () => {
         <div>
             <Navbar />
             <div className="bg-white flex flex-col justify-center items-center px-16 py-12 max-md:px-5">
-                <div className="flex w-full max-w-[1452px] flex-col mt-10 max-md:max-w-full max-md:my-10">
+                <div className="flex w-full max-w-[1252px] flex-col mt-10 max-md:max-w-full max-md:my-10">
                     <img
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/62f0d58ba90c77648dc55f2938fe6fe5f8c945d6e605a196ea46907291ce3c32?" alt='img'
                         className="aspect-square object-contain object-center w-[100px] fill-green-600 overflow-hidden self-center max-w-full"
                     />
-                    <div className="text-green-600 text-xl font-medium self-center mt-10 max-md:max-w-full">
+                    <div className="text-green-600 text-xl font-medium self-center mt-10 max-md:max-w-full max-sm:pl-10">
                         Congratulations! You have successfully booked tickets
                     </div>
                     <div className="text-zinc-500 text-center text-base font-medium self-center mt-2.5 max-md:max-w-full">
@@ -75,7 +75,7 @@ const Confirmbooking = () => {
                             </div>
                             <div className="flex flex-col items-stretch w-[30%] ml-5 max-md:w-full max-md:ml-0">
                                 <div className="justify-center items-center flex flex-col mt-8 py-0.5 max-md:mt-10">
-                                    <QRCode value='Angle' />
+                                    <QRCode value='Sanjai' />
                                     <div className="text-zinc-500 text-right text-base font-medium self-center whitespace-nowrap mt-5">
                                         Scan the code to view in any device
                                     </div>

@@ -11,28 +11,28 @@ import {
 
 const Marketplace = () => {
     return (
-        <section className="py-14 bg-white">
-            <div className="contain">
-                <div className="flex flex-col items-start justify-between w-full gap-9">
+        <section className="py-14 bg-white flex flex-row">
+            <div className="container  mx-auto">
+                <div className="grid   gap-9">
 
-                    <div className="w-full grid grid-cols-1 md:grid-cols-3  justify-center items-center gap-20 mt-6">
+                    <div className="w-full grid grid-cols-6 max-sm:grid-cols-2 items-center justify-center gap-10 mt-6">
 
                         <Link
                             to="/"
                             className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125"
                         >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#DF0068] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300">
+                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#DF0068] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
                                 <IoIosMicrophone size={60} />
                             </div>
                             <h2 className="text-xl font-medium text-center">
-                                Conference
+                                Conference 
                             </h2>
                         </Link>
                         <Link
                             to="/"
                             className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125"
                         >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#F33A00] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300">
+                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#F33A00] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
                                 <MdLocalMovies  size={60}/>
                             </div>
                             <h2 className="text-xl font-medium text-center">
@@ -44,7 +44,7 @@ const Marketplace = () => {
                             to="/"
                             className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125"
                         >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#A500F2] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300">
+                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#A500F2] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
                                 <SiYourtraveldottv size={60} />
                             </div>
                             <h2 className="text-xl font-medium text-center  ">
@@ -56,7 +56,7 @@ const Marketplace = () => {
                             to="/"
                             className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125"
                         >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#FCB808] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300">
+                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#FCB808] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
                                 <MdOutlineFestival size={60} />
                             </div>
                             <h2 className="text-xl font-medium text-center ">
@@ -68,7 +68,7 @@ const Marketplace = () => {
                             to="/"
                             className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125"
                         >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#1AAB18] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300">
+                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#1AAB18] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
                                 <MdWorkspacesOutline size={60} />
                             </div>
                             <h2 className="text-xl font-medium text-center ">
@@ -80,7 +80,7 @@ const Marketplace = () => {
                             to="/"
                             className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125 "
                         >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#1D1A1B] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300">
+                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#1D1A1B] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
                                 <MdSportsVolleyball size={60} />
                             </div>
                             <h2 className="text-xl font-medium text-center ">

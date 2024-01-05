@@ -137,7 +137,7 @@ const Contact = () => {
                     </div>
                     <div className="self-stretch mt-16 max-md:max-w-full max-md:mt-10">
                         <div className="gap-10 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                            <div className="flex flex-col items-stretch w-[30%] max-md:w-full max-md:ml-0">
+                            <div className="flex flex-col items-stretch w-[28%] max-md:w-full max-md:ml-0">
                                 <div className="flex grow flex-col items-stretch w-full pb-4 border-2 border-solid border-black border-opacity-10 max-md:max-w-full max-md:mt-6">
                                     <img
                                         loading="lazy"
@@ -154,7 +154,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col items-stretch w-[30%] ml-5 max-md:w-full max-md:ml-0">
+                            <div className="flex flex-col items-stretch w-[28%] ml-5 max-md:w-full max-md:ml-0">
                                 <div className="flex grow flex-col items-stretch w-full pb-4 border-2 border-solid border-black border-opacity-10 max-md:max-w-full max-md:mt-6">
                                     <img
                                         loading="lazy"
@@ -171,7 +171,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col items-stretch w-[30%] ml-5 max-md:w-full max-md:ml-0">
+                            <div className="flex flex-col items-stretch w-[28%] ml-5 max-md:w-full max-md:ml-0">
                                 <div className="flex grow flex-col items-stretch w-full pb-3 border-2 border-solid border-black border-opacity-10 max-md:max-w-full max-md:mt-6">
                                     <img
                                         loading="lazy"

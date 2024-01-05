@@ -12,7 +12,7 @@ const Eventselectionn = () => {
   return (
     <div className="bg-white flex flex-col ">
       <Navbar />
-      <div className=" flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 max-md:max-w-full max-md:mt-10 max-md:px-5  max-sm:-mt-0">
+      <div className=" flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 max-md:max-w-full max-md:mt-10 max-md:px-5  max-sm:-mt-0 ">
         <img
           srcSet={header}
           alt="header"
@@ -30,7 +30,7 @@ const Eventselectionn = () => {
           </div>
           <Link
             to="/eventticket"
-            class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950"
+            class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:-ml-20"
           >
             <span class="relative text-white font-bold text-lg">Book Now</span>
             <div class="flex items-center -space-x-3 translate-x-3">
@@ -53,7 +53,7 @@ const Eventselectionn = () => {
           </Link>
         </div>
       </div>
-      <div className="self-center flex w-full max-w-[1540px] flex-col items-stretch mt-5 max-md:max-w-full p-4">
+      <div className="self-center flex w-full max-w-[1340px] flex-col items-stretch mt-5 max-md:max-w-full p-4">
         <div className="max-md:max-w-full">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
@@ -155,7 +155,7 @@ const Eventselectionn = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+            <div className="flex flex-col items-stretch w-[32%] h- ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
               <div className="bg-white flex grow flex-col items-stretch w-full mt-2.5 pl-9 pr-11 pt-5 pb-11 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <div className="text-black text-sm font-medium">Location:</div>
                 <img

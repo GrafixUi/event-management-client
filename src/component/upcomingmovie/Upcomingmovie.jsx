@@ -41,6 +41,38 @@ const Upcomingevents = () => {
         };
     }, []);
 
+    const shopopen = useRef(null)
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setShowOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+    const dropDownOpen = useRef(null)
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+    
+
+
     const [items, setItems] = useState(upcomingData);
 
     return (
@@ -59,26 +91,26 @@ const Upcomingevents = () => {
                                 className="flex items-center"
                             >
                                 <span className="p-1 text-[#015464] text-sm">
-                                    Weekdays
+                                    WeekDays
                                 </span>
                                 <img src={dropdown} alt="Dropdown" className="w-3 h-3"
                                     width={3}
                                     height={3} />
                             </button>
                             {isSortOpen && (
-                                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                                <ul className="absolute mt-5 mr-96 p-2 z-50 py-2 w-36 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
 
-                                    <button className=" text-[#015464] text-sm my-3 ">
+                                    <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                                         12-01-2024{" "}
                                     </button>
 
 
-                                    <button className=" text-[#015464] text-sm my-3 ">
+                                    <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                                         12-01-2024{" "}
                                     </button>
                                     {" "}
 
-                                    <button className=" text-[#015464] text-sm my-3 ">
+                                    <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                                         12-01-2024{" "}
                                     </button>
                                     {" "}
@@ -86,7 +118,7 @@ const Upcomingevents = () => {
                             )}
                         </div>
                     </div>
-                    <div className="bg-violet-50 flex items-stretch justify-between gap-5 px-6 py-4 rounded-[50px] max-md:px-5">
+                    <div ref={shopopen} className="bg-violet-50 flex items-stretch justify-between gap-5 px-6 py-4 rounded-[50px] max-md:px-5">
                         <div ref={dropdownRef}>
 
                             <button
@@ -95,26 +127,26 @@ const Upcomingevents = () => {
                                 className="flex items-center"
                             >
                                 <span className="p-1 text-[#015464] text-sm">
-                                    Event Date
+                                    EventType
                                 </span>
                                 <img src={dropdown} alt="Dropdown" className="w-3 h-3"
                                     width={3}
                                     height={3} />
                             </button>
                             {isShowOpen && (
-                                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                                <ul className="absolute mt-5 mr-96 z-50 py-2 w-36 p-2 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
 
-                                    <button className=" text-[#015464] text-sm my-3 ">
+                                    <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                                         12-01-2024{" "}
                                     </button>
 
 
-                                    <button className=" text-[#015464] text-sm my-3 ">
+                                    <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                                         12-01-2024{" "}
                                     </button>
                                     {" "}
 
-                                    <button className=" text-[#015464] text-sm my-3 ">
+                                    <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                                         12-01-2024{" "}
                                     </button>
                                     {" "}
@@ -122,7 +154,7 @@ const Upcomingevents = () => {
                             )}
                         </div>
                     </div>
-                    <div className="bg-violet-50 flex items-stretch justify-between gap-4 px-6 py-4 rounded-[50px] max-md:px-5">
+                    <div ref={dropDownOpen} className="bg-violet-50 flex items-stretch justify-between gap-4 px-6 py-4 rounded-[50px] max-md:px-5">
                         <div ref={dropdownRef}>
 
                             <button
@@ -138,19 +170,19 @@ const Upcomingevents = () => {
                                     height={3} />
                             </button>
                             {isDropdownOpen && (
-                                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                                <ul className="absolute mt-5 mr-96 z-50 py-2 w-36 p-2 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
 
-                                    <button className=" text-[#015464] text-sm my-3 ">
+                                    <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                                         12-01-2024{" "}
                                     </button>
 
 
-                                    <button className=" text-[#015464] text-sm my-3 ">
+                                    <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                                         12-01-2024{" "}
                                     </button>
                                     {" "}
 
-                                    <button className=" text-[#015464] text-sm my-3 ">
+                                    <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                                         12-01-2024{" "}
                                     </button>
                                     {" "}

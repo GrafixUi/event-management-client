@@ -27,7 +27,7 @@ const Eventticket = () => {
                             Telangana, India
                         </div>
                     </div>
-                    <Link to="/confirmticket" class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
+                    <Link to="/confirmticket" class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:-ml-20">
                         <span class="relative text-white font-bold text-lg">Book Now</span>
                         <div class="flex items-center -space-x-3 translate-x-3">
                             <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
@@ -38,7 +38,7 @@ const Eventticket = () => {
                     </Link>
                 </div>
             </div>
-            <div className="self-center w-full max-w-[1478px] mt-5 max-md:max-w-full max-md:mt-10">
+            <div className="self-center w-full max-w-[1378px] mt-5 max-md:max-w-full max-md:mt-10 max-sm:p-4">
                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                     <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
                         <div className="bg-white flex w-full grow items-stretch justify-between gap-5 mx-auto px-16 py-10 rounded-2xl max-md:max-w-full max-md:flex-wrap max-md:mt-8 max-md:px-5">
@@ -78,7 +78,7 @@ const Eventticket = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+                    <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-3">
                         <div className="bg-white grow w-full px-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-8 max-md:px-5">
                             <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 ">
                                 <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0 max-sm:self-center max-sm:items-center">
@@ -112,14 +112,14 @@ const Eventticket = () => {
                     </div>
                 </div>
             </div>
-            <div className="self-center w-full max-w-[1478px] mt-12 max-md:max-w-full max-md:my-10">
-                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+            <div className="self-center w-full max-w-[1378px] mb-9 mt-12 max-md:max-w-full max-md:my-10 max-sm:p-5">
+                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:-mt-16">
                     <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
                         <div className="bg-white flex grow flex-col items-stretch w-full pl-14 pr-20 py-12 rounded-[32px] max-md:max-w-full max-md:mt-8 max-md:px-5">
-                            <div className="text-blue-950 text-3xl font-bold mr-6 mt-12 max-md:max-w-full max-md:mr-2.5 max-md:mt-10">
+                            <div className="text-blue-950 text-3xl font-bold mr-6 mt-12 max-md:max-w-full max-md:mr-2.5 max-md:mt-10 ">
                                 Select Your Seat
                             </div>
-                            <div className=" bg-zinc-300 hover:bg-blue-950 flex w-[590px] max-w-full items-center justify-between gap-5 mr-6 mt-20 pl-16 pr-12 py-8 rounded-xl max-md:flex-wrap max-md:mr-2.5 max-md:mt-10 max-md:px-5">
+                            <div className=" bg-zinc-300 hover:bg-blue-950 flex w-[590px] max-w-full items-center justify-between gap-5 mr-6 mt-20 pl-16 pr-12 py-8 rounded-xl max-md:flex-wrap max-md:mr-2.5 max-md:mt-10 max-md:px-5 cursor-pointer">
                                 <button className=" text-start text-white text-xl font-extrabold leading-6 uppercase grow shrink basis-auto my-auto">
                                     Gold tickets
                                 </button>
@@ -127,7 +127,7 @@ const Eventticket = () => {
                                     Price
                                 </div>
                             </div>
-                            <div className=" bg-zinc-300 hover:bg-blue-950 flex w-[590px] max-w-full items-center justify-between gap-5 mr-6 mt-20 pl-16 pr-12 py-8 rounded-xl max-md:flex-wrap max-md:mr-2.5 max-md:mt-10 max-md:px-5">
+                            <div className=" bg-zinc-300 hover:bg-blue-950 flex w-[590px] max-w-full items-center justify-between gap-5 mr-6 mt-20 pl-16 pr-12 py-8 rounded-xl max-md:flex-wrap max-md:mr-2.5 max-md:mt-10 max-md:px-5 cursor-pointer">
                                 <button className=" text-start text-white text-xl font-extrabold leading-6 uppercase grow shrink basis-auto my-auto">
                                     Gold tickets
                                 </button>
@@ -135,7 +135,7 @@ const Eventticket = () => {
                                     Price
                                 </div>
                             </div>
-                            <div className=" bg-zinc-300 hover:bg-blue-950 flex w-[590px] max-w-full items-center justify-between gap-5 mr-6 mt-20 pl-16 pr-12 py-8 rounded-xl max-md:flex-wrap max-md:mr-2.5 max-md:mt-10 max-md:px-5">
+                            <div className=" bg-zinc-300 hover:bg-blue-950 flex w-[590px] max-w-full items-center justify-between gap-5 mr-6 mt-20 pl-16 pr-12 py-8 rounded-xl max-md:flex-wrap max-md:mr-2.5 max-md:mt-10 max-md:px-5 cursor-pointer">
                                 <button className=" text-start text-white text-xl font-extrabold leading-6 uppercase grow shrink basis-auto my-auto">
                                     Gold tickets
                                 </button>
@@ -170,7 +170,7 @@ const Eventticket = () => {
                                             src={vector} alt='vector'
                                             className="aspect-square object-contain object-center w-5 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
                                         />
-                                        <div className="text-neutral-800 text-base font-medium self-stretch grow whitespace-nowrap">
+                                        <div className="text-neutral-800 text-xs font-medium self-stretch grow whitespace-nowrap flex items-center justify-center">
                                             50% off up to ₹100 | Use code BOOKNOW
                                         </div>
                                     </div>
@@ -185,11 +185,11 @@ const Eventticket = () => {
                                             src={vector} alt='vector'
                                             className="aspect-square object-contain object-center w-5 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
                                         />
-                                        <div className="text-neutral-800 text-base font-medium self-stretch grow whitespace-nowrap">
-                                            20% off | Use code FIRSTTIME
+                                        <div className="text-neutral-800 text-xs font-medium self-stretch grow whitespace-nowrap flex items-center justify-center">
+                                            20% off up to ₹100 | Use code FIRSTTIME
                                         </div>
                                     </div>
-                                    <Link className="text-blue-950 text-base font-medium">
+                                    <Link className="text-blue-950 text-base font-medium ml-2 grow whitespace-nowrap">
                                         Apply
                                     </Link>
                                 </div>
@@ -202,12 +202,12 @@ const Eventticket = () => {
                                             src={vector} alt='vector'
                                             className="aspect-square object-contain object-center w-8 fill-blue-950 overflow-hidden shrink-0 max-w-full"
                                         />
-                                        <div className="text-neutral-800 text-xl font-medium grow whitespace-nowrap self-start">
+                                        <div className="text-neutral-800 text-lg font-medium grow whitespace-nowrap self-start">
                                             Apply Code
                                         </div>
                                     </div>
                                     <div className="text-zinc-500 text-opacity-50 text-sm font-medium whitespace-nowrap items-stretch self-stretch grow justify-center px-6 py-5 border-b-zinc-500 border-b-opacity-50 border-b border-solid max-md:px-5">
-                                        <input type="text" placeholder='Enter Code' className=' p-5' />
+                                        <input type="text" placeholder='Enter Code' className=' p-5 w-48 border border-none' />
                                     </div>
                                 </div>
                             </div>

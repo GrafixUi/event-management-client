@@ -20,7 +20,7 @@ const Confirmticket = () => {
                     </div>
                     <div className="self-stretch mt-16 max-md:max-w-full max-md:mt-10">
                         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                            <div className="flex flex-col items-stretch w-[65%] max-md:w-full max-md:ml-0">
+                            <div className="flex flex-col items-stretch pl-28 w-[65%] max-md:w-full max-md:ml-0 max-sm:pl-0">
                                 <div className="bg-blue-950 grow w-[700px] pl-16 pr-20 py-12 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                                         <div className="flex flex-col items-stretch w-[51%] max-md:w-full max-md:ml-0">
@@ -86,7 +86,7 @@ const Confirmticket = () => {
                                                     50% off up to ₹100 | Use code BOOKNOW
                                                 </div>
                                             </div>
-                                            <Link className="text-blue-950 text-base font-medium">
+                                            <Link className="text-blue-950 text-base font-bold">
                                                 Apply
                                             </Link>
                                         </div>
@@ -100,7 +100,7 @@ const Confirmticket = () => {
                                                     20% off | Use code FIRSTTIME
                                                 </div>
                                             </div>
-                                            <Link className="text-blue-950 text-base font-medium">
+                                            <Link className="text-blue-950 text-base font-bold">
                                                 Apply
                                             </Link>
                                         </div>
@@ -117,7 +117,7 @@ const Confirmticket = () => {
                                                 </div>
                                             </div>
                                             <div className="text-zinc-500 text-opacity-50 text-sm font-medium whitespace-nowrap items-stretch self-stretch grow justify-center px-6 py-5 border-b-zinc-500 border-b-opacity-50 border-b border-solid max-md:px-5">
-                                                <input type="text" placeholder='Enter Code' className=' p-5' />
+                                                <input type="text" placeholder='Enter Code' className=' p-5 w-48 border border-none' />
                                             </div>
                                         </div>
                                     </div>
@@ -167,7 +167,7 @@ const Confirmticket = () => {
                         </div>
                     </div>
 
-                    <div className="flex max-w-[686px] flex-col px-5 mt-14">
+                    <div className="flex max-w-[686px] flex-col px-5 pl-28 mt-14 mb-10 max-sm:pl-0">
                         <div className="text-neutral-800 text-xl font-medium whitespace-nowrap self-start max-md:ml-1.5">
                             All Payment Options
                         </div>
@@ -201,7 +201,7 @@ const Confirmticket = () => {
                                     <div className="text-neutral-800 text-base font-medium">
                                         Credit / Debit Card
                                     </div>
-                                    <div className="text-zinc-500 text-xs font-medium whitespace-nowrap">
+                                    <div className="text-zinc-500 text-xs font-medium whitespace-nowrap max-sm:w-16">
                                         Visa, Mastercard, amex, Rupay and more
                                     </div>
                                 </div>
@@ -261,7 +261,7 @@ const Confirmticket = () => {
                                     <div className="text-neutral-800 text-base font-medium">
                                         Mobile Wallets
                                     </div>
-                                    <div className="text-zinc-500 text-xs font-medium whitespace-nowrap">
+                                    <div className="text-zinc-500 text-xs w-10 font-medium whitespace-nowrap max-sm:w-10">
                                         Amazonpay, Mobikwik, Payzapp, PayPal
                                     </div>
                                 </div>

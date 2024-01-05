@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-blue-950 w-full"> {/* Updated styling here */}
-      <div className="w-[1200px] mx-auto p-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-6 px-4 max-md:max-px-4 max-xl:w-[1000px]">
-        <div className="max-sm:w-[300px] mt-0 md:mt-[110px]">
+      <div className="w-[1200px] max-md:w-[500px] mx-auto p-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-6 px-4 max-md:max-px-4 max-xl:w-[1000px] max-sm:w-[390px]">
+        <div className="max-sm:w-[300px] max-md:w-[300px] mt-0 md:mt-[110px]">
           <img
             loading="lazy"
             srcSet={Logo}
@@ -36,13 +36,13 @@ const Footer = () => {
             Eventick
           </div>
           <div className="text-zinc-100 flex flex-col text-sm font-medium leading-7 mb-6">
-            <Link to="#" className="mb-2">
+            <Link to="/about" className="mb-2">
               About Us
             </Link>
             <Link to="#" className="mb-2">
               Press
             </Link>
-            <Link to="#" className="mb-2">
+            <Link to="/contact" className="mb-2">
               Contact Us
             </Link>
             <Link to="#" className="mb-2">
@@ -62,7 +62,7 @@ const Footer = () => {
           <div className="text-white text-lg font-bold capitalize mb-4 ">
             Stay in the loop
           </div>
-          <div className="text-zinc-100 text-sm leading-6 mb-6">
+          <div className="text-zinc-100 text-sm leading-6 mb-6 max-sm:w-80">
             Join our mailing list to stay in the loop with our newest for Event
             and concert
           </div>
@@ -74,8 +74,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-slate-600 self-stretch h-px mb-6" />
-      <div className="text-white text-center text-sm pb-4 leading-6">
+      <div className="bg-slate-600 self-stretch h-px mb-6 max-sm:w-[390px]" />
+      <div className="text-white text-center text-sm pb-4 leading-6 max-sm:w-[390px]">
         Copyright © 2023 TicketVerse{" "}
       </div>
     </div>

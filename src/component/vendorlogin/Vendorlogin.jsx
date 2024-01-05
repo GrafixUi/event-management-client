@@ -10,7 +10,7 @@ const Vendorlogin = () => {
         <div>
             <Navbar />
             <div className="items-center bg-white bg-opacity-90 flex flex-col justify-center px-16 py-12 max-md:px-5">
-                <div className="w-full max-w-[1499px] mt-10 mb-52 max-md:max-w-full max-md:my-10">
+                <div className="w-full max-w-[1499px] mt-10 max-md:max-w-full max-md:my-10">
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                         <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
                             <div className="items-stretch flex grow flex-col pr-2 pb-2.5 max-md:mt-10">
@@ -38,7 +38,7 @@ const Vendorlogin = () => {
                                         Ticket list
                                     </div>
                                 </button>
-                                <button
+                                {/* <button
                                     onClick={() => setIsToggled(!isToggled)}
                                     className="border border-[color:var(--NestMart-BorderColor-1,#E5E5E5)] bg-white flex items-stretch justify-between gap-3.5 mt-2.5 px-7 py-5 rounded-xl border-solid max-md:px-5 hover:bg-gray-200">
                                     <img
@@ -49,7 +49,7 @@ const Vendorlogin = () => {
                                     <div className="text-zinc-500 text-base font-bold leading-5 tracking-normal self-center grow whitespace-nowrap my-auto">
                                         Add a Event/Movie
                                     </div>
-                                </button>
+                                </button> */}
                                 <button 
                                     onClick={() => setIsToggled(!isToggled)}  
                                     className="border border-[color:var(--NestMart-BorderColor-1,#E5E5E5)] bg-white flex items-stretch justify-between gap-2.5 mt-2.5 px-8 py-5 rounded-xl border-solid max-md:px-5 hover:bg-gray-200">

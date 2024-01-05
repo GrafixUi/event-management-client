@@ -59,6 +59,36 @@ const Home = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const shopopen = useRef(null)
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const dropDownOpen = useRef(null)
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <div className="bg-white flex flex-col container-xl">
       <div className="flex-col overflow-hidden self-stretch relative flex min-h-[550px]  w-full  justify-center items-center px-16 py-12 max-md:max-w-full max-md:px-5">
@@ -77,32 +107,11 @@ const Home = () => {
                 <br />
                 Events & Movies
               </div>
-              <div
-                className={`flex flex-col lg:flex-row items-center w-full lg:w-[650px] h-[50px] rounded-md focus:border focus:border-primary relative mb-20 lg:mb-0`}
-              >
-                <div>
-                  <div className="relative mt-0 ml-6 rounded-md shadow-sm">
-                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                      <span className="text-pink-500 sm:text-sm">
-                        <FiSearch />
-                      </span>
-                    </div>
-                    <input
-                      type="text"
-                      name="price"
-                      id="price"
-                      className="block w-full rounded-md border-0 py-1.5 pl-7 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      placeholder="  Find the movies and events"
-                    />
-
-                    <div className="mt-2 sm:mt-0 sm:absolute sm:inset-y-0 sm:right-0 sm:flex sm:items-center">
-                      <button className="h-full bg-[#F5167E] rounded-md border-0 py-0 px-2 text-white sm:text-sm">
-                        Search
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
+              <div className=" pl-6">
+                <form action="#" className="search-form">
+                  <input type="text" placeholder="Find your Events and Movies" required className="" />
+                  <button className="material-symbols-outlined" type="sumbit">search</button>
+                </form>
               </div>
             </div>
             <img
@@ -116,8 +125,8 @@ const Home = () => {
       </div>
 
 
-      <div className="text-[#242565] text-3xl font-bold self-center  mt-16 max-md:max-w-full max-md:mt-10 max-sm:text-xl">
-        Explore the your Events and Movies
+      <div className="text-[#242565] text-3xl font-bold flex flex-col  self-center items-center  mt-16 max-md:max-w-full max-md:mt-10 max-sm:text-xl">
+        Explore your Events and Movies
         <Explore />
       </div>
       <Upcomingmovies />
@@ -173,7 +182,7 @@ const Home = () => {
                 onClick={handleSortToggle}
                 className="flex items-center"
               >
-                <span className="p-1 text-[#015464] text-sm">Weekdays</span>
+                <span className="p-1 text-[#015464] text-sm">WeekDays</span>
                 <img
                   src={dropdown}
                   alt="Dropdown"
@@ -183,28 +192,28 @@ const Home = () => {
                 />
               </button>
               {isSortOpen && (
-                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
-                  <button className=" text-[#015464] text-sm my-3 ">
+                <ul className="absolute mt-5 mr-96 z-50 p-2 py-2 w-36 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                     12-01-2024{" "}
                   </button>
-                  <button className=" text-[#015464] text-sm my-3 ">
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                     12-01-2024{" "}
                   </button>{" "}
-                  <button className=" text-[#015464] text-sm my-3 ">
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                     12-01-2024{" "}
                   </button>{" "}
                 </ul>
               )}
             </div>
           </div>
-          <div className="bg-violet-50 flex items-stretch justify-between gap-5 px-6 py-4 rounded-[50px] max-md:px-5">
+          <div ref={shopopen} className="bg-violet-50 flex items-stretch justify-between gap-5 px-6 py-4 rounded-[50px] max-md:px-5">
             <div ref={dropdownRef}>
               <button
                 type="button"
                 onClick={handleShowToggle}
                 className="flex items-center"
               >
-                <span className="p-1 text-[#015464] text-sm">Event Date</span>
+                <span className="p-1 text-[#015464] text-sm">EventType</span>
                 <img
                   src={dropdown}
                   alt="Dropdown"
@@ -214,21 +223,21 @@ const Home = () => {
                 />
               </button>
               {isShowOpen && (
-                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
-                  <button className=" text-[#015464] text-sm my-3 ">
+                <ul className="absolute mt-5 mr-96 p-2 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                     12-01-2024{" "}
                   </button>
-                  <button className=" text-[#015464] text-sm my-3 ">
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                     12-01-2024{" "}
                   </button>{" "}
-                  <button className=" text-[#015464] text-sm my-3 ">
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                     12-01-2024{" "}
                   </button>{" "}
                 </ul>
               )}
             </div>
           </div>
-          <div className="bg-violet-50 flex items-stretch justify-between gap-4 px-6 py-4 rounded-[50px] max-md:px-5">
+          <div ref={dropDownOpen} className="bg-violet-50 flex items-stretch justify-between gap-4 px-6 py-4 rounded-[50px] max-md:px-5">
             <div ref={dropdownRef}>
               <button
                 type="button"
@@ -245,14 +254,14 @@ const Home = () => {
                 />
               </button>
               {isDropdownOpen && (
-                <ul className="absolute mt-5 mr-96 z-50 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
-                  <button className=" text-[#015464] text-sm my-3 ">
+                <ul className="absolute mt-5 mr-96 z-50 p-2 py-2 w-32 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                     12-01-2024{" "}
                   </button>
-                  <button className=" text-[#015464] text-sm my-3 ">
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                     12-01-2024{" "}
                   </button>{" "}
-                  <button className=" text-[#015464] text-sm my-3 ">
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
                     12-01-2024{" "}
                   </button>{" "}
                 </ul>

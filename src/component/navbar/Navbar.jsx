@@ -1,131 +1,164 @@
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import "./Navbar.css";
+import { Fragment ,useState, useEffect} from 'react'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from "../../assets/images/logo.png"
-import MobileSidebar, {showLink} from "./Mobileside/Mobileside";
-import { FaBars } from "react-icons/fa";
+import { Link } from 'react-router-dom'
 
+const navigation = [
+  { name: 'Home', href: '/', current: true },
+  { name: 'About', href: '/about', current: false },
+  { name: 'Events', href: '/eventslist', current: false },
+  { name: 'Movies', href: '/movieslist', current: false },
+  { name: 'Venue', href: '/', current: false },
+  { name: 'Contact Us', href: '/contact', current: false },
+]
 
-const Navbar = () => {
-  const [active, setActive] = useState(false);
-  const [open, setOpen] = useState(false);
-  const [showLink, setShowLink] = useState(false);
-  const [loginModal, setLoginModal] = useState(false);
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
 
-  const { pathname } = useLocation();
+export default function Navbar() {
 
-  const isActive = () => {
-    window.scrollY > 0 ? setActive(true) : setActive(false);
-  };
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", isActive);
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const threshold = 100; 
+
+      setIsScrolled(scrollPosition > threshold);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
     return () => {
-      window.removeEventListener("scroll", isActive);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  // const currentUser = null
-
-  const currentUser = {
-    id: 1,
-    username: "Hello User",
-    isSeller: true,
-  };
-
   return (
-    <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
-      <div className="container">
-        <div className="logo">
-          <Link className="link" to="/">
-            <img className="img-2 " src={Logo} alt="" />
-          </Link>
-
-        </div>
-        <div className="links">
-          {/* <span>Fiverr Business</span>
-          <span>Explore</span>
-          <span>English</span> */}
-          <div className="contain">
-            <div className="w-full flex items-center justify-between py-4 relative">
-              <MobileSidebar
-                show={showLink}
-                setShow={setShowLink}
-                setLoginModal={setLoginModal}
-              />
-              <div className="flex items-center gap-2 h-full justify-between w-[50%] sm:w-fit">
-                <span onClick={() => setShowLink(true)} className="lg:hidden mt-1">
-                  <FaBars size={25} />
-                </span>
-              </div>
-              {/* <>
-            <div
-              onClick={() => {
-                navigate("/");
-                setLoginModal(true);
-              }}
-              className="cursor-pointer hidden sm:flex"
-            >
-              Create Events
-            </div>
-            <NavLink
-              to="/join"
-              className={`border py-2 px-5 rounded hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 text-sm font-semibold ${active ? "text-primary border-primary" : ""
-                }`}
-            >
-              Login
-            </NavLink>
-          </> */}
-            </div>
-          </div>
-          {!currentUser?.isSeller && <span>Become a Seller</span>}
-          {currentUser ? (
-            <div className="user flex  items-center justify-center text-center gap-3 max-sm:hidden" onClick={() => setOpen(!open)}>
-              <img
-                src="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0="
-                alt=""
-              />
-              <span className=" max-sm:hidden">{currentUser?.username}</span>
-            </div>
-          ) : (
-            <>
-              <span>Sign in</span>
-              <Link className="link" to="/register">
-                <button>Join</button>
-              </Link>
-            </>
-          )}
-        </div>
-      </div>
-      {(active || pathname !== "/") && (
+    <Disclosure as="nav" className={`fixed w-full z-20 bg-[#061046]`}>
+      {({ open }) => (
         <>
-          <hr />
-          <div className="menu">
-            <Link className="link menuLink" to="/">
-              Events
-            </Link>
-            <Link className="link menuLink" to="/">
-              Movies
-            </Link>
-            <Link className="link menuLink" to="/">
-              Upcoming Events
-            </Link>
-            <Link className="link menuLink" to="/">
-              Upcoming Movies
-            </Link>
-            <Link className="link menuLink" to="/">
-              Venus
-            </Link>
-            <Link className="link menuLink" to="/">
-              How it works?
-            </Link>
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-16 items-center justify-between">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="absolute -inset-0.5" />
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <Link to="/" className="flex flex-shrink-0 items-center">
+                  <img
+                    className=" h-14 w-auto"
+                    src={Logo}
+                    alt="Your Company"
+                  />
+                </Link>
 
+                <input className="bg-white h-10 mt-2 px-1 max-sm:hidden rounded-full border-none "
+                  placeholder='Search'
+                />
+
+                <div className="hidden sm:ml-6 sm:block">
+                  <div className="flex space-x-4 justify-center items-center mt-2 ">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          'rounded-md px-3 py-2 text-sm font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                {/* Profile dropdown */}
+                <Menu as="div" className="relative ml-3">
+                  <div>
+                    <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                      <span className="absolute -inset-1.5" />
+                      <span className="sr-only">Open user menu</span>
+                      <img
+                        className="h-8 w-8 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/vendorlogin"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Your Profile
+                          </a>
+                        )}
+                      </Menu.Item>
+                      
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Logout
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+              </div>
+            </div>
           </div>
-          <hr />
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pb-3 pt-2">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    'block rounded-md px-3 py-2 text-base font-medium'
+                  )}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
         </>
       )}
-    </div>
-  );
-};
-
-export default Navbar;
+    </Disclosure>
+  )
+}

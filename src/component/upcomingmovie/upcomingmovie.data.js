@@ -1,6 +1,7 @@
 export const upcomingData = [
     {
         id: 1,
+        img:"/assets/images/product1",
         month:"Apr",
         date:"14",
         title:"JYJ 2011 JYJ Worldwide Concert Barcelona",
@@ -8,6 +9,7 @@ export const upcomingData = [
     },
     {
         id: 2,
+        img:"/assets/images/product2",
         month:"Apr",
         date:"14",
         title:"JYJ 2011 JYJ Worldwide Concert Barcelona",
@@ -15,6 +17,7 @@ export const upcomingData = [
     },
     {
         id: 3,
+        img:"/assets/images/product3",
         month:"Apr",
         date:"14",
         title:"JYJ 2011 JYJ Worldwide Concert Barcelona",
