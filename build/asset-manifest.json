@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f2c89e12.css",
-    "main.js": "/static/js/main.77c63be8.js",
-    "static/media/background.png": "/static/media/background.1eb325ebab89068a98d5.png",
+    "main.css": "/static/css/main.f05e31bb.css",
+    "main.js": "/static/js/main.d6506e85.js",
     "static/media/header2.png": "/static/media/header2.12367e737a0d4d5597d9.png",
     "static/media/header.png": "/static/media/header.88bd3b3be20822b74bf6.png",
     "static/media/conatct.png": "/static/media/conatct.d009a263c2e2dc8a496a.png",
@@ -12,7 +11,6 @@
     "static/media/about4.png": "/static/media/about4.99dcda1594ca26630615.png",
     "static/media/about5.png": "/static/media/about5.929abcd56b152fe8f5ed.png",
     "static/media/about3.png": "/static/media/about3.520fc4ab5d1743f10438.png",
-    "static/media/img1.png": "/static/media/img1.dd47c1d1c740fe28b90e.png",
     "static/media/product1.png": "/static/media/product1.e66f643f559e86224613.png",
     "static/media/location.png": "/static/media/location.52bafb6f72e0d098943d.png",
     "static/media/booking.png": "/static/media/booking.b5fa62d718a58f94a5e8.png",
@@ -20,11 +18,11 @@
     "static/media/Vector.svg": "/static/media/Vector.2c06093112124dd46d1d091153a0feda.svg",
     "static/media/dropdown.svg": "/static/media/dropdown.bd3e584a9b748808d46ed76d264410c6.svg",
     "index.html": "/index.html",
-    "main.f2c89e12.css.map": "/static/css/main.f2c89e12.css.map",
-    "main.77c63be8.js.map": "/static/js/main.77c63be8.js.map"
+    "main.f05e31bb.css.map": "/static/css/main.f05e31bb.css.map",
+    "main.d6506e85.js.map": "/static/js/main.d6506e85.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2c89e12.css",
-    "static/js/main.77c63be8.js"
+    "static/css/main.f05e31bb.css",
+    "static/js/main.d6506e85.js"
   ]
 }
