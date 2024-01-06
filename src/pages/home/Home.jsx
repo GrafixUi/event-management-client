@@ -101,18 +101,18 @@ const Home = () => {
         <div className="relative flex w-full max-w-[1220px] flex-col items-stretch mb-16 max-md:max-w-full max-md:mb-10">
           <div className="flex items-stretch justify-between gap-5 mt-14 pr-2 h-[400px] max-md:max-w-full max-md:flex-wrap max-md:mt-10">
             <div className="self-center flex grow basis-[0%] flex-col my-auto items-start max-md:max-w-full max-sm:mt-32">
-              <div className="text-white text-3xl font-bold self-stretch mt-3 p-6 max-md:max-w-full max-md:text-1xl">
+              <div className="text-white text-3xl font-bold self-stretch mt-3 p-6 max-md:max-w-full max-md:text-1xl max-sm:self-center">
                 <span className="font-medium text-[35px]">Find the Your</span>{" "}
                 <span className="text-[40px] font-thin header-style-font">Favorites</span>
                 <br />
                 Events & Movies
               </div>
-              <div className=" pl-6">
+              {/* <div className=" pl-6">
                 <form action="#" className="search-form">
                   <input type="text" placeholder="Find your Events and Movies" required className="" />
                   <button className="material-symbols-outlined" type="sumbit">search</button>
                 </form>
-              </div>
+              </div> */}
             </div>
             <img
               loading="lazy"
@@ -161,7 +161,7 @@ const Home = () => {
             </div>
             <Link
               to="login"
-              className="text-white text-center text-lg font-bold shadow-2xl bg-pink-600 justify-center items-center mt-6 px-8 py-3 rounded-[40px] max-md:px-5"
+              className="text-white text-center w-72 flex self-center text-lg font-bold shadow-2xl bg-pink-600 justify-center items-center mt-6 px- py-3 rounded-[40px] max-md:px-5 max-sm:w-52"
             >
               Create Events
             </Link>
@@ -169,7 +169,7 @@ const Home = () => {
         </div>
       </div>
       <div className="self-center flex w-[1087px] max-w-full justify-between gap-5 mt-32 px-5 items-start max-md:flex-wrap max-md:mt-10">
-        <div className="text-blue-950 text-2xl font-bold grow shrink basis-auto mt-3 max-sm:ml-24">
+        <div className="text-blue-950 text-2xl font-bold grow shrink basis-auto mt-3 max-sm:ml-20">
           Upcoming Movies
         </div>
         <div className="flex items-stretch gap-5 max-md:max-w-full max-md:flex-wrap max-sm:hidden">
@@ -284,7 +284,7 @@ const Home = () => {
       <div className="justify-center text-pink-600 text-center text-sm font-bold leading-5 tracking-wider self-center whitespace-nowrap mt-32 max-md:mt-10">
         FAQ
       </div>
-      <div className="justify-center text-zinc-700 text-center text-5xl font-bold leading-10 self-center mt-8 max-md:max-w-full max-md:text-4xl">
+      <div className="justify-center text-zinc-700 text-center text-5xl max-sm:text-xl font-bold leading-10 self-center mt-8 max-md:max-w-full max-md:text-4xl">
         Common questions
       </div>
 

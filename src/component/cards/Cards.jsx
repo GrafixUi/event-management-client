@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom/dist';
 const Cards = () => {
     return (
         <div>
-            <Swiper
+            <Swiper className=''
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={5}
                 slidesPerView={3}

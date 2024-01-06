@@ -15,6 +15,7 @@ import Confirmticket from './component/confirmticket/Confirmticket';
 import Moviesticket from './component/moviestickets/Moviesticket';
 import Eventticket from "./component/eventticket/Eventticket";
 import Movieslist from './pages/movieslist/Movieslist';
+import Organizer from "./component/organizer/Organizer";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   },
+  {
+    path:"/organizer",
+    element: <Organizer />
+  }
   
 ]);
 

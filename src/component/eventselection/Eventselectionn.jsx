@@ -9,6 +9,7 @@ import Navbar from "../../component/navbar/Navbar"
 import Footer from "../../component/footer/Footer"
 import { Link } from "react-router-dom";
 const Eventselectionn = () => {
+  
   return (
     <div className="bg-white flex flex-col ">
       <Navbar />

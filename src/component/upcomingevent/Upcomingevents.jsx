@@ -191,29 +191,29 @@ const Upcomingevents = () => {
                     </div>
                 </div>
             </div>
-            <div className=" py-5 mt-8 ml-8 grid grid-cols-3 w-[1000px]  max-sm:grid-cols-1 max-sm:w-[320px] items-center justify-center gap-8 ">
+            <div className=" py-5 mt-8 ml-8 grid grid-cols-3 w-[1000px]  max-sm:grid-cols-2 max-sm:w-[300px] items-center justify-center gap-12 ">
                 {items.map((item) => (
                     <Link to="/eventslist" >
-                        <div key={item.id} className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105">
+                        <div key={item.id} className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[160px] max-sm:-ml-8">
                             <img
                                 loading="lazy"
                                 srcSet={product1} alt='product1'
                                 className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
                             />
                             <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
-                                <div className="flex basis-[0%] flex-col justify-center align-middle mt-5 items-stretch px-5">
-                                    <div className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
+                                <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle mt-5 items-stretch px-5">
+                                    <div className="text-indigo-600 max-sm:w-2 text-center text-xs max-sm:text-[10px] font-bold whitespace-nowrap">
                                         APR
                                     </div>
-                                    <div className="text-black text-xl font-bold whitespace-nowrap mt-2">
+                                    <div className="text-black text-xl max-sm:w-2 font-bold whitespace-nowrap mt-2">
                                         14
                                     </div>
                                 </div>
-                                <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                    <div className="text-black text-xs font-bold leading-5">
+                                <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
+                                    <div className="text-black text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
                                         {item.title}
                                     </div>
-                                    <div className="text-neutral-500 text-xs leading-2 mt-1">
+                                    <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
                                         {item.desc}
                                     </div>
                                 </div>

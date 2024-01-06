@@ -10,7 +10,7 @@ const FAQ = () => {
                         type="checkbox"
                     />
                     <div className=" w-full flex items-center">
-                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:w-72 max-sm:text-[18px]">
+                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:w-72 max-sm:text-sm max-sm:text-[18px]">
                             What’s the difference between the Free plan and the Unlimited
                             plan?
                         </h1>
@@ -45,7 +45,7 @@ const FAQ = () => {
                         type="checkbox"
                     />
                     <div className=" w-full flex items-center">
-                        <h1 className=" text-lg font-semibold text-[#404145]">
+                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:text-sm">
                             Do you offer live support?
                         </h1>
                     </div>
@@ -79,7 +79,7 @@ const FAQ = () => {
                         type="checkbox"
                     />
                     <div className=" w-full flex items-center">
-                        <h1 className=" text-lg font-semibold text-[#404145]">
+                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:text-sm">
                             Can I suggest new features?
                         </h1>
                     </div>
@@ -113,7 +113,7 @@ const FAQ = () => {
                         type="checkbox"
                     />
                     <div className=" w-full flex items-center">
-                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:w-80">
+                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:w-64 max-sm:text-sm">
                             Is my data secure? Are my clients protected?
                         </h1>
                     </div>
@@ -147,7 +147,7 @@ const FAQ = () => {
                         type="checkbox"
                     />
                     <div className="  w-full flex items-center">
-                        <h1 className=" text-lg font-semibold text-[#404145]">
+                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:w-64 max-sm:text-sm">
                             In which countries can I use Fiverr Workspace?
                         </h1>
                     </div>
@@ -181,7 +181,7 @@ const FAQ = () => {
                         type="checkbox"
                     />
                     <div className=" w-full flex items-center">
-                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:w-72 max-sm:text-[18px]">
+                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:text-sm max-sm:w-72 max-sm:text-[18px]">
                             What’s the difference between the Free plan and the Unlimited
                             plan?
                         </h1>
@@ -216,7 +216,7 @@ const FAQ = () => {
                         type="checkbox"
                     />
                     <div className="  w-full flex items-center">
-                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:w-72 max-sm:text-[18px]">
+                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:text-sm max-sm:w-72 max-sm:text-[18px]">
                             Which currencies does Fiverr Workspace support?
                         </h1>
                     </div>
@@ -250,7 +250,7 @@ const FAQ = () => {
                         type="checkbox"
                     />
                     <div className=" w-full flex items-center">
-                        <h1 className=" text-lg font-semibold text-[#404145]">
+                        <h1 className=" text-lg font-semibold text-[#404145] max-sm:text-sm">
                             When will I be billed?
                         </h1>
                     </div>
