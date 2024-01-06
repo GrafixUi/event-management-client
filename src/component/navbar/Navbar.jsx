@@ -138,9 +138,7 @@ export default function Navbar() {
                 </Menu>
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="relative flex rounded-full  text-sm ">
-                      <span className="absolute -inset-1.5" />
-                      <span className="sr-only">Open user menu</span>
+                    <Menu.Button className="relative flex   text-sm ">
                       <button className=' text-white ml-4 border border-spacing-1 p-2 px-5 rounded-full max-sm:hidden'>Login</button>
                     </Menu.Button>
                   </div>

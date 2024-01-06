@@ -38,10 +38,10 @@ const Eventticket = () => {
                     </Link>
                 </div>
             </div>
-            <div className="self-center w-full max-w-[1300px] mt-5 max-md:max-w-full max-md:mt-10 max-sm:p-4">
+            <div className="self-center w-full max-w-[1300px] mt-5 max-md:max-w-full max-md:mt-10 max-sm:p-5">
                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                     <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
-                        <div className="bg-white flex w-full grow items-stretch justify-between gap-5 mx-auto px-16 py-10 rounded-2xl max-md:max-w-full max-md:flex-wrap max-md:mt-8 max-md:px-5">
+                        <div className="bg-white flex w-full grow items-stretch justify-between gap-5 mx-auto px-16 py-10 rounded-2xl max-md:max-w-full max-md:flex-wrap max-md:mt-8 max-md:px-5 max-sm:-mt-5">
                             <div className="flex items-stretch justify-between gap-5">
                                 <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-4 pr-8 pt-4 pb-5 rounded-xl">
                                     <h2 className="text-white text-lg font-semibold leading-6 uppercase whitespace-nowrap">
@@ -78,9 +78,9 @@ const Eventticket = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-3">
-                        <div className="bg-white grow w-full px-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-8 max-md:px-5">
-                            <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 ">
+                    <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-5">
+                        <div className="bg-white grow w-full px-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-8 max-md:px-5 ">
+                            <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:-mt-5">
                                 <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0 max-sm:self-center max-sm:items-center">
                                     <img
                                         loading="lazy"
@@ -114,9 +114,9 @@ const Eventticket = () => {
             </div>
             <div className="self-center w-full max-w-[1300px] mb-9 mt-12 max-md:max-w-full max-md:my-10 max-sm:p-5">
                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:-mt-16">
-                    <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+                    <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-8">
                         <div className="bg-white flex grow flex-col items-stretch w-full pl-14 pr-20 py-12 rounded-[32px] max-md:max-w-full max-md:mt-8 max-md:px-5">
-                            <h2 className="text-blue-950 text-2xl font-bold mr-6  max-md:max-w-full max-md:mr-2.5 max-md:mt-10 ">
+                            <h2 className="text-blue-950 text-2xl font-bold mr-6  max-md:max-w-full max-md:mr-2.5 max-md:mt-10 max-sm:-mt-6">
                                 Select Your Seat
                             </h2>
                             <div className=" bg-zinc-300 hover:bg-blue-950 flex w-[590px] max-w-full items-center justify-between gap-5 mr-6 mt-20 pl-16 pr-12 py-8 rounded-xl max-md:flex-wrap max-md:mr-2.5 max-md:mt-10 max-md:px-5 cursor-pointer">
@@ -145,7 +145,7 @@ const Eventticket = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+                    <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-8">
                         <div className="flex flex-col px-5 max-md:max-w-full max-md:mt-8">
                             <div className="bg-blue-950 self-stretch flex mt-5 flex-col pl-14 pr-20 py-11 rounded-xl items-start max-md:max-w-full max-md:px-5">
                                 <h2 className="text-zinc-300 text-lg leading-7">

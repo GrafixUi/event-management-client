@@ -55,10 +55,10 @@ const Eventselectionn = () => {
         </div>
       </div>
       <div className="self-center flex w-full max-w-[1300px] flex-col items-stretch mt-5 max-md:max-w-full p-4">
-        <div className="max-md:max-w-full">
+        <div className="max-md:max-w-full max-sm:p-5">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-            <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
-              <div className="bg-white flex w-full grow items-stretch justify-between gap-5 mx-auto pl-16 pr-20 py-10 rounded-2xl max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-md:px-5">
+            <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:-mt-5">
+              <div className="bg-white flex w-full grow items-stretch justify-between gap-5 mx-auto pl-16 pr-20 py-10 rounded-2xl max-sm:-mt-5 max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-md:px-5">
                 <div className="flex items-stretch justify-between gap-5 max-sm:self-center max-sm:items-center">
                   <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-4 pr-8 py-6 rounded-xl ">
                     <h1 className="text-white text-lg font-semibold leading-6 uppercase whitespace-nowrap">
@@ -95,9 +95,9 @@ const Eventselectionn = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
-              <div className="bg-white grow w-full pl-16 pr-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
-                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+            <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-8">
+              <div className="bg-white grow w-full pl-16 pr-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:mt-5">
+                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:-mt-5">
                   <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0 max-sm:self-center max-sm:items-center">
                     <img
                       srcSet={vendor}
@@ -131,9 +131,9 @@ const Eventselectionn = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 max-md:max-w-full">
+        <div className="mt-8 max-md:max-w-full max-sm:p-5">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-            <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+            <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:-mt-5">
               <div className="bg-white flex grow flex-col w-full pl-10 pr-20 py-8 rounded-2xl items-start max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <h1 className="text-zinc-700 text-xl font-bold leading-7 max-md:max-w-full">
                   About This Event
@@ -156,7 +156,7 @@ const Eventselectionn = () => {
                 </h3>
               </div>
             </div>
-            <div className="flex flex-col items-stretch w-[32%] h- ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+            <div className="flex flex-col items-stretch w-[32%] h- ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-5">
               <div className="bg-white flex grow flex-col items-stretch w-full mt-2.5 pl-9 pr-11 pt-5 pb-11 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <div className="text-black text-sm font-medium">Location:</div>
                 <img

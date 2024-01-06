@@ -17,14 +17,14 @@ const Moviesticket = () => {
                     srcSet={header} alt='header'
                     className="absolute h-[500px] max-sm:h-full w-full object-cover object-center inset-0"
                 />
-                <div className="relative flex w-full max-w-[1489px] items-stretch justify-between gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
+                <div className="relative flex w-full max-w-[1300px] items-stretch justify-between gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
                     <div className="max-md:max-w-full">
                         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                             <div className="flex flex-col items-stretch w-[44%] max-md:w-full max-md:ml-0">
                                 <img
                                     loading="lazy"
                                     srcSet={header2} alt='header2'
-                                    className="aspect-[0.8] object-contain object-center w-[300px] overflow-hidden grow max-md:mt-9"
+                                    className="aspect-[0.8] object-contain max-sm:ml-6 object-center w-[300px] overflow-hidden grow max-md:mt-9"
                                 />
                             </div>
                             <div className="flex flex-col items-stretch w-[40%] ml-5 max-md:w-full max-md:ml-0">
@@ -48,7 +48,7 @@ const Moviesticket = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="backdrop-blur-[13.899999618530273px] self-center flex grow basis-[0%] flex-col justify-center my-auto px-16 py-12 rounded-3xl items-end max-md:max-w-full max-md:px-5">
+                    <div className="backdrop-blur-[13.899999618530273px] self-center flex grow basis-[0%] flex-col justify-center my-auto px-10 py-10 rounded-3xl items-end max-md:max-w-full max-md:px-5">
                         <Link to="/confirmticket" class="relative group overflow-hidden  px-20 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
                             <span class="relative text-white font-bold text-xl w-32">Book Now</span>
                             <div class="flex items-center -space-x-3 translate-x-3">
@@ -63,17 +63,19 @@ const Moviesticket = () => {
             </div>
 
             <div className="self-center w-full max-w-[1300px] mt-16 max-md:max-w-full max-md:mt-10">
-                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                    <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
-                        <div className="bg-white flex grow items-stretch justify-between gap-5 w-full px-16 py-9 rounded-2xl max-md:max-w-full max-md:flex-wrap max-md:mt-8 max-md:px-5">
-                            <div className="flex flex-col items-center">
-                                <h2 className="text-white text-lg font-semibold leading-6 uppercase whitespace-nowrap">
-                                    dec
-                                </h2>
-                                <div className="self-stretch z-[1] flex items-stretch justify-between gap-5">
-                                    <h1 className="text-white text-3xl font-bold whitespace-nowrap backdrop-blur-[3.950000047683716px] bg-blue-950 grow items-stretch pl-3 pr-5 pt-12 pb-6 rounded-xl max-md:text-4xl">
-                                        08
-                                    </h1>
+                <div className="max-md:max-w-full">
+                    <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:p-5">
+                        <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg ">
+                            <div className="bg-white flex w-full grow items-stretch justify-between gap-5 mx-auto pl-16 pr-20 py-10 rounded-2xl max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-md:px-5">
+                                <div className="flex items-stretch justify-between gap-5">
+                                    <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-3 pr-5 rounded-xl">
+                                        <h2 className="text-white text-xl mt-5 font-semibold leading-6 uppercase whitespace-nowrap">
+                                            dec
+                                        </h2>
+                                        <h1 className="text-white text-4xl pr-4 pl-4 font-bold self-stretch whitespace-nowrap mt-4 max-md:text-4xl">
+                                            08
+                                        </h1>
+                                    </div>
                                     <div className="self-center flex grow basis-[0%] flex-col items-stretch my-auto">
                                         <div className="items-stretch flex justify-between gap-3">
                                             <h3 className="text-black text-sm">Released:</h3>
@@ -89,51 +91,45 @@ const Moviesticket = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="flex flex-col items-stretch mt-5 self-start">
-                                <h3 className="text-black text-sm font-medium">Theater:</h3>
-                                <h3 className="text-blue-950 text-sm font-semibold mt-4">
-                                    HITEX Exhibition Centre
-                                </h3>
-                                <h3 className="text-blue-950 text-xs font-light mt-4">
-                                    HITEX Exhibition Centre, Hitex Road, Izzathnagar, <br />
-                                    Kothaguda, Telangana, India
-                                </h3>
+                                <div className="flex flex-col items-stretch mt-3 self-start">
+                                    <h3 className="text-black text-sm font-medium">Theater:</h3>
+                                    <h3 className="text-blue-950 text-lg font-semibold mt-3">
+                                        HITEX Exhibition Centre
+                                    </h3>
+                                    <h3 className="text-blue-950 text-md font-light mt-4">
+                                        HITEX Exhibition Centre, Hitex Road, Izzathnagar, <br />
+                                        Kothaguda, Telangana, India
+                                    </h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
-                        <div className="bg-white grow w-full px-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-8 max-md:px-5">
-                            <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                                <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0 max-sm:items-center">
-                                    <img
-                                        loading="lazy"
-                                        srcSet={vendor} alt='vendor'
-                                        className="aspect-square object-contain object-center w-[110px] justify-center items-center overflow-hidden shrink-0 max-w-full max-md:mt-10"
-                                    />
-                                </div>
-                                <div className="flex flex-col items-stretch w-[61%] ml-5 max-md:w-full max-md:ml-0 ">
-                                    <div className="flex grow flex-col items-stretch max-md:mt-10">
-                                        <div className="text-neutral-500  text-base font-bold leading-5">
-                                            airb123
-                                        </div>
-                                        <div className="text-neutral-500 text-base leading-5 whitespace-nowrap mt-2.5 max-md:mr-0.5">
-                                            Premium Digital Studio
-                                        </div>
-                                        <div className="flex justify-between gap-1 mt-1.5 items-start max-md:mr-0.5">
-                                            <div className="items-stretch flex gap-1 pr-3 py-0.5">
-                                                <Rating />
+                        <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-6">
+                            <div className="bg-white grow w-full pl-16 pr-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
+                                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:-mt-10">
+                                    <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0 max-sm:items-center">
+                                        <img
+                                            loading="lazy"
+                                            srcSet={vendor} alt='vendor'
+                                            className="aspect-square object-contain object-center w-[110px] justify-center items-center overflow-hidden shrink-0 max-w-full max-md:mt-10"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col items-stretch w-[61%] ml-5 max-md:w-full max-md:ml-0 max-sm:items-center ">
+                                        <div className="flex grow flex-col items-stretch max-md:mt-10">
+                                            <h3 className="text-neutral-500 text-base font-bold leading-5">
+                                                airb123
+                                            </h3>
+                                            <h2 className="text-neutral-500 text-base leading-5 whitespace-nowrap mt-2.5 max-md:mr-1">
+                                                Premium Digital Studio
+                                            </h2>
+                                            <div className="flex justify-between gap-1 mt-1.5 items-start max-md:mr-1">
+                                                <div className="items-stretch flex gap-1 pr-3 py-0.5">
+                                                    <Rating />
+                                                </div>
                                             </div>
-                                            <div className="text-amber-400 text-sm font-bold leading-5 self-center my-auto">
-                                                4.9
-                                            </div>
-                                            <div className="text-neutral-500 text-sm leading-5 self-stretch grow whitespace-nowrap">
-                                                (974)
-                                            </div>
+                                            <Link to="/contact" className="text-neutral-500 text-center text-sm font-semibold leading-4 items-stretch rounded border justify-center mt-5 px-7 py-3.5 border-solid border-neutral-500 max-md:px-5">
+                                                Contact Me
+                                            </Link>
                                         </div>
-                                        <button className="text-neutral-500 text-center text-sm font-semibold leading-4 items-stretch rounded border justify-center mt-5 px-7 py-3.5 border-solid border-neutral-500 max-md:px-5">
-                                            Contact Me
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -142,8 +138,8 @@ const Moviesticket = () => {
                 </div>
             </div>
             <div className="self-center w-full max-w-[1300px] mt-12 mb-10 max-md:max-w-full max-md:my-10">
-                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                    <div className="flex flex-col items-stretch w-[66%]  max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:p-5">
+                    <div className="flex flex-col items-stretch w-[66%]  max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg ">
                         <div className="bg-white flex grow flex-col w-full px-10 py-12 rounded-[32px] max-md:max-w-full max-md:mt-8 max-md:px-5">
                             <div className="self-stretch flex flex-col items-center mt-9 max-md:max-w-full">
                                 <img
@@ -342,9 +338,9 @@ const Moviesticket = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+                    <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-6">
                         <div className="flex flex-col px-5 mt-4 max-md:max-w-full max-md:mt-8">
-                            <div className="bg-blue-950  self-stretch flex flex-col pl-14 pr-20 py-11 rounded-xl items-start max-md:max-w-full max-md:px-5">
+                            <div className="bg-blue-950  self-stretch flex flex-col pl-14 pr-20 py-11 rounded-xl items-start max-md:max-w-full max-md:px-5 ">
                                 <h2 className="text-zinc-300 text-md leading-7">
                                     Movie Title
                                 </h2>

@@ -12,7 +12,7 @@ const Vendorlogin = () => {
             <div className="items-center bg-white bg-opacity-90 flex flex-col justify-center px-16 py-12 max-md:px-5">
                 <div className="w-full max-w-[1499px] mt-10 max-md:max-w-full max-md:my-10">
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                        <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
+                        <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0 mt-20 mb-20">
                             <div className="items-stretch flex grow flex-col pr-2 pb-2.5 max-md:mt-10">
                                 <button
                                     onClick={() => setIsToggled(!isToggled)}

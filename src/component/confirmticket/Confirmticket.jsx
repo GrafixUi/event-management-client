@@ -15,10 +15,10 @@ const Confirmticket = () => {
             <Navbar />
             <div className="bg-white flex flex-col justify-center items-center px-16 max-md:px-5">
                 <div className="flex w-full max-w-[1493px] flex-col mt-24 max-md:max-w-full max-md:my-10">
-                    <div className="text-blue-950 text-xl font-bold self-center whitespace-nowrap font-[Poppins]">
+                    <div className="text-blue-950 text-xl font-bold self-center whitespace-nowrap font-[Poppins] max-sm:mt-16">
                         Pay to confirm booking
                     </div>
-                    <div className="self-stretch mt-10 max-md:max-w-full max-md:mt-10">
+                    <div className="self-stretch mt-10 max-md:max-w-full max-md:mt-10 max-sm:-mt-4">
                         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                             <div className="flex flex-col items-stretch pl-28 w-[65%] max-md:w-full max-md:ml-0 max-sm:pl-0">
                                 <div className="bg-blue-950 grow w-[650px] pl-16 pr-20 py-12 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">

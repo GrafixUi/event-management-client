@@ -201,7 +201,7 @@ const Upcomingevents = () => {
                                 className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
                             />
                             <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
-                                <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle mt-5 items-stretch px-5">
+                                <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle  items-center self-center px-5">
                                     <div className="text-indigo-600 max-sm:w-2 text-center text-xs max-sm:text-[10px] font-bold whitespace-nowrap">
                                         APR
                                     </div>

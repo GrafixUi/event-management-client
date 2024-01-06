@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Logo from "../../assets/images/logo.png";
-import bg from "../../assets/images/background.png";
 import dropdown from "../../assets/icons/dropdown.svg";
-import img1 from "../../assets/images/img1.png";
 import baner from "../../assets/images/banner.png";
 import Upcomingevent from "../../component/upcomingevent/Upcomingevents";
 import Upcomingmovies from "../../component/upcomingmovie/Upcomingmovie";
@@ -11,10 +9,7 @@ import Footer from "../../component/footer/Footer";
 import Explore from "../home/explore/Explore"
 import "./Home.css";
 import { useNavigate } from 'react-router-dom';
-import { FiSearch } from "react-icons/fi";
 import FAQ from "../home/faq/FAQ";
-import CardComponent from "../../component/cato-card/cato-card";
-import Featured from "./featured/Featured";
 import Header from "../../component/header/Header";
 
 const Home = () => {
@@ -93,7 +88,7 @@ const Home = () => {
   return (
     <div className="bg-white flex flex-col container-xl">
       <div>
-        <Header className=" mt-[35px] max-sm:hidden max-sm:mt-0" />
+        <Header className=" mt-[55px] max-sm:hidden max-sm:mt-0" />
       </div>
       <div className="text-[#242565] text-3xl font-bold mt-10 flex flex-col self-center items-center max-md:max-w-full max-md:mt-10 max-sm:text-xl">
         Explore your Events and Movies

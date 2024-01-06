@@ -14,20 +14,20 @@ const Movieslist = () => {
     return (
         <div className="bg-white flex flex-col ">
             <Navbar />
-            <div className="flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
+            <div className="flex-col overflow-hidden relative flex min-h-[582px] w-full justify-center items-center self-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
                     srcSet={header} alt='header'
-                    className="absolute h-[500px] max-sm:h-full w-full object-cover object-center inset-0"
+                    className="absolute h-[500px] max-sm:h-full w-full object-cover flex items-center self-center justify-center object-center inset-0"
                 />
-                <div className="relative flex w-full max-w-[1489px] max-sm:self-center max-sm:items-center items-stretch justify-between gap-5 mt-5 max-md:max-w-full max-md:flex-wrap max-sm:ml-6">
+                <div className="relative flex w-full max-w-[1300px] max-sm:self-center max-sm:items-center items-stretch justify-between gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
                     <div className="max-md:max-w-full">
-                        <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+                        <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 ">
                             <div className="flex flex-col items-stretch w-[44%] max-md:w-full max-md:ml-0">
                                 <img
                                     loading="lazy"
                                     srcSet={header2} alt='header2'
-                                    className="aspect-[0.8] object-contain object-center w-[300px] overflow-hidden grow max-md:mt-9 "
+                                    className="aspect-[0.8] object-contain object-center w-[300px] overflow-hidden grow max-md:mt-9 max-sm:ml-6"
                                 />
                             </div>
                             <div className="flex flex-col items-stretch w-[40%] ml-5 max-md:w-full max-md:ml-0">
@@ -51,8 +51,8 @@ const Movieslist = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="backdrop-blur-[13.899999618530273px] self-center flex grow basis-[0%] flex-col justify-center my-auto px-16 py-12 rounded-3xl items-end max-md:max-w-full max-md:px-5">
-                        <Link to="/moviesticket" class="relative group overflow-hidden  px-20 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
+                    <div className="backdrop-blur-[13.899999618530273px] self-center flex grow basis-[0%] flex-col justify-center my-auto px-10 py-10 rounded-3xl items-end max-md:max-w-full max-md:px-5">
+                        <Link to="/moviesticket" class="relative group overflow-hidden  px-16 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
                             <span class="relative text-white font-bold text-xl w-32">Book Now</span>
                             <div class="flex items-center -space-x-3 translate-x-3">
                                 <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
@@ -105,7 +105,7 @@ const Movieslist = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-4">
+                        <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-5">
                             <div className="bg-white grow w-full pl-16 pr-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                                  <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:-mt-10">
                                     <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0 max-sm:items-center">
@@ -163,7 +163,7 @@ const Movieslist = () => {
                                 </h2>
                             </div>
                         </div>
-                        <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+                        <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-5">
                             <div className="bg-white flex grow flex-col items-stretch w-full mt-2.5 pl-9 pr-11 pt-5 pb-11 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                                 <div className="text-black text-sm font-medium">Location:</div>
                                 <img
