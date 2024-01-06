@@ -8,9 +8,7 @@ const Eventslist = () => {
 
     return (
         <div className=' flex flex-col items-center'>
-            <div className="text-blue-950 text-4xl font-bold self-center whitespace-nowrap mt-10">
-                Movies{" "}
-            </div>
+            
             <div className=" py-5 mt-8 grid grid-cols-4 flex-wrap items-center justify-center gap-8 max-sm:grid-cols-1 max-md:grid-cols-2 max-xl:grid-cols-2">
                 {items.map((item) => (
                     <Link to="/movieselection">

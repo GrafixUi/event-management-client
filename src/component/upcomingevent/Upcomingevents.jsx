@@ -191,10 +191,10 @@ const Upcomingevents = () => {
                     </div>
                 </div>
             </div>
-            <div className=" py-5 mt-8 ml-8 grid grid-cols-3 w-[1000px]  max-sm:grid-cols-2 max-sm:w-[300px] items-center justify-center gap-12 ">
+            <div className=" py-5 mt-8 ml-8 grid grid-cols-3 w-[1000px]  max-sm:grid-cols-2 max-sm:w-[320px] items-center justify-center gap-12 ">
                 {items.map((item) => (
                     <Link to="/eventslist" >
-                        <div key={item.id} className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[160px] max-sm:-ml-8">
+                        <div key={item.id} className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[170px] max-sm:-ml-8">
                             <img
                                 loading="lazy"
                                 srcSet={product1} alt='product1'
@@ -210,7 +210,7 @@ const Upcomingevents = () => {
                                     </div>
                                 </div>
                                 <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
-                                    <div className="text-black text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
+                                    <div className="text-black text-xs max-sm:text-[9px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
                                         {item.title}
                                     </div>
                                     <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">

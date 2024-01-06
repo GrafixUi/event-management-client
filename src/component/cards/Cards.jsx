@@ -13,7 +13,7 @@ const Cards = () => {
         <div>
             <Swiper className=''
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={5}
+                spaceBetween={1}
                 slidesPerView={3}
                 navigation
                 onSlideChange={() => console.log('slide change')}
@@ -43,7 +43,7 @@ const Cards = () => {
                 }}
             >
                 <SwiperSlide>
-                    <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center">
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center">
                         <Link to="/eventslist">
                             <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-2 justify-center">
                                 <img
@@ -73,7 +73,7 @@ const Cards = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
+                    <div className="container py-5 mt-8  flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
                             <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img
@@ -103,7 +103,7 @@ const Cards = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
                             <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img
@@ -133,7 +133,7 @@ const Cards = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
+                    <div className="container py-5 mt-8  flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
                             <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img
@@ -163,7 +163,7 @@ const Cards = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
                             <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img
@@ -194,7 +194,7 @@ const Cards = () => {
                 </SwiperSlide>
                 
                 <SwiperSlide>
-                    <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
                             <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img
@@ -224,7 +224,7 @@ const Cards = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="container py-5 mt-8 ml-8 flex flex-wrap items-center justify-center gap-8">
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center gap-8">
                         <Link to="/eventslist">
                             <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
                                 <img

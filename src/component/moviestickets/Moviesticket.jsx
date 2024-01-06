@@ -15,7 +15,7 @@ const Moviesticket = () => {
                 <img
                     loading="lazy"
                     srcSet={header} alt='header'
-                    className="absolute h-[500px] w-full object-cover object-center inset-0"
+                    className="absolute h-[500px] max-sm:h-full w-full object-cover object-center inset-0"
                 />
                 <div className="relative flex w-full max-w-[1489px] items-stretch justify-between gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
                     <div className="max-md:max-w-full">

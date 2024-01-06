@@ -19,16 +19,13 @@ const Footer = () => {
             Plan Events
           </div>
           <div className="text-zinc-100 text-sm flex flex-col font-medium leading-7 mb-6">
+
             <Link to="#" className="mb-2">
-              Create and Set Up
+              Create Events
             </Link>
-            <Link to="#" className="mb-2">
-              Sell Tickets
+            <Link to="#">
+              Create Movies
             </Link>
-            <Link to="#" className="mb-2">
-              Online RSVP
-            </Link>
-            <Link to="#">Online Events</Link>
           </div>
         </div>
         <div>
@@ -39,17 +36,12 @@ const Footer = () => {
             <Link to="/about" className="mb-2">
               About Us
             </Link>
-            <Link to="#" className="mb-2">
-              Press
-            </Link>
+
             <Link to="/contact" className="mb-2">
               Contact Us
             </Link>
             <Link to="#" className="mb-2">
               Help Center
-            </Link>
-            <Link to="#" className="mb-2">
-              How it Works
             </Link>
             <Link to="#" className="mb-2">
               Privacy

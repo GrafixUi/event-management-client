@@ -15,7 +15,7 @@ const FAQ = () => {
                             plan?
                         </h1>
                     </div>
-                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40">
+                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40 max-sm:text-sm">
                         <div className=" text-[#404145] p-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
                             doloribus impedit totam nulla, dolorum numquam recusandae facere
@@ -49,7 +49,7 @@ const FAQ = () => {
                             Do you offer live support?
                         </h1>
                     </div>
-                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40">
+                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40 max-sm:text-sm">
                         <div className=" text-[#404145] p-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
                             doloribus impedit totam nulla, dolorum numquam recusandae facere
@@ -83,7 +83,7 @@ const FAQ = () => {
                             Can I suggest new features?
                         </h1>
                     </div>
-                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40">
+                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40 max-sm:text-sm">
                         <div className=" text-[#404145] p-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
                             doloribus impedit totam nulla, dolorum numquam recusandae facere
@@ -117,7 +117,7 @@ const FAQ = () => {
                             Is my data secure? Are my clients protected?
                         </h1>
                     </div>
-                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40">
+                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40 max-sm:text-sm">
                         <div className=" text-[#404145] p-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
                             doloribus impedit totam nulla, dolorum numquam recusandae facere
@@ -151,7 +151,7 @@ const FAQ = () => {
                             In which countries can I use Fiverr Workspace?
                         </h1>
                     </div>
-                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40">
+                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40 max-sm:text-sm">
                         <div className=" text-[#404145] p-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
                             doloribus impedit totam nulla, dolorum numquam recusandae facere
@@ -186,7 +186,7 @@ const FAQ = () => {
                             plan?
                         </h1>
                     </div>
-                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40">
+                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40 max-sm:text-sm">
                         <div className=" text-[#404145] p-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
                             doloribus impedit totam nulla, dolorum numquam recusandae facere
@@ -220,7 +220,7 @@ const FAQ = () => {
                             Which currencies does Fiverr Workspace support?
                         </h1>
                     </div>
-                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40">
+                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40 max-sm:text-sm">
                         <div className=" text-[#404145] p-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
                             doloribus impedit totam nulla, dolorum numquam recusandae facere
@@ -254,8 +254,8 @@ const FAQ = () => {
                             When will I be billed?
                         </h1>
                     </div>
-                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40">
-                        <div className=" text-[#404145] p-4">
+                    <div className=" max-h-0 bg-white overflow-hidden transition-all duration-500 peer-checked:max-h-40 max-sm:text-sm">
+                        <div className=" text-[#404145] p-4 ">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
                             doloribus impedit totam nulla, dolorum numquam recusandae facere
                             modi mollitia? Eveniet sunt quas voluptas iure facere nesciunt

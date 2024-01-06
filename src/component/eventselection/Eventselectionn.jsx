@@ -17,7 +17,7 @@ const Eventselectionn = () => {
         <img
           srcSet={header}
           alt="header"
-          className="absolute h-[500px] w-full object-cover  object-center inset-0 max-md:h-[300px]"
+          className="absolute h-[500px] max-sm:h-full w-full object-cover  object-center inset-0 max-md:h-[300px]"
         />
         <div className=" container justify-around ite relative flex w-full max-w-[1438px] items-stretch gap-5 mt-72 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:self-center max-sm:items-center max-sm:ml-20">
           <div className="flex flex-col items-stretch max-md:max-w-full">
@@ -85,10 +85,10 @@ const Eventselectionn = () => {
                 </div>
                 <div className="flex flex-col items-stretch mt-3 self-start">
                   <div className="text-black text-sm font-medium">Theater:</div>
-                  <div className="text-blue-950 text-sm font-semibold mt-3">
+                  <div className="text-blue-950 text-lg font-semibold mt-3">
                     HITEX Exhibition Centre
                   </div>
-                  <div className="text-blue-950 text-xs font-light mt-4">
+                  <div className="text-blue-950 text-md font-light mt-4">
                     HITEX Exhibition Centre, Hitex Road, Izzathnagar, <br />
                     Kothaguda, Telangana, India
                   </div>

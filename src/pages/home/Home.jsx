@@ -15,6 +15,7 @@ import { FiSearch } from "react-icons/fi";
 import FAQ from "../home/faq/FAQ";
 import CardComponent from "../../component/cato-card/cato-card";
 import Featured from "./featured/Featured";
+import Header from "../../component/header/Header";
 
 const Home = () => {
   //dropdown for filter
@@ -91,39 +92,10 @@ const Home = () => {
   }, []);
   return (
     <div className="bg-white flex flex-col container-xl">
-      <div className="flex-col overflow-hidden self-stretch relative flex min-h-[550px]  w-full  justify-center items-center px-16 py-12 max-md:max-w-full max-md:px-5">
-        <img
-          loading="lazy"
-          srcSet={bg}
-          alt="bg"
-          className="absolute h-full w-full object-cover object-center inset-0"
-        />
-        <div className="relative flex w-full max-w-[1220px] flex-col items-stretch mb-16 max-md:max-w-full max-md:mb-10">
-          <div className="flex items-stretch justify-between gap-5 mt-14 pr-2 h-[400px] max-md:max-w-full max-md:flex-wrap max-md:mt-10">
-            <div className="self-center flex grow basis-[0%] flex-col my-auto items-start max-md:max-w-full max-sm:mt-32">
-              <div className="text-white text-3xl font-bold self-stretch mt-3 p-6 max-md:max-w-full max-md:text-1xl max-sm:self-center">
-                <span className="font-medium text-[35px]">Find the Your</span>{" "}
-                <span className="text-[40px] font-thin header-style-font">Favorites</span>
-                <br />
-                Events & Movies
-              </div>
-              {/* <div className=" pl-6">
-                <form action="#" className="search-form">
-                  <input type="text" placeholder="Find your Events and Movies" required className="" />
-                  <button className="material-symbols-outlined" type="sumbit">search</button>
-                </form>
-              </div> */}
-            </div>
-            <img
-              loading="lazy"
-              srcSet={img1}
-              alt="img1"
-              className="aspect-square max-sm:hidden object-contain object-center w-full overflow-hidden grow basis-[0%] w-50 "
-            />
-          </div>
-        </div>
+      <div>
+        <Header className=" mt-[35px] max-sm:hidden max-sm:mt-0" />
       </div>
-      <div className="text-[#242565] text-3xl font-bold flex flex-col  self-center items-center  mt-16 max-md:max-w-full max-md:mt-10 max-sm:text-xl">
+      <div className="text-[#242565] text-3xl font-bold mt-10 flex flex-col self-center items-center max-md:max-w-full max-md:mt-10 max-sm:text-xl">
         Explore your Events and Movies
         <Explore />
       </div>

@@ -8,9 +8,6 @@ const Eventslist = () => {
 
     return (
         <div className=' items-center self-center flex flex-col justify-center'>
-            <div className="text-blue-950 text-4xl font-bold items-center self-center justify-center whitespace-nowrap  mt-10">
-                Events{" "}
-            </div>
             <div className=" py-5 mt-8 grid grid-cols-4 flex-wrap items-center justify-center gap-5 max-sm:grid-cols-1 max-md:grid-cols-2 max-xl:grid-cols-2">
                 {items.map((item) => (
                     <Link to="/eventselection">

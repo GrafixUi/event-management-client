@@ -18,16 +18,16 @@ const Movieslist = () => {
                 <img
                     loading="lazy"
                     srcSet={header} alt='header'
-                    className="absolute h-[500px] w-full object-cover object-center inset-0"
+                    className="absolute h-[500px] max-sm:h-full w-full object-cover object-center inset-0"
                 />
-                <div className="relative flex w-full max-w-[1489px] items-stretch justify-between gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
+                <div className="relative flex w-full max-w-[1489px] max-sm:self-center max-sm:items-center items-stretch justify-between gap-5 mt-5 max-md:max-w-full max-md:flex-wrap max-sm:ml-6">
                     <div className="max-md:max-w-full">
                         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                             <div className="flex flex-col items-stretch w-[44%] max-md:w-full max-md:ml-0">
                                 <img
                                     loading="lazy"
                                     srcSet={header2} alt='header2'
-                                    className="aspect-[0.8] object-contain object-center w-[300px] overflow-hidden grow max-md:mt-9"
+                                    className="aspect-[0.8] object-contain object-center w-[300px] overflow-hidden grow max-md:mt-9 "
                                 />
                             </div>
                             <div className="flex flex-col items-stretch w-[40%] ml-5 max-md:w-full max-md:ml-0">
@@ -66,15 +66,15 @@ const Movieslist = () => {
             </div>
             <div className="self-center flex w-full max-w-[1300px] flex-col items-stretch mt-8 max-md:max-w-full">
                 <div className="max-md:max-w-full">
-                    <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                        <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+                    <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:p-5">
+                        <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg ">
                             <div className="bg-white flex w-full grow items-stretch justify-between gap-5 mx-auto pl-16 pr-20 py-10 rounded-2xl max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-md:px-5">
                                 <div className="flex items-stretch justify-between gap-5">
                                     <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-3 pr-5 rounded-xl">
-                                        <h2 className="text-white text-xl font-semibold leading-6 uppercase whitespace-nowrap">
+                                        <h2 className="text-white text-xl mt-5 font-semibold leading-6 uppercase whitespace-nowrap">
                                             dec
                                         </h2>
-                                        <h1 className="text-white text-6xl font-bold self-stretch whitespace-nowrap mt-4 max-md:text-4xl">
+                                        <h1 className="text-white text-4xl pr-4 pl-4 font-bold self-stretch whitespace-nowrap mt-4 max-md:text-4xl">
                                             08
                                         </h1>
                                     </div>
@@ -95,19 +95,19 @@ const Movieslist = () => {
                                 </div>
                                 <div className="flex flex-col items-stretch mt-3 self-start">
                                     <h3 className="text-black text-sm font-medium">Theater:</h3>
-                                    <h3 className="text-blue-950 text-sm font-semibold mt-3">
+                                    <h3 className="text-blue-950 text-lg font-semibold mt-3">
                                         HITEX Exhibition Centre
                                     </h3>
-                                    <h3 className="text-blue-950 text-xs font-light mt-4">
+                                    <h3 className="text-blue-950 text-md font-light mt-4">
                                         HITEX Exhibition Centre, Hitex Road, Izzathnagar, <br />
                                         Kothaguda, Telangana, India
                                     </h3>
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
+                        <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-4">
                             <div className="bg-white grow w-full pl-16 pr-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
-                                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+                                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:-mt-10">
                                     <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0 max-sm:items-center">
                                         <img
                                             loading="lazy"
@@ -138,10 +138,10 @@ const Movieslist = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-8 max-md:max-w-full">
+                <div className="mt-8 max-md:max-w-full max-sm:p-5">
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                         <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg">
-                            <div className="bg-white flex grow flex-col w-full pl-10 pr-20 py-12 rounded-2xl items-start max-md:max-w-full max-md:mt-10 max-md:px-5">
+                            <div className="bg-white flex grow flex-col w-full pl-10 pr-20 py-12 rounded-2xl items-start max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:-mt-5">
                                 <h1 className="text-zinc-700 text-xl font-bold leading-7 max-md:max-w-full">
                                     About This Movie{" "}
                                 </h1>

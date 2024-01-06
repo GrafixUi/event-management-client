@@ -15,7 +15,7 @@ const Eventticket = () => {
                 <img
                     loading="lazy"
                     srcSet={header} alt='header'
-                    className="absolute h-[480px] w-full object-cover object-center inset-0 max-md:h-[300px]"
+                    className="absolute h-[480px] max-sm:h-full w-full object-cover object-center inset-0 max-md:h-[300px]"
                 />
                 <div className="relative flex w-full max-w-[1438px] items-stretch justify-around gap-5 mt-72 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:ml-20">
                     <div className="flex flex-col items-stretch max-md:max-w-full">
