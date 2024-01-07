@@ -12,8 +12,8 @@ const About = () => {
             <Navbar />
             <div className="bg-white flex flex-col justify-center items-center px-16 py-12 max-md:px-5">
                 <div className="flex w-full max-w-[1634px] flex-col items-stretch mt-8 max-md:max-w-full max-md:my-10">
-                    <div className="max-md:max-w-full">
-                        <div className="gap-5 mt-20 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+                    <div className="max-md:max-w-full ">
+                        <div className="gap-5 mt-20 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:-mt-4">
                             <div className="flex flex-col items-center self-center justify-center w-6/12 max-md:w-full max-md:ml-0">
                                 <img
                                     loading="lazy"
@@ -49,7 +49,7 @@ const About = () => {
                     <div className="mt-32 max-md:max-w-full max-md:mt-10">
                         <div className="gap-52 flex items-center self-center justify-center max-md:flex-col max-md:items-stretch max-md:gap-0">
                             <div className="flex flex-col items-stretch self-center max-md:w-full max-md:ml-0">
-                                <div className="flex flex-col items-stretch ml-5  my-auto max-md:max-w-full max-md:mt-10">
+                                <div className="flex flex-col items-stretch my-auto max-md:max-w-full max-md:mt-10">
                                     <div className="text-black font-[Poppins] text-2xl font-bold max-md:max-w-full max-md:text-4xl">
                                         Our Story
                                     </div>

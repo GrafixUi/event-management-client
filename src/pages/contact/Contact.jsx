@@ -13,7 +13,7 @@ const Contact = () => {
     return (
         <div>
             <Navbar />
-            <div className="flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
+            <div className="flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:px-5">
                 <img
                     loading="lazy"
                     srcSet={conatct} alt='header'
@@ -26,7 +26,7 @@ const Contact = () => {
             <div className="bg-white -mt-36 flex flex-col justify-center items-center max-md:px-5">
                 <div className="flex w-full max-w-[1530px] flex-col items-center mb-20 max-md:max-w-full max-md:my-10">
                     <div className="flex justify-between gap-28 px-5 items-start max-md:flex-wrap ">
-                        <div className="flex grow basis-[0%] flex-col ml-10 mt-2 max-md:max-w-full max-sm:self-center max-sm:items-center max-sm:ml-10">
+                        <div className="flex grow basis-[0%] flex-col ml-10 mt-2 max-md:max-w-full max-sm:self-center max-sm:items-center max-sm:-ml-0">
                             <h1 className="text-black text-xl font-bold max-md:max-w-full max-md:text-4xl max-sm:self-center max-sm:items-center">
                                 We’re here to help you!
                             </h1>
