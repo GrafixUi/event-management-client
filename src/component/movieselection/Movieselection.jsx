@@ -14,7 +14,7 @@ const Movieslist = () => {
     return (
         <div className="bg-white flex flex-col ">
             <Navbar />
-            <div className="flex-col overflow-hidden relative flex min-h-[582px] w-full justify-center items-center self-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
+            <div className="flex-col overflow-hidden relative flex min-h-[550px] w-full justify-center items-center self-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
                     srcSet={header} alt='header'
@@ -64,7 +64,7 @@ const Movieslist = () => {
                     </div>
                 </div>
             </div>
-            <div className="self-center flex w-full max-w-[1300px] flex-col items-stretch mt-8 max-md:max-w-full">
+            <div className="self-center flex w-full max-w-[1300px] flex-col items-stretch mt- max-md:max-w-full">
                 <div className="max-md:max-w-full">
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:p-5">
                         <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg ">

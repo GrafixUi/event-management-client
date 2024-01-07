@@ -11,20 +11,20 @@ const Moviesticket = () => {
     return (
         <div className="bg-white flex flex-col items-stretch">
             <Navbar />
-            <div className="flex-col overflow-hidden self-stretch relative flex min-h-[582px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
+            <div className="flex-col overflow-hidden relative flex min-h-[550px] w-full justify-center items-center self-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
                     srcSet={header} alt='header'
-                    className="absolute h-[500px] max-sm:h-full w-full object-cover object-center inset-0"
+                    className="absolute h-[500px] max-sm:h-full w-full object-cover flex items-center self-center justify-center object-center inset-0"
                 />
-                <div className="relative flex w-full max-w-[1300px] items-stretch justify-between gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
+                <div className="relative flex w-full max-w-[1300px] max-sm:self-center max-sm:items-center items-stretch justify-between gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
                     <div className="max-md:max-w-full">
-                        <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+                        <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 ">
                             <div className="flex flex-col items-stretch w-[44%] max-md:w-full max-md:ml-0">
                                 <img
                                     loading="lazy"
                                     srcSet={header2} alt='header2'
-                                    className="aspect-[0.8] object-contain max-sm:ml-6 object-center w-[300px] overflow-hidden grow max-md:mt-9"
+                                    className="aspect-[0.8] object-contain object-center w-[300px] overflow-hidden grow max-md:mt-9 max-sm:ml-6"
                                 />
                             </div>
                             <div className="flex flex-col items-stretch w-[40%] ml-5 max-md:w-full max-md:ml-0">
@@ -32,7 +32,7 @@ const Moviesticket = () => {
                                     <h1 className="text-white text-3xl whitespace-nowrap max-md:text-4xl">
                                         SHINE (2023)
                                     </h1>
-                                    <p className="text-neutral-400 text-justify text-base mt-5 max-md:mt-10">
+                                    <p className="text-neutral-400 text-justify text-base mt-7 max-md:mt-10">
                                         <br />
                                         Eswar, an IT employee, moves into a new house with his
                                         pregnant wife. Ilamparuthi, a government employee, has been
@@ -41,15 +41,15 @@ const Moviesticket = () => {
                                         it in their common parking space. Did their ego win over
                                         them or did they realize their mistake?
                                     </p>
-                                    <h3 className="text-white text-lg whitespace-nowrap mt-4">
+                                    <h2 className="text-white text-lg whitespace-nowrap mt-5">
                                         Moive Type : Drama,scince friction{" "}
-                                    </h3>
+                                    </h2>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="backdrop-blur-[13.899999618530273px] self-center flex grow basis-[0%] flex-col justify-center my-auto px-10 py-10 rounded-3xl items-end max-md:max-w-full max-md:px-5">
-                        <Link to="/confirmticket" class="relative group overflow-hidden  px-20 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
+                        <Link to="/confirmticket" class="relative group overflow-hidden  px-16 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
                             <span class="relative text-white font-bold text-xl w-32">Book Now</span>
                             <div class="flex items-center -space-x-3 translate-x-3">
                                 <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
@@ -62,7 +62,7 @@ const Moviesticket = () => {
                 </div>
             </div>
 
-            <div className="self-center w-full max-w-[1300px] mt-16 max-md:max-w-full max-md:mt-10">
+            <div className="self-center w-full max-w-[1300px] max-md:max-w-full max-md:mt-10">
                 <div className="max-md:max-w-full">
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:p-5">
                         <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg ">

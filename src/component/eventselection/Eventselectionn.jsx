@@ -9,46 +9,32 @@ import Navbar from "../../component/navbar/Navbar"
 import Footer from "../../component/footer/Footer"
 import { Link } from "react-router-dom";
 const Eventselectionn = () => {
-  
+
   return (
     <div className="bg-white flex flex-col ">
       <Navbar />
-      <div className=" flex-col overflow-hidden self-stretch relative flex min-h-[450px] w-full justify-center items-center px-16 max-md:max-w-full max-md:mt-10 max-md:px-5  max-sm:-mt-0 ">
+      <div className="flex-col overflow-hidden relative flex min-h-[450px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:-mt-0">
         <img
           srcSet={header}
           alt="header"
           className="absolute h-[500px] max-sm:h-full w-full object-cover  object-center inset-0 max-md:h-[300px]"
         />
-        <div className=" container justify-around ite relative flex w-full max-w-[1438px] items-stretch gap-5 mt-72 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:self-center max-sm:items-center max-sm:ml-20">
-          <div className="flex flex-col items-stretch max-md:max-w-full">
+        <div className="relative flex w-full max-w-[1438px] items-stretch justify-around gap-5 mt-72 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+          <div className="flex flex-col items-stretch max-md:max-w-full max-sm:items-center max-sm:justify-center">
             <div className="text-white text-3xl max-md:max-w-full max-md:text-4xl">
               Event Name
             </div>
-            <div className="text-neutral-300 text-lg font-light mt-5 max-md:max-w-full">
+            <div className="text-neutral-300 text-lg font-light mt-5 max-md:max-w-full max-sm:ml-4">
               HITEX Exhibition Centre, Hitex Road, Izzathnagar, Kothaguda,
               Telangana, India
             </div>
           </div>
-          <Link
-            to="/eventticket"
-            class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:-ml-20"
-          >
+          <Link to="/confirmticket" class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:mt-14">
             <span class="relative text-white font-bold text-lg">Book Now</span>
             <div class="flex items-center -space-x-3 translate-x-3">
               <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </div>
           </Link>
