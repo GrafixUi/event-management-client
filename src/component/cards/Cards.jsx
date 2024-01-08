@@ -43,119 +43,30 @@ const Cards = () => {
                 }}
             >
                 <SwiperSlide>
-                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center">
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center max-sm:mt-10 max-sm:ml-4">
                         <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-2 justify-center">
+                            <div className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[250px] max-sm:-ml-8">
                                 <img
+                                    loading="lazy"
                                     srcSet={product1} alt='product1'
                                     className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
                                 />
-                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
-                                    <div className="flex justify-center items-center self-center basis-[0%] flex-col  px-5">
-                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
-                                            APR
-                                        </h1>
-                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
-                                            14
-                                        </p>
-                                    </div>
-                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <h2 className="text-black text-xs font-bold leading-5">
-                                            JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </h2>
-                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
-                                            Directly seated and inside for you to enjoy the show.
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="container py-5 mt-8  flex flex-wrap items-center justify-center gap-8">
-                        <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
-                                <img
-                                    srcSet={product1} alt='product1'
-                                    className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
-                                />
-                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-center justify-center self-center px-5">
-                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
-                                            APR
-                                        </h1>
-                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
-                                            14
-                                        </p>
-                                    </div>
-                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <h2 className="text-black text-xs font-bold leading-5">
-                                            JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </h2>
-                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
-                                            Directly seated and inside for you to enjoy the show.
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center gap-8">
-                        <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
-                                <img
-                                    srcSet={product1} alt='product1'
-                                    className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
-                                />
-                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-center self-center px-5">
-                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
-                                            APR
-                                        </h1>
-                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
-                                            14
-                                        </p>
-                                    </div>
-                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <h2 className="text-black text-xs font-bold leading-5">
-                                            JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </h2>
-                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
-                                            Directly seated and inside for you to enjoy the show.
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="container py-5 mt-8  flex flex-wrap items-center justify-center gap-8">
-                        <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
-                                <img
-                                    srcSet={product1} alt='product1'
-                                    className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
-                                />
-                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col self-center px-5">
-                                        <div className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
+                                <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle  items-center self-center px-5">
+                                        <div className="text-indigo-600 max-sm:w-2 text-center text-xs max-sm:text-[10px] font-bold whitespace-nowrap">
                                             APR
                                         </div>
-                                        <div className="text-black text-3xl font-bold whitespace-nowrap mt-2">
+                                        <div className="text-black text-xl max-sm:w-2 font-bold whitespace-nowrap mt-2">
                                             14
                                         </div>
                                     </div>
-                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <h2 className="text-black text-xs font-bold leading-5">
+                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
+                                        <div className="text-black text-xs max-sm:text-[9px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
                                             JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </h2>
-                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
+                                        </div>
+                                        <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
                                             Directly seated and inside for you to enjoy the show.
-                                        </h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -163,29 +74,185 @@ const Cards = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center gap-8">
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center max-sm:mt-10 max-sm:ml-4">
                         <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
+                            <div className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[250px] max-sm:-ml-8">
                                 <img
+                                    loading="lazy"
                                     srcSet={product1} alt='product1'
                                     className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
                                 />
-                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-stretch self-center px-5">
-                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
+                                <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle  items-center self-center px-5">
+                                        <div className="text-indigo-600 max-sm:w-2 text-center text-xs max-sm:text-[10px] font-bold whitespace-nowrap">
                                             APR
-                                        </h1>
-                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
+                                        </div>
+                                        <div className="text-black text-xl max-sm:w-2 font-bold whitespace-nowrap mt-2">
                                             14
-                                        </p>
+                                        </div>
                                     </div>
-                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <h2 className="text-black text-xs font-bold leading-5">
+                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
+                                        <div className="text-black text-xs max-sm:text-[9px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
                                             JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </h2>
-                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
+                                        </div>
+                                        <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
                                             Directly seated and inside for you to enjoy the show.
-                                        </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center max-sm:mt-10 max-sm:ml-4">
+                        <Link to="/eventslist">
+                            <div className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[250px] max-sm:-ml-8">
+                                <img
+                                    loading="lazy"
+                                    srcSet={product1} alt='product1'
+                                    className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
+                                />
+                                <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle  items-center self-center px-5">
+                                        <div className="text-indigo-600 max-sm:w-2 text-center text-xs max-sm:text-[10px] font-bold whitespace-nowrap">
+                                            APR
+                                        </div>
+                                        <div className="text-black text-xl max-sm:w-2 font-bold whitespace-nowrap mt-2">
+                                            14
+                                        </div>
+                                    </div>
+                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
+                                        <div className="text-black text-xs max-sm:text-[9px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
+                                            JYJ 2011 JYJ Worldwide Concert Barcelona
+                                        </div>
+                                        <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
+                                            Directly seated and inside for you to enjoy the show.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center max-sm:mt-10 max-sm:ml-4">
+                        <Link to="/eventslist">
+                            <div className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[250px] max-sm:-ml-8">
+                                <img
+                                    loading="lazy"
+                                    srcSet={product1} alt='product1'
+                                    className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
+                                />
+                                <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle  items-center self-center px-5">
+                                        <div className="text-indigo-600 max-sm:w-2 text-center text-xs max-sm:text-[10px] font-bold whitespace-nowrap">
+                                            APR
+                                        </div>
+                                        <div className="text-black text-xl max-sm:w-2 font-bold whitespace-nowrap mt-2">
+                                            14
+                                        </div>
+                                    </div>
+                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
+                                        <div className="text-black text-xs max-sm:text-[9px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
+                                            JYJ 2011 JYJ Worldwide Concert Barcelona
+                                        </div>
+                                        <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
+                                            Directly seated and inside for you to enjoy the show.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center max-sm:mt-10 max-sm:ml-4">
+                        <Link to="/eventslist">
+                            <div className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[250px] max-sm:-ml-8">
+                                <img
+                                    loading="lazy"
+                                    srcSet={product1} alt='product1'
+                                    className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
+                                />
+                                <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle  items-center self-center px-5">
+                                        <div className="text-indigo-600 max-sm:w-2 text-center text-xs max-sm:text-[10px] font-bold whitespace-nowrap">
+                                            APR
+                                        </div>
+                                        <div className="text-black text-xl max-sm:w-2 font-bold whitespace-nowrap mt-2">
+                                            14
+                                        </div>
+                                    </div>
+                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
+                                        <div className="text-black text-xs max-sm:text-[9px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
+                                            JYJ 2011 JYJ Worldwide Concert Barcelona
+                                        </div>
+                                        <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
+                                            Directly seated and inside for you to enjoy the show.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center max-sm:mt-10 max-sm:ml-4">
+                        <Link to="/eventslist">
+                            <div className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[250px] max-sm:-ml-8">
+                                <img
+                                    loading="lazy"
+                                    srcSet={product1} alt='product1'
+                                    className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
+                                />
+                                <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle  items-center self-center px-5">
+                                        <div className="text-indigo-600 max-sm:w-2 text-center text-xs max-sm:text-[10px] font-bold whitespace-nowrap">
+                                            APR
+                                        </div>
+                                        <div className="text-black text-xl max-sm:w-2 font-bold whitespace-nowrap mt-2">
+                                            14
+                                        </div>
+                                    </div>
+                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
+                                        <div className="text-black text-xs max-sm:text-[9px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
+                                            JYJ 2011 JYJ Worldwide Concert Barcelona
+                                        </div>
+                                        <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
+                                            Directly seated and inside for you to enjoy the show.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center max-sm:mt-10 max-sm:ml-4">
+                        <Link to="/eventslist">
+                            <div className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-3 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[250px] max-sm:-ml-8">
+                                <img
+                                    loading="lazy"
+                                    srcSet={product1} alt='product1'
+                                    className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
+                                />
+                                <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
+                                    <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle  items-center self-center px-5">
+                                        <div className="text-indigo-600 max-sm:w-2 text-center text-xs max-sm:text-[10px] font-bold whitespace-nowrap">
+                                            APR
+                                        </div>
+                                        <div className="text-black text-xl max-sm:w-2 font-bold whitespace-nowrap mt-2">
+                                            14
+                                        </div>
+                                    </div>
+                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
+                                        <div className="text-black text-xs max-sm:text-[9px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
+                                            JYJ 2011 JYJ Worldwide Concert Barcelona
+                                        </div>
+                                        <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
+                                            Directly seated and inside for you to enjoy the show.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -193,67 +260,7 @@ const Cards = () => {
                     </div>
                 </SwiperSlide>
                 
-                <SwiperSlide>
-                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center gap-8">
-                        <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
-                                <img
-                                    srcSet={product1} alt='product1'
-                                    className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
-                                />
-                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-stretch self-center px-5">
-                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
-                                            APR
-                                        </h1>
-                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
-                                            14
-                                        </p>
-                                    </div>
-                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <h2 className="text-black text-xs font-bold leading-5">
-                                            JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </h2>
-                                        <h2 className="text-neutral-500 text-xs leading-2 mt-1">
-                                            Directly seated and inside for you to enjoy the show.
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="container py-5 mt-8 flex flex-wrap items-center justify-center gap-8">
-                        <Link to="/eventslist">
-                            <div className="bg-white shadow shadow-black flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center">
-                                <img
-                                    srcSet={product1} alt='product1'
-                                    className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
-                                />
-                                <div className="self-center flex justify-between gap-5 mt-1 items-start w-full">
-                                    <div className="flex basis-[0%] flex-col items-stretch self-center px-5">
-                                        <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap">
-                                            APR
-                                        </h1>
-                                        <p className="text-black text-3xl font-bold whitespace-nowrap mt-2">
-                                            14
-                                        </p>
-                                    </div>
-                                    <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5">
-                                        <h2 className="text-black text-xs font-bold leading-5">
-                                            JYJ 2011 JYJ Worldwide Concert Barcelona
-                                        </h2>
-                                        <h2 className="text-neutral-500 text-xs leading-5 mt-1">
-                                            Directly seated and inside for you to enjoy the show.
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                </SwiperSlide>
-                
+
             </Swiper>
         </div >
     )

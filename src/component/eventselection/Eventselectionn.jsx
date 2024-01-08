@@ -29,7 +29,7 @@ const Eventselectionn = () => {
               Telangana, India
             </div>
           </div>
-          <Link to="/confirmticket" class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:mt-14">
+          <Link to="/eventticket" class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:mt-14">
             <span class="relative text-white font-bold text-lg">Book Now</span>
             <div class="flex items-center -space-x-3 translate-x-3">
               <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
