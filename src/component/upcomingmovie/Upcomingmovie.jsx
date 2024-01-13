@@ -3,10 +3,10 @@ import product1 from "../../assets/images/product1.png";
 import dropdown from "../../assets/icons/dropdown.svg";
 import { upcomingData } from "./upcomingmovie.data";
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Upcomingevents = () => {
     //dropdown for filter
-
     const [isShowOpen, setShowOpen] = useState(false);
 
     const handleShowToggle = () => {
@@ -32,7 +32,6 @@ const Upcomingevents = () => {
                 setSortOpen(false);
             }
         };
-
         document.addEventListener("mousedown", handleClickOutside);
 
         return () => {
@@ -70,15 +69,27 @@ const Upcomingevents = () => {
         };
     }, []);
     
-
-
     const [items, setItems] = useState(upcomingData);
+    useEffect(() => {
+        const upcomingDataNew = async () => {
+            try {
+                const upcomingMovies = await axios.get(
+                    `${process.env.REACT_APP_BACKENDURL}/movies`
+                );
+                setItems(upcomingMovies.data.data);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        upcomingDataNew();
+    })
+    console.log(items)
 
     return (
         <div className="flex flex-col mt-14">
             <div className="self-center flex w-[1087px] max-w-full justify-between gap-5 mt-6 px-5 items-start max-md:flex-wrap max-md:mt-10 max-sm:w-80 max-sm:mt-5 max-sm:self-center max-sm:items-center">
                 <div className="text-blue-950 text-2xl font-bold grow shrink basis-auto mt-2.5 max-sm:self-center max-sm:items-center max-sm:ml-5">
-                    Upcoming Events
+                    Upcoming Movies
                 </div>
                 <div className=" flex items-center justify-center gap-5 max-md:max-w-full max-md:flex-wrap max-sm:hidden">
                     <div ref={dropdownRef} className="bg-violet-50 flex items-stretch justify-between gap-5 px-6 py-4 rounded-[50px] max-md:px-5">

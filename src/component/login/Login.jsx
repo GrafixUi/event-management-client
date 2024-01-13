@@ -3,8 +3,52 @@ import logo from "../../assets/images/logo.png";
 import { Link } from 'react-router-dom';
 import Navbar from "../../component/navbar/Navbar"
 import Footer from "../../component/footer/Footer"
+import { useStore } from '../../utils/store';
+import {useNavigate} from 'react-router-dom'
+import { useState } from 'react';
+import axios from 'axios';
 
 const Login = () => {
+    const setIsAuthenticated = useStore((state) => state.setIsAuthenticated);
+    const setJwt = useStore((state) => state.setJwt);
+    const setUserData = useStore((state) => state.setUserData);
+    const navigate = useNavigate()
+  
+    const [formData, setFormData] = useState({
+        identifier: "",
+        password: "",
+    })
+
+    const { identifier, password } = formData;
+
+    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    const onSubmit = async e => {
+        e.preventDefault();
+        try {
+            const newUser = await axios.post(`${process.env.REACT_APP_BACKENDURL}/auth/local`, {
+                identifier,
+                password,
+            })
+            console.log("data",newUser)
+            if (newUser.data) {
+                console.log("data",newUser.data)
+                setIsAuthenticated(true)
+                setJwt(newUser.data.jwt)
+                setUserData(newUser.data.user)
+                navigate('/')
+            }
+            else {
+                alert('Invalid Credentials')
+            }
+        }
+        catch (err) {
+            alert("User Already Exists")
+        }
+    }
+
+
+
     return (
         <div>
             <Navbar />
@@ -22,11 +66,11 @@ const Login = () => {
                                     <span className="font-[275] text-2xl">Login as</span>
                                     <br />
                                     <span className="font-extrabold text-lg tracking-[5.2px] uppercase">
-                                        Organizer{" "}
+                                        Attendee{" "}
                                     </span>
                                 </div>
                                 <div className="text-white text-xl font-semibold self-center whitespace-nowrap mt-10 max-md:mt-10">
-                                    <span className="font-bold">Existing User</span>
+                                    <span className="font-bold">New User</span>
                                     <span className="text-5xl">?</span>
                                 </div>
                                 <div className="text-white text-center text-base mt-5">
@@ -44,7 +88,7 @@ const Login = () => {
                                     <div className="flex flex-col items-stretch max-md:w-full max-md:ml-0 ">
                                         <div className="flex-col overflow-hidden relative flex min-h-[48px] grow py-12 max-md:max-w-full max-sm:-mt-10 max-sm:p-4">
                                             <div className="relative text-slate-700 text-2xl font-bold leading-10 tracking-normal self-stretch  max-md:max-w-full max-md:mt-10">
-                                                Create an Account
+                                                Login
                                             </div>
                                             <div className="text-zinc-400 text-sm leading-5 self-stretch max-md:max-w-full">
                                                 Your personal data will be used to support your experience
@@ -53,9 +97,9 @@ const Login = () => {
                                             </div>
                                             <div className="relative flex flex-col items-stretch ml-9 self-start max-md:ml-2.5 max-md:mt-10 ">
 
-                                                <input className="justify-center text-zinc-400 text-base leading-6 mt-10 max-md:mt-10 border border-[#E5E5E5] pr-28 pl-2 py-3 rounded-md w-72" type='text' placeholder='Username or Email *' />
+                                                <input className="justify-center text-zinc-400 text-base leading-6 mt-10 max-md:mt-10 border border-[#E5E5E5] pr-28 pl-2 py-3 rounded-md w-72" type='text' placeholder='Username or Email *' name='identifier' onChange={onChange} />
 
-                                                <input className="justify-center text-zinc-400 text-base leading-6 mt-10 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md w-72" type='text' placeholder='Your password *' />
+                                                <input className="justify-center text-zinc-400 text-base leading-6 mt-10 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md w-72" type='password' placeholder='Your password *' name='password' onChange={onChange} />
                                             </div>
                                             <div className="relative self-stretch flex items-center justify-between gap-2.5 mt-16 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
                                                 <input type="checkbox" checked="checked" className=' w-4 items-center justify-center' />
@@ -64,8 +108,9 @@ const Login = () => {
                                                 </div>
                                                 <Link className=' mr-7 text-[#B6B6B6]'>Forgot password</Link>
                                             </div>
-                                            <button className="relative w-52 text-white text-sm font-bold leading-5 tracking-normal bg-stone-950 self-stretch justify-center items-stretch mt-6 px-8 py-4 rounded-xl max-md:max-w-full max-md:px-5">
-                                                Submit & Register
+                                            <button type='button' className="relative w-52 text-white text-sm font-bold leading-5 tracking-normal bg-stone-950 self-stretch justify-center items-stretch mt-6 px-8 py-4 rounded-xl max-md:max-w-full max-md:px-5" 
+                                            onClick={onSubmit}>
+                                                Login
                                             </button>
                                         </div>
                                     </div>

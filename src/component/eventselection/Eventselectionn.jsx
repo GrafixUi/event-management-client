@@ -5,11 +5,29 @@ import location from "../../assets/images/location.png";
 import Rating from "../rating/Rating";
 import Cards from "../cards/Cards";
 import frame from "../../assets/images/Frame.png";
-import Navbar from "../../component/navbar/Navbar"
-import Footer from "../../component/footer/Footer"
+import Navbar from "../../component/navbar/Navbar";
+import Footer from "../../component/footer/Footer";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
 const Eventselectionn = () => {
-
+  const requestParams = new URLSearchParams(window.location.search);
+  const eventid = requestParams.get("eventid");
+  const [eventData, setEventData] = useState();
+  useEffect(() => {
+    const eventDataNew = async () => {
+      try {
+        const events = await axios.get(
+          `${process.env.REACT_APP_BACKENDURL}/events/${eventid}`
+        );
+        setEventData(events.data.data.attributes);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    eventDataNew();
+  }, []);
+  console.log(eventData);
   return (
     <div className="bg-white flex flex-col ">
       <Navbar />
@@ -22,19 +40,32 @@ const Eventselectionn = () => {
         <div className="relative flex w-full max-w-[1438px] items-stretch justify-around gap-5 mt-72 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10">
           <div className="flex flex-col items-stretch max-md:max-w-full max-sm:items-center max-sm:justify-center">
             <div className="text-white text-3xl max-md:max-w-full max-md:text-4xl">
-              Event Name
+              {eventData?.eventtitle}
             </div>
             <div className="text-neutral-300 text-lg font-light mt-5 max-md:max-w-full max-sm:ml-4">
-              HITEX Exhibition Centre, Hitex Road, Izzathnagar, Kothaguda,
-              Telangana, India
+              {eventData?.locationname}, {eventData?.address}
             </div>
           </div>
-          <Link to="/eventticket" class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:mt-14">
+          <Link
+            to={`/eventticket?eventid=${eventid}`}
+            class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:mt-14"
+          >
             <span class="relative text-white font-bold text-lg">Book Now</span>
             <div class="flex items-center -space-x-3 translate-x-3">
               <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </div>
           </Link>
@@ -48,35 +79,41 @@ const Eventselectionn = () => {
                 <div className="flex items-stretch justify-between gap-5 max-sm:self-center max-sm:items-center">
                   <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-4 pr-8 py-6 rounded-xl ">
                     <h1 className="text-white text-lg font-semibold leading-6 uppercase whitespace-nowrap">
-                      dec
+                      {eventData?.month}
                     </h1>
                     <h3 className="text-white text-4xl font-bold self-stretch whitespace-nowrap mt-4 max-md:text-4xl">
-                      08
+                      {eventData?.day}
                     </h3>
                   </div>
                   <div className="self-center flex grow basis-[0%] flex-col items-stretch my-auto">
                     <div className="items-stretch flex justify-between gap-3">
                       <div className="text-black text-sm">Released:</div>
-                      <div className="text-black text-sm">2021</div>
+                      <div className="text-black text-sm">
+                        {eventData?.year}
+                      </div>
                     </div>
                     <div className="items-stretch flex justify-between gap-3 mt-5">
-                      <div className="text-black text-sm">Gener:</div>
-                      <div className="text-black text-sm">Comedy</div>
+                      <div className="text-black text-sm">Domain:</div>
+                      <div className="text-black text-sm">
+                        {eventData?.domaintype}
+                      </div>
                     </div>
                     <div className="items-stretch flex justify-between gap-3 mt-5">
-                      <div className="text-black text-sm">PG Rating:</div>
-                      <div className="text-black text-sm">AM</div>
+                      <div className="text-black text-sm">Category:</div>
+                      <div className="text-black text-sm">
+                        {eventData?.category}
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col items-stretch mt-3 self-start">
-                  <div className="text-black text-sm font-medium">Theater:</div>
+                  <div className="text-black text-sm font-medium">Address:</div>
                   <div className="text-blue-950 text-lg font-semibold mt-3">
-                    HITEX Exhibition Centre
+                    {eventData?.locationname}
                   </div>
                   <div className="text-blue-950 text-md font-light mt-4">
-                    HITEX Exhibition Centre, Hitex Road, Izzathnagar, <br />
-                    Kothaguda, Telangana, India
+                    {eventData?.locationname} <br />
+                    {eventData?.address} <br />
                   </div>
                 </div>
               </div>
@@ -94,11 +131,11 @@ const Eventselectionn = () => {
                   <div className="flex flex-col items-stretch w-[61%] ml-5 max-md:w-full max-md:ml-0 ">
                     <div className="flex grow flex-col items-stretch max-md:mt-10">
                       <div className="text-neutral-500  text-base font-bold leading-5">
-                        airb123
+                        {eventData?.organisername}
                       </div>
-                      <div className="text-neutral-500 text-base leading-5 whitespace-nowrap mt-2.5 max-md:mr-1">
+                      {/* <div className="text-neutral-500 text-base leading-5 whitespace-nowrap mt-2.5 max-md:mr-1">
                         Premium Digital Studio
-                      </div>
+                      </div> */}
                       <div className="flex justify-between gap-1 mt-1.5 items-start max-md:mr-1">
                         <div className="items-stretch flex gap-1 pr-3 py-0.5">
                           <Rating />
@@ -125,31 +162,32 @@ const Eventselectionn = () => {
                   About This Event
                 </h1>
                 <p className="justify-center text-neutral-500 text-sm leading-6 max-w-[645px] mt-8 max-md:max-w-full">
-                  About the movie
-                  <br />
-                  Eswar, an IT employee, moves into a new house with his
-                  pregnant wife. Ilamparuthi, a government employee, has been
-                  living next door for over 15 years with his wife and daughter.
-                  Things take a turn when Eswar buys a car and parks it in their
-                  common parking space. Did their ego win over them or did they
-                  realize their mistake?
+                  {eventData?.description}
                 </p>
-                <h3 className="text-neutral-400 text-base leading-6 mt-5 max-md:max-w-full max-md:mt-10">
+                {/* <h3 className="text-neutral-400 text-base leading-6 mt-5 max-md:max-w-full max-md:mt-10">
                   Movie or Event type
                 </h3>
                 <h3 className="justify-center text-neutral-500 text-base leading-6 underline mt-1 max-md:max-w-full">
                   Drama,
-                </h3>
+                </h3> */}
               </div>
             </div>
             <div className="flex flex-col items-stretch w-[32%] h- ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-5">
               <div className="bg-white flex grow flex-col items-stretch w-full mt-2.5 pl-9 pr-11 pt-5 pb-11 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <div className="text-black text-sm font-medium">Location:</div>
-                <img
-                  srcSet={location}
-                  alt="location"
-                  className="aspect-[1.61] object-contain object-center w-full overflow-hidden mt-3.5 max-md:mr-0.5"
-                />
+                <div className="google-map-code">
+                  <iframe
+                    src={eventData?.mapurl}
+                    width="300"
+                    height="300"
+                    frameborder="0"
+                    style={{ border: 0 }}
+                    allowfullscreen=''
+                    aria-hidden="false"
+                    tabindex="0"
+                    title="maps"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
@@ -157,7 +195,7 @@ const Eventselectionn = () => {
       </div>
       <div className="border bg-blue-950 self-stretch flex w-full flex-col justify-center items-center mt-12 px-16 py-5 border-solid border-zinc-200 max-md:max-w-full max-md:mt-10 max-md:px-5">
         <div className="flex w-full max-w-[1465px] flex-col items-stretch mb-4 max-md:max-w-full">
-          <div className="justify-center text-white text-2xl font-bold leading-8 max-md:max-w-full">
+          <div className="justify-center pb-6 text-white text-2xl font-bold  max-md:max-w-full">
             Recommended For You
           </div>
           <Cards />

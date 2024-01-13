@@ -17,6 +17,9 @@ import Movieslist from "./pages/movieslist/Movieslist";
 import Navbar from "./component/navbar/Navbar";
 import Organizer from "./component/organizer/Organizer";
 import { Footer } from "flowbite-react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
@@ -39,6 +42,7 @@ function App() {
         <Route path="/vendorlogin" element={<Vendorlogin />} />
         <Route path="/organizer" element={<Organizer />} />
       </Routes>
+      <ToastContainer autoClose={5000} />
       <Footer />
     </div>
   );

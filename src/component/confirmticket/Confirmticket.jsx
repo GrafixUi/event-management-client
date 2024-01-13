@@ -8,8 +8,31 @@ import MWallets from "../../assets/images/m-wallets.png"
 import { Link } from 'react-router-dom';
 import Navbar from "../../component/navbar/Navbar"
 import Footer from "../../component/footer/Footer"
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useStore } from '../../utils/store';
 
 const Confirmticket = () => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const eventid = searchParams.get("eventid");
+    const [eventData, setEventData] = useState([]);
+    const ticketPrice = useStore((state) => state.ticketPrice);
+    const userNumber = useStore((state) => state.userNumber);
+    useEffect(() => {
+        const eventDataNew = async () => {
+          try {
+            const events = await axios.get(
+              `${process.env.REACT_APP_BACKENDURL}/events/${eventid}`
+            );
+            setEventData(events.data.data.attributes);
+             } 
+             catch (err) {
+            console.log(err);
+          }
+        };
+        eventDataNew();
+      }, []);
+    
     return (
         <div>
             <Navbar />
@@ -32,32 +55,29 @@ const Confirmticket = () => {
                                                     Schedule
                                                 </h2>
                                                 <h3 className="text-white font-thin text-md leading-7 mt-7">
-                                                    Movie Title
+                                                    Event Title
                                                 </h3>
                                                 <h1 className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
-                                                    EVENT NAME
+                                                    {eventData?.eventtitle}
                                                 </h1>
                                                 <h2 className="text-white font-thin text-md leading-7 mt-5">
                                                     Date
                                                 </h2>
                                                 <h2 className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
-                                                    Mon, 23 Oct 2023
+                                                    {eventData?.day} {eventData?.month} {eventData?.year}
                                                 </h2>
                                                 <h3 className="text-neutral-400 text-lg leading-7 mt-5">
-                                                    Ticket (3)
+                                                    Ticket - {userNumber}
                                                 </h3>
-                                                <h1 className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
-                                                    C8, C9, C10
-                                                </h1>
+                                                
                                                 <p className="text-white text-sm font-thin mt-5 max-md:max-w-full">
-                                                    Theater:
+                                                    Location:
                                                 </p>
                                                 <h1 className="text-white text-xl font-semibold mt-7 max-md:max-w-full">
-                                                    HITEX Exhibition Centre
+                                                    {eventData?.locationname}
                                                 </h1>
                                                 <p className="text-white text-md font-thin mt-3 max-md:max-w-full">
-                                                    HITEX Exhibition Centre, Hitex Road, Izzathnagar,
-                                                    Kothaguda, Telangana, India
+                                                    {eventData?.locationname}{eventData?.address}
                                                 </p>
                                             </div>
                                         </div>
@@ -130,21 +150,21 @@ const Confirmticket = () => {
                                                 Base Ticket Fare
                                             </h3>
                                             <h3 className="text-zinc-500 text-xs font-medium">
-                                                ₹1000.00
+                                                {ticketPrice}
                                             </h3>
                                         </div>
                                         <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
                                             <h3 className="text-zinc-500 text-xs font-medium">
                                                 Total Travellers
                                             </h3>
-                                            <h3 className="text-zinc-500 text-xs font-medium">3</h3>
+                                            <h3 className="text-zinc-500 text-xs font-medium">{userNumber}</h3>
                                         </div>
                                         <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
                                             <h3 className="text-zinc-500 text-xs font-medium">
                                                 CGST & SGST
                                             </h3>
                                             <h3 className="text-zinc-500 text-xs font-medium">
-                                                ₹500.00
+                                                {ticketPrice * 0.18}
                                             </h3>
                                         </div>
                                         <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
@@ -152,12 +172,12 @@ const Confirmticket = () => {
                                                 Total Charge
                                             </h2>
                                             <h2 className="text-neutral-700 text-xl font-medium">
-                                                ₹3500.00
+                                                ₹{ticketPrice * 1.18}
                                             </h2>
                                         </div>
                                     </div>
-                                    <Link to="/confirmbooking" className="text-[#0A075F] text-bold font-semibold self-center whitespace-nowrap mt-10 max-md:mt-10">
-                                        Next
+                                    <Link to={`/confirmbooking`} className="text-[#0A075F] text-bold font-semibold self-center whitespace-nowrap mt-10 max-md:mt-10">
+                                        Pay Now
                                     </Link>
                                     <button className="text-pink-600 text-bold font-semibold self-center whitespace-nowrap mt-10 max-md:mt-10">
                                         Cancel

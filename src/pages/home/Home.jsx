@@ -11,6 +11,7 @@ import "./Home.css";
 import { useNavigate } from 'react-router-dom';
 import FAQ from "../home/faq/FAQ";
 import Header from "../../component/header/Header";
+import {useStore} from "../../utils/store"
 
 const Home = () => {
   //dropdown for filter

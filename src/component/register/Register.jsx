@@ -2,9 +2,66 @@ import React from 'react';
 import logo from "../../assets/images/logo.png";
 import Navbar from "../../component/navbar/Navbar"
 import Footer from "../../component/footer/Footer"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
 
 const Register = () => {
+const [formData , setFormData] = useState({
+    username : "",
+    email: "",
+    password: "",
+    checkbox: false
+})
+const navigate = useNavigate()
+
+const {username, email, password, checkbox} = formData;
+
+const onChange = e => setFormData({...formData, [e.target.name]: e.target.value});
+
+const onSubmit = async e => {
+    e.preventDefault();
+    if(checkbox === false){
+        alert("Please accept the terms and conditions")
+    }
+    else if(username === "" || email === "" || password === ""){
+        alert("Please fill all the fields")
+    }
+    else{
+        try{
+            const newUser = await axios.post(`${process.env.REACT_APP_BACKENDURL}/auth/local/register`, {
+                username,
+                email,
+                password,
+            })
+
+            if(newUser.data){
+
+            try{
+                const updateId = await axios.put(`${process.env.REACT_APP_BACKENDURL}/users/${newUser.data.user.id}`, {
+                    role: 4
+                })
+                console.log(updateId)
+                if(updateId.status === 200){
+                    navigate('/')
+                }
+                else{
+                    alert('Registration failed, Try Again')
+                }
+            }
+            catch(err){
+                alert('Registration failed, Try Again')
+            }
+        }
+            else{
+                alert(newUser.error)
+            }
+        }
+        catch(err){
+            alert("User Already Exists")
+        }
+    }
+}
     return (
         <div>
             <Navbar />
@@ -22,7 +79,7 @@ const Register = () => {
                                     <span className="font-[275] text-2xl">Register as</span>
                                     <br />
                                     <span className="font-bold text-lg tracking-[5.2px] uppercase">
-                                        Organizer{" "}
+                                        Attendee{" "}
                                     </span>
                                 </div>
                                 <div className="text-white text-xl font-semibold self-center whitespace-nowrap mt-10 max-md:mt-10">
@@ -54,20 +111,19 @@ const Register = () => {
                                             </div>
                                             <div className="relative flex flex-col items-stretch ml-9 self-start max-md:ml-2.5 max-md:mt-10">
 
-                                                <input className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md" type='text' placeholder='UserName' />
+                                                <input className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md" onChange={onChange} type='text' placeholder='UserName' name="username" />
 
-                                                <input className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md" type='text' placeholder='Email' />
+                                                <input className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md" onChange={onChange} type='email' placeholder='Email' name="email" />
 
-                                                <input className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md" type='text' placeholder='password' />
-                                                <input className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md" type='text' placeholder='confirm password' />
+                                                <input className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md" onChange={onChange} type='password' placeholder='Password' name="password" />
                                             </div>
                                             <div className="relative self-centre flex items-centre justify-between gap-2.5 mt-8 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
-                                                <input type="checkbox" checked="checked" className=' w-4 items-center justify-center' />
+                                                <input type="checkbox" onChange={onChange} className=' w-4 items-center justify-center' name="checkbox" />
                                                 <div className="text-zinc-500 text-sm leading-5 grow shrink basis-auto mt-2 self-start max-md:max-w-full">
                                                     I agree to terms & Policy.
                                                 </div>
                                             </div>
-                                            <button className="relative w-52 text-white text-sm font-bold  tracking-normal bg-stone-950 self-stretch justify-center items-stretch mt-6 px-7 py-4 rounded-xl max-md:max-w-full max-md:px-5">
+                                            <button className="relative w-52 text-white text-sm font-bold  tracking-normal bg-stone-950 self-stretch justify-center items-stretch mt-6 px-7 py-4 rounded-xl max-md:max-w-full max-md:px-5" onClick={onSubmit}>
                                                 Submit & Register
                                             </button>
                                         </div>
