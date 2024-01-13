@@ -30,8 +30,6 @@ const Movieslist = () => {
         upcomingDataNew();
       }, []);
 
-      console.log(items);
-
     return (
         <div className="bg-white flex flex-col ">
             <Navbar />

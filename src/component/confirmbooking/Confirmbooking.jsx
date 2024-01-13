@@ -10,7 +10,6 @@ const Confirmbooking = () => {
   const navigate = useNavigate();
   const orderDetails = useStore((state) => state.orderDetails);
 
-  console.log(orderDetails);
   const eventname = orderDetails?.eventDetails?.eventtitle;
   const quantity = orderDetails?.ticketquantity;
   const price = orderDetails?.totalprice;

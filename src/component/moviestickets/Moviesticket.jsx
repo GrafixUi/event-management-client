@@ -26,7 +26,6 @@ const Moviesticket = () => {
         upcomingDataNew();
       }, []);
 
-      console.log(items);
     return (
         <div className="bg-white flex flex-col items-stretch">
             <Navbar />

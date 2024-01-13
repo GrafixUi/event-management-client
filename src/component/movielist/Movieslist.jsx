@@ -19,9 +19,6 @@ const Eventslist = () => {
         };
         upcomingDataNew();
       }, []);
-
-      console.log(items);
-
     return (
         <div className=' flex flex-col items-center'>
 

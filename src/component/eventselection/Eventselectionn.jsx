@@ -32,10 +32,14 @@ const Eventselectionn = () => {
     eventDataNew();
   }, []);
 
+  console.log(isAuth);
+
   function handleBookEvent() {
-    if(isAuth === false){
-      navigate('/login')
-    }else{  navigate(`/eventticket?eventid=${eventid}`)}
+    if(isAuth === true){
+      navigate(`/eventticket?eventid=${eventid}`)
+    }else{ 
+      navigate(`/login`)
+    }
 
   
   }
