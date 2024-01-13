@@ -11,6 +11,13 @@ const Confirmbooking = () => {
   const orderDetails = useStore((state) => state.orderDetails);
 
   console.log(orderDetails);
+  const eventname = orderDetails?.eventDetails?.eventtitle;
+  const quantity = orderDetails?.ticketquantity;
+  const price = orderDetails?.totalprice;
+const location = orderDetails?.eventDetails?.locationname;
+  const address = orderDetails?.eventDetails?.address;
+
+  const qrvalue = `Event Name: ${eventname} \n Quantity: ${quantity} \n Price: ${price} \n Location: ${location} \n Address: ${address}`;
 
   return (
     <div>
@@ -94,7 +101,7 @@ const Confirmbooking = () => {
               </div>
               <div className="flex flex-col items-stretch w-[30%] ml-5 max-md:w-full max-md:ml-0">
                 <div className="justify-center items-center flex flex-col mt-8 py-0.5 max-md:mt-10">
-                  <QRCode value="Sanjai" />
+                  <QRCode value={ qrvalue} />
                   <div className="text-zinc-500 text-right text-base font-medium self-center whitespace-nowrap mt-5">
                     Scan the code to view in any device
                   </div>

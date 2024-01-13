@@ -10,10 +10,14 @@ import Footer from "../../component/footer/Footer";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useStore } from "../../utils/store";
 const Eventselectionn = () => {
   const requestParams = new URLSearchParams(window.location.search);
   const eventid = requestParams.get("eventid");
   const [eventData, setEventData] = useState();
+  const navigate = useNavigate();
+  const isAuth = useStore((state) => state.isAuthenticated);
   useEffect(() => {
     const eventDataNew = async () => {
       try {
@@ -27,6 +31,14 @@ const Eventselectionn = () => {
     };
     eventDataNew();
   }, []);
+
+  function handleBookEvent() {
+    if(isAuth === false){
+      navigate('/login')
+    }else{  navigate(`/eventticket?eventid=${eventid}`)}
+
+  
+  }
 
   return (
     <div className="bg-white flex flex-col ">
@@ -46,8 +58,9 @@ const Eventselectionn = () => {
               {eventData?.locationname}, {eventData?.address}
             </div>
           </div>
-          <Link
-            to={`/eventticket?eventid=${eventid}`}
+          <button
+            
+            onClick={handleBookEvent}
             class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:mt-14"
           >
             <span class="relative text-white font-bold text-lg">Book Now</span>
@@ -68,7 +81,7 @@ const Eventselectionn = () => {
                 />
               </svg>
             </div>
-          </Link>
+          </button>
         </div>
       </div>
       <div className="self-center flex w-full max-w-[1300px] flex-col items-stretch mt-5 max-md:max-w-full p-4">

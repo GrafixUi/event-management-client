@@ -211,10 +211,18 @@ const Confirmticket = () => {
                     </div>
                     <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
                       <h3 className="text-zinc-500 text-xs font-medium">
-                        CGST & SGST
+                       VAT
                       </h3>
                       <h3 className="text-zinc-500 text-xs font-medium">
                         ${orderDetails?.ticketprice * 0.18}
+                      </h3>
+                    </div>
+                    <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
+                      <h3 className="text-zinc-500 text-xs font-medium">
+                       Platform Fee
+                      </h3>
+                      <h3 className="text-zinc-500 text-xs font-medium">
+                        ${orderDetails?.ticketprice * 0.1}
                       </h3>
                     </div>
                     <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
@@ -222,7 +230,7 @@ const Confirmticket = () => {
                         Total Charge
                       </h2>
                       <h2 className="text-neutral-700 text-xl font-medium">
-                        ${orderDetails?.totalprice}
+                        ${orderDetails?.totalprice }
                       </h2>
                     </div>
                   </div>

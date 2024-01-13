@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Dashboard from "../dashboard/Dashboard";
 import Navbar from "../../component/navbar/Navbar"
 import Footer from "../../component/footer/Footer"
+import ProfileCard from '../profile/ProfileCard';
 
 const Vendorlogin = () => {
     const [isToggled, setIsToggled] = useState(false)
@@ -89,7 +90,7 @@ const Vendorlogin = () => {
                             </div>
                         </div>
                         <div>
-                            {isToggled && <Dashboard />}
+                            {isToggled ? <Dashboard />:<ProfileCard />}
                         </div>
                     </div>
                 </div>

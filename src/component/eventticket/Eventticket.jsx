@@ -21,7 +21,6 @@ const Eventticket = () => {
  const setOrderDetails = useStore((state) => state.setOrderDetails);
   const axiosAuth = useAxiosAuth();
   const navigate = useNavigate();
-
   useEffect(() => {
     const eventDataNew = async () => {
       try {
@@ -62,7 +61,6 @@ const Eventticket = () => {
     setTicketPrice(totalPrice);
     setTicketQuantity(totalQuantity);
   }, [ticketData]);
-
 
   return (
     <div className="bg-white flex flex-col items-stretch">
@@ -364,10 +362,18 @@ const Eventticket = () => {
                   </div>
                   <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
                     <h3 className="text-zinc-500 text-xs font-medium">
-                      CGST & SGST
+                     VAT
                     </h3>
                     <h3 className="text-zinc-500 text-xs font-medium">
                       ${ticketPrice * 0.18}
+                    </h3>
+                  </div>
+                  <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
+                    <h3 className="text-zinc-500 text-xs font-medium">
+                     Platform Fee
+                    </h3>
+                    <h3 className="text-zinc-500 text-xs font-medium">
+                      ${ticketPrice * 0.10}
                     </h3>
                   </div>
                   <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
@@ -375,7 +381,7 @@ const Eventticket = () => {
                       Total Charge
                     </h3>
                     <h3 className="text-neutral-700 text-xl font-medium">
-                      ${ticketPrice + ticketPrice * 0.18}
+                      ${ticketPrice + ticketPrice * 0.28}
                     </h3>
                   </div>
                 </div>
@@ -391,7 +397,7 @@ const Eventticket = () => {
                         ticketdetails: ticketData,
                         ticketprice: ticketPrice,
                         ticketquantity: ticketQuantity,
-                        totalprice: ticketPrice + ticketPrice * 0.18,
+                        totalprice: ticketPrice + ticketPrice * 0.28,
                         eventDetails: eventData,
                       });
                       navigate(`/confirmticket?eventid=${eventid}`)

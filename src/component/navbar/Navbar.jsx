@@ -25,6 +25,9 @@ export default function Navbar() {
   const isAuthenticated = useStore((state) => state.isAuthenticated);
   const setIsAuthenticated = useStore((state) => state.setIsAuthenticated);
   const navigate = useNavigate();
+  const setJwt = useStore((state) => state.setJwt);
+  const setOrderDetails = useStore((state) => state.setOrderDetails);
+  const setUserData = useStore((state) => state.setUserData);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -187,6 +190,9 @@ export default function Navbar() {
                             <button
                               onClick={() => {
                                 setIsAuthenticated(false);
+                                setJwt(null);
+                                setOrderDetails(null);
+                                setUserData(null);
                                 navigate("/");
                               }}
                               className={classNames(

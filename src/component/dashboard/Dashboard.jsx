@@ -11,7 +11,6 @@ const axiosAuth = useAxiosAuth();
 const userid = useStore((state) => state.userData.id);
 const [items, setItems] = useState([]);
 
-
 useEffect(() => {
     const upcomingDataNew = async () => {
       try {
@@ -62,12 +61,10 @@ useEffect(() => {
                 <td class="px-6 py-4">
                     ${item?.attributes?.totalprice}
                 </td>
-                
             </tr>
                 ))
             }
-            
-           
+             
         </tbody>
     </table>
 </div>
