@@ -10,18 +10,17 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import useAxiosAuth from "../../utils/useAxiosAuth";
 import { useStore } from "../../utils/store";
+import {useNavigate} from 'react-router-dom'
 const Eventticket = () => {
   const requestParams = new URLSearchParams(window.location.search);
   const eventid = requestParams.get("eventid");
   const [eventData, setEventData] = useState();
   const [ticketData, setTicketData] = useState([]);
+  const [ticketPrice, setTicketPrice] = useState(0);
+  const [ticketQuantity, setTicketQuantity] = useState(0);
+ const setOrderDetails = useStore((state) => state.setOrderDetails);
   const axiosAuth = useAxiosAuth();
-  const setTicketPriceInc = useStore((state) => state.setTicketPriceInc);
-  const setTicketPriceDec = useStore((state) => state.setTicketPriceDec);
-  const ticketPrice = useStore((state) => state.ticketPrice);
-  const userNumber = useStore((state) => state.userNumber);
-  const setUserNumberInc = useStore((state) => state.setUserNumberInc);
-  const setUserNumberDec = useStore((state) => state.setUserNumberDec);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const eventDataNew = async () => {
@@ -46,6 +45,24 @@ const Eventticket = () => {
     };
     eventDataNew();
   }, []);
+
+  useEffect(() => {
+    // Calculate total ticket quantity and price
+    const totalPrice = ticketData.reduce(
+      (accumulator, ticket) =>
+        accumulator + ticket.attributes.price * ticket.attributes.quantity,
+      0
+    );
+
+    const totalQuantity = ticketData.reduce(
+      (accumulator, ticket) => accumulator + ticket.attributes.quantity,
+      0
+    );
+
+    setTicketPrice(totalPrice);
+    setTicketQuantity(totalQuantity);
+  }, [ticketData]);
+
 
   return (
     <div className="bg-white flex flex-col items-stretch">
@@ -87,7 +104,7 @@ const Eventticket = () => {
                       {eventData?.month}
                     </h1>
                     <h3 className="text-white text-4xl font-bold self-stretch whitespace-nowrap mt-4 max-md:text-4xl">
-                      {eventData?.date}
+                      {eventData?.day}
                     </h3>
                   </div>
                   <div className="self-center flex grow basis-[0%] flex-col items-stretch my-auto">
@@ -166,13 +183,13 @@ const Eventticket = () => {
             <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-8">
               <div className="bg-white flex grow flex-col items-stretch w-full pl-14 pr-20 py-12 rounded-[32px] max-md:max-w-full max-md:mt-8 max-md:px-5">
                 <h2 className="text-blue-950 text-2xl font-bold mr-6  max-md:max-w-full max-md:mr-2.5 max-md:mt-10 max-sm:-mt-6">
-                  Select Your Seat
+                  Select Your Ticket
                 </h2>
-                {ticketData.map((ticket) => {
+                {ticketData.map((ticket, index) => {
                   return (
                     <div
-                      key={ticket.id}
-                      className=" bg-zinc-300 hover:bg-blue-950 flex w-[590px] max-w-full items-center justify-between gap-5 mr-6 mt-20 pl-16 pr-12 py-8 rounded-xl max-md:flex-wrap max-md:mr-2.5 max-md:mt-10 max-md:px-5 cursor-pointer"
+                      key={index}
+                      className=" bg-blue-950 flex w-[590px] max-w-full items-center justify-between gap-5 mr-6 mt-20 pl-16 pr-12 py-8 rounded-xl max-md:flex-wrap max-md:mr-2.5 max-md:mt-10 max-md:px-5"
                     >
                       <div className=" text-start text-white text-xl font-extrabold leading-6 uppercase grow shrink basis-auto my-auto">
                         {ticket.attributes.tickettitle}
@@ -180,15 +197,23 @@ const Eventticket = () => {
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => {
-                            if (
-                              ticketPrice > 0 &&
-                              ticketPrice >= ticket.attributes.price
-                            ) {
-                              setTicketPriceDec(ticket.attributes.price);
-                            }
-                            if (userNumber > 0) {
-                              setUserNumberDec(1);
-                            }
+                       
+                            setTicketData((prevData) =>
+                              prevData.map((t, i) =>
+                                i === index
+                                  ? {
+                                      ...t,
+                                      attributes: {
+                                        ...t.attributes,
+                                        quantity: Math.max(
+                                          (t.attributes.quantity || 0) - 1,
+                                          0
+                                        ), // Ensure the quantity is never negative
+                                      },
+                                    }
+                                  : t
+                              )
+                            );
                           }}
                         >
                           <svg
@@ -208,11 +233,21 @@ const Eventticket = () => {
                         </p>
                         <button
                           onClick={() => {
-                            setTicketPriceInc(ticket.attributes.price);
-                            setUserNumberInc(1);
-                          }
-                          
-                          }
+                            setTicketData((prevData) =>
+                              prevData.map((t, i) =>
+                                i === index
+                                  ? {
+                                      ...t,
+                                      attributes: {
+                                        ...t.attributes,
+                                        quantity:
+                                          (t.attributes.quantity || 0) + 1, // Treat null as 0
+                                      },
+                                    }
+                                  : t
+                              )
+                            );
+                          }}
                         >
                           <svg
                             viewBox="0 0 1024 1024"
@@ -225,6 +260,9 @@ const Eventticket = () => {
                             <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" />
                           </svg>
                         </button>
+                        <div className="text-white text-xl font-medium uppercase  ">
+                          X {ticket.attributes.quantity || 0}
+                        </div>
                       </div>
                     </div>
                   );
@@ -320,7 +358,9 @@ const Eventticket = () => {
                     <h3 className="text-zinc-500 text-xs font-medium">
                       Total Travellers
                     </h3>
-                    <h3 className="text-zinc-500 text-xs font-medium">{userNumber}</h3>
+                    <h3 className="text-zinc-500 text-xs font-medium">
+                      {ticketQuantity}
+                    </h3>
                   </div>
                   <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
                     <h3 className="text-zinc-500 text-xs font-medium">
@@ -343,12 +383,24 @@ const Eventticket = () => {
                   Discounts, offers and price concessions will be applied later
                   during payment
                 </div>
-                <Link
-                  to={`/confirmticket?eventid=${eventid}`}
-                  className="text-white text-center text-base font-semibold whitespace-nowrap justify-center items-center bg-blue-950 self-center w-[350px] max-w-full mt-8 px-14 py-5 rounded-xl max-md:mt-10 max-md:px-5 cursor-pointer"
-                >
-                  Book Now
-                </Link>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setOrderDetails({
+                        eventid: eventid,
+                        ticketdetails: ticketData,
+                        ticketprice: ticketPrice,
+                        ticketquantity: ticketQuantity,
+                        totalprice: ticketPrice + ticketPrice * 0.18,
+                        eventDetails: eventData,
+                      });
+                      navigate(`/confirmticket?eventid=${eventid}`)
+                    }}
+                    disabled={ ticketData?.length === 0 || !ticketData || ticketQuantity === 0 }
+                    className={`text-white text-center text-base font-semibold whitespace-nowrap justify-center items-center bg-blue-950 self-center w-[350px] max-w-full mt-8 px-14 py-5 rounded-xl max-md:mt-10 max-md:px-5 ${ticketData?.length === 0 || ticketQuantity === 0 ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-950 hover:bg-blue-800'}`}
+                  >
+                    Book Now
+                  </button>
                 <div className="text-pink-600 text-base font-semibold self-center whitespace-nowrap mt-5 cursor-pointer">
                   Cancel
                 </div>

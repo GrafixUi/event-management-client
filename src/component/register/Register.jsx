@@ -41,7 +41,7 @@ const onSubmit = async e => {
                 const updateId = await axios.put(`${process.env.REACT_APP_BACKENDURL}/users/${newUser.data.user.id}`, {
                     role: 4
                 })
-                console.log(updateId)
+              
                 if(updateId.status === 200){
                     navigate('/')
                 }

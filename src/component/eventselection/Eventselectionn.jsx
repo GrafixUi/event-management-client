@@ -27,7 +27,7 @@ const Eventselectionn = () => {
     };
     eventDataNew();
   }, []);
-  console.log(eventData);
+
   return (
     <div className="bg-white flex flex-col ">
       <Navbar />

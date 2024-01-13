@@ -20,7 +20,7 @@ const Eventslist = () => {
         upcomingDataNew();
       }, []);
 
-      console.log(items)
+  
 
     return (
         <div className=' items-center self-center flex flex-col justify-center'>

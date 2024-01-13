@@ -30,20 +30,20 @@ const Login = () => {
                 identifier,
                 password,
             })
-            console.log("data",newUser)
+          
             if (newUser.data) {
-                console.log("data",newUser.data)
+              
                 setIsAuthenticated(true)
                 setJwt(newUser.data.jwt)
                 setUserData(newUser.data.user)
                 navigate('/')
             }
             else {
-                alert('Invalid Credentials')
+                alert('Check your credentials')
             }
         }
         catch (err) {
-            alert("User Already Exists")
+            alert("Server Error. Please try again later")
         }
     }
 

@@ -1,35 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import QRCode from "react-qr-code";
 import booking from "../../assets/images/booking.png";
 import Navbar from "../../component/navbar/Navbar";
 import Footer from "../../component/footer/Footer";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { useStore } from "../../utils/store";
 
 const Confirmbooking = () => {
   const navigate = useNavigate();
-  const userid = useStore((state) => state.userdata.id);
-  const userNumber = useStore((state) => state.userNumber);
-  const ticketPrice = useStore((state) => state.ticketPrice);
-  const ticketprice = ticketPrice + (ticketPrice * 0.18)
-  useEffect(() => {
-    const sendData = async () => {
-      try {
-        const req = await axios.post(
-          `${process.env.REACT_APP_BACKENDURL}/orders`,
-          {
-           
-            quantity: userNumber,
-            price: ticketprice,
-            userid: userid,
-          }
-        );
-      } catch (err) {
-        console.log(err);
-      }
-    };
-  }, []);
+  const orderDetails = useStore((state) => state.orderDetails);
+
+  console.log(orderDetails);
+
   return (
     <div>
       <Navbar />
@@ -52,41 +34,51 @@ const Confirmbooking = () => {
               <div className="flex flex-col items-stretch w-[70%] max-md:w-full max-md:ml-0">
                 <div className="bg-blue-950 grow w-[650px] pl-16 pr-20 py-12 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                   <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                    <div className="flex flex-col items-stretch w-[61%] max-md:w-full max-md:ml-0">
-                      <div className="flex flex-col my-auto max-md:max-w-full max-md:mt-10">
-                        <h1 className="text-white text-xl font-semibold self-stretch max-md:max-w-full">
+                  <div className="flex flex-col items-stretch w-[51%] max-md:w-full max-md:ml-0">
+                      <div className="flex flex-col items-stretch my-auto max-md:max-w-full max-md:mt-10">
+                        <h1 className="text-white text-2xl font-semibold max-md:max-w-full">
                           BOOKING DETAIL
                         </h1>
-                        <h2 className="text-white text-lg font-medium leading-8 self-stretch mt-4 max-md:max-w-full">
+                        <h2 className="text-white text-xl font-medium leading-8 mt-8 max-md:max-w-full">
                           Schedule
                         </h2>
-                        <h2 className="text-white font-thin text-md leading-7 self-stretch mt-4 max-md:max-w-full">
-                          Movie Title
-                        </h2>
-                        <h3 className="text-white text-lg font-medium leading-8 self-stretch mt-1.5 max-md:max-w-full">
-                          SPIDERMAN NO WAY HOME
+                        <h3 className="text-white font-thin text-md leading-7 mt-7">
+                          Event Title
                         </h3>
+                        <h1 className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
+                          {orderDetails?.eventDetails?.eventtitle}
+                        </h1>
                         <h2 className="text-white font-thin text-md leading-7 mt-5">
                           Date
                         </h2>
                         <h2 className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
-                          Mon, 23 Oct 2023
+                          {orderDetails?.eventDetails?.day} {orderDetails?.eventDetails?.month} {orderDetails?.eventDetails?.year}
                         </h2>
-                        <h1 className="text-neutral-400 text-md leading-7 mt-5">
-                          Ticket (3)
+                        <h3 className="text-neutral-400 text-lg leading-7 mt-5">
+                          Ticket :{" "}
+                          {orderDetails?.ticketdetails.map((ticket) => {
+                            if (ticket.attributes.quantity > 0) {
+                              return (
+                                <div>
+                                  {ticket.attributes.tickettitle} -{" "}
+                                  {ticket.attributes.quantity} - $
+                                  {ticket.attributes.price *
+                                    ticket.attributes.quantity}
+                                </div>
+                              );
+                            }
+                          })}
+                        </h3>
+
+                        <p className="text-white text-sm font-thin mt-5 max-md:max-w-full">
+                          Location:
+                        </p>
+                        <h1 className="text-white text-xl font-semibold mt-7 max-md:max-w-full">
+                          {orderDetails?.eventDetails?.locationname}
                         </h1>
-                        <h2 className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
-                          C8, C9, C10
-                        </h2>
-                        <h3 className="text-white text-sm font-thin self-stretch mt-5 max-md:max-w-full">
-                          Theater:
-                        </h3>
-                        <h3 className="text-white text-xl font-semibold self-stretch mt-7 max-md:max-w-full">
-                          HITEX Exhibition Centre
-                        </h3>
-                        <p className="text-white text-md font-thin self-stretch mt-5 max-md:max-w-full">
-                          HITEX Exhibition Centre, Hitex Road, Izzathnagar,
-                          Kothaguda, Telangana, India
+                        <p className="text-white text-md font-thin mt-3 max-md:max-w-full">
+                          {orderDetails?.ventData?.locationname}
+                          {orderDetails?.eventDetails?.address}
                         </p>
                       </div>
                     </div>

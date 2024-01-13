@@ -6,9 +6,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Upcomingevents = () => {
-    const datetime = new Date();
-    const date = datetime.getDate();
-    console.log(date);
   const [items, setItems] = useState([]);
   useEffect(() => {
     const upcomingDataNew = async () => {
@@ -88,7 +85,7 @@ const Upcomingevents = () => {
     };
   }, []);
 
-  console.log(items);
+
 
   return (
     <div className="flex flex-col">
