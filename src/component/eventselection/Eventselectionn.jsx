@@ -76,12 +76,12 @@ const Eventselectionn = () => {
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:-mt-5">
               <div className="bg-white flex w-full grow items-stretch justify-between gap-5 mx-auto pl-16 pr-20 py-10 rounded-2xl max-sm:-mt-5 max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-md:px-5">
-                <div className="flex items-stretch justify-between gap-5 max-sm:self-center max-sm:items-center">
-                  <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-4 pr-8 py-6 rounded-xl ">
+                <div className="flex items-stretch justify-start gap-5 max-sm:self-center max-sm:items-center">
+                  <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-4 pr-4 py-6 rounded-xl">
                     <h1 className="text-white text-lg font-semibold leading-6 uppercase whitespace-nowrap">
                       {eventData?.month}
                     </h1>
-                    <h3 className="text-white text-4xl font-bold self-stretch whitespace-nowrap mt-4 max-md:text-4xl">
+                    <h3 className="text-white text-4xl font-bold self-stretch whitespace-nowrap mt-4 max-md:text-4xl text-center">
                       {eventData?.day}
                     </h3>
                   </div>
@@ -98,7 +98,7 @@ const Eventselectionn = () => {
                         {eventData?.domaintype}
                       </div>
                     </div>
-                    <div className="items-stretch flex justify-between gap-3 mt-5">
+                    <div className="items-stretch w-full flex justify-between gap-3 mt-5">
                       <div className="text-black text-sm">Category:</div>
                       <div className="text-black text-sm">
                         {eventData?.category}

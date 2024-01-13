@@ -41,11 +41,13 @@ const Confirmticket = () => {
         {
             data: {
               eventid: eventid,
+              eventname: eventData.eventtitle,
               userid: userid,
               ticketdetails:JSON.stringify(orderDetails.ticketdetails),
               ticketquantity: orderDetails.ticketquantity,
               ticketprice: orderDetails.ticketprice,
               totalprice: orderDetails.totalprice,
+              organiserid:eventData.userid
             }
           }
       );

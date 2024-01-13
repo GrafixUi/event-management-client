@@ -6,8 +6,27 @@ import Rating from '../rating/Rating';
 import { Link } from 'react-router-dom';
 import Navbar from "../../component/navbar/Navbar"
 import Footer from "../../component/footer/Footer"
-
+import {useState, useEffect} from 'react'
+import axios from 'axios'
 const Moviesticket = () => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const movieid = searchParams.get("movieid");
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        const upcomingDataNew = async () => {
+          try {
+            const upcomingEvents = await axios.get(
+              `${process.env.REACT_APP_BACKENDURL}/movies/${movieid}`
+            );
+            setItems(upcomingEvents.data.data);
+          } catch (err) {
+            console.log(err);
+          }
+        };
+        upcomingDataNew();
+      }, []);
+
+      console.log(items);
     return (
         <div className="bg-white flex flex-col items-stretch">
             <Navbar />
@@ -30,19 +49,14 @@ const Moviesticket = () => {
                             <div className="flex flex-col items-stretch w-[40%] ml-5 max-md:w-full max-md:ml-0">
                                 <div className="flex flex-col items-stretch my-auto max-md:mt-10">
                                     <h1 className="text-white text-3xl whitespace-nowrap max-md:text-4xl">
-                                        SHINE (2023)
+                                        {items?.attributes?.movietitle}
                                     </h1>
                                     <p className="text-neutral-400 text-justify text-base mt-7 max-md:mt-10">
                                         <br />
-                                        Eswar, an IT employee, moves into a new house with his
-                                        pregnant wife. Ilamparuthi, a government employee, has been
-                                        living next door for over 15 years with his wife and
-                                        daughter. Things take a turn when Eswar buys a car and parks
-                                        it in their common parking space. Did their ego win over
-                                        them or did they realize their mistake?
+                                       {items?.attributes?.moviedesc}
                                     </p>
                                     <h2 className="text-white text-lg whitespace-nowrap mt-5">
-                                        Moive Type : Drama,scince friction{" "}
+                                        Moive Type : {items?.attributes?.movietype}
                                     </h2>
                                 </div>
                             </div>
@@ -70,20 +84,20 @@ const Moviesticket = () => {
                                 <div className="flex items-stretch justify-between gap-5">
                                     <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-3 pr-5 rounded-xl">
                                         <h2 className="text-white text-xl mt-5 font-semibold leading-6 uppercase whitespace-nowrap">
-                                            dec
+                                            {items?.attributes?.month}
                                         </h2>
                                         <h1 className="text-white text-4xl pr-4 pl-4 font-bold self-stretch whitespace-nowrap mt-4 max-md:text-4xl">
-                                            08
+                                            {items?.attributes?.day}
                                         </h1>
                                     </div>
                                     <div className="self-center flex grow basis-[0%] flex-col items-stretch my-auto">
                                         <div className="items-stretch flex justify-between gap-3">
                                             <h3 className="text-black text-sm">Released:</h3>
-                                            <h3 className="text-black text-sm">2021</h3>
+                                            <h3 className="text-black text-sm">{items?.attributes?.year}</h3>
                                         </div>
                                         <div className="items-stretch flex justify-between gap-3 mt-5">
-                                            <h3 className="text-black text-sm">Gener:</h3>
-                                            <h3 className="text-black text-sm">Comedy</h3>
+                                            <h3 className="text-black text-sm">Genre:</h3>
+                                            <h3 className="text-black text-sm">{items?.attributes?.genre}</h3>
                                         </div>
                                         <div className="items-stretch flex justify-between gap-3 mt-5">
                                             <h3 className="text-black text-sm">PG Rating:</h3>
@@ -94,11 +108,10 @@ const Moviesticket = () => {
                                 <div className="flex flex-col items-stretch mt-3 self-start">
                                     <h3 className="text-black text-sm font-medium">Theater:</h3>
                                     <h3 className="text-blue-950 text-lg font-semibold mt-3">
-                                        HITEX Exhibition Centre
+                                        {items?.attributes?.theater}
                                     </h3>
                                     <h3 className="text-blue-950 text-md font-light mt-4">
-                                        HITEX Exhibition Centre, Hitex Road, Izzathnagar, <br />
-                                        Kothaguda, Telangana, India
+                                        {items?.attributes?.address}
                                     </h3>
                                 </div>
                             </div>
@@ -116,11 +129,11 @@ const Moviesticket = () => {
                                     <div className="flex flex-col items-stretch w-[61%] ml-5 max-md:w-full max-md:ml-0 max-sm:items-center ">
                                         <div className="flex grow flex-col items-stretch max-md:mt-10">
                                             <h3 className="text-neutral-500 text-base font-bold leading-5">
-                                                airb123
+                                                {items?.attributes?.organiser}
                                             </h3>
-                                            <h2 className="text-neutral-500 text-base leading-5 whitespace-nowrap mt-2.5 max-md:mr-1">
+                                            {/* <h2 className="text-neutral-500 text-base leading-5 whitespace-nowrap mt-2.5 max-md:mr-1">
                                                 Premium Digital Studio
-                                            </h2>
+                                            </h2> */}
                                             <div className="flex justify-between gap-1 mt-1.5 items-start max-md:mr-1">
                                                 <div className="items-stretch flex gap-1 pr-3 py-0.5">
                                                     <Rating />
@@ -345,7 +358,7 @@ const Moviesticket = () => {
                                     Movie Title
                                 </h2>
                                 <h2 className="text-white text-xl font-bold uppercase whitespace-nowrap mt-3.5">
-                                    Shine (2023)
+                                    {items?.attributes?.movietitle}
                                 </h2>
                                 <h2 className="text-zinc-300 text-md mt-7">Seat No </h2>
                                 <h1 className="text-white text-lg font-semibold mt-3.5">
