@@ -12,38 +12,45 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useStore } from "../../utils/store";
 import { useNavigate } from "react-router-dom";
+import { type } from "@testing-library/user-event/dist/type";
 
 const ConfirmMovieTicket = () => {
-  const userid = useStore((state) => state.userData.id)
+  const userid = useStore((state) => state.userData.id);
   const navigate = useNavigate();
   const movieData = useStore((state) => state.movieOrderDetails);
-console.log(movieData)
-//   const handlePaySubmit = async () => {
-//     try {
-//       const newOrder = await axios.post(
-//         `${process.env.REACT_APP_BACKENDURL}/orders`,
-//         {
-//             data: {
-//               eventid: eventid,
-//               eventname: eventData.eventtitle,
-//               userid: userid,
-//               ticketdetails:JSON.stringify(orderDetails.ticketdetails),
-//               ticketquantity: orderDetails.ticketquantity,
-//               ticketprice: orderDetails.ticketprice,
-//               totalprice: orderDetails.totalprice,
-//               organiserid:eventData.userid
-//             }
-//           }
-//       );
-//       if (newOrder.data) {
-//         navigate("/confirmbooking");
-//       } else {
-//         alert("Payment failed, Try Again");
-//       }
-//     } catch (err) {
-//       alert("Payment failed, Try Again");
-//     }
-//   };
+  const isAuth = useStore((state) => state.isAuthenticated);
+  console.log(movieData);
+  const handlePaySubmit = async () => {
+    try {
+      const newOrder = await axios.post(
+        `${process.env.REACT_APP_BACKENDURL}/orders`,
+        {
+          data: {
+            movieid: Number(movieData?.movieid),
+            name: movieData.movietitle,
+            userid: userid,
+            ticketdetails: movieData?.selectedSeatsName,
+            ticketquantity: movieData.selectedSeatsQuantity,
+            ticketprice: movieData?.selectedSeatsPrice,
+            totalprice: movieData?.totalPrice,
+            organiserid: movieData?.organiserid,
+            type: "movie",
+          },
+        }
+      );
+      if (newOrder.data) {
+        navigate("/confirmbooking?type=movie");
+      } else {
+        alert("Payment failed, Try Again");
+      }
+    } catch (err) {
+      alert("Payment failed, Try Again");
+    }
+  };
+
+  if (isAuth === "false") {
+    navigate("/login");
+  }
   return (
     <div>
       <Navbar />
@@ -85,10 +92,10 @@ console.log(movieData)
                           Location:
                         </p>
                         <h1 className="text-white text-xl font-semibold mt-7 max-md:max-w-full">
-                          {movieData?.theatre}
+                          {movieData?.theater}
                         </h1>
                         <p className="text-white text-md font-thin mt-3 max-md:max-w-full">
-                          {movieData?.theatre}
+                          {movieData?.theater}
                           {movieData?.address}
                         </p>
                       </div>
@@ -178,24 +185,21 @@ console.log(movieData)
                         Total Travellers
                       </h3>
                       <h3 className="text-zinc-500 text-xs font-medium">
-                      {movieData?.selectedSeatsQuantity}
+                        {movieData?.selectedSeatsQuantity}
+                      </h3>
+                    </div>
+                    <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
+                      <h3 className="text-zinc-500 text-xs font-medium">VAT</h3>
+                      <h3 className="text-zinc-500 text-xs font-medium">
+                        ${movieData?.selectedSeatsPriceWithVat}
                       </h3>
                     </div>
                     <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
                       <h3 className="text-zinc-500 text-xs font-medium">
-                       VAT
+                        Platform Fee
                       </h3>
                       <h3 className="text-zinc-500 text-xs font-medium">
-                      ${movieData?.selectedSeatsPriceWithVat}
-                       
-                      </h3>
-                    </div>
-                    <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
-                      <h3 className="text-zinc-500 text-xs font-medium">
-                       Platform Fee
-                      </h3>
-                      <h3 className="text-zinc-500 text-xs font-medium">
-                      ${movieData?.selectedSeatsPriceWithPlatformFee}
+                        ${movieData?.selectedSeatsPriceWithPlatformFee}
                       </h3>
                     </div>
                     <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
@@ -203,12 +207,12 @@ console.log(movieData)
                         Total Charge
                       </h2>
                       <h2 className="text-neutral-700 text-xl font-medium">
-                        ${movieData?.totalPrice }
+                        ${movieData?.totalPrice}
                       </h2>
                     </div>
                   </div>
                   <button
-                    // onClick={handlePaySubmit}
+                    onClick={handlePaySubmit}
                     className="bg-[#0A075F] rounded-xl
                                      text-white text-bold font-semibold self-center whitespace-nowrap mt-10 max-md:mt-10 py-5 px-20"
                   >

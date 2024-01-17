@@ -14,12 +14,19 @@ import { useStore } from "../../utils/store";
 import { useNavigate } from "react-router-dom";
 
 const Confirmticket = () => {
+  const isAuth = useStore((state) => state.isAuthenticated);
+  const navigate = useNavigate();
+  if(isAuth === false){
+    navigate('/login')
+}
   const searchParams = new URLSearchParams(window.location.search);
   const eventid = searchParams.get("eventid");
   const [eventData, setEventData] = useState([]);
   const userid = useStore((state) => state.userData.id);
   const orderDetails = useStore((state) => state.orderDetails);
-  const navigate = useNavigate();
+
+  console.log(isAuth);
+
   useEffect(() => {
     const eventDataNew = async () => {
       try {
@@ -41,18 +48,19 @@ const Confirmticket = () => {
         {
             data: {
               eventid: eventid,
-              eventname: eventData.eventtitle,
+              name: eventData.eventtitle,
               userid: userid,
               ticketdetails:JSON.stringify(orderDetails.ticketdetails),
               ticketquantity: orderDetails.ticketquantity,
               ticketprice: orderDetails.ticketprice,
               totalprice: orderDetails.totalprice,
-              organiserid:eventData.userid
+              organiserid:eventData.userid,
+              type:"event"
             }
           }
       );
       if (newOrder.data) {
-        navigate("/confirmbooking");
+        navigate("/confirmbooking?type=event")
       } else {
         alert("Payment failed, Try Again");
       }
@@ -60,6 +68,8 @@ const Confirmticket = () => {
       alert("Payment failed, Try Again");
     }
   };
+
+
   return (
     <div>
       <Navbar />

@@ -75,7 +75,8 @@ const handleMovieBooking = () => {
                 selectedSeatsPrice: selectedSeatsPrice,
                 selectedSeatsPriceWithVat: selectedSeatsPriceWithVat,
                 selectedSeatsPriceWithPlatformFee: selectedSeatsPriceWithPlatformFee,
-                totalPrice: totalPrice
+                totalPrice: totalPrice,
+                organiserid: items?.attributes?.userid,
             }
         )
         navigate("/confirmmovieticket")
