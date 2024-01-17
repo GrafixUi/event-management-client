@@ -15,6 +15,7 @@ import Confirmticket from './component/confirmticket/Confirmticket';
 import Moviesticket from './component/moviestickets/Moviesticket';
 import Eventticket from "./component/eventticket/Eventticket";
 import Movieslist from './pages/movieslist/Movieslist';
+import Venuelist from './pages/venuelist/Venuelist';
 import Organizer from "./component/organizer/Organizer";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/movieslist",
     element: <Movieslist />,
+  },
+  {
+    path: "/venuelist",
+    element: <Venuelist />,
   },
   {
     path: "/eventselection",
