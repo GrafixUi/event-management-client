@@ -14,6 +14,7 @@ import Login from "./component/login/Login";
 import Vendorlogin from "./component/vendorlogin/Vendorlogin";
 import Contact from "./pages/contact/Contact";
 import Movieslist from "./pages/movieslist/Movieslist";
+import Venuelist from "./pages/venuelist/Venuelist";
 import Navbar from "./component/navbar/Navbar";
 import Organizer from "./component/organizer/Organizer";
 import { Footer } from "flowbite-react";
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<List />} />
         <Route path="/movielist" element={<Movieslist />} />
+        <Route path="/venuelist" element={<Venuelist />} />
         <Route path="/eventselection" element={<Eventselection />} />
         <Route path="/eventticket" element={<Eventticket />} />
         <Route path="/moviesticket" element={<Moviesticket />} />
