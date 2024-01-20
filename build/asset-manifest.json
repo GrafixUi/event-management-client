@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ca316d88.css",
+    "main.js": "/static/js/main.cbc1f133.js",
+    "static/media/header2.png": "/static/media/header2.12367e737a0d4d5597d9.png",
+    "static/media/header.png": "/static/media/header.88bd3b3be20822b74bf6.png",
+    "static/media/conatct.png": "/static/media/conatct.d009a263c2e2dc8a496a.png",
+    "static/media/about1.png": "/static/media/about1.bad693753d04ec431cff.png",
+    "static/media/banner.png": "/static/media/banner.9e2df11ce8171b858d44.png",
+    "static/media/about2.png": "/static/media/about2.e0dcdc9c3682f00894fc.png",
+    "static/media/about4.png": "/static/media/about4.99dcda1594ca26630615.png",
+    "static/media/about5.png": "/static/media/about5.929abcd56b152fe8f5ed.png",
+    "static/media/about3.png": "/static/media/about3.520fc4ab5d1743f10438.png",
+    "static/media/product1.png": "/static/media/product1.e66f643f559e86224613.png",
+    "static/media/location.png": "/static/media/location.52bafb6f72e0d098943d.png",
+    "static/media/booking.png": "/static/media/booking.b5fa62d718a58f94a5e8.png",
+    "static/media/vendorlogo.png": "/static/media/vendorlogo.a14555ff5f30aa784d1e.png",
+    "static/media/Vector.svg": "/static/media/Vector.2c06093112124dd46d1d091153a0feda.svg",
+    "static/media/dropdown.svg": "/static/media/dropdown.bd3e584a9b748808d46ed76d264410c6.svg",
+    "index.html": "/index.html",
+    "main.ca316d88.css.map": "/static/css/main.ca316d88.css.map",
+    "main.cbc1f133.js.map": "/static/js/main.cbc1f133.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca316d88.css",
+    "static/js/main.cbc1f133.js"
+  ]
+}
