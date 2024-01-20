@@ -12,55 +12,34 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useStore } from "../../utils/store";
 import { useNavigate } from "react-router-dom";
+import { type } from "@testing-library/user-event/dist/type";
 
-const Confirmticket = () => {
-  const isAuth = useStore((state) => state.isAuthenticated);
-  const navigate = useNavigate();
-  if(isAuth === false){
-    navigate('/login')
-}
-  const searchParams = new URLSearchParams(window.location.search);
-  const eventid = searchParams.get("eventid");
-  const [eventData, setEventData] = useState([]);
+const ConfirmMovieTicket = () => {
   const userid = useStore((state) => state.userData.id);
-  const orderDetails = useStore((state) => state.orderDetails);
-
-  console.log(isAuth);
-
-  useEffect(() => {
-    const eventDataNew = async () => {
-      try {
-        const events = await axios.get(
-          `${process.env.REACT_APP_BACKENDURL}/events/${eventid}`
-        );
-        setEventData(events.data.data.attributes);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    eventDataNew();
-  }, []);
-  
+  const navigate = useNavigate();
+  const movieData = useStore((state) => state.movieOrderDetails);
+  const isAuth = useStore((state) => state.isAuthenticated);
+  console.log(movieData);
   const handlePaySubmit = async () => {
     try {
       const newOrder = await axios.post(
         `${process.env.REACT_APP_BACKENDURL}/orders`,
         {
-            data: {
-              eventid: eventid,
-              name: eventData.eventtitle,
-              userid: userid,
-              ticketdetails:JSON.stringify(orderDetails.ticketdetails),
-              ticketquantity: orderDetails.ticketquantity,
-              ticketprice: orderDetails.ticketprice,
-              totalprice: orderDetails.totalprice,
-              organiserid:eventData.userid,
-              type:"event"
-            }
-          }
+          data: {
+            movieid: Number(movieData?.movieid),
+            name: movieData.movietitle,
+            userid: userid,
+            ticketdetails: movieData?.selectedSeatsName,
+            ticketquantity: movieData.selectedSeatsQuantity,
+            ticketprice: movieData?.selectedSeatsPrice,
+            totalprice: movieData?.totalPrice,
+            organiserid: movieData?.organiserid,
+            type: "movie",
+          },
+        }
       );
       if (newOrder.data) {
-        navigate("/confirmbooking?type=event")
+        navigate("/confirmbooking?type=movie");
       } else {
         alert("Payment failed, Try Again");
       }
@@ -69,7 +48,9 @@ const Confirmticket = () => {
     }
   };
 
-
+  if (isAuth === "false") {
+    navigate("/login");
+  }
   return (
     <div>
       <Navbar />
@@ -95,39 +76,27 @@ const Confirmticket = () => {
                           Event Title
                         </h3>
                         <h1 className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
-                          {eventData?.eventtitle}
+                          {movieData?.movietitle}
                         </h1>
                         <h2 className="text-white font-thin text-md leading-7 mt-5">
                           Date
                         </h2>
                         <h2 className="text-white text-xl font-medium leading-8 whitespace-nowrap mt-1.5 self-start">
-                          {eventData?.day} {eventData?.month} {eventData?.year}
+                          {movieData?.day} {movieData?.month} {movieData?.year}
                         </h2>
                         <h3 className="text-neutral-400 text-lg leading-7 mt-5">
-                          Ticket :{" "}
-                          {orderDetails?.ticketdetails.map((ticket) => {
-                            if (ticket.attributes.quantity > 0) {
-                              return (
-                                <div>
-                                  {ticket.attributes.tickettitle} -{" "}
-                                  {ticket.attributes.quantity} - $
-                                  {ticket.attributes.price *
-                                    ticket.attributes.quantity}
-                                </div>
-                              );
-                            }
-                          })}
+                          Ticket :{movieData?.selectedSeatsName}
                         </h3>
 
                         <p className="text-white text-sm font-thin mt-5 max-md:max-w-full">
                           Location:
                         </p>
                         <h1 className="text-white text-xl font-semibold mt-7 max-md:max-w-full">
-                          {eventData?.locationname}
+                          {movieData?.theater}
                         </h1>
                         <p className="text-white text-md font-thin mt-3 max-md:max-w-full">
-                          {eventData?.locationname}
-                          {eventData?.address}
+                          {movieData?.theater}
+                          {movieData?.address}
                         </p>
                       </div>
                     </div>
@@ -208,7 +177,7 @@ const Confirmticket = () => {
                         Base Ticket Fare
                       </h3>
                       <h3 className="text-zinc-500 text-xs font-medium">
-                        ${orderDetails?.ticketprice}
+                        ${movieData?.selectedSeatsPrice}
                       </h3>
                     </div>
                     <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
@@ -216,23 +185,21 @@ const Confirmticket = () => {
                         Total Travellers
                       </h3>
                       <h3 className="text-zinc-500 text-xs font-medium">
-                        {orderDetails?.ticketquantity}
+                        {movieData?.selectedSeatsQuantity}
+                      </h3>
+                    </div>
+                    <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
+                      <h3 className="text-zinc-500 text-xs font-medium">VAT</h3>
+                      <h3 className="text-zinc-500 text-xs font-medium">
+                        ${movieData?.selectedSeatsPriceWithVat}
                       </h3>
                     </div>
                     <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
                       <h3 className="text-zinc-500 text-xs font-medium">
-                       VAT
+                        Platform Fee
                       </h3>
                       <h3 className="text-zinc-500 text-xs font-medium">
-                        ${orderDetails?.ticketprice * 0.18}
-                      </h3>
-                    </div>
-                    <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
-                      <h3 className="text-zinc-500 text-xs font-medium">
-                       Platform Fee
-                      </h3>
-                      <h3 className="text-zinc-500 text-xs font-medium">
-                        ${orderDetails?.ticketprice * 0.1}
+                        ${movieData?.selectedSeatsPriceWithPlatformFee}
                       </h3>
                     </div>
                     <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
@@ -240,7 +207,7 @@ const Confirmticket = () => {
                         Total Charge
                       </h2>
                       <h2 className="text-neutral-700 text-xl font-medium">
-                        ${orderDetails?.totalprice }
+                        ${movieData?.totalPrice}
                       </h2>
                     </div>
                   </div>
@@ -381,4 +348,4 @@ const Confirmticket = () => {
   );
 };
 
-export default Confirmticket;
+export default ConfirmMovieTicket;

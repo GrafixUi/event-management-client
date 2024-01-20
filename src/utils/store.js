@@ -5,8 +5,10 @@ export const useStore = create((set) => ({
   jwt: null,
   userData: null,
   orderDetails: null,
+  movieOrderDetails: null,
   setIsAuthenticated: (data) => set({ isAuthenticated: data }),
   setJwt: (data) => set({ jwt: data }),
   setUserData: (data) => set({ userData: data }),
   setOrderDetails: (data) => set({ orderDetails: data }),
+  setMovieOrderDetails: (data) => set({ movieOrderDetails: data }),
 }));

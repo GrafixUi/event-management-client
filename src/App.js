@@ -8,6 +8,7 @@ import Confirmticket from "./component/confirmticket/Confirmticket";
 import Confirmbooking from "./component/confirmbooking/Confirmbooking";
 import Movieselection from "./component/movieselection/Movieselection";
 import Moviesticket from "./component/moviestickets/Moviesticket";
+import ConfirmMovieTicket from "./component/confirmmovieticket/ConfirmMovieTicket";
 import About from "./pages/about/About";
 import Register from "./component/register/Register";
 import Login from "./component/login/Login";
@@ -36,6 +37,7 @@ function App() {
         <Route path="/moviesticket" element={<Moviesticket />} />
         <Route path="/movieselection" element={<Movieselection />} />
         <Route path="/confirmticket" element={<Confirmticket />} />
+        <Route path="/confirmmovieticket" element={<ConfirmMovieTicket />} />
         <Route path="/booking" element={<Confirmbooking />} />
         <Route path="/about" element={<About />} />
         <Route path="/register" element={<Register />} />
