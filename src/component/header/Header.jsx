@@ -5,7 +5,6 @@ const carouselItems = [
     "https://assets-in.bmscdn.com/promotions/cms/creatives/1703750644861_patramitroweb.jpg",
     "https://assets-in.bmscdn.com/promotions/cms/creatives/1703857318721_chndesktop.jpg",
     "https://assets-in.bmscdn.com/promotions/cms/creatives/1703162228341_web.jpg",
-
 ];
 
 const Headerswiper = () => {
@@ -25,16 +24,20 @@ const Headerswiper = () => {
     }, []);
 
     return (
-        <div id="default-carousel" className="relative w-full" data-carousel="slide" ref={carouselRef}>
-            <div className="relative h-[500px] md:h-[500px] max-md:w-full overflow-hidden rounded-lg max-sm:h-[300px]">
+        <div id="default-carousel" className="relative  w-full" data-carousel="slide" ref={carouselRef}>
+            <div className="h-[400px] max-md:w-full max-sm:h-[130px]">
                 {carouselItems.map((imageUrl, index) => (
                     <div key={index} className={`duration-700 ease-in-out ${index === 0 ? '' : 'hidden'}`} data-carousel-item>
-                        <img src={imageUrl} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={`Slide ${index + 1}`} />
+                        <img
+                            src={imageUrl}
+                            className="absolute block w-full h-full object-cover"
+                            alt={`Slide ${index + 1}`}
+                        />
                     </div>
                 ))}
             </div>
         </div>
     );
-}
+};
 
 export default Headerswiper;

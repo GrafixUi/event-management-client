@@ -74,7 +74,7 @@ const Upcomingevents = () => {
         const upcomingDataNew = async () => {
             try {
                 const upcomingMovies = await axios.get(
-                    `${process.env.REACT_APP_BACKENDURL}/movies?pagination[pageSize]=3`
+                    `${process.env.REACT_APP_BACKENDURL}/movies?pagination[pageSize]=6`
                 );
                 setItems(upcomingMovies.data.data);
             } catch (err) {

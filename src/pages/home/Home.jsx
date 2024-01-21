@@ -87,11 +87,11 @@ const Home = () => {
     };
   }, []);
   return (
-    <div className="bg-white flex flex-col container-xl">
-      <div>
-        <Header className=" mt-[55px] max-sm:hidden max-sm:mt-0" />
+    <div className="bg-white flex flex-col container-xl mx-auto">
+      <div className="mt-12">
+        <Header  />
       </div>
-      <div className="text-[#242565] text-3xl font-bold mt-10 flex flex-col self-center items-center max-md:max-w-full max-md:mt-10 max-sm:text-xl">
+      <div className="text-[#242565] text-3xl font-bold mt-10 flex flex-col self-center items-center max-md:max-w-full max-md:mt-5 max-sm:text-xl">
         Explore your Events and Movies
         <Explore />
       </div>
@@ -165,7 +165,7 @@ const Home = () => {
         <span className="text-emerald-500">drop us a message</span>
         <span className=""> any time.</span>
       </div>
-      <Footer />
+      
     </div>
   );
 };

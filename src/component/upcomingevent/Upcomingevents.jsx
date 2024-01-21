@@ -11,7 +11,7 @@ const Upcomingevents = () => {
     const upcomingDataNew = async () => {
       try {
         const upcomingEvents = await axios.get(
-          `${process.env.REACT_APP_BACKENDURL}/events?pagination[pageSize]=3`
+          `${process.env.REACT_APP_BACKENDURL}/events?pagination[pageSize]=6`
         );
         setItems(upcomingEvents.data.data);
       } catch (err) {
@@ -88,7 +88,7 @@ const Upcomingevents = () => {
 
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col container">
       <div className="self-center flex w-[1087px] max-w-full justify-between gap-5 mt-6 px-5 items-start max-md:flex-wrap max-md:mt-10 max-sm:w-80 max-sm:mt-5 max-sm:self-center max-sm:items-center">
         <div className="text-blue-950 text-2xl font-bold grow shrink basis-auto mt-2.5 max-sm:self-center max-sm:items-center max-sm:ml-5">
           Upcoming Events
@@ -198,7 +198,7 @@ const Upcomingevents = () => {
           </div>
         </div>
       </div>
-      <div className=" py-5 mt-8 ml-8 grid grid-cols-3 w-[1000px]  max-sm:grid-cols-2 max-sm:w-[320px] items-center justify-center gap-12 ">
+      <div className=" py-5 px-5  grid grid-cols-3 w-full  max-sm:grid-cols-2 max-sm:w-[320px] items-center justify-center gap-12 ">
         {items.map((item) => (
           <Link to="/eventslist">
             <div
@@ -209,19 +209,19 @@ const Upcomingevents = () => {
                 loading="lazy"
                 srcSet={product1}
                 alt="product1"
-                className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
+                className=" object-contain object-center w-full overflow-hidden"
               />
               <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
-                <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle  items-center self-center px-5">
-                  <div className="text-indigo-600 max-sm:w-2 text-center text-xs max-sm:text-[10px] font-bold whitespace-nowrap">
+                <div className="flex  flex-col justify-center text-center self-center ml-5">
+                  <div className="text-indigo-600 max-sm:w-2 text-center text-lg max-sm:text-[10px] font-bold whitespace-nowrap">
                     {item.attributes.month}
                   </div>
                   <div className="text-black text-xl max-sm:w-2 font-bold whitespace-nowrap mt-2">
                     {item.attributes.day}
                   </div>
                 </div>
-                <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
-                  <div className="text-black text-xs max-sm:text-[9px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
+                <div className="self-stretch flex grow basis-[0%] flex-col items-stretch py-2 px-5 max-sm:-ml-2">
+                  <div className="text-black text-md max-sm:text-[9px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
                     {item.attributes.eventtitle}
                   </div>
                   <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">

@@ -8,7 +8,7 @@ import { useStore } from "../../utils/store";
 import { useNavigate } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
   { name: "Events", href: "/eventslist", current: false },
   { name: "Movies", href: "/movieslist", current: false },
