@@ -88,7 +88,7 @@ const Upcomingevents = () => {
 
 
   return (
-    <div className="flex flex-col container">
+    <div className="flex flex-col ">
       <div className="self-center flex w-[1087px] max-w-full justify-between gap-5 mt-6 px-5 items-start max-md:flex-wrap max-md:mt-10 max-sm:w-80 max-sm:mt-5 max-sm:self-center max-sm:items-center">
         <div className="text-blue-950 text-2xl font-bold grow shrink basis-auto mt-2.5 max-sm:self-center max-sm:items-center max-sm:ml-5">
           Upcoming Events
@@ -198,7 +198,7 @@ const Upcomingevents = () => {
           </div>
         </div>
       </div>
-      <div className=" py-5 px-5  grid grid-cols-3 w-full  max-sm:grid-cols-2 max-sm:w-[320px] items-center justify-center gap-12 ">
+      <div className=" py-5 mt-8 ml-8 grid grid-cols-3 w-[1000px]  max-sm:grid-cols-2 max-sm:w-[320px] items-center justify-center gap-12 ">
         {items.map((item) => (
           <Link to="/eventslist">
             <div
@@ -211,7 +211,7 @@ const Upcomingevents = () => {
                 alt="product1"
                 className=" object-contain object-center w-full overflow-hidden"
               />
-              <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
+              <div className="self-center flex justify-between gap-12 mt-0.5 items-start w-full">
                 <div className="flex  flex-col justify-center text-center self-center ml-5">
                   <div className="text-indigo-600 max-sm:w-2 text-center text-lg max-sm:text-[10px] font-bold whitespace-nowrap">
                     {item.attributes.month}

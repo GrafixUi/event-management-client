@@ -90,6 +90,7 @@ const Eventselectionn = () => {
 
       </div>
 
+{/* bottom */}
       <div className="fixed max-sm:mt-[780px] md:hidden grid gap-2 grid-cols-2 px-10 py-3 w-full z-20 bg-[#f0f3ff]">
         <div className="text-[#061046] font-bold pt-2 text-sm text-center flex justify-center">{eventData?.eventtitle}</div>
         <div><button
