@@ -45,7 +45,7 @@ const Eventselectionn = () => {
   }
 
   return (
-    <div className="bg-white flex flex-col ">
+    <div className="bg-white flex flex-col  ">
       <Navbar />
       <div className="flex-col overflow-hidden relative flex min-h-[450px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:-mt-0">
         <img
@@ -90,12 +90,12 @@ const Eventselectionn = () => {
 
       </div>
 
-      <div className="fixed max-sm:mt-[860px] md:hidden grid gap-5 grid-cols-2 px-10 py-2 w-full z-20 bg-[#f0f3ff]">
-<div className="text-[#061046] font-bold pt-2 text-center flex justify-center">{eventData?.eventtitle}</div>
-<div><button
+      <div className="fixed max-sm:mt-[780px] md:hidden grid gap-6 grid-cols-2 px-10 py-3 w-full z-20 bg-[#f0f3ff]">
+        <div className="text-[#061046] font-bold pt-2 text-sm text-center flex justify-center">{eventData?.eventtitle}</div>
+        <div><button
             
             onClick={handleBookEvent}
-            class="relative group rounded-lg  flex items-center px-16 py-2 bg-gradient-to-r bg-blue-950 "
+            class="relative group rounded-lg  flex items-center px-2 py-2 bg-gradient-to-r bg-blue-950 "
           >
             <span class="relative text-white font-bold text-lg ">Book Now</span>
             <div class="flex items-center -space-x-3 translate-x-3">
@@ -117,7 +117,9 @@ const Eventselectionn = () => {
             </div>
           </button></div>
       </div>
-      <div className="self-center flex w-full max-w-[1300px] flex-col items-stretch mt-5 max-md:max-w-full p-4">
+
+
+      <div className="self-center px-12 flex w-full max-w-[1300px] flex-col items-stretch mt-5 max-md:max-w-full p-4">
         <div className="max-md:max-w-full max-sm:p-5">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:-mt-5">
@@ -221,7 +223,7 @@ const Eventselectionn = () => {
             <div className="flex flex-col items-stretch w-[32%] h- ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-5">
               <div className="bg-white flex grow flex-col items-stretch w-full mt-2.5 pl-9 pr-11 pt-5 pb-11 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <div className="text-black text-sm font-medium">Location:</div>
-                <div className="google-map-code">
+                <div className="google-map-code max-sm:w-full">
                   <iframe
                     src={eventData?.mapurl}
                     width="300"

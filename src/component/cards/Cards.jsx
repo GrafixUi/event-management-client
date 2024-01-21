@@ -62,14 +62,14 @@ const Cards = () => {
                      items.map((item) => (
                       <SwiperSlide>
                       <Link to={`/eventselection?eventid=${item.id}`}>
-                        <div key={item.id} className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[170px] max-sm:-ml-2">
+                        <div key={item.id} className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-2 rounded-2xl mb-2 justify-center transition duration-500 hover:scale-105 max-sm:w-[220px] max-sm:ml-14 ml-12">
                             <img
                                 loading="lazy"
                                 srcSet={product1} alt='product'
-                                className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
+                                className="object-contain object-center w-full overflow-hidden"
                             />
-                            <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
-                                <div className="flex basis-[0%] flex-col self-center items-stretch px-5 max-sm:w-12 max-sm:-ml-2">
+                            <div className="self-center flex justify-between  mt-0.5 items-start w-full">
+                                <div className="flex basis-[0%] flex-col self-center items-stretch px-6 max-sm:w-12 max-sm:-ml-2">
                                     <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap max-sm:text-[10px]">
                                         {item.attributes.month}
                                     </h1>
@@ -77,7 +77,7 @@ const Cards = () => {
                                         {item.attributes.day}
                                     </h3>
                                 </div>
-                                <div className="self-stretch flex grow basis-[0%] max-sm:-ml-2 flex-col items-stretch px-5 max-sm:w-32">
+                                <div className="self-stretch flex grow basis-[0%] max-sm:-ml-2 flex-col items-stretch px-12 max-sm:w-32">
                                     <h1 className="text-black text-xs font-bold leading-1 max-sm:text-[10px]  max-sm:-ml-8 max-sm:leading-2 max-sm:w-32">
                                         {item.attributes.eventtitle}
                                     </h1>
