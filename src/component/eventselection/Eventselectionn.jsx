@@ -47,6 +47,37 @@ const Eventselectionn = () => {
   return (
     <div className="bg-white flex flex-col  ">
       <Navbar />
+
+      {/* bottom part */}
+      <div className="fixed max-sm:mt-[780px] md:hidden grid gap-2 grid-cols-2 px-10 py-3 w-full z-20 bg-[#f0f3ff]">
+        <div className="text-[#061046] font-bold pt-2 text-sm text-center flex justify-center">{eventData?.eventtitle}</div>
+        <div><button
+            
+            onClick={handleBookEvent}
+            class="relative group rounded-lg  flex items-center px-6 py-2 bg-gradient-to-r bg-blue-950 "
+          >
+            <span class="relative text-white font-light text-md ">Book Now</span>
+            <div class="flex items-center -space-x-3 translate-x-3">
+              <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </div>
+          </button></div>
+      </div>
+
+
       <div className="flex-col overflow-hidden relative flex min-h-[450px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:-mt-0">
         <img
           srcSet={header}
@@ -91,33 +122,7 @@ const Eventselectionn = () => {
       </div>
 
 {/* bottom */}
-      <div className="fixed max-sm:mt-[780px] md:hidden grid gap-2 grid-cols-2 px-10 py-3 w-full z-20 bg-[#f0f3ff]">
-        <div className="text-[#061046] font-bold pt-2 text-sm text-center flex justify-center">{eventData?.eventtitle}</div>
-        <div><button
-            
-            onClick={handleBookEvent}
-            class="relative group rounded-lg  flex items-center px-6 py-2 bg-gradient-to-r bg-blue-950 "
-          >
-            <span class="relative text-white font-light text-md ">Book Now</span>
-            <div class="flex items-center -space-x-3 translate-x-3">
-              <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </div>
-          </button></div>
-      </div>
+      
 
 
       <div className="self-center px-12 max-sm:px-1 flex w-full max-w-[1300px] flex-col items-stretch mt-5 max-md:max-w-full p-4">
