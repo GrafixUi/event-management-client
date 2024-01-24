@@ -1,97 +1,97 @@
-import React, { useEffect, useRef, useState } from "react";
-import Logo from "../../assets/images/logo.png";
-import dropdown from "../../assets/icons/dropdown.svg";
-import baner from "../../assets/images/banner.png";
-import Upcomingevent from "../../component/upcomingevent/Upcomingevents";
-import Upcomingmovies from "../../component/upcomingmovie/Upcomingmovie";
-import { Link } from "react-router-dom";
-import Footer from "../../component/footer/Footer";
-import Explore from "../home/explore/Explore"
-import "./Home.css";
-import { useNavigate } from 'react-router-dom';
-import FAQ from "../home/faq/FAQ";
-import Header from "../../component/header/Header";
-import {useStore} from "../../utils/store"
+import React, {useEffect, useRef, useState} from 'react';
+import Logo from '../../assets/images/logo.png';
+import dropdown from '../../assets/icons/dropdown.svg';
+import baner from '../../assets/images/banner.png';
+import Upcomingevent from '../../component/upcomingevent/Upcomingevents';
+import Upcomingmovies from '../../component/upcomingmovie/Upcomingmovie';
+import {Link} from 'react-router-dom';
+import Footer from '../../component/footer/Footer';
+import Explore from '../home/explore/Explore';
+import './Home.css';
+import {useNavigate} from 'react-router-dom';
+import FAQ from '../home/faq/FAQ';
+import Header from '../../component/header/Header';
+import {useStore} from '../../utils/store';
 
 const Home = () => {
   //dropdown for filter
-  const [search, setSearch] = useState('');
-  const navigate = useNavigate();
+  const [search, setSearch] = useState ('');
+  const navigate = useNavigate ();
 
   const handleSearch = () => {
     if (search) {
-      navigate(`/gigs?search=${search}`);
+      navigate (`/gigs?search=${search}`);
     }
-  }
+  };
 
-  const [isShowOpen, setShowOpen] = useState(false);
+  const [isShowOpen, setShowOpen] = useState (false);
 
   const handleShowToggle = () => {
-    setShowOpen(!isShowOpen);
+    setShowOpen (!isShowOpen);
   };
-  const [isSortOpen, setSortOpen] = useState(false);
+  const [isSortOpen, setSortOpen] = useState (false);
 
   const handleSortToggle = () => {
-    setSortOpen(!isSortOpen);
+    setSortOpen (!isSortOpen);
   };
 
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isDropdownOpen, setDropdownOpen] = useState (false);
 
   const handleDropdownToggle = () => {
-    setDropdownOpen(!isDropdownOpen);
+    setDropdownOpen (!isDropdownOpen);
   };
 
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef (null);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setSortOpen(false);
+  useEffect (() => {
+    const handleClickOutside = event => {
+      if (dropdownRef.current && !dropdownRef.current.contains (event.target)) {
+        setSortOpen (false);
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener ('mousedown', handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener ('mousedown', handleClickOutside);
     };
   }, []);
 
-  const shopopen = useRef(null)
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowOpen(false);
+  const shopopen = useRef (null);
+  useEffect (() => {
+    const handleClickOutside = event => {
+      if (dropdownRef.current && !dropdownRef.current.contains (event.target)) {
+        setShowOpen (false);
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener ('mousedown', handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener ('mousedown', handleClickOutside);
     };
   }, []);
 
-  const dropDownOpen = useRef(null)
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
+  const dropDownOpen = useRef (null);
+  useEffect (() => {
+    const handleClickOutside = event => {
+      if (dropdownRef.current && !dropdownRef.current.contains (event.target)) {
+        setDropdownOpen (false);
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener ('mousedown', handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener ('mousedown', handleClickOutside);
     };
   }, []);
   return (
-    <div className="bg-white flex flex-col container-xl">
-      <div>
-        <Header className=" mt-[55px] max-sm:hidden max-sm:mt-0" />
+    <div className="bg-white flex flex-col container-xl mx-auto">
+      <div className="mt-12">
+        <Header />
       </div>
-      <div className="text-[#242565] text-3xl font-bold mt-10 flex flex-col self-center items-center max-md:max-w-full max-md:mt-10 max-sm:text-xl">
+      <div className="text-[#242565] text-3xl font-bold mt-10 flex flex-col self-center items-center max-md:max-w-full max-md:mt-5 max-sm:text-xl">
         Explore your Events and Movies
         <Explore />
       </div>
@@ -103,7 +103,7 @@ const Home = () => {
         to="eventslist"
         className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-8 py-3 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5  hover:text-white group relative flex overflow-hidden"
       >
-        <span className=" absolute left-0 w-full h-0 transition-all bg-indigo-500 opacity-100 group-hover:h-full group-hover:top-0 duration-200 ease"></span>
+        <span className=" absolute left-0 w-full h-0 transition-all bg-indigo-500 opacity-100 group-hover:h-full group-hover:top-0 duration-200 ease" />
         <span className=" relative">Load More</span>
       </Link>
       <div className="flex-col overflow-hidden self-stretch relative flex min-h-[252px] w-full justify-center items-center mt-11 px-16 py-10 max-md:max-w-full max-md:mt-10 max-md:px-5">
@@ -122,10 +122,10 @@ const Home = () => {
           />
           <div className="self-stretch flex flex-col items-stretch">
             <div className="text-white text-3xl font-bold">
-              Make your own Event{" "}
+              Make your own Event{' '}
             </div>
             <div className="text-neutral-400 text-sm mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
             </div>
             <Link
               to="login"
@@ -136,7 +136,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
+
       <div className=" flex self-center items-center justify-center">
         <Upcomingmovies />
       </div>
@@ -144,7 +144,7 @@ const Home = () => {
         to="movieslist"
         className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-8 py-3 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5 hover:text-white group relative flex overflow-hidden"
       >
-        <span className=" absolute left-0 w-full h-0 transition-all bg-indigo-500 opacity-100 group-hover:h-full group-hover:top-0 duration-200 ease"></span>
+        <span className=" absolute left-0 w-full h-0 transition-all bg-indigo-500 opacity-100 group-hover:h-full group-hover:top-0 duration-200 ease" />
         <span className=" relative">Load More</span>
       </Link>
       <div className="justify-center text-pink-600 text-center text-sm font-bold leading-5 tracking-wider self-center whitespace-nowrap mt-32 max-md:mt-10">
@@ -165,7 +165,7 @@ const Home = () => {
         <span className="text-emerald-500">drop us a message</span>
         <span className=""> any time.</span>
       </div>
-      <Footer />
+
     </div>
   );
 };

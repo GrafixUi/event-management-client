@@ -33,6 +33,23 @@ const Movieslist = () => {
     return (
         <div className="bg-white flex flex-col ">
             <Navbar />
+
+            <div className="fixed bottom-0 md:hidden grid gap-2 grid-cols-2 px-12 py-3 w-full z-20 bg-[#f0f3ff]">
+    <div className="text-[#061046] font-bold pt-2 text-sm text-center flex justify-center">
+    {items?.attributes?.movietitle}
+    </div>
+    <div>
+    <Link to={`/moviesticket?movieid=${items.id}`} class="relative group overflow-hidden  px-3 h-10 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
+                            <span class="relative text-white text-sm w-full">Book Now</span>
+                            <div class="flex items-center -space-x-3 translate-x-3">
+                                <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </Link>
+    </div>
+      </div>
             <div className="flex-col overflow-hidden relative flex min-h-[550px] w-full justify-center items-center self-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <img
                     loading="lazy"
@@ -65,7 +82,8 @@ const Movieslist = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="backdrop-blur-[13.899999618530273px] self-center flex grow basis-[0%] flex-col justify-center my-auto px-10 py-10 rounded-3xl items-end max-md:max-w-full max-md:px-5">
+                    <div className=" self-center flex grow basis-[0%] flex-col justify-center  px-3 py-3  items-end max-md:max-w-full max-md:px-5">
+                        <div className='backdrop-blur-[13px] px-12 py-12 rounded-lg'>
                         <Link to={`/moviesticket?movieid=${items.id}`} class="relative group overflow-hidden  px-16 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950">
                             <span class="relative text-white font-bold text-xl w-32">Book Now</span>
                             <div class="flex items-center -space-x-3 translate-x-3">
@@ -75,6 +93,7 @@ const Movieslist = () => {
                                 </svg>
                             </div>
                         </Link>
+                        </div>
                     </div>
                 </div>
             </div>

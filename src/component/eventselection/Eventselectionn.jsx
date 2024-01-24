@@ -45,29 +45,64 @@ const Eventselectionn = () => {
   }
 
   return (
-    <div className="bg-white flex flex-col ">
+    <div className="bg-white flex flex-col  ">
       <Navbar />
+
+      {/* bottom part */}
+      <div className="fixed bottom-0 md:hidden grid gap-2 grid-cols-2 px-10 py-3 w-full z-20 bg-[#f0f3ff]">
+    <div className="text-[#061046] font-bold pt-2 text-sm text-center flex justify-center">
+        {eventData?.eventtitle}
+    </div>
+    <div>
+        <button
+            onClick={handleBookEvent}
+            className="relative group rounded-lg  flex items-center px-6 py-2 bg-gradient-to-r bg-blue-950"
+        >
+            <span className="relative text-white font-light text-md">Book Now</span>
+            <div className="flex items-center -space-x-3 translate-x-3">
+                <div className="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 5l7 7-7 7"
+                    />
+                </svg>
+            </div>
+        </button>
+    </div>
+      </div>
+
+
+
       <div className="flex-col overflow-hidden relative flex min-h-[450px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:-mt-0">
         <img
           srcSet={header}
           alt="header"
           className="absolute h-[500px] max-sm:h-full w-full object-cover  object-center inset-0 max-md:h-[300px]"
         />
-        <div className="relative flex w-full max-w-[1438px] items-stretch justify-around gap-5 mt-72 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+        <div className="relative flex w-full max-w-[1438px] items-stretch justify-around gap-5 mt-72 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:mt-72">
           <div className="flex flex-col items-stretch max-md:max-w-full max-sm:items-center max-sm:justify-center">
-            <div className="text-white text-3xl max-md:max-w-full max-md:text-4xl">
+            <div className="text-white text-3xl  max-md:max-w-full max-md:text-1xl">
               {eventData?.eventtitle}
             </div>
-            <div className="text-neutral-300 text-lg font-light mt-5 max-md:max-w-full max-sm:ml-4">
+            <div className="text-neutral-300 text-md font-light  max-md:max-w-full max-sm:ml-4">
               {eventData?.locationname}, {eventData?.address}
             </div>
           </div>
           <button
             
             onClick={handleBookEvent}
-            class="relative group overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:mt-14"
+            class="relative group max-sm:hidden overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:mt-14"
           >
-            <span class="relative text-white font-bold text-lg">Book Now</span>
+            <span class="relative text-white font-bold text-lg ">Book Now</span>
             <div class="flex items-center -space-x-3 translate-x-3">
               <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
               <svg
@@ -87,8 +122,14 @@ const Eventselectionn = () => {
             </div>
           </button>
         </div>
+
       </div>
-      <div className="self-center flex w-full max-w-[1300px] flex-col items-stretch mt-5 max-md:max-w-full p-4">
+
+{/* bottom */}
+      
+
+
+      <div className="self-center px-12 max-sm:px-1 flex w-full max-w-[1300px] flex-col items-stretch mt-5 max-md:max-w-full p-4">
         <div className="max-md:max-w-full max-sm:p-5">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:-mt-5">
@@ -138,11 +179,11 @@ const Eventselectionn = () => {
             <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-8">
               <div className="bg-white grow w-full pl-16 pr-20 py-9 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:mt-5">
                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:-mt-5">
-                  <div className="flex flex-col items-stretch w-[39%] max-md:w-full max-md:ml-0 max-sm:self-center max-sm:items-center">
+                  <div className="flex flex-col items-stretch w-[450px] max-md:w-full max-md:ml-0 max-sm:self-center max-sm:items-center">
                     <img
                       srcSet={vendor}
                       alt="vendor"
-                      className="aspect-square object-contain object-center w-[110px] justify-center items-center overflow-hidden shrink-0 max-w-full max-md:mt-10"
+                      className="aspect-square object-contain object-center w-[150px] justify-center items-center overflow-hidden shrink-0 max-w-full max-md:mt-10"
                     />
                   </div>
                   <div className="flex flex-col items-stretch w-[61%] ml-5 max-md:w-full max-md:ml-0 ">
@@ -189,10 +230,10 @@ const Eventselectionn = () => {
                 </h3> */}
               </div>
             </div>
-            <div className="flex flex-col items-stretch w-[32%] h- ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-5">
+            <div className="flex flex-col items-stretch  h- ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-5">
               <div className="bg-white flex grow flex-col items-stretch w-full mt-2.5 pl-9 pr-11 pt-5 pb-11 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <div className="text-black text-sm font-medium">Location:</div>
-                <div className="google-map-code">
+                <div className="google-map-code max-sm:w-full">
                   <iframe
                     src={eventData?.mapurl}
                     width="300"
