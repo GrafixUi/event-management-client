@@ -3,7 +3,7 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { TfiWorld } from "react-icons/tfi";
 import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-
+import { useStore } from "../../../utils/store";
 const MobileSidebar = ({ show, setShow, setLoginModal }) => {
   const variants = {
     open: { opacity: 1, x: 0, transition: { duration: 0.3 } },
@@ -39,6 +39,8 @@ const MobileSidebar = ({ show, setShow, setLoginModal }) => {
     }
   };
   useMemo(() => overflowHidden(), [show]);
+  const userData = useStore((state) => state.userData);
+  const isAuthenticated = useStore((state) => state.isAuthenticated);
 
   return (
     <div
@@ -91,6 +93,7 @@ const MobileSidebar = ({ show, setShow, setLoginModal }) => {
         <NavLink to="/" className={`text-base font-semibold text-gray-400`}>
           How it workS?
         </NavLink>
+        
       </motion.div>
     </div>
   );

@@ -59,7 +59,7 @@ export default function Example() {
       <div>
         {/* Mobile filter dialog */}
         <Transition.Root show={mobileFiltersOpen} as={Fragment}>
-          <Dialog as="div" className="relative z-40 lg:hidden" onClose={setMobileFiltersOpen}>
+          <Dialog as="div" className="relative z-40 " onClose={setMobileFiltersOpen}>
             <Transition.Child
               as={Fragment}
               enter="transition-opacity ease-linear duration-300"
@@ -168,7 +168,7 @@ export default function Example() {
                     Sort
                     <ChevronDownIcon
                       className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
+                      // aria-hidden="true"
                     />
                   </Menu.Button>
                 </div>
@@ -211,7 +211,7 @@ export default function Example() {
               </button>
               <button
                 type="button"
-                className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
+                className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6"
                 onClick={() => setMobileFiltersOpen(true)}
               >
                 <span className="sr-only">Filters</span>

@@ -10,8 +10,10 @@ import { Link } from 'react-router-dom';
 import Navbar from "../../component/navbar/Navbar"
 import Footer from "../../component/footer/Footer"
 import axios from 'axios';
-
+import SubFAQ from '../../pages/home/faq/SubFAQ';
+import Testimonials2 from '../../pages/home/faq/Testimonials2';
 import { useEffect, useState } from 'react';
+// import Testimonials from '../../pages/home/testimonials/testimonials';
 const Movieslist = () => {
     const searchParams = new URLSearchParams(window.location.search);
     const movieid = searchParams.get("movieid");
@@ -193,11 +195,24 @@ const Movieslist = () => {
                         <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-5">
                             <div className="bg-white flex grow flex-col items-stretch w-full mt-2.5 pl-9 pr-11 pt-5 pb-11 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                                 <div className="text-black text-sm font-medium">Location:</div>
-                                <img
+                                {/* <img
                                     loading="lazy"
                                     srcSet={location} alt='location'
                                     className="aspect-[1.61] object-contain object-center w-full overflow-hidden mt-3.5 max-md:mr-0.5"
-                                />
+                                /> */}
+                                <div className="google-map-code max-sm:w-full">
+                  <iframe
+                    src={items?.attributes?.maplink}
+                    width="300"
+                    height="300"
+                    frameborder="0"
+                    style={{ border: 0 }}
+                    allowfullscreen=''
+                    aria-hidden="false"
+                    tabindex="0"
+                    title="maps"
+                  ></iframe>
+                </div>
                             </div>
                         </div>
                     </div>
@@ -373,6 +388,8 @@ const Movieslist = () => {
                     </div>
                 </div>{" "}
             </div>
+            <Testimonials2 />
+            <SubFAQ />
             <Footer />
         </div>
     )

@@ -12,6 +12,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../../utils/store";
+import SubFAQ from "../../pages/home/faq/SubFAQ";
+import Testimonials from '../../pages/home/faq/Testimonials';
+
 const Eventselectionn = () => {
   const requestParams = new URLSearchParams(window.location.search);
   const eventid = requestParams.get("eventid");
@@ -429,6 +432,8 @@ const Eventselectionn = () => {
           </div>
         </div>{" "}
       </div>
+      <Testimonials />
+      <SubFAQ />
       <Footer />
     </div>
   );

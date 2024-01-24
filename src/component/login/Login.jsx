@@ -43,7 +43,7 @@ const Login = () => {
             }
         }
         catch (err) {
-            alert("Server Error. Please try again later")
+            alert("Check your credentials")
         }
     }
 

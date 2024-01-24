@@ -15,7 +15,7 @@ const Moviesticket = () => {
   const searchParams = new URLSearchParams(window.location.search);
   const movieid = searchParams.get("movieid");
   const [items, setItems] = useState([]);
-  const setMovieOrderDetails = useStore((state) => state.setMovieOrderDetails); 
+  const setMovieOrderDetails = useStore((state) => state.setMovieOrderDetails);
   const isAuthenticated = useStore((state) => state.isAuthenticated);
   const navigate = useNavigate();
   useEffect(() => {
@@ -33,58 +33,63 @@ const Moviesticket = () => {
   }, []);
 
   const pricing = [
-    { category: 'RedCircle', price: 30},
-    { category: 'PinkCircle', price: 40},
-    { category: 'OrangeCircle', price: 50}
-];
-const [selectedSeats, setSelectedSeats] = useState([]);
+    { category: "RedCircle", price: 30 },
+    { category: "PinkCircle", price: 40 },
+    { category: "OrangeCircle", price: 50 },
+  ];
+  const [selectedSeats, setSelectedSeats] = useState([]);
 
-
-const handleObjectSelected = (e) => {
+  const handleObjectSelected = (e) => {
     const id = e.id;
     const pricing = e.pricing.price;
-    setSelectedSeats((prevSelectedSeats) => [...prevSelectedSeats, { id, pricing }]);
- 
+    setSelectedSeats((prevSelectedSeats) => [
+      ...prevSelectedSeats,
+      { id, pricing },
+    ]);
   };
 
   const handleObjectDeselected = (e) => {
     const { id } = e;
-    setSelectedSeats((prevSelectedSeats) => prevSelectedSeats.filter((seat) => seat.id !== id));
-
+    setSelectedSeats((prevSelectedSeats) =>
+      prevSelectedSeats.filter((seat) => seat.id !== id)
+    );
   };
 
-const selectedSeatsName = selectedSeats.map((seat) => seat.id).join(', ');
-const selectedSeatsPrice = selectedSeats.map((seat) => seat.pricing).reduce((a, b) => a + b, 0);
-const selectedSeatsPriceWithVat = Math.round(selectedSeatsPrice * 1.8) / 10;
-const selectedSeatsPriceWithPlatformFee = Math.round(selectedSeatsPrice * 1) / 10;
-const totalPrice =selectedSeatsPrice + selectedSeatsPriceWithVat + selectedSeatsPriceWithPlatformFee
+  const selectedSeatsName = selectedSeats.map((seat) => seat.id).join(", ");
+  const selectedSeatsPrice = selectedSeats
+    .map((seat) => seat.pricing)
+    .reduce((a, b) => a + b, 0);
+  const selectedSeatsPriceWithVat = Math.round(selectedSeatsPrice * 1.8) / 10;
+  const selectedSeatsPriceWithPlatformFee =
+    Math.round(selectedSeatsPrice * 1) / 10;
+  const totalPrice =
+    selectedSeatsPrice +
+    selectedSeatsPriceWithVat +
+    selectedSeatsPriceWithPlatformFee;
 
-const handleMovieBooking = () => {
-    if(isAuthenticated === true){
-        setMovieOrderDetails(
-            {
-                movieid: items?.id,
-                movietitle: items?.attributes?.movietitle,
-                month: items?.attributes?.month,
-                day: items?.attributes?.day,
-                year: items?.attributes?.year,
-                theater: items?.attributes?.theater,
-                address: items?.attributes?.address,
-                selectedSeatsName: selectedSeatsName,
-                selectedSeatsQuantity: selectedSeats.length,
-                selectedSeatsPrice: selectedSeatsPrice,
-                selectedSeatsPriceWithVat: selectedSeatsPriceWithVat,
-                selectedSeatsPriceWithPlatformFee: selectedSeatsPriceWithPlatformFee,
-                totalPrice: totalPrice,
-                organiserid: items?.attributes?.userid,
-            }
-        )
-        navigate("/confirmmovieticket")
+  const handleMovieBooking = () => {
+    if (isAuthenticated === true) {
+      setMovieOrderDetails({
+        movieid: items?.id,
+        movietitle: items?.attributes?.movietitle,
+        month: items?.attributes?.month,
+        day: items?.attributes?.day,
+        year: items?.attributes?.year,
+        theater: items?.attributes?.theater,
+        address: items?.attributes?.address,
+        selectedSeatsName: selectedSeatsName,
+        selectedSeatsQuantity: selectedSeats.length,
+        selectedSeatsPrice: selectedSeatsPrice,
+        selectedSeatsPriceWithVat: selectedSeatsPriceWithVat,
+        selectedSeatsPriceWithPlatformFee: selectedSeatsPriceWithPlatformFee,
+        totalPrice: totalPrice,
+        organiserid: items?.attributes?.userid,
+      });
+      navigate("/confirmmovieticket");
+    } else {
+      navigate("/login");
     }
-    else{
-        navigate("/login")
-    }
-}
+  };
 
   return (
     <div className="bg-white flex flex-col items-stretch">
@@ -242,8 +247,9 @@ const handleMovieBooking = () => {
               workspaceKey="10f391a9-8bc8-4ce1-8c5e-d7a4532a5b3d"
               event="e4df854b-2f9a-4dfa-89e8-975338706d67"
               pricing={pricing}
-                onObjectSelected={handleObjectSelected}
-                onObjectDeselected={handleObjectDeselected}
+              showSeatLabels={true}
+              onObjectSelected={handleObjectSelected}
+              onObjectDeselected={handleObjectDeselected}
               region="eu"
             />
           </div>
@@ -269,31 +275,31 @@ const handleMovieBooking = () => {
                 <div className="text-blue-950 text-2xl font-medium max-md:max-w-full">
                   Offers
                 </div>
-                <div className="justify-between items-stretch flex gap-5 mt-3 max-md:max-w-full max-md:flex-wrap">
-                  <div className="justify-between items-center self-center flex gap-2.5">
+                <div className="justify-between items-stretch flex flex-col gap-2 mt-3 max-md:max-w-full max-md:flex-wrap">
+                  <div className="flex flex-col max-md:flex-row gap-2.5">
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/93e2f9a3ab332727d07dceec0d7d91924df0a1bce654f8e4f84ece11c0d38c0e?"
                       alt="img"
-                      className="aspect-square object-contain object-center w-5 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
+                      className="aspect-square object-contain object-center w-12 h-12 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
                     />
-                    <div className="text-neutral-800 text-xs font-medium self-stretch grow whitespace-nowrap">
+                    <div className="text-neutral-800 text-sm font-medium self-stretch grow">
                       50% off up to ₹100 | Use code BOOKNOW
                     </div>
                   </div>
-                  <Link className="text-blue-950 text-base font-medium grow whitespace-nowrap">
+                  <Link className="text-blue-950 text-base font-medium">
                     Apply
                   </Link>
                 </div>
-                <div className="justify-between items-stretch flex w-full gap-5 mt-2 max-md:max-w-full max-md:flex-wrap">
-                  <div className="justify-between items-center self-center flex gap-2.5">
+                <div className="justify-between items-stretch flex flex-col gap-2 mt-2 max-md:max-w-full max-md:flex-wrap">
+                  <div className="flex flex-col max-md:flex-row gap-2.5">
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/93e2f9a3ab332727d07dceec0d7d91924df0a1bce654f8e4f84ece11c0d38c0e?"
                       alt="img"
-                      className="aspect-square object-contain object-center w-5 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
+                      className="aspect-square object-contain object-center w-12 h-12 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
                     />
-                    <div className="text-neutral-800 text-xs font-medium self-stretch grow whitespace-nowrap">
+                    <div className="text-neutral-800 text-sm font-medium self-stretch grow">
                       20% off up to ₹100 | Use code FIRSTTIME
                     </div>
                   </div>
@@ -302,26 +308,28 @@ const handleMovieBooking = () => {
                   </Link>
                 </div>
               </div>
+
               <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 px-8 py-4 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
-                <div className="justify-between items-center flex gap-5 max-md:max-w-full max-md:flex-wrap">
-                  <div className="items-stretch flex gap-2.5 my-auto">
+                <div className="justify-between items-start flex flex-col gap-5 max-md:max-w-full max-md:flex-wrap">
+                  <div className="items-stretch flex flex-col gap-2.5 my-auto">
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/93c146497e8165cb89e62d813ff44ceaae8089be958bef572eb8b97e70731be6?"
                       alt="img"
-                      className="aspect-square object-contain object-center w-8 fill-blue-950 overflow-hidden shrink-0 max-w-full"
+                      className="aspect-square object-contain object-center w-12 h-12 fill-blue-950 overflow-hidden shrink-0 max-w-full"
                     />
-                    <div className="text-neutral-800 text-xl font-medium grow whitespace-nowrap self-start">
+                    <div className="text-neutral-800 text-lg font-medium grow whitespace-nowrap self-start">
                       Apply Code
                     </div>
                   </div>
                   <input
-                    className="text-zinc-500 text-opacity-50 w-36  text-sm font-medium whitespace-nowrap items-stretch self-stretch grow justify-center px-6 py-5 border-b-zinc-500 border-b-opacity-50 border border-none max-md:px-5"
+                    className="text-zinc-500 text-opacity-50 w-full md:w-36 text-sm font-medium whitespace-nowrap items-stretch self-stretch grow justify-center px-6 py-3 md:py-5 border-b-zinc-500 border-b-opacity-50 border border-none max-md:px-5"
                     type="text"
                     placeholder="Enter code"
                   />
                 </div>
               </div>
+
               <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 p-8 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
                 <h2 className="text-neutral-800 text-xl font-medium max-md:max-w-full">
                   Bill details
@@ -331,26 +339,30 @@ const handleMovieBooking = () => {
                     Base Ticket Fare
                   </h3>
                   <h3 className="text-zinc-500 text-xs font-medium">
-                  ${selectedSeatsPrice}
+                    ${selectedSeatsPrice}
                   </h3>
                 </div>
                 <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
                   <h3 className="text-zinc-500 text-xs font-medium">
                     Total Travellers
                   </h3>
-                  <h3 className="text-zinc-500 text-xs font-medium">{selectedSeats.length}</h3>
+                  <h3 className="text-zinc-500 text-xs font-medium">
+                    {selectedSeats.length}
+                  </h3>
                 </div>
                 <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
+                  <h3 className="text-zinc-500 text-xs font-medium">VAT</h3>
                   <h3 className="text-zinc-500 text-xs font-medium">
-                    VAT
+                    ${selectedSeatsPriceWithVat}
                   </h3>
-                  <h3 className="text-zinc-500 text-xs font-medium">${selectedSeatsPriceWithVat}</h3>
                 </div>
                 <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
                   <h3 className="text-zinc-500 text-xs font-medium">
                     Platform Fee
                   </h3>
-                  <h3 className="text-zinc-500 text-xs font-medium">${selectedSeatsPriceWithPlatformFee}</h3>
+                  <h3 className="text-zinc-500 text-xs font-medium">
+                    ${selectedSeatsPriceWithPlatformFee}
+                  </h3>
                 </div>
                 <div className="justify-between items-stretch flex gap-5 mt-4 max-md:max-w-full max-md:flex-wrap">
                   <h3 className="text-neutral-700 text-xl font-medium">

@@ -28,6 +28,7 @@ export default function Navbar() {
   const setJwt = useStore((state) => state.setJwt);
   const setOrderDetails = useStore((state) => state.setOrderDetails);
   const setUserData = useStore((state) => state.setUserData);
+  const userData = useStore((state) => state.userData);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -148,7 +149,10 @@ export default function Navbar() {
                   </Menu>
                 ) : (
                   <Menu as="div" className="relative ml-3">
+                    <div className="hidden  xl:flex text-center items-center text-white space-x-2">
                     <div>
+                      <p>Hello, {userData?.username} </p>
+                    </div>
                       <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">Open user menu</span>

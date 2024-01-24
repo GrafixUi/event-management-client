@@ -11,11 +11,12 @@ const Register = () => {
     username: "",
     email: "",
     password: "",
+    confirmPassword:"",
     checkbox: false,
   });
   const navigate = useNavigate();
 
-  const { username, email, password, checkbox } = formData;
+  const { username, email, password, confirmPassword, checkbox } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,7 +27,11 @@ const Register = () => {
       alert("Please accept the terms and conditions");
     } else if (username === "" || email === "" || password === "") {
       alert("Please fill all the fields");
-    } else {
+    }
+    else if( password !== confirmPassword){
+      alert("Password does not match")
+    }
+    else {
       try {
         const newUser = await axios.post(
           `${process.env.REACT_APP_BACKENDURL}/auth/local/register`,
@@ -113,7 +118,7 @@ const Register = () => {
                       </div>
                       <div className="relative flex flex-col items-stretch  self-start max-md:mt-10">
                         <input
-                          className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md"
+                          className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5]  pl-2 py-3 rounded-md"
                           onChange={onChange}
                           type="text"
                           placeholder="UserName"
@@ -121,7 +126,7 @@ const Register = () => {
                         />
 
                         <input
-                          className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md"
+                          className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5]  pl-2 py-3 rounded-md"
                           onChange={onChange}
                           type="email"
                           placeholder="Email"
@@ -129,11 +134,18 @@ const Register = () => {
                         />
 
                         <input
-                          className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md"
+                          className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5]  pl-2 py-3 rounded-md"
                           onChange={onChange}
                           type="password"
                           placeholder="Password"
                           name="password"
+                        />
+                         <input
+                          className="justify-center w-72 text-zinc-400 text-base leading-6 mt-5 max-md:mt-10 border border-[#E5E5E5]  pl-2 py-3 rounded-md"
+                          onChange={onChange}
+                          type="password"
+                          placeholder="Confirm Password"
+                          name="confirmPassword"
                         />
                       </div>
                        <div className="relative self-centre flex items-centre justify-between gap-2.5 mt-8 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
