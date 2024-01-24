@@ -136,12 +136,12 @@ const Register = () => {
                           name="password"
                         />
                       </div>
-                      {/* <div className="relative self-centre flex items-centre justify-between gap-2.5 mt-8 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
-                                                <input type="checkbox" onChange={onChange} className=' w-4 items-center justify-center' name="checkbox" />
+                       <div className="relative self-centre flex items-centre justify-between gap-2.5 mt-8 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+                                                 <input type="checkbox" onChange={onChange} className=' w-4 items-center justify-center' name="checkbox" />
                                                 <div className="text-zinc-500 text-sm leading-5 grow shrink basis-auto mt-2 self-start max-md:max-w-full">
                                                     I agree to terms & Policy.
                                                 </div>
-                                            </div> */}
+                                            </div>  
                       <button
                         className="relative w-52 text-white text-sm font-bold  tracking-normal bg-stone-950 self-stretch justify-center items-stretch mt-6 px-7 py-4 rounded-xl max-md:max-w-full max-md:px-5"
                         onClick={onSubmit}

@@ -15,7 +15,7 @@ useEffect(() => {
     const upcomingDataNew = async () => {
       try {
         const upcomingEvents = await axiosAuth.get(
-          `${process.env.REACT_APP_BACKENDURL}/orders?filters[userid][eq]=${userid}`
+          `${process.env.REACT_APP_BACKENDURL}/orders?filters[userid][$eq]=${userid}`
         );
         setItems(upcomingEvents.data.data);
         
