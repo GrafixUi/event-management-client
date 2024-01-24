@@ -27,12 +27,12 @@ const Login = () => {
                                 </div>
                                 <div className="text-white text-xl font-semibold self-center whitespace-nowrap mt-10 max-md:mt-10">
                                     <span className="font-bold">Existing User</span>
-                                    <span className="text-5xl">?</span>
+                                    <span className="text-xl">?</span>
                                 </div>
-                                <div className="text-white text-center text-base mt-5">
+                                {/* <div className="text-white text-center text-base mt-5">
                                     Make your events visible by
                                     <br /> ticketverse
-                                </div>
+                                </div> */}
                                 <Link to="/register" className="text-blue-950 text-center text-base font-bold whitespace-nowrap bg-white self-center justify-center items-stretch mt-6 px-12 py-3.5 rounded-[45px] max-md:px-5">
                                     Sign up
                                 </Link>
@@ -57,13 +57,13 @@ const Login = () => {
 
                                                 <input className="justify-center text-zinc-400 text-base leading-6 mt-10 max-md:mt-10 border border-[#E5E5E5] pr-40 pl-2 py-3 rounded-md w-72" type='text' placeholder='Your password *' />
                                             </div>
-                                            <div className="relative self-stretch flex items-center justify-between gap-2.5 mt-16 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+                                            {/* <div className="relative self-stretch flex items-center justify-between gap-2.5 mt-16 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
                                                 <input type="checkbox" checked="checked" className=' w-4 items-center justify-center' />
                                                 <div className="text-zinc-500 text-sm leading-5 grow shrink basis-auto mt-2 self-start max-md:max-w-full">
                                                     Remember me
                                                 </div>
                                                 <Link className=' mr-7 text-[#B6B6B6]'>Forgot password</Link>
-                                            </div>
+                                            </div> */}
                                             <button className="relative w-52 text-white text-sm font-bold leading-5 tracking-normal bg-stone-950 self-stretch justify-center items-stretch mt-6 px-8 py-4 rounded-xl max-md:max-w-full max-md:px-5">
                                                 Submit & Register
                                             </button>

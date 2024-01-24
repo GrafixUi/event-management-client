@@ -101,7 +101,7 @@ const Home = () => {
       </div>
       <Link
         to="eventslist"
-        className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-8 py-3 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5  hover:text-white group relative flex overflow-hidden"
+        className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch px-8 py-3 rounded-[50px] border-[1.5px] border-solid border-indigo-600  max-md:px-5  hover:text-white group relative flex overflow-hidden"
       >
         <span className=" absolute left-0 w-full h-0 transition-all bg-indigo-500 opacity-100 group-hover:h-full group-hover:top-0 duration-200 ease" />
         <span className=" relative">Load More</span>
@@ -142,7 +142,7 @@ const Home = () => {
       </div>
       <Link
         to="movieslist"
-        className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch mt-16 px-8 py-3 rounded-[50px] border-[1.5px] border-solid border-indigo-600 max-md:mt-10 max-md:px-5 hover:text-white group relative flex overflow-hidden"
+        className="text-indigo-600 text-center text-lg font-bold whitespace-nowrap shadow-2xl self-center justify-center items-stretch  px-8 py-3 rounded-[50px] border-[1.5px] border-solid border-indigo-600  max-md:px-5 hover:text-white group relative flex overflow-hidden"
       >
         <span className=" absolute left-0 w-full h-0 transition-all bg-indigo-500 opacity-100 group-hover:h-full group-hover:top-0 duration-200 ease" />
         <span className=" relative">Load More</span>

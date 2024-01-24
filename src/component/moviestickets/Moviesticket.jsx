@@ -53,7 +53,7 @@ const handleObjectSelected = (e) => {
 
   };
 
-  const selectedSeatsName = selectedSeats.map((seat) => seat.id).join(', ');
+const selectedSeatsName = selectedSeats.map((seat) => seat.id).join(', ');
 const selectedSeatsPrice = selectedSeats.map((seat) => seat.pricing).reduce((a, b) => a + b, 0);
 const selectedSeatsPriceWithVat = Math.round(selectedSeatsPrice * 1.8) / 10;
 const selectedSeatsPriceWithPlatformFee = Math.round(selectedSeatsPrice * 1) / 10;
@@ -117,7 +117,7 @@ const handleMovieBooking = () => {
                     {items?.attributes?.moviedesc}
                   </p>
                   <h2 className="text-white text-lg whitespace-nowrap mt-5">
-                    Moive Type : {items?.attributes?.movietype}
+                    Movie Type : {items?.attributes?.genre}
                   </h2>
                 </div>
               </div>

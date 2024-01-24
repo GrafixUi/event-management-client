@@ -32,7 +32,7 @@ const Venuelist2 = () => {
                             />
                             <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
                                 <div className="flex basis-[0%] flex-col self-center items-stretch px-5 max-sm:w-12 max-sm:-ml-2">
-                                    <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap max-sm:text-[10px]">
+                                    <h1 className="text-blue-950 text-center text-xs font-bold whitespace-nowrap max-sm:text-[10px]">
                                         {item?.attributes?.month}
                                     </h1>
                                     <h3 className="text-black text-xl font-bold whitespace-nowrap mt-2">

@@ -76,7 +76,7 @@ const Movieslist = () => {
                                         {items?.attributes?.moviedesc}
                                     </p>
                                     <h2 className="text-white text-lg whitespace-nowrap mt-5">
-                                        Moive Type : {items?.attributes?.movietype}
+                                        Movie Type : {items?.attributes?.genre}
                                     </h2>
                                 </div>
                             </div>
@@ -186,7 +186,7 @@ const Movieslist = () => {
                                     Movie or Event type
                                 </h2>
                                 <h2 className="justify-center text-neutral-500 text-base leading-6 underline mt-3 max-md:max-w-full">
-                                    {items?.attributes?.movietype}
+                                    {items?.attributes?.genre}
                                 </h2>
                             </div>
                         </div>

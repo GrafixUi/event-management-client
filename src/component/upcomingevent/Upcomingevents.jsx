@@ -7,8 +7,20 @@ import axios from "axios";
 
 const Upcomingevents = () => {
   const [items, setItems] = useState([]);
+  const [category, setCategory] = useState();
   useEffect(() => {
     const upcomingDataNew = async () => {
+      try {
+        const upcomingEvents = await axios.get(
+          `${process.env.REACT_APP_BACKENDURL}/events?pagination[pageSize]=6&filters[category][$eq]=${category}`
+        );
+        setItems(upcomingEvents.data.data);
+      } catch (err) {
+        console.log(err);
+      }
+
+    };
+    const initialData = async () => {
       try {
         const upcomingEvents = await axios.get(
           `${process.env.REACT_APP_BACKENDURL}/events?pagination[pageSize]=6`
@@ -17,8 +29,14 @@ const Upcomingevents = () => {
       } catch (err) {
         console.log(err);
       }
+
     };
+    if(category){
     upcomingDataNew();
+    }
+    else{
+      initialData()
+    }
   }, []);
   //dropdown for filter
 
@@ -94,7 +112,7 @@ const Upcomingevents = () => {
           Upcoming Events
         </div>
         <div className=" flex items-center justify-center gap-5 max-md:max-w-full max-md:flex-wrap max-sm:hidden">
-          <div
+          {/* <div
             ref={dropdownRef}
             className="bg-violet-50 flex items-stretch justify-between gap-5 px-6 py-4 rounded-[50px] max-md:px-5"
           >
@@ -127,8 +145,8 @@ const Upcomingevents = () => {
                 </ul>
               )}
             </div>
-          </div>
-          <div
+          </div> */}
+          {/* <div
             ref={shopopen}
             className="bg-violet-50 flex items-stretch justify-between gap-5 px-6 py-4 rounded-[50px] max-md:px-5"
           >
@@ -161,7 +179,7 @@ const Upcomingevents = () => {
                 </ul>
               )}
             </div>
-          </div>
+          </div> */}
           <div
             ref={dropDownOpen}
             className="bg-violet-50 flex items-stretch justify-between gap-4 px-6 py-4 rounded-[50px] max-md:px-5"
@@ -183,14 +201,20 @@ const Upcomingevents = () => {
               </button>
               {isDropdownOpen && (
                 <ul className="absolute mt-5 mr-96 z-50 py-2 w-36 p-2 bg-[#ffffff] border border-gray-200 shadow-lg rounded-md flex flex-col">
-                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
-                    12-01-2024{" "}
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 " onClick={(e)=>{setCategory(e.target.innerText)}} >
+                  Musical
                   </button>
-                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
-                    12-01-2024{" "}
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 " onClick={(e)=>{setCategory(e.target.innerText)}}>
+                  Dance
                   </button>{" "}
-                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 ">
-                    12-01-2024{" "}
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 " onClick={(e)=>{setCategory(e.target.innerText)}}>
+                  Sports
+                  </button>{" "}
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 " onClick={(e)=>{setCategory(e.target.innerText)}}>
+                  Meet Ups
+                  </button>{" "}
+                  <button className=" text-[#015464] text-sm my-3 hover:bg-indigo-100 rounded p-2 " onClick={(e)=>{setCategory(e.target.innerText)}}>
+                  Others
                   </button>{" "}
                 </ul>
               )}
@@ -198,7 +222,7 @@ const Upcomingevents = () => {
           </div>
         </div>
       </div>
-      <div className=" py-5 mt-8 ml-8 grid grid-cols-3 w-[1000px]  max-sm:grid-cols-2 max-sm:w-[320px] items-center justify-center gap-12 ">
+      <div className=" py-5 mt-8 ml-8 grid grid-cols-3 w-[1000px]  max-sm:grid-cols-2 max-sm:w-[320px] items-center justify-center gap-8 ">
         {items.map((item) => (
           <Link to="/eventslist">
             <div
@@ -213,7 +237,7 @@ const Upcomingevents = () => {
               />
               <div className="self-center flex justify-between gap-12 mt-0.5 items-start w-full">
                 <div className="flex  flex-col justify-center text-center self-center ml-5">
-                  <div className="text-indigo-600 max-sm:w-2 text-center text-lg max-sm:text-[10px] font-bold whitespace-nowrap">
+                  <div className="text-blue-950 max-sm:w-2 text-center text-lg max-sm:text-[10px] font-bold whitespace-nowrap">
                     {item.attributes.month}
                   </div>
                   <div className="text-black text-xl max-sm:w-2 font-bold whitespace-nowrap mt-2">
@@ -225,7 +249,7 @@ const Upcomingevents = () => {
                     {item.attributes.eventtitle}
                   </div>
                   <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
-                  {item?.attributes?.description?.slice(0, 50) + "..."}
+                  {item?.attributes?.description?.slice(0, 25) + "..."}
                   </div>
                 </div>
               </div>

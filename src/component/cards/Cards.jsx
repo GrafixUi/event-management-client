@@ -70,7 +70,7 @@ const Cards = () => {
                             />
                             <div className="self-center flex justify-between  mt-0.5 items-start w-full">
                                 <div className="flex basis-[0%] flex-col self-center items-stretch px-6 max-sm:w-12 max-sm:-ml-2">
-                                    <h1 className="text-indigo-600 text-center text-xs font-bold whitespace-nowrap max-sm:text-[10px]">
+                                    <h1 className="text-blue-950 text-center text-xs font-bold whitespace-nowrap max-sm:text-[10px]">
                                         {item.attributes.month}
                                     </h1>
                                     <h3 className="text-black text-xl font-bold whitespace-nowrap mt-2">
@@ -82,7 +82,7 @@ const Cards = () => {
                                         {item.attributes.eventtitle}
                                     </h1>
                                     <h3 className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
-                                        {item.attributes.description}
+                                        {item?.attributes?.description?.slice(0, 20)}
                                     </h3>
                                 </div>
                             </div>
