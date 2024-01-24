@@ -1,6 +1,7 @@
 import { create } from "zustand";
+import {persist} from "zustand/middleware";
 
-export const useStore = create((set) => ({
+export const useStore = create(persist((set) => ({
   isAuthenticated: false,
   jwt: null,
   userData: null,
@@ -11,4 +12,7 @@ export const useStore = create((set) => ({
   setUserData: (data) => set({ userData: data }),
   setOrderDetails: (data) => set({ orderDetails: data }),
   setMovieOrderDetails: (data) => set({ movieOrderDetails: data }),
+}),{
+  name: "user-storage",
+  getStorage: () => sessionStorage,
 }));

@@ -225,7 +225,7 @@ const Upcomingevents = () => {
                     {item.attributes.eventtitle}
                   </div>
                   <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
-                    {item.attributes.description}
+                  {item?.attributes?.description?.slice(0, 50) + "..."}
                   </div>
                 </div>
               </div>

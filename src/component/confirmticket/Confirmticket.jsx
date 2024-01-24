@@ -60,6 +60,7 @@ const Confirmticket = () => {
           }
       );
       if (newOrder.data) {
+        
         navigate("/confirmbooking?type=event")
       } else {
         alert("Payment failed, Try Again");

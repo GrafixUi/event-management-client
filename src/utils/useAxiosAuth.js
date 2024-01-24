@@ -1,6 +1,6 @@
 import {axiosAuth} from './axios';
 import {useEffect} from 'react';
-import   {useStore}  from './store';
+import {useStore}  from './store';
 
 const useAxiosAuth = () => {
     const jwt = useStore((state) => state.jwt);
