@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
         <div>
           <div className="text-white text-lg font-bold capitalize mb-4">
-            Eventick
+            Quick Links
           </div>
           <div className="text-zinc-100 flex flex-col text-sm font-medium leading-7 mb-6">
             <Link to="/about" className="mb-2">
