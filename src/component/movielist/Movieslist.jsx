@@ -44,7 +44,7 @@ const Eventslist = () => {
                                     <h1 className="text-black text-xs font-bold leading-1 max-sm:text-[10px]  max-sm:-ml-8 max-sm:leading-2 max-sm:w-32">
                                         {item?.attributes?.movietitle}
                                     </h1>
-                                    <h3 className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
+                                    <h3 className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-24 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
                                     {item?.attributes?.description?.slice(0, 50) + "..."}
                                     </h3>
                                 </div>

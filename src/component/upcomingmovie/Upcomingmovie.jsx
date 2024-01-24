@@ -298,10 +298,10 @@ const Upcomingevents = () => {
                   </div>
                 </div>
                 <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
-                  <div className="text-black text-xs max-sm:text-[9px] max-sm:w-28 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
+                  <div className="text-black text-xs max-sm:text-[9px] max-sm:w-24 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
                     {item?.attributes?.movietitle}
                   </div>
-                  <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-28 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
+                  <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-24 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
                     {item?.attributes?.moviedesc?.slice(0, 25) + "..."}
                   </div>
                 </div>
