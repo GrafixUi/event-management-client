@@ -27,7 +27,7 @@ const Eventselectionn = () => {
         const events = await axios.get(
           `${process.env.REACT_APP_BACKENDURL}/events/${eventid}`
         );
-        setEventData(events.data.data.attributes);
+        setEventData(events.data.data);
       } catch (err) {
         console.log(err);
       }
@@ -54,7 +54,7 @@ const Eventselectionn = () => {
       {/* bottom part */}
       <div className="fixed bottom-0 md:hidden grid gap-2 grid-cols-2 px-10 py-3 w-full z-20 bg-[#f0f3ff]">
     <div className="text-[#061046] font-bold pt-2 text-sm text-center flex justify-center">
-        {eventData?.eventtitle}
+        {eventData?.attributes?.eventtitle}
     </div>
     <div>
         <button
@@ -94,10 +94,10 @@ const Eventselectionn = () => {
         <div className="relative flex w-full max-w-[1438px] items-stretch justify-around gap-5 mt-72 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-sm:mt-72">
           <div className="flex flex-col items-stretch max-md:max-w-full max-sm:items-center max-sm:justify-center">
             <div className="text-white text-3xl  max-md:max-w-full max-md:text-1xl">
-              {eventData?.eventtitle}
+              {eventData?.attributes?.eventtitle}
             </div>
             <div className="text-neutral-300 text-md font-light  max-md:max-w-full max-sm:ml-4">
-              {eventData?.locationname}, {eventData?.address}
+              {eventData?.attributes?.locationname}, {eventData?.attributes?.address}
             </div>
           </div>
           <button
@@ -140,29 +140,29 @@ const Eventselectionn = () => {
                 <div className="flex items-stretch justify-start gap-5 max-sm:self-center max-sm:items-center">
                   <div className="backdrop-blur-[3.950000047683716px] bg-blue-950 flex grow basis-[0%] flex-col items-center pl-4 pr-4 py-6 rounded-xl">
                     <h1 className="text-white text-lg font-semibold leading-6 uppercase whitespace-nowrap">
-                      {eventData?.month}
+                      {eventData?.attributes?.month}
                     </h1>
                     <h3 className="text-white text-4xl font-bold self-stretch whitespace-nowrap mt-4 max-md:text-4xl text-center">
-                      {eventData?.day}
+                      {eventData?.attributes?.day}
                     </h3>
                   </div>
                   <div className="self-center flex grow basis-[0%] flex-col items-stretch my-auto">
                     <div className="items-stretch flex justify-between gap-3">
                       <div className="text-black text-sm">Released:</div>
                       <div className="text-black text-sm">
-                        {eventData?.year}
+                        {eventData?.attributes?.year}
                       </div>
                     </div>
                     <div className="items-stretch flex justify-between gap-3 mt-5">
                       <div className="text-black text-sm">Domain:</div>
                       <div className="text-black text-sm">
-                        {eventData?.domaintype}
+                        {eventData?.attributes?.domaintype}
                       </div>
                     </div>
                     <div className="items-stretch w-full flex justify-between gap-3 mt-5">
                       <div className="text-black text-sm">Category:</div>
                       <div className="text-black text-sm">
-                        {eventData?.category}
+                        {eventData?.attributes?.category}
                       </div>
                     </div>
                   </div>
@@ -170,11 +170,11 @@ const Eventselectionn = () => {
                 <div className="flex flex-col items-stretch mt-3 self-start">
                   <div className="text-black text-sm font-medium">Address:</div>
                   <div className="text-blue-950 text-lg font-semibold mt-3">
-                    {eventData?.locationname}
+                    {eventData?.attributes?.locationname}
                   </div>
                   <div className="text-blue-950 text-md font-light mt-4">
-                    {eventData?.locationname} <br />
-                    {eventData?.address} <br />
+                    {eventData?.attributes?.locationname} <br />
+                    {eventData?.attributes?.address} <br />
                   </div>
                 </div>
               </div>
@@ -192,7 +192,7 @@ const Eventselectionn = () => {
                   <div className="flex flex-col items-stretch w-[61%] ml-5 max-md:w-full max-md:ml-0 ">
                     <div className="flex grow flex-col items-stretch max-md:mt-10">
                       <div className="text-neutral-500  text-base font-bold leading-5">
-                        {eventData?.organisername}
+                        {eventData?.attributes?.organisername}
                       </div>
                       {/* <div className="text-neutral-500 text-base leading-5 whitespace-nowrap mt-2.5 max-md:mr-1">
                         Premium Digital Studio
@@ -223,7 +223,7 @@ const Eventselectionn = () => {
                   About This Event
                 </h1>
                 <p className="justify-center text-neutral-500 text-sm leading-6 max-w-[645px] mt-8 max-md:max-w-full">
-                  {eventData?.description}
+                  {eventData?.attributes?.description}
                 </p>
                 {/* <h3 className="text-neutral-400 text-base leading-6 mt-5 max-md:max-w-full max-md:mt-10">
                   Movie or Event type
@@ -238,7 +238,7 @@ const Eventselectionn = () => {
                 <div className="text-black text-sm font-medium">Location:</div>
                 <div className="google-map-code max-sm:w-full">
                   <iframe
-                    src={eventData?.mapurl}
+                    src={eventData?.attributes?.mapurl}
                     width="300"
                     height="300"
                     frameborder="0"
@@ -433,7 +433,7 @@ const Eventselectionn = () => {
         </div>{" "}
       </div>
       <Testimonials />
-      <SubFAQ />
+      <SubFAQ type='event' id={eventid}   />
       <Footer />
     </div>
   );

@@ -389,7 +389,7 @@ const Movieslist = () => {
                 </div>{" "}
             </div>
             <Testimonials2 />
-            <SubFAQ />
+            <SubFAQ type='movie' id={movieid}  />
             <Footer />
         </div>
     )

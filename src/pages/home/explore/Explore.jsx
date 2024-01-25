@@ -7,86 +7,116 @@ import {
     MdWorkspacesOutline,
     MdOutlineFestival,
     MdLocalMovies,
+    MdNightlife,
+    MdOutlineSportsBasketball,
+    
 } from "react-icons/md";
+import { FaRegLaughSquint } from "react-icons/fa";
+import { GiDramaMasks } from "react-icons/gi";
+import { IoFastFoodSharp } from "react-icons/io5";
+import { GiPartyPopper } from "react-icons/gi";
 
 const Marketplace = () => {
     return (
-        <section className="py-14 bg-white flex flex-row">
+        <section className="pb-14 bg-white flex flex-row">
             <div className="container  mx-auto">
                 <div className="grid   gap-9">
 
-                    <div className="w-full grid grid-cols-6 max-sm:grid-cols-2 items-center justify-center gap-10 mt-6">
+                    <div className="w-full grid grid-cols-8 max-lg:grid-cols-6 max-md:grid-cols-4 max-sm:grid-cols-2 items-center justify-center gap-10 mt-6">
 
                         <Link
                             to="/"
-                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125"
+                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-105 "
                         >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#DF0068] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
-                                <IoIosMicrophone size={60} />
+                            <div className="w-20 h-18 relative items-center justify-center flex after:h-[2px] rounded-full p-5 border border-gray-300">
+                                <IoIosMicrophone size={40} />
                             </div>
-                            <h2 className="text-lg font-light text-center">
-                                Conference 
+                            <h2 className="text-sm font-light text-center">
+                                Music 
                             </h2>
                         </Link>
                         <Link
                             to="/"
-                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125"
+                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-105 "
                         >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#F33A00] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
-                                <MdLocalMovies  size={60}/>
+                            <div className="w-20 h-18 relative items-center justify-center flex after:h-[2px] rounded-full p-5 border border-gray-300">
+                                <MdNightlife size={40} />
                             </div>
-                            <h2 className="text-lg font-light text-center">
-                                Entertainment
-                            </h2>
-                        </Link>
-
-                        <Link
-                            to="/"
-                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125"
-                        >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#A500F2] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
-                                <SiYourtraveldottv size={60} />
-                            </div>
-                            <h2 className="text-lg font-light text-center  ">
-                                Travel
+                            <h2 className="text-sm font-light text-center">
+                                Night Life 
                             </h2>
                         </Link>
 
                         <Link
                             to="/"
-                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125"
+                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-105 "
                         >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#FCB808] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
-                                <MdOutlineFestival size={60} />
+                            <div className="w-20 h-18 relative items-center justify-center flex after:h-[2px] rounded-full p-5 border border-gray-300">
+                                <GiDramaMasks size={40} />
                             </div>
-                            <h2 className="text-lg font-light text-center ">
-                                Festivals
+                            <h2 className="text-sm font-light text-center">
+                                Visual Arts 
                             </h2>
                         </Link>
 
                         <Link
                             to="/"
-                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125"
+                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-105 "
                         >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#1AAB18] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
-                                <MdWorkspacesOutline size={60} />
+                            <div className="w-20 h-18 relative items-center justify-center flex after:h-[2px] rounded-full p-5 border border-gray-300">
+                                <MdOutlineSportsBasketball size={40} />
                             </div>
-                            <h2 className="text-lg font-light text-center ">
-                                Workshop
+                            <h2 className="text-sm font-light text-center">
+                                Sports 
                             </h2>
                         </Link>
 
                         <Link
                             to="/"
-                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-125 "
+                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-105 "
                         >
-                            <div className="w-20 h-18 relative items-center justify-center flex after:content-[''] after:absolute after:-bottom-2 after:w-full after:h-[2px] after:bg-[#1D1A1B] group-hover:after:bg-primary group-hover:after:w-20 group-hover:after:translate-x-[5%] after:transition-all after:duration-300 max-sm:w-10">
-                                <MdSportsVolleyball size={60} />
+                            <div className="w-20 h-18 relative items-center justify-center flex after:h-[2px] rounded-full p-5 border border-gray-300">
+                                <IoFastFoodSharp size={40} />
                             </div>
-                            <h2 className="text-lg font-light text-center ">
-                                Sport
+                            <h2 className="text-sm font-light text-center">
+                                Food & Drink 
                             </h2>
                         </Link>
+
+                        <Link
+                            to="/"
+                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-105 "
+                        >
+                            <div className="w-20 h-18 relative items-center justify-center flex after:h-[2px] rounded-full p-5 border border-gray-300">
+                                <FaRegLaughSquint size={40} />
+                            </div>
+                            <h2 className="text-sm font-light text-center">
+                                Comedy 
+                            </h2>
+                        </Link>
+                        <Link
+                            to="/"
+                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-105 "
+                        >
+                            <div className="w-20 h-18 relative items-center justify-center flex after:h-[2px] rounded-full p-5 border border-gray-300">
+                                <MdLocalMovies size={40} />
+                            </div>
+                            <h2 className="text-sm font-light text-center">
+                                Movies
+                            </h2>
+                        </Link>
+                        <Link
+                            to="/"
+                            className="w-full flex items-center justify-center flex-col gap-4 group transition duration-500 hover:scale-105 "
+                        >
+                            <div className="w-20 h-18 relative items-center justify-center flex after:h-[2px] rounded-full p-5 border border-gray-300">
+                                <GiPartyPopper size={40} />
+                            </div>
+                            <h2 className="text-sm font-light text-center">
+                                Party  
+                            </h2>
+                        </Link>
+                        
 
                     </div>
                 </div>

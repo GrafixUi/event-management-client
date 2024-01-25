@@ -4,9 +4,16 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
+   <div>
+     <img 
+    src='/citydoodle.png'
+    alt="logo"
+    className="object-contain object-center w-full overflow-hidden flex justify-center align-middle items-center"
+    />
     <div className="bg-blue-950 w-full"> {/* Updated styling here */}
-      <div className="w-[1200px] max-md:w-[500px] mx-auto p-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-6 px-4 max-md:max-px-4 max-xl:w-[1000px] max-sm:w-[390px]">
-        <div className="max-sm:w-[300px] max-md:w-[300px] mt-0 md:mt-[110px]">
+    
+      <div className="  mx-auto p-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-6 px-4 max-md:max-px-4 ">
+        <div className="  mt-0 ">
           <img
             loading="lazy"
             srcSet={Logo}
@@ -70,6 +77,7 @@ const Footer = () => {
         Copyright © 2023 TicketVerse{" "}
       </div>
     </div>
+   </div>
   );
 };
 

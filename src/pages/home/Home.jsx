@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import FAQ from "../home/faq/FAQ";
 import Header from "../../component/header/Header";
 import { useStore } from "../../utils/store";
+import Feature from "./faq/Feature";
 
 const Home = () => {
   //dropdown for filter
@@ -86,15 +87,17 @@ const Home = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  
   return (
     <div className="bg-white flex flex-col container-xl mx-auto">
       <div className="mt-12">
         <Header />
       </div>
-      {/* <div className="text-[#242565] text-3xl font-bold mt-10 flex flex-col self-center items-center max-md:max-w-full max-md:mt-5 max-sm:text-xl">
+      <div className="text-[#242565] text-3xl font-bold mt-10 flex flex-col self-center items-center max-md:max-w-full max-md:mt-5 max-sm:text-xl">
         Explore your Events and Movies
         <Explore />
-      </div> */}
+      </div>
 
       <div className=" flex self-center items-center justify-center">
         <Upcomingevent />
@@ -147,6 +150,7 @@ const Home = () => {
         <span className=" absolute left-0 w-full h-0 transition-all bg-indigo-500 opacity-100 group-hover:h-full group-hover:top-0 duration-200 ease" />
         <span className=" relative">Load More</span>
       </Link>
+      <Feature  />
       <div className="justify-center text-pink-600 text-center text-sm font-bold leading-5 tracking-wider self-center whitespace-nowrap mt-32 max-md:mt-10">
         FAQ
       </div>

@@ -6,12 +6,15 @@ import Footer from "../../component/footer/Footer"
 import { useStore } from '../../utils/store';
 import {useNavigate} from 'react-router-dom'
 import { useState } from 'react';
+import { likedData } from '../../utils/store';
 import axios from 'axios';
 
 const Login = () => {
     const setIsAuthenticated = useStore((state) => state.setIsAuthenticated);
     const setJwt = useStore((state) => state.setJwt);
     const setUserData = useStore((state) => state.setUserData);
+    const setLikedEvents = likedData((state) => state.setLikedEvents);
+    const setLikedMovies = likedData((state) => state.setLikedMovies);
     const navigate = useNavigate()
   
     const [formData, setFormData] = useState({
@@ -32,10 +35,13 @@ const Login = () => {
             })
           
             if (newUser.data) {
+                console.log(newUser.data)
               
                 setIsAuthenticated(true)
                 setJwt(newUser.data.jwt)
                 setUserData(newUser.data.user)
+                setLikedEvents(JSON.parse(newUser.data.user.likedevent))
+                setLikedMovies(JSON.parse(newUser.data.user.likedmovie))
                 navigate('/')
             }
             else {

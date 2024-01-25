@@ -5,6 +5,7 @@ import Logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import { CiUser, CiCalendar } from "react-icons/ci";
 import { useStore } from "../../utils/store";
+import { likedData } from "../../utils/store";
 import { useNavigate } from "react-router-dom";
 
 const navigation = [
@@ -29,6 +30,9 @@ export default function Navbar() {
   const setOrderDetails = useStore((state) => state.setOrderDetails);
   const setUserData = useStore((state) => state.setUserData);
   const userData = useStore((state) => state.userData);
+  const setLikedEvents = likedData((state) => state.setLikedEvents);
+  const setLikedMovies = likedData((state) => state.setLikedMovies);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,9 +53,9 @@ export default function Navbar() {
     <Disclosure as="nav" className={`fixed w-full z-20 bg-[#061046]`}>
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
+          <div className="mx-auto lg:max-w-7xl px-2 sm:px-6 lg:px-8 ">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
@@ -63,7 +67,7 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
                 <Link to="/" className="flex flex-shrink-0 items-center">
                   <img className=" h-14 w-auto" src={Logo} alt="Your Company" />
                 </Link>
@@ -73,7 +77,7 @@ export default function Navbar() {
                   placeholder="Search"
                 />
 
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="hidden lg:ml-6 lg:block">
                   <div className="flex space-x-4 justify-center items-center mt-2 ">
                     {navigation.map((item) => (
                       <a
@@ -100,7 +104,7 @@ export default function Navbar() {
                   <Menu as="div" className="relative ml-3">
                     <div>
                       <Menu.Button className="relative flex   text-sm ">
-                        <button className=" text-white ml-4 border border-spacing-1 p-2 px-5 rounded-full max-sm:hidden">
+                        <button className=" text-white ml-4 border border-spacing-1 p-2 px-5 rounded-full ">
                           Login
                         </button>
                       </Menu.Button>
@@ -149,8 +153,8 @@ export default function Navbar() {
                   </Menu>
                 ) : (
                   <Menu as="div" className="relative ml-3">
-                    <div className="hidden  xl:flex text-center items-center text-white space-x-2">
-                    <div>
+                    <div className="flex text-center items-center text-white space-x-2">
+                    <div className="hidden sm:block">
                       <p>Hello, {userData?.username} </p>
                     </div>
                       <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -197,6 +201,8 @@ export default function Navbar() {
                                 setJwt(null);
                                 setOrderDetails(null);
                                 setUserData(null);
+                                setLikedEvents(null);
+                                setLikedMovies(null);
                                 navigate("/");
                               }}
                               className={classNames(
@@ -217,7 +223,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="lg:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Disclosure.Button

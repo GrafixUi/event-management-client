@@ -282,7 +282,7 @@ export default function Example() {
               </form> */}
 
               {/* Product grid */}
-              <div className="lg:col-span-3 mx-auto container flex justify-center">
+              <div className=" lg:col-span-3 mx-auto container flex justify-center">
                 <Eventslist />
               </div>
             </div>
