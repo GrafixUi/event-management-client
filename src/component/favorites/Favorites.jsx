@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import product1 from "../../assets/images/product1.png";
-import { eventslistData } from "../eventslist/eventslist.data";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect } from "react";
@@ -8,13 +7,16 @@ import { likedData } from "../../utils/store";
 import { useStore } from "../../utils/store";
 import { useNavigate } from "react-router-dom";
 import { axiosAuth } from "../../utils/axios";
-import Headerswiper from "../header/Header";
 import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
 const Favorites = () => {
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const [itemsMovie, setItemsMovie] = useState([]);
+  const userData = useStore((state) => state.userData);
+  if(!userData){
+    navigate("/login");
+  }
   useEffect(() => {
     const upcomingDataNew = async () => {
       try {
@@ -42,8 +44,6 @@ const Favorites = () => {
 
   const likedEvents = likedData((state) => state.likedEvents);
   const [likedEventsArr, setLikedEventsArr] = useState(likedEvents);
-  const userData = useStore((state) => state.userData);
-
   const updateLikedEvents = likedData((state) => state.updateLikedEvents);
   const removeLikedEvents = likedData((state) => state.removeLikedEvents);
   const handleLikedEvent = async (id) => {
