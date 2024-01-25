@@ -25,8 +25,8 @@ const Headerswiper = () => {
   }, []);
 
   return (
-    <div id="default-carousel" className="relative w-full" data-carousel="slide" ref={carouselRef}>
-      <div className="relative h-56 md:h-96 overflow-hidden rounded-lg">
+    <div id="default-carousel" className="relative w-full top-0" data-carousel="slide" ref={carouselRef}>
+      <div className="relative h-[285px] sm:h-[230px]   top-7 overflow-hidden ">
         {carouselItems.map((imageUrl, index) => (
           <div key={index} className={`duration-700 ease-in-out ${index === 0 ? '' : 'hidden'}`} data-carousel-item>
             <img src={imageUrl} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={`Slide ${index + 1}`} />

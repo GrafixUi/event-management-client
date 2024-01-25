@@ -22,10 +22,10 @@ const Eventslist = () => {
     return (
         <div className=' flex flex-col items-center'>
 
-            <div className=" py-5 mt-8 grid grid-cols-4 flex-wrap items-center justify-center gap-8 max-sm:grid-cols-2 ">
+            <div className=" py-5 mt-8 grid grid-cols-4 max-md:grid-cols-2 max-lg:grid-cols-3 flex-wrap items-center justify-center gap-6 max-sm:grid-cols-2 ">
                 {items.map((item) => (
                     <Link to={`/movieselection?movieid=${item.id}`}>
-                        <div key={item.id} className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[170px] max-sm:-ml-2">
+                        <div key={item.id} className="bg-white shadow-sm shadow-slate-300 flex w-[240px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[170px] max-sm:-ml-2">
                             <img
                                 loading="lazy"
                                 srcSet={product1} alt='product'

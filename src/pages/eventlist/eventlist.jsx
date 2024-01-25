@@ -10,7 +10,7 @@ const eventlist = () => {
   return (
     <div className="bg-white flex flex-col">
       <Navbar />
-      <div className="mt-[35px] max-sm:hidden">
+      <div className=" max-sm:hidden">
         <Headerswiper />
       </div>
       <List />
