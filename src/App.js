@@ -19,6 +19,7 @@ import Venuelist from "./pages/venuelist/Venuelist";
 import Navbar from "./component/navbar/Navbar";
 import Organizer from "./component/organizer/Organizer";
 import  Footer  from "./component/footer/Footer";
+import Favorites from "./component/favorites/Favorites";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -45,6 +46,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/vendorlogin" element={<Vendorlogin />} />
         <Route path="/organizer" element={<Organizer />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
       <Footer />
       <ToastContainer autoClose={5000} />

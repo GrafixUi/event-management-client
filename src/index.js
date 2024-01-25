@@ -18,6 +18,7 @@ import Movieslist from './pages/movieslist/Movieslist';
 import Venuelist from './pages/venuelist/Venuelist';
 import Organizer from "./component/organizer/Organizer";
 import ConfirmMovieTicket from './component/confirmmovieticket/ConfirmMovieTicket';
+import Favorites from './component/favorites/Favorites';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -88,6 +89,10 @@ const router = createBrowserRouter([
   {
     path:"/organizer",
     element: <Organizer />
+  },
+  {
+    path:"/favorites",
+    element: <Favorites />
   }
   
 ]);

@@ -181,6 +181,21 @@ export default function Navbar() {
                           {({ active }) => (
                             <button
                               onClick={() => {
+                                navigate("/favorites");
+                              }}
+                              className={classNames(
+                                active ? "bg-gray-100" : "",
+                                "block px-4 py-2 text-sm text-gray-700"
+                              )}
+                            >
+                              Your favorites
+                            </button>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <button
+                              onClick={() => {
                                 navigate("/vendorlogin");
                               }}
                               className={classNames(
