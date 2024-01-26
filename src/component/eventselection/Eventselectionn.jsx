@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../../utils/store";
 import SubFAQ from "../../pages/home/faq/SubFAQ";
-import Testimonials from '../../pages/home/faq/Testimonials';
+import Testimonials from "../../pages/home/faq/Testimonials";
 import Review from "../../pages/home/faq/Review";
 
 const Eventselectionn = () => {
@@ -38,14 +38,14 @@ const Eventselectionn = () => {
   console.log(isAuth);
 
   function handleBookEvent() {
-    if(isAuth === true){
-      navigate(`/eventticket?eventid=${eventid}`)
-    }else{ 
-      navigate(`/login`)
+    if (isAuth === true) {
+      navigate(`/eventticket?eventid=${eventid}`);
+    } else {
+      navigate(`/login`);
     }
-
-  
   }
+
+  console.log(eventData?.attributes);
 
   return (
     <div className="bg-white flex flex-col  ">
@@ -53,37 +53,37 @@ const Eventselectionn = () => {
 
       {/* bottom part */}
       <div className="fixed bottom-0 md:hidden grid gap-2 grid-cols-2 px-10 py-3 w-full z-20 bg-[#f0f3ff]">
-    <div className="text-[#061046] font-bold pt-2 text-sm text-center flex justify-center">
-        {eventData?.attributes?.eventtitle}
-    </div>
-    <div>
-        <button
+        <div className="text-[#061046] font-bold pt-2 text-sm text-center flex justify-center">
+          {eventData?.attributes?.eventtitle}
+        </div>
+        <div>
+          <button
             onClick={handleBookEvent}
             className="relative group rounded-lg  flex items-center px-6 py-2 bg-gradient-to-r bg-blue-950"
-        >
-            <span className="relative text-white font-light text-md">Book Now</span>
+          >
+            <span className="relative text-white font-light text-md">
+              Book Now
+            </span>
             <div className="flex items-center -space-x-3 translate-x-3">
-                <div className="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 5l7 7-7 7"
-                    />
-                </svg>
+              <div className="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
             </div>
-        </button>
-    </div>
+          </button>
+        </div>
       </div>
-
-
 
       <div className="flex-col overflow-hidden relative flex min-h-[450px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:-mt-0">
         <img
@@ -97,11 +97,11 @@ const Eventselectionn = () => {
               {eventData?.attributes?.eventtitle}
             </div>
             <div className="text-neutral-300 text-md font-light  max-md:max-w-full max-sm:ml-4">
-              {eventData?.attributes?.locationname}, {eventData?.attributes?.address}
+              {eventData?.attributes?.locationname},{" "}
+              {eventData?.attributes?.address}
             </div>
           </div>
           <button
-            
             onClick={handleBookEvent}
             class="relative group max-sm:hidden overflow-hidden px-10 h-16 rounded-md flex space-x-2 items-center bg-gradient-to-r bg-blue-950 max-sm:mt-14"
           >
@@ -125,12 +125,9 @@ const Eventselectionn = () => {
             </div>
           </button>
         </div>
-
       </div>
 
-{/* bottom */}
-      
-
+      {/* bottom */}
 
       <div className="self-center px-12 max-sm:px-1 flex w-full max-w-[1300px] flex-col items-stretch mt-5 max-md:max-w-full p-4">
         <div className="max-md:max-w-full max-sm:p-5">
@@ -198,9 +195,7 @@ const Eventselectionn = () => {
                         Premium Digital Studio
                       </div> */}
                       <div className="flex justify-between gap-1 mt-1.5 items-start max-md:mr-1">
-                        <div className="items-stretch flex gap-1 pr-3 py-0.5">
-                  
-                        </div>
+                        <div className="items-stretch flex gap-1 pr-3 py-0.5"></div>
                       </div>
                       <Link
                         to="/contact"
@@ -216,9 +211,9 @@ const Eventselectionn = () => {
           </div>
         </div>
         <div className="mt-8 max-md:max-w-full max-sm:p-5">
-  <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-    <div className="flex flex-col items-stretch w-[50%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:-mt-5">
-      {/* Movie Content */}
+          <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+            <div className="flex flex-col items-stretch w-[50%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:-mt-5">
+              {/* Movie Content */}
               <div className="bg-white flex grow flex-col w-full pl-10 pr-20 py-8 rounded-2xl items-start max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <h1 className="text-zinc-700 text-xl font-bold leading-7 max-md:max-w-full">
                   About This Event
@@ -244,7 +239,7 @@ const Eventselectionn = () => {
                     height="300px"
                     frameborder="0"
                     style={{ border: 0 }}
-                    allowfullscreen=''
+                    allowfullscreen=""
                     aria-hidden="false"
                     tabindex="0"
                     title="maps"
@@ -263,10 +258,10 @@ const Eventselectionn = () => {
           <Cards />
         </div>
       </div>
-      
+
       {/* <Testimonials /> */}
-      <Review type='event' id={eventid}   />
-      <SubFAQ type='event' id={eventid}   />
+      <Review type="event" id={eventid} />
+      <SubFAQ type="event" id={eventid} />
       <Footer />
     </div>
   );
