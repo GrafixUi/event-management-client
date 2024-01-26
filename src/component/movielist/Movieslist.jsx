@@ -83,7 +83,7 @@ const Eventslist = () => {
             <div className="relative group">
               <img
                 loading="lazy"
-                srcSet={product1}
+                srcSet={ item?.attributes?.movieimg || product1}
                 alt="product1"
                 className="object-contain object-center w-full overflow-hidden"
               />

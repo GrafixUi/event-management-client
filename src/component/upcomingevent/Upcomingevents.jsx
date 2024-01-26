@@ -231,7 +231,7 @@ const Upcomingevents = () => {
             <div className="relative group">
               <img
                 loading="lazy"
-                srcSet={product1}
+                srcSet={ items?.attributes?.eventimg || product1}
                 alt="product1"
                 className="object-contain object-center w-full overflow-hidden"
               />
