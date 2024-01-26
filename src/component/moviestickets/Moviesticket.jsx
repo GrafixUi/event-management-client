@@ -2,7 +2,7 @@ import React from "react";
 import header from "../../assets/images/header2.png";
 import header2 from "../../assets/images/booking.png";
 import vendor from "../../assets/images/vendorlogo.png";
-import Rating from "../rating/Rating";
+
 import { Link } from "react-router-dom";
 import Navbar from "../../component/navbar/Navbar";
 import Footer from "../../component/footer/Footer";
@@ -223,7 +223,7 @@ const Moviesticket = () => {
                                             </h2> */}
                       <div className="flex justify-between gap-1 mt-1.5 items-start max-md:mr-1">
                         <div className="items-stretch flex gap-1 pr-3 py-0.5">
-                          <Rating />
+                      
                         </div>
                       </div>
                       <Link

@@ -48,3 +48,10 @@ export const likedData = create(
     }
   )
 );
+
+export const reviewsData = create((set) => ({
+  reviews: [],
+  setReviews: (data) => set({ reviews: data }),
+  updateReviews: (data) =>
+    set((state) => ({ reviews: [...state.reviews, data] })),
+}));

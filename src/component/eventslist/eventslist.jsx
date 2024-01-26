@@ -77,7 +77,7 @@ const Eventslist = () => {
          
             <div
               key={item.id}
-              className="bg-white shadow-sm shadow-slate-300 flex w-300 h-300 flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-170 max-sm-ml-2"
+              className="bg-white shadow-sm   shadow-slate-300 flex w-300  flex-col min-h-[300px] pb-6 rounded-2xl mb-5  transition duration-500 hover:scale-105 max-sm:w-170 max-sm-ml-2"
               style={{
                 maxWidth: "300px",
                 maxHeight: "300px",
@@ -134,11 +134,11 @@ const Eventslist = () => {
                   </h3>
                 </div>
                 <div className="flex grow basis-0 max-sm-ml-2 flex-col px-5 max-sm:w-32">
-                  <h1 className="text-black text-xs font-bold leading-1 max-sm:text-10px max-sm-ml-8 max-sm-leading-2 max-sm-w-32">
+                  <h1 className="text-black text-md font-bold   max-sm-w-32">
                     {item?.attributes?.eventtitle}
                   </h1>
-                  <h3 className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-24 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
-                    {item?.attributes?.description?.slice(0, 50) + "..."}
+                  <h3 className="text-neutral-500 text-sm   mt-1 ">
+                    {item?.attributes?.description?.slice(0, 40) + "..."}
                   </h3>
                 </div>
               </div>

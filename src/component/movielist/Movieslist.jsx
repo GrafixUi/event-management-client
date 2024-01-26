@@ -79,7 +79,7 @@ const Eventslist = () => {
     <div className="flex flex-col items-center">
       <div className="py-5 mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-sm:grid-cols-1">
         {items.map((item) => (
-          <div className="bg-white shadow-sm shadow-slate-300 flex flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-w-[300px] max-sm:w-full max-sm:-ml-2">
+          <div className="bg-white shadow-sm min-h-[300px] shadow-slate-300 flex flex-col items-stretch pb-6 rounded-2xl mb-5  transition duration-500 hover:scale-105 max-w-[300px] max-sm:w-full max-sm:-ml-2">
             <div className="relative group">
               <img
                 loading="lazy"
@@ -129,10 +129,10 @@ const Eventslist = () => {
                   </h3>
                 </div>
                 <div className="self-stretch flex-grow flex-col items-stretch px-5 w-full sm:w-32">
-                  <h1 className="text-black text-xs font-bold leading-1 max-sm:text-[10px] max-sm:-ml-8 max-sm:leading-2 max-sm:w-32">
+                  <h1 className="text-black text-md font-bold leading-1  max-sm:leading-2 max-sm:w-32">
                     {item?.attributes?.movietitle}
                   </h1>
-                  <h3 className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-24 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
+                  <h3 className="text-neutral-500 text-sm  leading-2 mt-1 max-sm:leading-2">
                     {item?.attributes?.description?.slice(0, 50) + "..."}
                   </h3>
                 </div>

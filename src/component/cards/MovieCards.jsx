@@ -84,17 +84,24 @@ const Cards = () => {
       <Swiper
         className=""
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={1}
+        spaceBetween={30}
+        style={{
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#fff',
+        }}
         slidesPerView={3}
         navigation
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         breakpoints={{
+          240: {
+            slidesPerView: 1,
+          },
           390: {
             slidesPerView: 1,
           },
           480: {
-            slidesPerView: 2,
+            slidesPerView: 1,
           },
           640: {
             slidesPerView: 2,
@@ -118,7 +125,7 @@ const Cards = () => {
            
               <div
                 key={item.id}
-                className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-[170px] max-sm:-ml-2"
+                className="bg-white shadow-sm shadow-slate-300 min-h-[220px] flex flex-col items-stretch pb-2 rounded-2xl mb-2 transition duration-500 hover:scale-105 max-sm:w-[220px] mx-auto"
               >
                 <div className="relative group">
                   <img
@@ -171,10 +178,10 @@ const Cards = () => {
                     </h3>
                   </div>
                   <div className="self-stretch flex grow basis-[0%] max-sm:-ml-2 flex-col items-stretch px-5 max-sm:w-32">
-                    <h1 className="text-black text-xs font-bold leading-1 max-sm:text-[10px]  max-sm:-ml-8 max-sm:leading-2 max-sm:w-32">
+                    <h1 className="text-black text-md font-bold max-sm:w-32">
                       {item.attributes.movietitle}
                     </h1>
-                    <h3 className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-24 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
+                    <h3 className="text-neutral-500 text-sm max-sm:w-32 mt-1">
                       {item.attributes.moviedesc}
                     </h3>
                   </div>

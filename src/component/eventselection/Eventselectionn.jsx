@@ -2,7 +2,6 @@ import React from "react";
 import header from "../../assets/images/header2.png";
 import vendor from "../../assets/images/vendorlogo.png";
 import location from "../../assets/images/location.png";
-import Rating from "../rating/Rating";
 import Cards from "../cards/Cards";
 import frame from "../../assets/images/Frame.png";
 import Navbar from "../../component/navbar/Navbar";
@@ -14,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useStore } from "../../utils/store";
 import SubFAQ from "../../pages/home/faq/SubFAQ";
 import Testimonials from '../../pages/home/faq/Testimonials';
+import Review from "../../pages/home/faq/Review";
 
 const Eventselectionn = () => {
   const requestParams = new URLSearchParams(window.location.search);
@@ -199,7 +199,7 @@ const Eventselectionn = () => {
                       </div> */}
                       <div className="flex justify-between gap-1 mt-1.5 items-start max-md:mr-1">
                         <div className="items-stretch flex gap-1 pr-3 py-0.5">
-                          <Rating />
+                  
                         </div>
                       </div>
                       <Link
@@ -216,8 +216,9 @@ const Eventselectionn = () => {
           </div>
         </div>
         <div className="mt-8 max-md:max-w-full max-sm:p-5">
-          <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-            <div className="flex flex-col items-stretch w-[68%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:-mt-5">
+  <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+    <div className="flex flex-col items-stretch w-[50%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:-mt-5">
+      {/* Movie Content */}
               <div className="bg-white flex grow flex-col w-full pl-10 pr-20 py-8 rounded-2xl items-start max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <h1 className="text-zinc-700 text-xl font-bold leading-7 max-md:max-w-full">
                   About This Event
@@ -233,14 +234,14 @@ const Eventselectionn = () => {
                 </h3> */}
               </div>
             </div>
-            <div className="flex flex-col items-stretch  h- ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-5">
+            <div className="flex flex-col items-stretch w-[50%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-5">
               <div className="bg-white flex grow flex-col items-stretch w-full mt-2.5 pl-9 pr-11 pt-5 pb-11 rounded-2xl max-md:max-w-full max-md:mt-10 max-md:px-5">
                 <div className="text-black text-sm font-medium">Location:</div>
                 <div className="google-map-code max-sm:w-full">
                   <iframe
                     src={eventData?.attributes?.mapurl}
-                    width="300"
-                    height="300"
+                    width="100%"
+                    height="300px"
                     frameborder="0"
                     style={{ border: 0 }}
                     allowfullscreen=''
@@ -262,177 +263,9 @@ const Eventselectionn = () => {
           <Cards />
         </div>
       </div>
-      <div className=" self-center items-center justify-center flex max-w-full flex-col mt-20 max-md:my-10 max-sm:ml-0">
-        <h1 className=" items-end text-zinc-700 text-xl font-bold leading-7 whitespace-nowrap ml-6 self-start max-md:ml-2.5">
-          Reviews
-        </h1>
-        <div className="  flex  gap-3.5 ml-6 mt-14  max-md:ml-2.5 max-md:mt-10">
-          <h3 className="  text-zinc-700 text-base font-bold leading-6 grow whitespace-nowrap">
-            902 reviews for this Gig
-          </h3>
-          <div className="flex gap-1 py-px self-start items-start">
-            <div className="items-stretch flex gap-1 py-0.5">
-              <Rating />
-            </div>
-          </div>
-        </div>
-        <div className="items-center self-stretch flex flex-col mt-3 pb-5 px-5 max-md:max-w-full">
-          <div className="self-stretch pb-6 px-4 max-md:max-w-full">
-            <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-              <div className="flex flex-col items-stretch w-6/12 max-md:w-full max-md:ml-0">
-                <div className="items-stretch flex grow flex-col pb-2 px-1 max-md:mt-8">
-                  <div className="flex items-stretch justify-between gap-2.5">
-                    <h2 className="text-blue-500 text-base font-semibold leading-4 self-center whitespace-nowrap my-auto">
-                      5 Stars
-                    </h2>
-                    <div className="fill-zinc-200 self-center flex grow basis-[0%] flex-col justify-center items-stretch my-auto pr-3">
-                      <div className="bg-amber-400 flex shrink-0 h-2 flex-col rounded-[999px]" />
-                    </div>{" "}
-                    <div className="text-blue-500 text-sm leading-6 whitespace-nowrap">
-                      (852)
-                    </div>
-                  </div>{" "}
-                  <div className="flex items-stretch justify-between gap-2.5 mt-2 max-md:mr-2">
-                    <div className="text-blue-500 text-base font-semibold leading-4 self-center whitespace-nowrap my-auto">
-                      4 Stars
-                    </div>{" "}
-                    <div className="fill-zinc-200 self-center flex grow basis-[0%] flex-col justify-center my-auto pr-16 items-start max-md:pr-5">
-                      <div className="bg-amber-400 flex w-[9px] shrink-0 h-2 flex-col rounded-[999px]" />
-                    </div>{" "}
-                    <div className="text-blue-500 text-base leading-6 whitespace-nowrap">
-                      (37)
-                    </div>
-                  </div>{" "}
-                  <div className="flex items-stretch justify-between gap-2.5 mt-2">
-                    <div className="text-blue-500 text-base font-semibold leading-4 self-center whitespace-nowrap my-auto">
-                      3 Stars
-                    </div>{" "}
-                    <div className="fill-zinc-200 self-center flex grow basis-[0%] flex-col justify-center my-auto pr-16 items-start max-md:pr-5">
-                      <div className="bg-amber-400 flex w-[15px] shrink-0 h-2 flex-col rounded-[999px]" />
-                    </div>{" "}
-                    <div className="text-blue-500 text-sm leading-6 whitespace-nowrap">
-                      (9)
-                    </div>
-                  </div>{" "}
-                  <div className="flex items-stretch justify-between gap-2.5 mt-2">
-                    <div className="text-blue-500 text-base font-semibold leading-4 self-center whitespace-nowrap my-auto">
-                      2 Stars
-                    </div>{" "}
-                    <div className="fill-zinc-200 self-center flex grow basis-[0%] flex-col justify-center my-auto pr-16 items-start max-md:pr-5">
-                      <div className="bg-amber-400 flex w-3.5 shrink-0 h-2 flex-col rounded-[999px]" />
-                    </div>{" "}
-                    <div className="text-blue-500 text-sm leading-6 whitespace-nowrap">
-                      (2)
-                    </div>
-                  </div>{" "}
-                  <div className="flex items-stretch justify-between gap-2.5 mt-2">
-                    <div className="text-blue-500 text-base font-semibold leading-4 self-center whitespace-nowrap my-auto">
-                      1 Star
-                    </div>{" "}
-                    <div className="fill-zinc-200 self-center flex grow basis-[0%] flex-col justify-center my-auto pr-16 items-start max-md:pr-5">
-                      <div className="bg-amber-400 flex w-3.5 shrink-0 h-2 flex-col rounded-[999px]" />
-                    </div>{" "}
-                    <div className="text-blue-500 text-sm leading-6 whitespace-nowrap">
-                      (2)
-                    </div>
-                  </div>
-                </div>
-              </div>{" "}
-              <div className="flex flex-col items-stretch w-6/12 ml-5 max-md:w-full max-md:ml-0">
-                <div className="items-stretch flex flex-col max-md:mt-8">
-                  <div className="text-zinc-700 text-base font-semibold leading-6">
-                    Rating Breakdown
-                  </div>{" "}
-                  <div className="items-stretch flex w-full justify-between gap-5 mt-4 pb-2 px-px">
-                    <div className="text-neutral-400 text-base leading-6">
-                      Seller communication level
-                    </div>{" "}
-                    <div className="flex items-stretch gap-1 self-start">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/fdb3dc49426c084e2519525f533bbf9f55d5fb91719ec0788bd6eb62158a7d65?"
-                        alt="img"
-                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                      />{" "}
-                      <div className="text-amber-400 text-sm font-bold leading-5 mt-1 self-start">
-                        4.9
-                      </div>
-                    </div>
-                  </div>{" "}
-                  <div className="items-stretch flex w-full justify-between gap-5 pb-2 px-px">
-                    <div className="text-neutral-400 text-base leading-6">
-                      Recommend to a friend
-                    </div>{" "}
-                    <div className="flex items-stretch gap-1 self-start">
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/f48a24d352d80756cf41639cad242272e5baef79d86bdee8164b529893c00c28?"
-                        alt="img"
-                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                      />{" "}
-                      <div className="text-amber-400 text-sm font-bold leading-5 mt-1 self-start">
-                        4.9
-                      </div>
-                    </div>
-                  </div>{" "}
-                  <div className="items-stretch flex w-full justify-between gap-5 px-px">
-                    <div className="text-neutral-400 text-base leading-6">
-                      Service as described
-                    </div>{" "}
-                    <div className="flex items-stretch gap-1 self-start">
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/72e0526c9c7bbdd4ea708b644d0bd15707cdde08736d4003aa558067fa5c8104?"
-                        alt="img"
-                        className="aspect-square object-contain object-center w-[15px] justify-center items-center overflow-hidden shrink-0 max-w-full"
-                      />{" "}
-                      <div className="text-amber-400 text-sm font-bold leading-5 mt-1 self-start">
-                        4.9
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-          <div className=" flex">
-            <input
-              type="text"
-              placeholder="search reviews"
-              className=" border bg-white flex w-[338px] max-w-full justify-between gap-5 mt-2 pl-3.5 p-2 border-solid border-stone-300 self-start max-md:ml-2.5 "
-            />
-
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/c00625ce9079d76300de144b9854e33e50b2ab9ad7b9ebf7dfc1df4615e53733?"
-              alt="img"
-              className="aspect-[1.14] object-contain object-center w-12 justify-center items-center overflow-hidden self-stretch z-[1] shrink-0 max-w-full mt-2"
-            />
-          </div>
-          <div className="items-center flex gap-0 ml-4 mt-4 self-start max-md:ml-2.5">
-            <div className="text-zinc-700 text-base leading-6 my-auto">
-              Sort By
-            </div>{" "}
-            <div className="items-stretch rounded bg-white self-stretch flex justify-between gap-3 pl-3.5 pr-8 py-2 max-md:pr-5">
-              <div className="text-zinc-700 text-base font-semibold leading-6">
-                Most relevant
-              </div>{" "}
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f022e0377bd873752717a2b6b4bf6002774651b5f58c2faaf12e8f97dd268ad?"
-                alt="img"
-                className="aspect-square object-contain object-center w-[11px] justify-center items-center overflow-hidden self-center shrink-0 max-w-full my-auto"
-              />
-            </div>
-          </div>{" "}
-          <div className="flex items-stretch gap-5 ml-4 mt-3 self-start max-md:ml-2.5">
-            <div className="border bg-white flex w-[18px] shrink-0 h-[18px] flex-col rounded-sm border-solid border-stone-300" />{" "}
-            <div className="text-neutral-500 text-base leading-6 self-center grow whitespace-nowrap my-auto">
-              Delivery images (558)
-            </div>
-          </div>
-        </div>{" "}
-      </div>
-      <Testimonials />
+      
+      {/* <Testimonials /> */}
+      <Review type='event' id={eventid}   />
       <SubFAQ type='event' id={eventid}   />
       <Footer />
     </div>

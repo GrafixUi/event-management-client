@@ -277,10 +277,10 @@ const Upcomingevents = () => {
                   </div>
                 </div>
                 <div className="self-stretch flex-grow flex-col items-stretch py-2 px-5 max-sm:-ml-2">
-                  <div className="text-black text-md max-sm:text-[9px] max-sm:w-24 max-sm:-ml-8 font-bold leading-5 max-sm:leading-2">
+                  <div className="text-black text-md  font-bold leading-5 max-sm:leading-2">
                     {item.attributes.eventtitle}
                   </div>
-                  <div className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-24 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
+                  <div className="text-neutral-500 text-xs leading-2 mt-1 max-sm:leading-2">
                     {item?.attributes?.description?.slice(0, 25) + "..."}
                   </div>
                 </div>

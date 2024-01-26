@@ -82,14 +82,20 @@ const Cards = () => {
   return (
     <div>
       <Swiper
-        className=""
+        style={{
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#fff',
+        }}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={1}
-        slidesPerView={3}
+        spaceBetween={30}
+        slidesPerView={1}
         navigation
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         breakpoints={{
+          240: {
+            slidesPerView: 1,
+          },
           390: {
             slidesPerView: 1,
           },
@@ -97,7 +103,7 @@ const Cards = () => {
             slidesPerView: 2,
           },
           640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
           },
           768: {
             slidesPerView: 2,
@@ -109,15 +115,15 @@ const Cards = () => {
             slidesPerView: 3,
           },
           1536: {
-            slidesPerView: 4,
+            slidesPerView: 3,
           },
         }}
       >
         {items.map((item) => (
-          <SwiperSlide>
-            <div
-              key={item.id}
-              className="bg-white shadow-sm shadow-slate-300 flex w-[300px] flex-col items-stretch pb-2 rounded-2xl mb-2 justify-center transition duration-500 hover:scale-105 max-sm:w-[220px] max-sm:ml-14 ml-12"
+          <SwiperSlide key={item.id}>
+    <div
+      key={item.id}
+      className="bg-white  shadow-sm shadow-slate-300 min-h-[220px] flex flex-col items-stretch pb-2 rounded-2xl mb-2 transition duration-500 hover:scale-105 max-sm:w-[220px] mx-auto"
             >
               <div className="relative group">
                 <img
@@ -167,11 +173,11 @@ const Cards = () => {
                       {item.attributes.day}
                     </h3>
                   </div>
-                  <div className="self-stretch flex grow basis-[0%] max-sm:-ml-2 flex-col items-stretch px-12 max-sm:w-32">
-                    <h1 className="text-black text-xs font-bold leading-1 max-sm:text-[10px]  max-sm:-ml-8 max-sm:leading-2 max-sm:w-32">
+                  <div className="self-stretch flex grow basis-[0%] max-sm:-ml-2 flex-col items-stretch px-6 max-sm:w-32">
+                    <h1 className="text-black text-md font-bold  max-sm:w-32">
                       {item.attributes.eventtitle}
                     </h1>
-                    <h3 className="text-neutral-500 text-xs max-sm:text-[8px] max-sm:w-24 max-sm:-ml-8 leading-2 mt-1 max-sm:leading-2">
+                    <h3 className="text-neutral-500 text-sm  mt-1 max-sm:leading-2">
                       {item?.attributes?.description?.slice(0, 20)}
                     </h3>
                   </div>

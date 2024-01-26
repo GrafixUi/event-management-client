@@ -2,7 +2,6 @@ import React from "react";
 import header from "../../assets/images/header2.png";
 import vendor from "../../assets/images/vendorlogo.png";
 import vector from "../../assets/icons/Vector.svg";
-import Rating from "../rating/Rating";
 import { Link } from "react-router-dom";
 import Navbar from "../../component/navbar/Navbar";
 import Footer from "../../component/footer/Footer";
@@ -160,7 +159,7 @@ const Eventticket = () => {
                                             </div> */}
                       <div className="flex justify-between gap-1 mt-1.5 items-start max-md:mr-1">
                         <div className="items-stretch flex gap-1 pr-3 py-0.5">
-                          <Rating />
+                      
                         </div>
                       </div>
                       <Link

@@ -73,7 +73,7 @@ export default function Navbar() {
                 </Link>
 
                 <input
-                  className="bg-white h-10 mt-2 px-1 max-sm:hidden rounded-full border-none placeholder:p-2 "
+                  className="bg-white h-10 hidden xl:block mt-2 px-1 max-sm:hidden rounded-full border-none placeholder:p-2 "
                   placeholder="Search"
                 />
 
