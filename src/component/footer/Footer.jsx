@@ -3,6 +3,7 @@ import Logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
    <div>
      <img 
@@ -74,7 +75,7 @@ const Footer = () => {
       </div>
       <div className="bg-slate-600 self-stretch h-px mb-6 max-sm:w-[390px]" />
       <div className="text-white text-center text-sm pb-4 leading-6 max-sm:w-[390px]">
-        Copyright © 2023 TicketVerse{" "}
+        Copyright © {currentYear} TicketVerse{" "}
       </div>
     </div>
    </div>
