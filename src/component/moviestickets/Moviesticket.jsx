@@ -32,6 +32,9 @@ const Moviesticket = () => {
     upcomingDataNew();
   }, []);
 
+  const jwt = useStore((state) => state.jwt);
+  if(jwt === null) navigate('/login')
+
   const pricing = [
     { category: "RedCircle", price: 30 },
     { category: "PinkCircle", price: 40 },
@@ -55,6 +58,7 @@ const Moviesticket = () => {
     );
   };
 
+  console.log(items);
   const selectedSeatsName = selectedSeats.map((seat) => seat.id).join(", ");
   const selectedSeatsPrice = selectedSeats
     .map((seat) => seat.pricing)

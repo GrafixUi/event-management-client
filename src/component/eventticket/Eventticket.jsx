@@ -20,6 +20,8 @@ const Eventticket = () => {
  const setOrderDetails = useStore((state) => state.setOrderDetails);
   const axiosAuth = useAxiosAuth();
   const navigate = useNavigate();
+  const jwt = useStore((state) => state.jwt);
+  if(jwt === null) navigate('/login')
   useEffect(() => {
     const eventDataNew = async () => {
       try {
@@ -60,6 +62,8 @@ const Eventticket = () => {
     setTicketPrice(totalPrice);
     setTicketQuantity(totalQuantity);
   }, [ticketData]);
+
+
 
   return (
     <div className="bg-white flex flex-col items-stretch">

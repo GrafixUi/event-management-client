@@ -26,6 +26,9 @@ const Confirmbooking = () => {
     navigate("/");
   }
 
+  const jwt = useStore((state) => state.jwt);
+  if(jwt === null) navigate('/login')
+
   if (type === "event") {
     return (
       <div>

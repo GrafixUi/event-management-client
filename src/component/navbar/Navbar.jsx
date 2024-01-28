@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import { CiUser, CiCalendar } from "react-icons/ci";
 import { useStore } from "../../utils/store";
 import { likedData } from "../../utils/store";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
 
 const navigation = [
   { name: "Home", href: "/", current: false },
@@ -32,6 +33,9 @@ export default function Navbar() {
   const userData = useStore((state) => state.userData);
   const setLikedEvents = likedData((state) => state.setLikedEvents);
   const setLikedMovies = likedData((state) => state.setLikedMovies);
+  const location = useLocation();
+  console.log(location.pathname);
+
 
 
   useEffect(() => {
@@ -104,7 +108,7 @@ export default function Navbar() {
                   <Menu as="div" className="relative ml-3">
                     <div>
                       <Menu.Button className="relative flex   text-sm ">
-                        <button className=" text-white ml-4 border border-spacing-1 p-2 px-5 rounded-full ">
+                        <button className={ `text-white ml-4 border border-spacing-1 p-2 px-5 rounded-full ${location.pathname === '/login' || location.pathname === '/register' ? 'hidden' : 'block'}`}>
                           Login
                         </button>
                       </Menu.Button>

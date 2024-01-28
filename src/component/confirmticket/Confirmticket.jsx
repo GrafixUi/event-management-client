@@ -26,6 +26,8 @@ const Confirmticket = () => {
   const orderDetails = useStore((state) => state.orderDetails);
 
   console.log(isAuth);
+  const jwt = useStore((state) => state.jwt);
+  if(jwt === null) navigate('/login')
 
   useEffect(() => {
     const eventDataNew = async () => {

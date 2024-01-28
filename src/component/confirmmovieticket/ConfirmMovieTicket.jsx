@@ -19,6 +19,8 @@ const ConfirmMovieTicket = () => {
   const navigate = useNavigate();
   const movieData = useStore((state) => state.movieOrderDetails);
   const isAuth = useStore((state) => state.isAuthenticated);
+  const jwt = useStore((state) => state.jwt);
+  if(jwt === null) navigate('/login')
   console.log(movieData);
   const handlePaySubmit = async () => {
     try {
@@ -26,7 +28,7 @@ const ConfirmMovieTicket = () => {
         `${process.env.REACT_APP_BACKENDURL}/orders`,
         {
           data: {
-            movieid: Number(movieData?.movieid),
+            movieid: movieData?.movieid,
             name: movieData.movietitle,
             userid: userid,
             ticketdetails: movieData?.selectedSeatsName,
