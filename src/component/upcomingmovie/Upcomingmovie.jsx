@@ -435,8 +435,8 @@ const Upcomingevents = () => {
               )}
             </div>
             <Link to="/movieslist" key={item?.id}>
-              <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
-                <div className="flex basis-[0%] flex-col max-sm:w-12 justify-center align-middle  items-center self-center px-5">
+              <div className="self-center flex justify-between gap-12 sm:gap-6 mt-0.5 items-start w-full">
+                <div className="flex flex-col justify-center text-center self-center ml-5">
                   <div className="text-blue-950 max-sm:w-2 text-center text-xs max-sm:text-[10px] font-bold whitespace-nowrap">
                     {item?.attributes?.month}
                   </div>
@@ -444,12 +444,12 @@ const Upcomingevents = () => {
                     {item?.attributes?.day}
                   </div>
                 </div>
-                <div className="self-stretch flex grow basis-[0%] flex-col items-stretch px-5 max-sm:-ml-2">
+                <div className="self-stretch flex-grow flex-col items-stretch py-2 px-5 max-sm:-ml-2">
                   <div className="text-black text-md  font-bold leading-5 max-sm:leading-2">
                     {item?.attributes?.movietitle}
                   </div>
-                  <div className="text-neutral-500 text-md  leading-2 mt-1 max-sm:leading-2">
-                    {item?.attributes?.moviedesc?.slice(0, 25) + "..."}
+                  <div className="text-neutral-500 text-sm  leading-2 mt-1 max-sm:leading-2">
+                    {item?.attributes?.moviedesc?.slice(0, 40) + "..."}
                   </div>
                 </div>
               </div>

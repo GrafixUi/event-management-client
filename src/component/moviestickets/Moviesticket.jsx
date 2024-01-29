@@ -275,7 +275,7 @@ const Moviesticket = () => {
                 alt="img"
                 className="aspect-[498] object-contain object-center w-full stroke-[1px] stroke-zinc-500 stroke-opacity-50 overflow-hidden self-stretch mt-8 max-md:max-w-full"
               />
-              <div className="justify-center items-stretch bg-white self-stretch flex flex-col mt-5 p-8 rounded-3xl border-2 border-dashed border-blue-950 max-md:max-w-full max-md:px-5">
+              {/* <div className="justify-center items-stretch bg-white self-stretch flex flex-col mt-5 p-8 rounded-3xl border-2 border-dashed border-blue-950 max-md:max-w-full max-md:px-5">
                 <div className="text-blue-950 text-2xl font-medium max-md:max-w-full">
                   Offers
                 </div>
@@ -311,9 +311,9 @@ const Moviesticket = () => {
                     Apply
                   </Link>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 px-8 py-4 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
+              {/* <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 px-8 py-4 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
                 <div className="justify-between items-start flex flex-col gap-5 max-md:max-w-full max-md:flex-wrap">
                   <div className="items-stretch flex flex-col gap-2.5 my-auto">
                     <img
@@ -332,7 +332,7 @@ const Moviesticket = () => {
                     placeholder="Enter code"
                   />
                 </div>
-              </div>
+              </div> */}
 
               <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 p-8 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
                 <h2 className="text-neutral-800 text-xl font-medium max-md:max-w-full">

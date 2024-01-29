@@ -133,7 +133,7 @@ const Eventslist = () => {
                     {item?.attributes?.movietitle}
                   </h1>
                   <h3 className="text-neutral-500 text-sm  leading-2 mt-1 max-sm:leading-2">
-                    {item?.attributes?.description?.slice(0, 50) + "..."}
+                    {item?.attributes?.moviedesc?.slice(0, 50) + "..."}
                   </h3>
                 </div>
               </div>

@@ -155,7 +155,7 @@ const Home = () => {
         FAQ
       </div>
       <div className="justify-center text-zinc-700 text-center text-5xl max-sm:text-xl font-bold leading-10 self-center mt-8 max-md:max-w-full max-md:text-4xl">
-        Common questions
+        Common Questions
       </div>
 
       <FAQ />

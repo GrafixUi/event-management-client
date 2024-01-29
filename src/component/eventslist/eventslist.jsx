@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import product1 from "../../assets/images/product1.png";
-import { eventslistData } from "../eventslist/eventslist.data";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect } from "react";
@@ -71,8 +70,7 @@ const Eventslist = () => {
   }
 
   return (
-    <div className=" items-center self-center flex flex-col justify-center">
-      <div className=" py-5 mt-8 grid grid-cols-4 flex-wrap max-sm:grid-cols-1 items-center justify-center gap-5 max-md:grid-cols-2 max-xl:grid-cols-2">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-4 w-full">
         {items.map((item) => (
          
             <div
@@ -146,8 +144,7 @@ const Eventslist = () => {
             </div>
          
         ))}
-      </div>
-    </div>
+   </div>
   );
 };
 

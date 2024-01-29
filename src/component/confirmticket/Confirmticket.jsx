@@ -12,6 +12,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useStore } from "../../utils/store";
 import { useNavigate } from "react-router-dom";
+import { axiosAuth } from "../../utils/axios";
+import vector from "../../assets/icons/Vector.svg";
 
 const Confirmticket = () => {
   const isAuth = useStore((state) => state.isAuthenticated);
@@ -22,6 +24,8 @@ const Confirmticket = () => {
   const searchParams = new URLSearchParams(window.location.search);
   const eventid = searchParams.get("eventid");
   const [eventData, setEventData] = useState([]);
+  const [couponData, setCouponData] = useState([]);
+  const [couponCode, setCouponCode] = useState("");
   const userid = useStore((state) => state.userData.id);
   const orderDetails = useStore((state) => state.orderDetails);
 
@@ -35,7 +39,18 @@ const Confirmticket = () => {
         const events = await axios.get(
           `${process.env.REACT_APP_BACKENDURL}/events/${eventid}`
         );
-        setEventData(events.data.data.attributes);
+        if(events.status === 200){
+          setEventData(events.data.data.attributes);
+          try {
+            const couponData = await axiosAuth.get(
+              `/coupons?filters[eventid]=${eventid}`
+            );
+            console.log(couponData);
+            setCouponData(couponData.data.data);
+          } catch (err) {
+            console.log("Error in fetching Coupon Data", err);
+          }
+        }
       } catch (err) {
         console.log(err);
       }
@@ -71,7 +86,7 @@ const Confirmticket = () => {
       alert("Payment failed, Try Again");
     }
   };
-
+  
 
   return (
     <div>
@@ -146,7 +161,7 @@ const Confirmticket = () => {
               </div>
               <div className="flex flex-col items-stretch w-[30%] ml-5 max-md:w-full max-md:ml-0">
                 <div className="flex flex-col max-md:max-w-full max-md:mt-10">
-                  <div className="justify-center items-stretch bg-white self-stretch flex flex-col p-8 rounded-3xl border-2 border-dashed border-blue-950 max-md:max-w-full max-md:px-5">
+                  {/* <div className="justify-center items-stretch bg-white self-stretch flex flex-col p-8 rounded-3xl border-2 border-dashed border-blue-950 max-md:max-w-full max-md:px-5">
                     <h1 className="text-blue-950 text-xl font-medium max-md:max-w-full">
                       Offers
                     </h1>
@@ -180,28 +195,34 @@ const Confirmticket = () => {
                         Apply
                       </Link>
                     </div>
-                  </div>
-                  <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 px-8 py-4 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
-                    <div className="justify-between items-center flex gap-5 max-md:max-w-full max-md:flex-wrap">
-                      <div className="items-stretch flex gap-2.5 my-auto">
-                        <img
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/93c146497e8165cb89e62d813ff44ceaae8089be958bef572eb8b97e70731be6?"
-                          alt="img"
-                          className="aspect-square object-contain object-center w-8 fill-blue-950 overflow-hidden shrink-0 max-w-full"
-                        />
-                        <h1 className="text-neutral-800 text-lg font-medium grow whitespace-nowrap self-start">
-                          Apply Code
-                        </h1>
-                      </div>
-                      <div className="text-zinc-500 text-opacity-50 text-sm font-medium whitespace-nowrap items-stretch self-stretch grow justify-center px-6 py-5 border-b-zinc-500 border-b-opacity-50 border-b border-solid max-md:px-5">
-                        <input
-                          type="text"
-                          placeholder="Enter Code"
-                          className=" p-5 w-36 border border-none"
-                        />
-                      </div>
+                  </div> */}
+                  <div className="md:flex md:justify-center md:items-stretch border bg-white self-stretch flex flex-col mt-3 md:px-8 px-4 py-4 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
+                  <div className="md:flex md:justify-between md:items-center flex flex-col gap-5 max-md:max-w-full max-md:flex-wrap">
+                    <div className="flex gap-2.5 my-auto flex-grow">
+                      {" "}
+                      {/* Added flex-grow */}
+                      <img
+                        loading="lazy"
+                        src={vector}
+                        alt="vector"
+                        className="aspect-square object-contain object-center w-6 fill-blue-950 overflow-hidden shrink-0 max-w-full"
+                      />
+                      <h2 className="text-neutral-800 text-md font-medium grow whitespace-nowrap self-start">
+                        Apply Code
+                      </h2>
+                    </div>
+                    <div className="mt-4 md:mt-0 text-zinc-500 flex-shrink">
+                      {" "}
+                      {/* Added flex-shrink */}
+                      <input
+                        type="text"
+                        placeholder="Enter Code"
+                        onChange={(e) => {setCouponCode(e.target.value)}} // Added onChange
+                        className="w-full md:w-auto border-gray-400 border rounded-md py-2 px-4"
+                      />
                     </div>
                   </div>
+                </div>
                   <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 p-8 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
                     <h1 className="text-neutral-800 text-xl font-medium max-md:max-w-full">
                       Bill details
@@ -238,12 +259,52 @@ const Confirmticket = () => {
                         ${orderDetails?.ticketprice * 0.1}
                       </h3>
                     </div>
+                    {
+                     couponData.map((coupon) => {
+                      if (coupon.attributes.code === couponCode)  {
+                        return (
+                          <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
+                            <h3 className="text-zinc-500 text-xs font-medium">
+                              Discount
+                            </h3>
+                            <h3 className="text-zinc-500 text-xs font-medium">
+                              -${(orderDetails?.totalprice * coupon.attributes.discount) / 100}
+                            </h3>
+                          </div>
+                        )
+                      }
+                    })
+                  }
                     <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
                       <h2 className="text-neutral-700 text-xl font-medium">
                         Total Charge
                       </h2>
                       <h2 className="text-neutral-700 text-xl font-medium">
-                        ${orderDetails?.totalprice }
+                      {
+                        couponData.map((coupon) => {
+                          if (coupon.attributes.code === couponCode) {
+                            return (
+                              <div>
+                                ${orderDetails?.totalprice - (orderDetails?.totalprice * coupon.attributes.discount) / 100}
+                              </div>
+                            )
+                          }
+                          else{
+                            return (
+                              <div>
+                                ${orderDetails?.totalprice}
+                              </div>
+                            )
+                          }
+                        })
+                      }
+                      {
+                        couponData.length === 0 && (
+                          <div>
+                                ${orderDetails?.totalprice}
+                              </div>
+                        )
+                      }
                       </h2>
                     </div>
                   </div>

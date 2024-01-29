@@ -11,8 +11,8 @@ const venuelist = () => {
   return (
     <div className="bg-white flex flex-col items-stretc">
       <Navbar />
-      <div className=" mt-[35px] max-sm:hidden">
-        <Headerswiper />
+      <div className=" max-sm:hidden mt-12">
+        <Header />
       </div>
       <List />
       <Footer />

@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import useAxiosAuth from "../../utils/useAxiosAuth";
 import { useStore } from "../../utils/store";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 const Eventticket = () => {
   const requestParams = new URLSearchParams(window.location.search);
   const eventid = requestParams.get("eventid");
@@ -17,11 +17,13 @@ const Eventticket = () => {
   const [ticketData, setTicketData] = useState([]);
   const [ticketPrice, setTicketPrice] = useState(0);
   const [ticketQuantity, setTicketQuantity] = useState(0);
- const setOrderDetails = useStore((state) => state.setOrderDetails);
+  const [totalPrice, setTotalPrice] = useState(0); // Added totalPrice state
+
+  const setOrderDetails = useStore((state) => state.setOrderDetails);
   const axiosAuth = useAxiosAuth();
   const navigate = useNavigate();
   const jwt = useStore((state) => state.jwt);
-  if(jwt === null) navigate('/login')
+  if (jwt === null) navigate("/login");
   useEffect(() => {
     const eventDataNew = async () => {
       try {
@@ -35,12 +37,13 @@ const Eventticket = () => {
               `${process.env.REACT_APP_BACKENDURL}/ticketdetails?filters[eventid]=${eventid}`
             );
             setTicketData(ticketData.data.data);
+           
           } catch (err) {
-            console.log(err);
+            console.log("Error in fetching Ticket Data", err);
           }
         }
       } catch (err) {
-        console.log(err);
+        console.log("Error in fetching Event Data", err);
       }
     };
     eventDataNew();
@@ -60,9 +63,9 @@ const Eventticket = () => {
     );
 
     setTicketPrice(totalPrice);
+    setTotalPrice(totalPrice + totalPrice * 0.28);
     setTicketQuantity(totalQuantity);
   }, [ticketData]);
-
 
 
   return (
@@ -162,9 +165,7 @@ const Eventticket = () => {
                                                 Premium Digital Studio
                                             </div> */}
                       <div className="flex justify-between gap-1 mt-1.5 items-start max-md:mr-1">
-                        <div className="items-stretch flex gap-1 pr-3 py-0.5">
-                      
-                        </div>
+                        <div className="items-stretch flex gap-1 pr-3 py-0.5"></div>
                       </div>
                       <Link
                         to="/contact"
@@ -198,7 +199,6 @@ const Eventticket = () => {
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => {
-                       
                             setTicketData((prevData) =>
                               prevData.map((t, i) =>
                                 i === index
@@ -284,7 +284,7 @@ const Eventticket = () => {
                     D4,D3
                   </h3> */}
                 </div>
-                <div className="justify-center items-stretch bg-white self-stretch flex flex-col mt-5 p-8 rounded-3xl border-2 border-dashed border-blue-950 max-md:max-w-full max-md:px-5">
+                {/* <div className="justify-center items-stretch bg-white self-stretch flex flex-col mt-5 p-8 rounded-3xl border-2 border-dashed border-blue-950 max-md:max-w-full max-md:px-5">
                   <h1 className="text-blue-950 text-xl font-medium max-md:max-w-full">
                     Offers
                   </h1>
@@ -320,10 +320,11 @@ const Eventticket = () => {
                       Apply
                     </Link>
                   </div>
-                </div>
-                <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-3 px-8 py-4 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
-                  <div className="justify-between items-center flex gap-5 max-md:max-w-full max-md:flex-wrap">
-                    <div className="items-stretch flex gap-2.5 my-auto">
+                </div> */}
+                {/* <div className="md:flex md:justify-center md:items-stretch border bg-white self-stretch flex flex-col mt-3 md:px-8 px-4 py-4 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
+                  <div className="md:flex md:justify-between md:items-center flex flex-col gap-5 max-md:max-w-full max-md:flex-wrap">
+                    <div className="flex gap-2.5 my-auto flex-grow">
+                      
                       <img
                         loading="lazy"
                         src={vector}
@@ -334,15 +335,19 @@ const Eventticket = () => {
                         Apply Code
                       </h2>
                     </div>
-                    <div className="text-zinc-500 text-opacity-50 text-sm font-medium whitespace-nowrap items-stretch self-stretch grow justify-center px-6 py-5 border-b-zinc-500 border-b-opacity-50 border-b border-solid max-md:px-5">
+                    <div className="mt-4 md:mt-0 text-zinc-500 flex-shrink">
+                      {" "}
+                     
                       <input
                         type="text"
                         placeholder="Enter Code"
-                        className=" p-5 w-48 border border-none"
+                        onChange={(e) => {setCouponCode(e.target.value)}} // Added onChange
+                        className="w-full md:w-auto border-gray-400 border rounded-md py-2 px-4"
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
+
                 <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 p-8 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
                   <h1 className="text-neutral-800 text-xl font-medium max-md:max-w-full">
                     Bill details
@@ -364,27 +369,28 @@ const Eventticket = () => {
                     </h3>
                   </div>
                   <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
-                    <h3 className="text-zinc-500 text-xs font-medium">
-                     VAT
-                    </h3>
+                    <h3 className="text-zinc-500 text-xs font-medium">VAT</h3>
                     <h3 className="text-zinc-500 text-xs font-medium">
                       ${ticketPrice * 0.18}
                     </h3>
                   </div>
                   <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
                     <h3 className="text-zinc-500 text-xs font-medium">
-                     Platform Fee
+                      Platform Fee
                     </h3>
                     <h3 className="text-zinc-500 text-xs font-medium">
-                      ${ticketPrice * 0.10}
+                      ${ticketPrice * 0.1}
                     </h3>
                   </div>
+                  
                   <div className="justify-between items-stretch flex gap-5 mt-5 max-md:max-w-full max-md:flex-wrap">
                     <h3 className="text-neutral-700 text-xl font-medium">
                       Total Charge
                     </h3>
                     <h3 className="text-neutral-700 text-xl font-medium">
-                      ${ticketPrice + ticketPrice * 0.28}
+                     
+                                ${totalPrice}
+                            
                     </h3>
                   </div>
                 </div>
@@ -392,24 +398,32 @@ const Eventticket = () => {
                   Discounts, offers and price concessions will be applied later
                   during payment
                 </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setOrderDetails({
-                        eventid: eventid,
-                        ticketdetails: ticketData,
-                        ticketprice: ticketPrice,
-                        ticketquantity: ticketQuantity,
-                        totalprice: ticketPrice + ticketPrice * 0.28,
-                        eventDetails: eventData,
-                      });
-                      navigate(`/confirmticket?eventid=${eventid}`)
-                    }}
-                    disabled={ ticketData?.length === 0 || !ticketData || ticketQuantity === 0 }
-                    className={`text-white text-center text-base font-semibold whitespace-nowrap justify-center items-center bg-blue-950 self-center w-[350px] max-w-full mt-8 px-14 py-5 rounded-xl max-md:mt-10 max-md:px-5 ${ticketData?.length === 0 || ticketQuantity === 0 ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-950 hover:bg-blue-800'}`}
-                  >
-                    Book Now
-                  </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setOrderDetails({
+                      eventid: eventid,
+                      ticketdetails: ticketData,
+                      ticketprice: ticketPrice,
+                      ticketquantity: ticketQuantity,
+                      totalprice: totalPrice,
+                      eventDetails: eventData,
+                    });
+                    navigate(`/confirmticket?eventid=${eventid}`);
+                  }}
+                  disabled={
+                    ticketData?.length === 0 ||
+                    !ticketData ||
+                    ticketQuantity === 0
+                  }
+                  className={`text-white text-center text-base font-semibold whitespace-nowrap justify-center items-center bg-blue-950 self-center w-[350px] max-w-full mt-8 px-14 py-5 rounded-xl max-md:mt-10 max-md:px-5 ${
+                    ticketData?.length === 0 || ticketQuantity === 0
+                      ? "bg-gray-300 cursor-not-allowed"
+                      : "bg-blue-950 hover:bg-blue-800"
+                  }`}
+                >
+                  Book Now
+                </button>
                 <div className="text-pink-600 text-base font-semibold self-center whitespace-nowrap mt-5 cursor-pointer">
                   Cancel
                 </div>

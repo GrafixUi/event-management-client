@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import { CiUser, CiCalendar } from "react-icons/ci";
@@ -34,9 +34,6 @@ export default function Navbar() {
   const setLikedEvents = likedData((state) => state.setLikedEvents);
   const setLikedMovies = likedData((state) => state.setLikedMovies);
   const location = useLocation();
-  console.log(location.pathname);
-
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +54,7 @@ export default function Navbar() {
     <Disclosure as="nav" className={`fixed w-full z-20 bg-[#061046]`}>
       {({ open }) => (
         <>
-          <div className="mx-auto lg:max-w-7xl px-2 sm:px-6 lg:px-8 ">
+          <div className="mx-auto lg:max-w-8xl px-2 sm:px-6 lg:px-8 ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}

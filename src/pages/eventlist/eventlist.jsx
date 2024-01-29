@@ -11,8 +11,8 @@ const eventlist = () => {
   return (
     <div className="bg-white flex flex-col">
       <Navbar />
-      <div className=" max-sm:hidden">
-        <Headerswiper />
+      <div className=" max-sm:hidden mt-12">
+        <Header />
       </div>
       <List />
       <Footer />
