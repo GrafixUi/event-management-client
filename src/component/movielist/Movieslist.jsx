@@ -79,7 +79,7 @@ const Eventslist = () => {
     <div className="flex flex-col items-center">
       <div className="py-5 mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-sm:grid-cols-1">
         {items.map((item) => (
-          <div className="bg-white shadow-sm min-h-[300px] shadow-slate-300 flex flex-col items-stretch pb-6 rounded-2xl mb-5  transition duration-500 hover:scale-105 max-w-[300px] max-sm:w-full max-sm:-ml-2">
+          <div className="bg-white shadow-sm min-h-[250px] shadow-slate-300 flex flex-col  pb-6 rounded-2xl mb-5  transition duration-500 hover:scale-105 max-w-[300px] max-sm:w-full max-sm:-ml-2">
             <div className="relative group">
               <img
                 loading="lazy"

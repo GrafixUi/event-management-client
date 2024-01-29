@@ -9,13 +9,13 @@ const Footer = () => {
       <img
         src="/citydoodle.png"
         alt="logo"
-        className="object-contain object-center w-full overflow-hidden flex justify-center align-middle items-center"
+        className="h-[170px] object-center w-full overflow-hidden flex justify-center align-middle items-center"
       />
       <div className="bg-blue-950 ">
         {" "}
         {/* Updated styling here */}
-        <div className="  mx-auto p-2 lg:max-w-7xl grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-6 px-4 max-md:max-px-4 ">
-          <div className="  mt-0 ">
+        <div className="mx-auto p-2 lg:max-w-7xl grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-6 px-4 max-md:max-px-4 ">
+          <div className="mt-0 ">
             <img
               loading="lazy"
               srcSet={Logo}
