@@ -7,6 +7,7 @@ import { likedData } from "../../utils/store";
 import { useStore } from "../../utils/store";
 import { useNavigate } from "react-router-dom";
 import {axiosAuth} from "../../utils/axios";
+
 const Eventslist = () => {
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
@@ -27,9 +28,9 @@ const Eventslist = () => {
   const likedEvents = likedData((state) => state.likedEvents);
   const [likedEventsArr, setLikedEventsArr] = useState(likedEvents);
   const userData = useStore((state) => state.userData);
-
   const updateLikedEvents = likedData((state) => state.updateLikedEvents);
   const removeLikedEvents = likedData((state) => state.removeLikedEvents);
+
   const handleLikedEvent = async (id) => {
     if(!userData) {
       navigate("/login");
@@ -45,16 +46,15 @@ const Eventslist = () => {
         setLikedEventsArr([...likedEventsArr, {id:id}]);
       }
     }
-    catch{
-      console.log("error")
+    catch(error){
+      console.log("error", error)
     }
   }
-  const handleDislikedEvent = async (id) => {
 
+  const handleDislikedEvent = async (id) => {
     if(!userData) {
       navigate("/login");
     }
-
     try{
       const res = await axiosAuth.put(`${process.env.REACT_APP_BACKENDURL}/users/${userData.id}`, {
         likedevent: JSON.stringify(likedEventsArr.filter((item) => item.id !== id))
@@ -64,8 +64,8 @@ const Eventslist = () => {
         removeLikedEvents({id}); // Pass an array
       }
     }
-    catch{
-      console.log("error")
+    catch(error){
+      console.log("error", error)
     }
   }
 

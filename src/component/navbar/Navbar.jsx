@@ -217,8 +217,8 @@ export default function Navbar() {
                                 setJwt(null);
                                 setOrderDetails(null);
                                 setUserData(null);
-                                setLikedEvents(null);
-                                setLikedMovies(null);
+                                setLikedEvents([]);
+                                setLikedMovies([]);
                                 navigate("/");
                               }}
                               className={classNames(

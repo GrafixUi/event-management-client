@@ -11,7 +11,7 @@ const Upcomingevents = () => {
   const [items, setItems] = useState([]);
   const [category, setCategory] = useState();
   const likedEvents = likedData((state) => state.likedEvents);
-  const [likedEventsArr, setLikedEventsArr] = useState(likedEvents);
+  const [likedEventsArr, setLikedEventsArr] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
     const upcomingDataNew = async () => {
@@ -24,6 +24,7 @@ const Upcomingevents = () => {
         console.log(err);
       }
     };
+    console.log(likedEventsArr);
     const initialData = async () => {
       try {
         const upcomingEvents = await axiosAuth.get(
@@ -110,6 +111,10 @@ const Upcomingevents = () => {
   const removeLikedEvents = likedData((state) => state.removeLikedEvents);
 
   const handleLikedEvent = async (id) => {
+    if(likedEvents === null){
+      updateLikedEvents([]);
+    }
+    console.log(id, "id")
     if (!userData) {
       navigate("/login");
     }
@@ -123,13 +128,14 @@ const Upcomingevents = () => {
       console.log(res);
       if (res.status === 200) {
         updateLikedEvents({ id });
-        setLikedEventsArr([...likedEventsArr, { id: id }]);
+        setLikedEventsArr((prevLikedEventsArr) => [...prevLikedEventsArr, { id: id }]);
       }
-    } catch {
-      console.log("error");
+    }  catch(err) {
+      console.log("error", err);
     }
   };
   const handleDislikedEvent = async (id) => {
+    console.log(id, "id")
     if (!userData) {
       navigate("/login");
     }
@@ -147,8 +153,8 @@ const Upcomingevents = () => {
         setLikedEventsArr(likedEventsArr.filter((item) => item.id !== id));
         removeLikedEvents({ id }); // Pass an array
       }
-    } catch {
-      console.log("error");
+    } catch(err) {
+      console.log("error", err);
     }
   };
 
