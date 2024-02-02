@@ -28,7 +28,7 @@ const Venuelist = () => {
                   loading="lazy"
                   srcSet={product1}
                   alt='product'
-                  className="aspect-[1.7] object-contain object-center w-full overflow-hidden"
+                  className="aspect-[1.7] rounded-t-xl object-cover h-[200px] object-center w-full overflow-hidden"
                 />
                 <div className="self-center flex justify-between gap-5 mt-0.5 items-start w-full">
                   <div className="flex-basis-0 flex-col self-center items-stretch px-5 max-sm:w-12 max-sm:-ml-2">

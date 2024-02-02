@@ -148,6 +148,8 @@ const Favorites = () => {
 
   console.log(filteredMovieItems);
 
+  console.log(likedEvents , likedMovies)
+
 
 
   return (
@@ -159,7 +161,7 @@ const Favorites = () => {
         </div>
         <div className=" items-center self-center flex flex-col justify-center">
           <div className=" py-5 mt-8 grid grid-cols-4 flex-wrap max-sm:grid-cols-1 items-center justify-center gap-5 max-md:grid-cols-2 max-xl:grid-cols-2">
-            {filteredEventItems.map((item) => (
+            {filteredEventItems && filteredEventItems.map((item) => (
               <div
                 key={item.id}
                 className="bg-white shadow-sm shadow-slate-300 flex w-300 h-300 flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-170 max-sm-ml-2"
@@ -174,9 +176,9 @@ const Favorites = () => {
                     loading="lazy"
                     srcSet={ item?.attributes?.eventimg|| product1}
                     alt="product1"
-                    className="object-contain object-center w-full overflow-hidden"
+                    className="rounded-t-xl object-cover h-[200px] object-center w-full overflow-hidden"
                   />
-                  {likedEvents &&
+                  {likedEvents !== null &&
                   likedEvents.find(
                     (likedEvent) => likedEvent.id === item.id
                   ) ? (
@@ -247,7 +249,7 @@ const Favorites = () => {
         </div>
         <div className=" items-center self-center flex flex-col justify-center">
           <div className=" py-5 mt-8 grid grid-cols-4 flex-wrap max-sm:grid-cols-1 items-center justify-center gap-5 max-md:grid-cols-2 max-xl:grid-cols-2">
-            {filteredMovieItems.map((item) => (
+            {filteredMovieItems && filteredMovieItems.map((item) => (
               <div
                 key={item.id}
                 className="bg-white shadow-sm shadow-slate-300 flex w-300 h-300 flex-col items-stretch pb-6 rounded-2xl mb-5 justify-center transition duration-500 hover:scale-105 max-sm:w-170 max-sm-ml-2"
@@ -264,7 +266,7 @@ const Favorites = () => {
                     alt="product1"
                     className="object-contain object-center w-full overflow-hidden"
                   />
-                  {likedMovies &&
+                  {likedMovies !== null &&
                   likedMovies.find(
                     (likedMovie) => likedMovie.id === item.id
                   ) ? (

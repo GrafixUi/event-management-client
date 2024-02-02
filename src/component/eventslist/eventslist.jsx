@@ -88,7 +88,7 @@ const Eventslist = () => {
                   loading="lazy"
                   srcSet={item?.attributes?.eventimg || product1}
                   alt="product1"
-                  className="object-contain object-center w-full overflow-hidden"
+                  className="rounded-t-xl object-cover h-[200px] object-center w-full overflow-hidden"
                 />
                {likedEvents &&
               likedEvents.find((likedEvent) => likedEvent.id === item.id) ? (

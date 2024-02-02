@@ -229,12 +229,15 @@ const Upcomingevents = () => {
         {items.map((item) => (
           <div className="bg-white shadow-sm flex flex-col items-stretch rounded-2xl mb-5 transition duration-500 hover:scale-105 ">
             <div className="relative group">
-              <img
+              <div>
+                <img
                 loading="lazy"
-                srcSet={ items?.attributes?.eventimg || product1}
+                srcSet={ item?.attributes?.eventimg || product1}
                 alt="product1"
-                className="object-contain object-center w-full overflow-hidden"
+                className=" object-center w-full overflow-hidden rounded-t-xl object-cover h-[200px] "
               />
+              </div>
+
               {likedEvents &&
               likedEvents.find((likedEvent) => likedEvent.id === item.id) ? (
                 <div className="absolute top-2 right-2 cursor-pointer heart-icon-wrapper opacity-0 group-hover:opacity-100 transition-opacity duration-300  ">

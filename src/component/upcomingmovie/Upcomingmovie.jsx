@@ -150,6 +150,7 @@ const Upcomingevents = () => {
   }
   console.log("Array",likedMoviesArr);
   console.log("Store",likedMovies);
+  console.log(items)
 
   return (
     <div className="flex flex-col">
@@ -401,7 +402,7 @@ const Upcomingevents = () => {
                 loading="lazy"
                 srcSet={item?.attributes?.movieimg || product1}
                 alt="product1"
-                className="object-contain object-center w-full overflow-hidden"
+                className=" rounded-t-xl object-cover h-[200px] object-center w-full overflow-hidden"
               />
               {likedMovies &&
               likedMovies.find((likedMovie) => likedMovie.id === item.id) ? (

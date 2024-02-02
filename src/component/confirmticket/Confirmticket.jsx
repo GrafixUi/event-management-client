@@ -153,7 +153,7 @@ const Confirmticket = () => {
                       <img
                         srcSet={Booking}
                         alt="booking"
-                        className="aspect-[0.8] object-contain object-center w-full overflow-hidden mt-5 max-md:mt-10"
+                        className="aspect-[0.8]  object-contain object-center w-full overflow-hidden mt-5 max-md:mt-10"
                       />
                     </div>
                   </div>
