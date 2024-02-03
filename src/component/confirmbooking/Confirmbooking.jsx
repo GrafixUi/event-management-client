@@ -29,6 +29,8 @@ const Confirmbooking = () => {
   const jwt = useStore((state) => state.jwt);
   if(jwt === null) navigate('/login')
 
+  console.log(orderDetails);
+
   if (type === "event") {
     return (
       <div>
@@ -76,7 +78,7 @@ const Confirmbooking = () => {
                           </h2>
                           <h3 className="text-neutral-400 text-lg leading-7 mt-5">
                             Ticket :{" "}
-                            {orderDetails?.ticketdetails.map((ticket) => {
+                            { orderDetails?.type === 'Normal' && orderDetails?.ticketdetails.map((ticket) => {
                               if (ticket.attributes.quantity > 0) {
                                 return (
                                   <div>
@@ -88,6 +90,11 @@ const Confirmbooking = () => {
                                 );
                               }
                             })}
+                            { orderDetails?.type === 'Seatsio' && (
+                              <div>
+                              {orderDetails?.ticketdetails}
+                              </div>
+                            )}
                           </h3>
 
                           <p className="text-white text-sm font-thin mt-5 max-md:max-w-full">

@@ -39,7 +39,7 @@ const SubFAQ = (type) => {
   }, []);
   console.log(faqData);
   return (
-    <div className="self-center items-center justify-center max-sm:w-96 mt-8">
+    <div className="self-center items-center justify-between max-sm:w-96 mt-8">
       {faqData.length !== 0 && (
         <h1 className="text-center text-2xl font-semibold">
           {type.type === "event" ? "Event" : "Venue"} FAQs
@@ -50,7 +50,8 @@ const SubFAQ = (type) => {
           key={index}
           className="justify-between items-stretch self-center flex w-full max-w-[1115px] gap-5 px-5 py-7 border-b-zinc-300 border-b border-solid max-md:flex-wrap max-md:mt-10"
         >
-          <div className="relative w-full overflow-hidden pb-3">
+          <div className="relative justify-between flex w-full space-x-10 overflow-hidden pb-3">
+            <div>
             <input
               className="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"
               type="checkbox"
@@ -65,7 +66,8 @@ const SubFAQ = (type) => {
                 {faq?.attributes?.answer}
               </div>
             </div>
-            <div className="absolute top-3 right-3 text-[#404145] peer-checked:rotate-180 transition-transform duration-500 rotate-0">
+            </div>
+            <div className=" text-[#404145] peer-checked:rotate-180 transition-transform duration-500 rotate-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

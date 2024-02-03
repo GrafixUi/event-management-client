@@ -72,6 +72,7 @@ const Confirmticket = () => {
               ticketprice: orderDetails.ticketprice,
               totalprice: orderDetails.totalprice,
               organiserid:eventData.userid,
+              ticketingtype:eventData.ticketingtype,
               type:"event"
             }
           }
@@ -123,7 +124,7 @@ const Confirmticket = () => {
                         </h2>
                         <h3 className="text-neutral-400 text-lg leading-7 mt-5">
                           Ticket :{" "}
-                          {orderDetails?.ticketdetails.map((ticket) => {
+                          {orderDetails.type === 'Normal' && orderDetails?.ticketdetails.map((ticket) => {
                             if (ticket.attributes.quantity > 0) {
                               return (
                                 <div>
@@ -135,6 +136,14 @@ const Confirmticket = () => {
                               );
                             }
                           })}
+                          {
+                            orderDetails.type === 'Seatsio' && (
+                              <div>
+                              {orderDetails?.ticketdetails}
+                            </div>
+                            )
+
+                          }
                         </h3>
 
                         <p className="text-white text-sm font-thin mt-5 max-md:max-w-full">

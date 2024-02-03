@@ -299,7 +299,7 @@ export default function Example() {
 
 
 
-        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-0">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">Movie venues</h1> 
 
@@ -345,13 +345,13 @@ export default function Example() {
                     </div>
                   </Menu.Items>
                 </Transition>
-              </Menu>
+              </Menu> */}
 
               {/* <button type="button" className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7">
                 <span className="sr-only">View grid</span>
                 <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
               </button> */}
-              <button
+              {/* <button
                 type="button"
                 className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
                 onClick={() => setMobileFiltersOpen(true)}
@@ -360,19 +360,19 @@ export default function Example() {
                 <FunnelIcon className="h-5 w-5" aria-hidden="true" />
               </button>
             </div>
-          </div>
+          </div> */}
 
 
 
 
           
-
+{/* 
           <section aria-labelledby="products-heading" className="pb-24 pt-6">
             <h2 id="products-heading" className="sr-only">
               Products
             </h2>
 
-            <div className="">
+            <div className=""> */}
              
               {/* <form className="hidden lg:block">
                 <h3 className="sr-only">Categories</h3>
@@ -429,12 +429,12 @@ export default function Example() {
               </form> */}
 
               {/* Product grid */}
-              <div className="lg:col-span-3 mx-auto container flex justify-center">
+              {/* <div className="lg:col-span-3 mx-auto container flex justify-center">
                 <Venuelist2 />
               </div>
             </div>
           </section>
-        </main>
+        </main> */}
 
 
 

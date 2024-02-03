@@ -159,8 +159,8 @@ const Upcomingevents = () => {
   };
 
   return (
-    <div className="flex flex-col">
-      <div className="mx-4 mt-6 mb-8 text-center  flex justify-between items-center">
+    <div className="flex flex-col lg:mx-20">
+      <div className="mx-4 mt-6 mb-8 text-center   flex justify-between items-center">
         <div className="text-blue-950 text-2xl font-bold mt-2.5">
           Upcoming Events
         </div>

@@ -10,6 +10,7 @@ import axios from "axios";
 import useAxiosAuth from "../../utils/useAxiosAuth";
 import { useStore } from "../../utils/store";
 import { useNavigate } from "react-router-dom";
+import { SeatsioSeatingChart } from "@seatsio/seatsio-react";
 const Eventticket = () => {
   const requestParams = new URLSearchParams(window.location.search);
   const eventid = requestParams.get("eventid");
@@ -66,6 +67,43 @@ const Eventticket = () => {
     setTotalPrice(totalPrice + totalPrice * 0.28);
     setTicketQuantity(totalQuantity);
   }, [ticketData]);
+
+  console.log("ticketData", eventData);
+
+  const pricing = [
+    { category: "RedCircle", price: eventData?.redprice },
+    { category: "PinkCircle", price: eventData?.pinkprice },
+    { category: "OrangeCircle", price: eventData?.orangeprice },
+  ];
+  const [selectedSeats, setSelectedSeats] = useState([]);
+
+  const handleObjectSelected = (e) => {
+    const id = e.id;
+    const pricing = e.pricing.price;
+    setSelectedSeats((prevSelectedSeats) => [
+      ...prevSelectedSeats,
+      { id, pricing },
+    ]);
+  };
+
+  const handleObjectDeselected = (e) => {
+    const { id } = e;
+    setSelectedSeats((prevSelectedSeats) =>
+      prevSelectedSeats.filter((seat) => seat.id !== id)
+    );
+  };
+
+  const selectedSeatsName = selectedSeats.map((seat) => seat.id).join(", ");
+  const selectedSeatsPrice = selectedSeats
+    .map((seat) => seat.pricing)
+    .reduce((a, b) => a + b, 0);
+  const selectedSeatsPriceWithVat = Math.round(selectedSeatsPrice * 1.8) / 10;
+  const selectedSeatsPriceWithPlatformFee =
+    Math.round(selectedSeatsPrice * 1) / 10;
+  const totalPriceSeats =
+    selectedSeatsPrice +
+    selectedSeatsPriceWithVat +
+    selectedSeatsPriceWithPlatformFee;
 
 
   return (
@@ -180,7 +218,9 @@ const Eventticket = () => {
             </div>
           </div>
         </div>
-        <div className="self-center w-full max-w-[1300px] mb-9 mt-7 max-md:max-w-full max-md:my-10 max-sm:p-5">
+        {
+          eventData?.ticketingtype === "Normal" ? (
+            <div className="self-center w-full max-w-[1300px] mb-9 mt-7 max-md:max-w-full max-md:my-10 max-sm:p-5">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:-mt-16">
             <div className="flex flex-col items-stretch w-[66%] max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-8">
               <div className="bg-white flex grow flex-col items-stretch w-full pl-14 pr-20 py-12 rounded-[32px] max-md:max-w-full max-md:mt-8 max-md:px-5">
@@ -279,74 +319,8 @@ const Eventticket = () => {
                   <h2 className="text-white text-xl font-bold uppercase whitespace-nowrap mt-5">
                     {eventData?.eventtitle}
                   </h2>
-                  {/* <h3 className="text-zinc-300 text-lg mt-5">Seat No </h3>
-                  <h3 className="text-white text-2xl font-semibold mt-3.5">
-                    D4,D3
-                  </h3> */}
                 </div>
-                {/* <div className="justify-center items-stretch bg-white self-stretch flex flex-col mt-5 p-8 rounded-3xl border-2 border-dashed border-blue-950 max-md:max-w-full max-md:px-5">
-                  <h1 className="text-blue-950 text-xl font-medium max-md:max-w-full">
-                    Offers
-                  </h1>
-                  <div className="justify-between items-stretch flex gap-5 mt-2 max-md:max-w-full max-md:flex-wrap">
-                    <div className="justify-between items-center flex gap-2.5">
-                      <img
-                        loading="lazy"
-                        src={vector}
-                        alt="vector"
-                        className="aspect-square object-contain object-center w-5 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
-                      />
-                      <h3 className="text-neutral-800 text-xs font-medium self-stretch grow whitespace-nowrap flex items-center justify-center">
-                        50% off up to ₹100 | Use code BOOKNOW
-                      </h3>
-                    </div>
-                    <Link className="text-blue-950 text-base font-medium grow whitespace-nowrap">
-                      Apply
-                    </Link>
-                  </div>
-                  <div className="justify-between items-stretch flex w-full gap-5 mt-1 max-md:max-w-full max-md:flex-wrap">
-                    <div className="justify-between items-center flex gap-2.5">
-                      <img
-                        loading="lazy"
-                        src={vector}
-                        alt="vector"
-                        className="aspect-square object-contain object-center w-5 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
-                      />
-                      <h3 className="text-neutral-800 text-xs font-medium self-stretch grow whitespace-nowrap flex items-center justify-center">
-                        20% off up to ₹100 | Use code FIRSTTIME
-                      </h3>
-                    </div>
-                    <Link className="text-blue-950 text-base font-medium ml-2 grow whitespace-nowrap">
-                      Apply
-                    </Link>
-                  </div>
-                </div> */}
-                {/* <div className="md:flex md:justify-center md:items-stretch border bg-white self-stretch flex flex-col mt-3 md:px-8 px-4 py-4 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
-                  <div className="md:flex md:justify-between md:items-center flex flex-col gap-5 max-md:max-w-full max-md:flex-wrap">
-                    <div className="flex gap-2.5 my-auto flex-grow">
-                      
-                      <img
-                        loading="lazy"
-                        src={vector}
-                        alt="vector"
-                        className="aspect-square object-contain object-center w-6 fill-blue-950 overflow-hidden shrink-0 max-w-full"
-                      />
-                      <h2 className="text-neutral-800 text-md font-medium grow whitespace-nowrap self-start">
-                        Apply Code
-                      </h2>
-                    </div>
-                    <div className="mt-4 md:mt-0 text-zinc-500 flex-shrink">
-                      {" "}
-                     
-                      <input
-                        type="text"
-                        placeholder="Enter Code"
-                        onChange={(e) => {setCouponCode(e.target.value)}} // Added onChange
-                        className="w-full md:w-auto border-gray-400 border rounded-md py-2 px-4"
-                      />
-                    </div>
-                  </div>
-                </div> */}
+                
 
                 <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 p-8 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
                   <h1 className="text-neutral-800 text-xl font-medium max-md:max-w-full">
@@ -408,6 +382,7 @@ const Eventticket = () => {
                       ticketquantity: ticketQuantity,
                       totalprice: totalPrice,
                       eventDetails: eventData,
+                      type: "Normal",
                     });
                     navigate(`/confirmticket?eventid=${eventid}`);
                   }}
@@ -431,6 +406,181 @@ const Eventticket = () => {
             </div>
           </div>
         </div>
+          ) : (
+            <div className="self-center w-full max-w-[1300px] mt-12 mb-10 max-md:max-w-full max-md:my-10">
+        <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:p-5">
+          <div className="w-full">
+            <SeatsioSeatingChart
+              workspaceKey={eventData?.seatsiopublickey}
+              event={eventData?.seatsioeventkey}
+              pricing={pricing}
+              showSeatLabels={true}
+              onObjectSelected={handleObjectSelected}
+              onObjectDeselected={handleObjectDeselected}
+              region="eu"
+            />
+          </div>
+          <div className="flex flex-col items-stretch w-[34%] ml-5 max-md:w-full max-md:ml-0 shadow-sm shadow-slate-300 rounded-lg max-sm:mt-6">
+            <div className="flex flex-col px-5 mt-4 max-md:max-w-full max-md:mt-8">
+              <div className="bg-blue-950  self-stretch flex flex-col pl-14 pr-20 py-11 rounded-xl items-start max-md:max-w-full max-md:px-5 ">
+              <h2 className="text-zinc-300 text-lg leading-7">
+                    Event Title
+                  </h2>
+                  <h2 className="text-white text-xl font-bold uppercase whitespace-nowrap mt-5">
+                    {eventData?.eventtitle}
+                  </h2>
+                <h2 className="text-zinc-300 text-md mt-7">Seat No </h2>
+                <h1 className="text-white text-lg font-semibold mt-3.5">
+                  {selectedSeatsName}
+                </h1>
+              </div>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c4672bdf0d884350fffc7229ebea2f1d26f4e52a26b93bf07fd4d1bf9816fc7a?"
+                alt="img"
+                className="aspect-[498] object-contain object-center w-full stroke-[1px] stroke-zinc-500 stroke-opacity-50 overflow-hidden self-stretch mt-8 max-md:max-w-full"
+              />
+              {/* <div className="justify-center items-stretch bg-white self-stretch flex flex-col mt-5 p-8 rounded-3xl border-2 border-dashed border-blue-950 max-md:max-w-full max-md:px-5">
+                <div className="text-blue-950 text-2xl font-medium max-md:max-w-full">
+                  Offers
+                </div>
+                <div className="justify-between items-stretch flex flex-col gap-2 mt-3 max-md:max-w-full max-md:flex-wrap">
+                  <div className="flex flex-col max-md:flex-row gap-2.5">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/93e2f9a3ab332727d07dceec0d7d91924df0a1bce654f8e4f84ece11c0d38c0e?"
+                      alt="img"
+                      className="aspect-square object-contain object-center w-12 h-12 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
+                    />
+                    <div className="text-neutral-800 text-sm font-medium self-stretch grow">
+                      50% off up to ₹100 | Use code BOOKNOW
+                    </div>
+                  </div>
+                  <Link className="text-blue-950 text-base font-medium">
+                    Apply
+                  </Link>
+                </div>
+                <div className="justify-between items-stretch flex flex-col gap-2 mt-2 max-md:max-w-full max-md:flex-wrap">
+                  <div className="flex flex-col max-md:flex-row gap-2.5">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/93e2f9a3ab332727d07dceec0d7d91924df0a1bce654f8e4f84ece11c0d38c0e?"
+                      alt="img"
+                      className="aspect-square object-contain object-center w-12 h-12 fill-blue-950 overflow-hidden shrink-0 max-w-full my-auto"
+                    />
+                    <div className="text-neutral-800 text-sm font-medium self-stretch grow">
+                      20% off up to ₹100 | Use code FIRSTTIME
+                    </div>
+                  </div>
+                  <Link className="text-blue-950 text-base font-medium">
+                    Apply
+                  </Link>
+                </div>
+              </div> */}
+
+              {/* <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 px-8 py-4 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
+                <div className="justify-between items-start flex flex-col gap-5 max-md:max-w-full max-md:flex-wrap">
+                  <div className="items-stretch flex flex-col gap-2.5 my-auto">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/93c146497e8165cb89e62d813ff44ceaae8089be958bef572eb8b97e70731be6?"
+                      alt="img"
+                      className="aspect-square object-contain object-center w-12 h-12 fill-blue-950 overflow-hidden shrink-0 max-w-full"
+                    />
+                    <div className="text-neutral-800 text-lg font-medium grow whitespace-nowrap self-start">
+                      Apply Code
+                    </div>
+                  </div>
+                  <input
+                    className="text-zinc-500 text-opacity-50 w-full md:w-36 text-sm font-medium whitespace-nowrap items-stretch self-stretch grow justify-center px-6 py-3 md:py-5 border-b-zinc-500 border-b-opacity-50 border border-none max-md:px-5"
+                    type="text"
+                    placeholder="Enter code"
+                  />
+                </div>
+              </div> */}
+
+              <div className="justify-center items-stretch border bg-white self-stretch flex flex-col mt-5 p-8 rounded-xl border-solid border-zinc-500 border-opacity-50 max-md:max-w-full max-md:px-5">
+                <h2 className="text-neutral-800 text-xl font-medium max-md:max-w-full">
+                  Bill details
+                </h2>
+                <div className="justify-between items-stretch flex gap-5 mt-3 max-md:max-w-full max-md:flex-wrap">
+                  <h3 className="text-zinc-500 text-xs font-medium">
+                    Base Ticket Fare
+                  </h3>
+                  <h3 className="text-zinc-500 text-xs font-medium">
+                    ${selectedSeatsPrice}
+                  </h3>
+                </div>
+                <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
+                  <h3 className="text-zinc-500 text-xs font-medium">
+                    Total Travellers
+                  </h3>
+                  <h3 className="text-zinc-500 text-xs font-medium">
+                    {selectedSeats.length}
+                  </h3>
+                </div>
+                <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
+                  <h3 className="text-zinc-500 text-xs font-medium">VAT</h3>
+                  <h3 className="text-zinc-500 text-xs font-medium">
+                    ${selectedSeatsPriceWithVat}
+                  </h3>
+                </div>
+                <div className="justify-between items-stretch flex gap-5 mt-2.5 max-md:max-w-full max-md:flex-wrap">
+                  <h3 className="text-zinc-500 text-xs font-medium">
+                    Platform Fee
+                  </h3>
+                  <h3 className="text-zinc-500 text-xs font-medium">
+                    ${selectedSeatsPriceWithPlatformFee}
+                  </h3>
+                </div>
+                <div className="justify-between items-stretch flex gap-5 mt-4 max-md:max-w-full max-md:flex-wrap">
+                  <h3 className="text-neutral-700 text-xl font-medium">
+                    Total Charge
+                  </h3>
+                  <h3 className="text-neutral-700 text-xl font-medium">
+                    ${totalPriceSeats}
+                  </h3>
+                </div>
+              </div>
+              <h2 className="text-zinc-500 text-xs font-medium self-center mt-5 max-md:max-w-full">
+                Discounts, offers and price concessions will be applied later
+                during payment
+              </h2>
+              <button
+                  type="button"
+                  onClick={() => {
+                    setOrderDetails({
+                      eventid: eventid,
+                      ticketdetails: selectedSeatsName,
+                      ticketprice: selectedSeatsPrice,
+                      ticketquantity: selectedSeats.length,
+                      totalprice: totalPriceSeats,
+                      eventDetails: eventData,
+                      type: "Seatsio",
+                    });
+                    navigate(`/confirmticket?eventid=${eventid}`);
+                  }}
+                  disabled={
+                    selectedSeats?.length === 0 ||
+                    !selectedSeats 
+                  }
+                  className={`text-white text-center text-base font-semibold whitespace-nowrap justify-center items-center bg-blue-950 self-center w-[350px] max-w-full mt-8 px-14 py-5 rounded-xl max-md:mt-10 max-md:px-5 ${
+                    selectedSeats?.length === 0
+                      ? "bg-gray-300 cursor-not-allowed"
+                      : "bg-blue-950 hover:bg-blue-800"
+                  }`}
+                >
+                  Book Now
+                </button>
+                <div className="text-pink-600 text-base font-semibold self-center whitespace-nowrap mt-5 cursor-pointer">
+                  Cancel
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+          )
+        }
       </div>
       <Footer />
     </div>

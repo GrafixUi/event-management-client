@@ -44,8 +44,18 @@ const Login = () => {
         setIsAuthenticated(true);
         setJwt(newUser.data.jwt);
         setUserData(newUser.data.user);
-        setLikedEvents(JSON.parse(newUser.data.user.likedevent));
-        setLikedMovies(JSON.parse(newUser.data.user.likedmovie));
+        if(newUser.data.user.likedevent === null){
+          setLikedEvents([]);
+        }
+        else{
+          setLikedEvents(JSON.parse(newUser.data.user.likedevent));
+        }
+        if(newUser.data.user.likedmovie === null){
+          setLikedMovies([]);
+        }
+        else{
+          setLikedMovies(JSON.parse(newUser.data.user.likedmovie));
+        }
         navigate("/");
       } else {
         alert("Check your credentials");

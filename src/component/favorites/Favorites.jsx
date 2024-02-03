@@ -142,11 +142,11 @@ const Favorites = () => {
     return likedEventsArr.find((likedEvent) => likedEvent.id === item.id);
   });
 
-  const filteredMovieItems = itemsMovie.filter((item) => {
-    return likedMoviesArr.find((likedMovie) => likedMovie.id === item.id);
-  })
+  // const filteredMovieItems = itemsMovie.filter((item) => {
+  //   return likedMoviesArr.find((likedMovie) => likedMovie.id === item.id);
+  // })
 
-  console.log(filteredMovieItems);
+  
 
   console.log(likedEvents , likedMovies)
 
@@ -243,7 +243,7 @@ const Favorites = () => {
           </div>
         </div>
       </div>
-      <div className="mx-32">
+      {/* <div className="mx-32">
         <div className="text-blue-950 text-2xl font-bold mt-2.5">
           Liked Movies
         </div>
@@ -330,7 +330,7 @@ const Favorites = () => {
             }
           </div>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </>
   );
