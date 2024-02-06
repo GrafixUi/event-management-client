@@ -137,16 +137,13 @@ export default function Navbar() {
 
                         <Menu.Item>
                           {({ active }) => (
-                            <a
-                              href="/organizer"
-                              className={classNames(
-                                active ? "bg-gray-100" : "",
-                                "flex items-center gap-2 px-4 py-2 text-sm text-gray-700"
-                              )}
-                            >
-                              <CiCalendar size={15} />
-                              Organizer
-                            </a>
+                          <a
+                            href="https://event-management-admin-wolfertech.netlify.app"
+                            className={classNames(active ? 'bg-gray-100' : '', 'flex items-center gap-2 px-4 py-2 text-sm text-gray-700')}
+                          >
+                            <CiCalendar size={15} />
+                            Organizer
+                          </a>
                           )}
                         </Menu.Item>
                       </Menu.Items>
