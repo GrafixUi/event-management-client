@@ -34,7 +34,7 @@ const Feature = () => {
                 Easy Ticketing:
                 </h2>
                 <p class="leading-relaxed text-base">
-                Ticket 9 offers a straightforward ticketing process, making it simple for attendees to secure their spot at events hassle-free.
+                Ticketverse offers a straightforward ticketing process, making it simple for attendees to secure their spot at events hassle-free.
                 </p>
                 {/* <a class="mt-3 text-indigo-500 inline-flex items-center">
                   Learn More
@@ -112,7 +112,7 @@ const Feature = () => {
                 Discover with Ease:
                 </h2>
                 <p class="leading-relaxed text-base">
-                Effortlessly explore and find events tailored to your interests, thanks to Ticket 9's user-friendly platform and personalized recommendations.
+                Effortlessly explore and find events tailored to your interests, thanks to Ticketverse's user-friendly platform and personalized recommendations.
                 </p>
                 {/* <a class="mt-3 text-indigo-500 inline-flex items-center">
                   Learn More
