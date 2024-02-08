@@ -111,9 +111,9 @@ const Eventticket = () => {
       <Navbar />
       <div className="flex-col overflow-hidden relative flex min-h-[450px] w-full justify-center items-center px-16 py-12 max-md:max-w-full max-md:mt-10 max-md:px-5 max-sm:-mt-0">
         <img
-          srcSet={header}
+          srcSet={eventData?.eventimg || header}
           alt="header"
-          className="absolute h-[500px] max-sm:h-full w-full object-cover  object-center inset-0 max-md:h-[300px]"
+          className="absolute h-[500px] max-sm:h-full w-full object-cover  object-top inset-0 max-md:h-[300px]"
         />
         <div className="relative flex w-full max-w-[1438px] items-stretch justify-start gap-5 mt-72 mb-3 px-px max-md:max-w-full max-md:flex-wrap max-md:mt-10">
           <div className="flex flex-col items-stretch max-md:max-w-full max-sm:items-center max-sm:justify-center">
