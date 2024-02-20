@@ -36,9 +36,9 @@ const Moviesticket = () => {
   if(jwt === null) navigate('/login')
 
   const pricing = [
-    { category: "RedCircle", price: 30 },
-    { category: "PinkCircle", price: 40 },
-    { category: "OrangeCircle", price: 50 },
+    { category: "RedCircle", price: items?.attributes?.redcircle_price },
+    { category: "PinkCircle", price: items?.attributes?.pinkcircle_price },
+    { category: "OrangeCircle", price: items?.attributes?.orangecircle_price },
   ];
   const [selectedSeats, setSelectedSeats] = useState([]);
 
@@ -248,8 +248,8 @@ const Moviesticket = () => {
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0 max-sm:p-5">
           <div className="w-full">
             <SeatsioSeatingChart
-              workspaceKey="10f391a9-8bc8-4ce1-8c5e-d7a4532a5b3d"
-              event="e4df854b-2f9a-4dfa-89e8-975338706d67"
+              workspaceKey={items?.attributes?.seatsio_publickey}
+              event={items?.attributes?.seatsio_eventkey}
               pricing={pricing}
               showSeatLabels={true}
               onObjectSelected={handleObjectSelected}
