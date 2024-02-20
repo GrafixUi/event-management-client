@@ -140,7 +140,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <div className=" flex self-center items-center justify-center">
+      <div className=" flex self-center items-center justify-center">
         <Upcomingmovies />
       </div>
       <Link
@@ -149,7 +149,7 @@ const Home = () => {
       >
         <span className=" absolute left-0 w-full h-0 transition-all bg-indigo-500 opacity-100 group-hover:h-full group-hover:top-0 duration-200 ease" />
         <span className=" relative">Load More</span>
-      </Link> */}
+      </Link>
       <Feature  />
       <div className="justify-center text-pink-600 text-center text-sm font-bold leading-5 tracking-wider self-center whitespace-nowrap mt-32 max-md:mt-10">
         FAQ
